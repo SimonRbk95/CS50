@@ -4,11 +4,11 @@
 int main(void)
 {
     // prompt for input as long as condition is met
-    int n;
+    int height;
     do{
-        n = get_int("Height: ");
+        height = get_int("Height: ");
     }
-    while (n < 1 || n > 8);
+    while (height < 1 || height > 8);
 
     // create building with n hashtags
 
@@ -24,13 +24,17 @@ int main(void)
         printf("\n");
     }
 
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < height; i++){
 
-            // for each column
-            printf(".");
+            // for each column print '.'
+            for (int k = height - i; k > 1; k--)
+        {
+            printf(" ");
+        }
+
             for(int j = 0; j < i; j++){
 
-                // each colum print '.'
+
 
 
                 printf("#");
