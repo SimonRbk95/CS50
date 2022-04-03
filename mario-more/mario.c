@@ -1,7 +1,11 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void) 
+int main(void)
 {
-    
+    // prompt for input
+    // if input valid create building
+    // else prompt for input again
+
+
 }
