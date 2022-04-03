@@ -24,14 +24,14 @@ int main(void)
         printf("\n");
     }
 
-    for (int i = 0; i < height; i++){
+    for (int i = 1; i < height; i++){
 
             // for each column print '.'
-            for (int l = height - i; l > 1; l--){
+            for (int l = height - i; l >= 1; l--){
                 printf(".");
             }
             // for each column print '#'
-            for(int j = 0; j < i; j++){
+            for(int j = 1; j <= i; j++){
                 printf("#");
             }
         // move to next row
