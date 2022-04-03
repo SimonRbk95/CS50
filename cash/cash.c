@@ -38,8 +38,9 @@ int main(void)
 int get_cents(void)
 {
     // TODO
-    do{
-    int cents = get_int("How many cents do you get? ");
+    do
+    {
+        int cents = get_int("How many cents do you get? ");
     }
     while (cents >= 1);
     return cents;
