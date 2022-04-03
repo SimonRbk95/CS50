@@ -34,7 +34,6 @@ void createPyramide(int height)
             }
             // For each row print double space
             printf("  ");
-            
             // For each column print mirrored '#'
             for (int k = 1; k <= i; k++)
             {
