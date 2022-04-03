@@ -28,7 +28,7 @@ int main(void)
 
             // for each column print '.'
             for (int l = height - i; l >= 1; l--){
-                printf(".");
+                printf("");
             }
             // for each column print '#'
             for(int j = 1; j <= i; j++){
