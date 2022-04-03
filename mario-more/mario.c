@@ -33,6 +33,7 @@ void createPyramide(int height){
             // for each column print mirrored '#'
             for(int k = 1; k <= i; k++){
                 printf("#");
+            }
 
         // move to next row
             printf("\n");
