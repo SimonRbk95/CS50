@@ -8,7 +8,7 @@ int main(void)
     do{
         n = get_int("Height: ");
     }
-    while (n < 1);
+    while (n < 1 );
 
     // create building with n hashtags
 
