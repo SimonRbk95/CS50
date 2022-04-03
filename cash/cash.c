@@ -50,9 +50,17 @@ int calculate_quarters(int cents)
     // TODO
     n = 1;
     while (True){
-    if (cents % (25 * n) != 0){
-        return n
-    
+        if (cents % (25 * n) == 0){
+            n++;
+        else if (cents > 25){
+            return n;
+        }
+        else{
+            return 0;
+        }
+    }
+
+
     }
 
 }
