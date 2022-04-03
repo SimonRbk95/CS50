@@ -30,7 +30,7 @@ int main(void)
             for(int j = 0; j <= i; j++){
 
                 // each colum print '.'
-                for(int l = n - 1; l == 1; l++){
+                for(int l = n - 1; l == 1; l--){
                     printf(".");
                 }
                 printf("#");
