@@ -76,7 +76,7 @@ int calculate_dimes(int cents)
     int n = 1;
     while (true)
     {
-        if (cents - (10 * n) >= 0)
+        if (cents - (10 * n) > 0)
         {
             n++;
         }
@@ -97,7 +97,7 @@ int calculate_nickels(int cents)
     int n = 1;
     while (true)
     {
-        if (cents - (5 * n) >= 0)
+        if (cents - (5 * n) > 0)
         {
             n++;
         }
@@ -118,7 +118,7 @@ int calculate_pennies(int cents)
     int n = 1;
     while (true)
     {
-        if (cents - (1 * n) >= 0)
+        if (cents - (1 * n) > 0)
         {
             n++;
         }
