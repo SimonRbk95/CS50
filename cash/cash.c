@@ -37,10 +37,12 @@ int main(void)
 
 int get_cents(void)
 {
-    // TODO
+    // Prompt for input as long as condition is met
+    int cents;
+
     do
     {
-        int cents = get_int("How many cents do you get? ");
+        cents = get_int("How many cents do you get? ");
     }
     while (cents >= 1);
     return cents;
