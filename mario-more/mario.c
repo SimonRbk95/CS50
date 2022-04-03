@@ -41,9 +41,9 @@ void createPyramide(int height)
                 printf("#");
             }
 
-        // move to next row
+            // move to next row
             printf("\n");
-        }
+    }
 }
 
 
