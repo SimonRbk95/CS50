@@ -24,6 +24,16 @@ int main(void)
         printf("\n");
     }
 
+for (int i = 0; i <= n; i++)
+    {
+        // for each column
+        for(int x = 0; x <= i; x++)
+        {
+            printf("#");
+        }
+    // move to next row
+        printf("\n");
+    }
 
 
 
