@@ -16,7 +16,7 @@ int main(void)
     for (int i = 0; i <= n; i++)
     {
         // for each column
-        for(int j = 0; x <= i; j++)
+        for(int j = 0; j <= i; j++)
         {
             printf("#");
         }
@@ -24,15 +24,20 @@ int main(void)
         printf("\n");
     }
 
-for (int i = 0; i <= n; i++){
-        // for each column
-        for(int j = 0; x <= i; j++){
-            for(int l = 0; x <=
-            printf("#");
+    for (int i = 0; i <= n; i++){
+
+            // for each column
+            for(int j = 0; j <= i; j++){
+
+                // each colum print '.'
+                for(int l = n - 1; l == 1; l++){
+                    printf(".");
+                }
+                printf("#");
+            }
+        // move to next row
+            printf("\n");
         }
-    // move to next row
-        printf("\n");
-    }
 
 
 
