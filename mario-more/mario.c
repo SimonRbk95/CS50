@@ -19,7 +19,7 @@ int main(void)
 void createPyramide(int height){
     for (int i = 1; i < height; i++){
 
-            // for each column print '.'
+            // for each column print space
             for (int l = height - i; l >= 1; l--){
                 printf(" ");
             }
@@ -27,6 +27,13 @@ void createPyramide(int height){
             for(int j = 1; j <= i; j++){
                 printf("#");
             }
+            // for each row print double space
+            printf("  ");
+
+            // for each column print mirrored '#'
+            for(int k = 1; k <= i; k++){
+                printf("#");
+
         // move to next row
             printf("\n");
         }
