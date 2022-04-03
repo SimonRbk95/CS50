@@ -52,13 +52,15 @@ int calculate_quarters(int cents)
 {
     // TODO
     int n = 1;
-    while (True){
+    while (true){
         if (cents % (25 * n) == 0){
             n++;
-        else if (cents > 25){
+        else if (cents > 25)
+        {
             return n;
         }
-        else{
+        else
+        {
             return 0;
         }
     }
