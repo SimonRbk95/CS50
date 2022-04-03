@@ -12,12 +12,12 @@ int main(void)
 
     // create building with n hashtags
 
-    // each row
+    // for each row
     for (int i = 0; i < n; i++)
     {
         //printf(".");
         // for each column
-        for(int x = 0; x < n; x++)
+        for(int x = 0; x < i; x++)
         {
             printf("#");
         }
