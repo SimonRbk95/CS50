@@ -3,11 +3,21 @@
 
 int main(void)
 {
-    // prompt for input
-    n = get_int("Height: ");
-    // if input valid create building
-    
-    // else prompt for input again
+    // prompt for input as long as condition is met
+    int n;
+    do{
+        n = get_int("Height: ");
+    }
+    while (n < 1);
+
+    // create building with n hashtags
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("#   #\n");
+    }
+
+
 
 
 }
