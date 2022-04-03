@@ -27,12 +27,11 @@ int main(void)
     for (int i = 0; i < n; i++){
 
             // for each column
+            printf(".");
             for(int j = 0; j < i; j++){
 
                 // each colum print '.'
-                if (){
-                    
-                }
+
 
                 printf("#");
             }
