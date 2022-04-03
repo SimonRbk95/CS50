@@ -24,9 +24,9 @@ void createPyramide(int height)
     {
         // for each column print space
         for (int l = height - i; l >= 1; l--)
-            {
-                printf(" ");
-            }
+        {
+            printf(" ");
+        }
             // for each column print '#'
             for (int j = 1; j <= i; j++)
             {
