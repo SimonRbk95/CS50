@@ -12,6 +12,7 @@ int main(void)
 
     // create building with n hashtags
 
+    // each row
     for (int i = 0; i < n; i++)
     {
         for(int x = 0; x < n; x++)
