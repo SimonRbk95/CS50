@@ -15,7 +15,6 @@ int main(void)
     // for each row
     for (int i = 0; i < n; i++)
     {
-        //printf(".");
         // for each column
         for(int x = 0; x < i; x++)
         {
