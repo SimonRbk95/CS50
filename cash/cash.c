@@ -53,8 +53,10 @@ int calculate_quarters(int cents)
     // TODO
     int n = 1;
     while (true){
-        if (cents % (25 * n) == 0){
+        if (cents % (25 * n) == 0)
+        {
             n++;
+        }
         else if (cents > 25)
         {
             return n;
@@ -64,11 +66,8 @@ int calculate_quarters(int cents)
             return 0;
         }
     }
-
-
-    }
-
 }
+
 
 int calculate_dimes(int cents)
 {
