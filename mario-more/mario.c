@@ -24,11 +24,9 @@ int main(void)
         printf("\n");
     }
 
-for (int i = 0; i <= n; i++)
-    {
+for (int i = 0; i <= n; i++){
         // for each column
-        for(int j = 0; x <= i; j++)
-        {
+        for(int j = 0; x <= i; j++){
             for(int l = 0; x <=
             printf("#");
         }
