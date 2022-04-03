@@ -17,7 +17,7 @@ int main(void)
     createPyramide(height);
 }
 void createPyramide(int height){
-    for (int i = 1; i < height; i++){
+    for (int i = 1; i <= height; i++){
 
             // for each column print space
             for (int l = height - i; l >= 1; l--){
