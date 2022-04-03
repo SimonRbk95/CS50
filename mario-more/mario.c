@@ -22,7 +22,7 @@ void createPyramide(int height)
 {
     for (int i = 1; i <= height; i++)
     {
-        // For each column print space
+        // For each column print whitespace
         for (int l = height - i; l >= 1; l--)
         {
             printf(" ");
@@ -32,7 +32,7 @@ void createPyramide(int height)
             {
                 printf("#");
             }
-            // For each row print double space
+            // For each row print whitespace
             printf("  ");
             // For each column print mirrored '#'
             for (int k = 1; k <= i; k++)
@@ -43,5 +43,3 @@ void createPyramide(int height)
             printf("\n");
     }
 }
-
-
