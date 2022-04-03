@@ -71,18 +71,22 @@ int calculate_quarters(int cents)
 
 int calculate_dimes(int cents)
 {
-    // TODO
-    n = 1;
-    while (True){
-        if (cents % (10 * n) == 0){
+    int n = 1;
+    while (true){
+        if (cents % (25 * n) == 0)
+        {
             n++;
-        else if (cents > 25){
+        }
+        else if (cents > 25)
+        {
             return n;
         }
-        else{
+        else
+        {
             return 0;
         }
     }
+}
 
 int calculate_nickels(int cents)
 {
