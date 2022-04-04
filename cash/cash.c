@@ -115,18 +115,12 @@ int calculate_nickels(int cents)
 int calculate_pennies(int cents)
 {
     // TODO
-    int n = 1;
     int pennies = 0;
-    while (true)
+    while (pennies >= 1)
     {
-        if (cents - (1 * n) >= 0)
-        {
-            n++;
-            pennies++;
+        cents -= 1;
+        pennies++;
         }
-        else
-        {
-            return pennies;
-        }
+    return pennies;
     }
 }
