@@ -101,7 +101,7 @@ int calculate_nickels(int cents)
         {
             n++;
         }
-        else if (cents >= 5)
+        else if (cents > 5)
         {
             return n;
         }
@@ -118,11 +118,11 @@ int calculate_pennies(int cents)
     int n = 1;
     while (true)
     {
-        if (cents - (1 * n) > 0)
+        if (cents - (1 * n) >= 0)
         {
             n++;
         }
-        else if (cents >= 1)
+        else if (cents > 1)
         {
             return n;
         }
