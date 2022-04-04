@@ -58,7 +58,7 @@ int calculate_quarters(int cents)
         {
             n++;
         }
-        else if (cents > 25)
+        else if (cents >= 25)
         {
             return n;
         }
@@ -80,7 +80,7 @@ int calculate_dimes(int cents)
         {
             n++;
         }
-        else if (cents > 10)
+        else if (cents >= 10)
         {
             return n;
         }
@@ -101,7 +101,7 @@ int calculate_nickels(int cents)
         {
             n++;
         }
-        else if (cents > 5)
+        else if (cents >= 5)
         {
             return n;
         }
@@ -122,7 +122,7 @@ int calculate_pennies(int cents)
         {
             n++;
         }
-        else if (cents > 1)
+        else if (cents >= 1)
         {
             return n;
         }
