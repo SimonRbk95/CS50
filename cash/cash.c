@@ -122,13 +122,9 @@ int calculate_pennies(int cents)
         {
             n++;
         }
-        else if (cents > 1)
-        {
-            return n;
-        }
         else
         {
-            return 0;
+            return n;
         }
     }
 }
