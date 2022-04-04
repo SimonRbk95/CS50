@@ -116,15 +116,17 @@ int calculate_pennies(int cents)
 {
     // TODO
     int n = 1;
+    int pennies = 0;
     while (true)
     {
         if (cents - (1 * n) >= 0)
         {
             n++;
+            pennies++;
         }
         else
         {
-            return n;
+            return pennies;
         }
     }
 }
