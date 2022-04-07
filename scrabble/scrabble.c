@@ -24,4 +24,7 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+    // return the score for each player's word
+    // Ignore non-letter characters
+    // Handle both upper & lowe case letters
 }
