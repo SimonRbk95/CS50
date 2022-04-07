@@ -33,10 +33,13 @@ int compute_score(string word)
     // loop through string
     int i = 0;
     for (letter = word[i]; n = strlen(word); n++)
-    {word[i]
+    {
+        // turn each char into upper or lower, consitency needed
+        toupper.(word[i]);
+        
 
     }
-    // turn each char into upper or lower, consitency needed
+
     // ignore non-letter characters by turning each char into its int value
     // compare each char's int value its ASCII value in alphabetical order starting at 65 through 90, inclusive
     // either count or use algebra to determine which char corresponds to what score
