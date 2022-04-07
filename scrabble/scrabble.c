@@ -42,7 +42,7 @@ int compute_score(string word)
         if (c >= 65 && <= 90)
         {
             // loop through int CHARS, look for a letter that matches word[i] and remember int CHARS' index
-            for(alphabet = C)
+            for()
             {
 
 
