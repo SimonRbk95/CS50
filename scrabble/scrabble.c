@@ -31,8 +31,9 @@ int compute_score(string word)
     // Handle both upper & lowe case letters
 
     // loop through string
-    for (letter = word[n]; n < word)
-    {
+    int i = 0;
+    for (letter = word[i]; n = strlen(word); n++)
+    {word[i]
 
     }
     // turn each char into upper or lower, consitency needed
