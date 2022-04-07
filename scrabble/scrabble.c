@@ -5,6 +5,8 @@
 
 // Points assigned to each letter of the alphabet
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+// Array of letters of the alphabet
+int CHARS[]={A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z};
 
 int compute_score(string word);
 
@@ -27,4 +29,17 @@ int compute_score(string word)
     // return the score for each player's word
     // Ignore non-letter characters
     // Handle both upper & lowe case letters
+
+    // loop through string
+    for (letter = word[n]; n < word)
+    {
+
+    }
+    // turn each char into upper or lower, consitency needed
+    // ignore non-letter characters by turning each char into its int value
+    // compare each char's int value its ASCII value in alphabetical order starting at 65 through 90, inclusive
+    // either count or use algebra to determine which char corresponds to what score
+    // remember the score of each char
+    // add each char's score to compute the total score
+    // return the score
 }
