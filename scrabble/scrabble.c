@@ -28,10 +28,11 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     // return the score for each player's word
     // Ignore non-letter characters
-    // Handle both upper & lowe case letters
+    // Handle both upper & lower case letters
 
     // loop through string
     int i = 0;
+    int score = 0;
     for (letter = word[i]; n = strlen(word); n++)
     {
         // turn each char into upper or lower, consitency needed
@@ -40,7 +41,13 @@ int compute_score(string word)
         char c = word[i];
         if (c >= 65 && <= 90)
         {
-            
+            // loop through int CHARS, look for a letter that matches word[i] and remember int CHARS' index
+            for()
+            {
+
+
+            }
+            // add Points[CHARS' index] to a variable that keeps track of the points -> score += POINTS[chars' index]
 
         }
 
