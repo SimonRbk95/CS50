@@ -38,8 +38,8 @@ int compute_score(string word)
         // turn each char into upper or lower, consitency needed
         toupper.(word[i]);
         // ignore non-letter characters by turning each char into its int value
-        char c = word[i];
-        if (c >= 65 && <= 90)
+        char l = word[i];
+        if (l >= 65 && l <= 90)
         {
             // loop through int CHARS, look for a letter that matches word[i] and remember int CHARS' index
             for()
