@@ -52,8 +52,7 @@ int compute_score(string word)
             // test
             printf("uppered: %c\n", chr);
 
-
-            // loop through int CHARS, look for a letter that matches word[i] and remember int CHARS' index
+            // loop through int CHARS, look for a letter that matches word[i]/chr and remember int CHARS' index
             for(int j = 0; j < strlen(CHARS); j++)
             {
                 if (CHARS[j] == chr)
