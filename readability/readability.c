@@ -18,7 +18,7 @@ int main(void)
     int grade = grade_calculator(letters, words, sentences);
     if (grade < 1)
     {
-        printf("Before Grade 1...\n");
+        printf("Before Grade 1\n");
     }
     else if(grade >= 16)
     {
@@ -94,6 +94,7 @@ int grade_calculator(letters, words, sentences)
     double L = (float)letters / (float)words * 100;
     double S = (float)sentences / (float)words * 100;
     double index = 0.0588 * L - 0.296 * S - 15.8;
+    print
     double round(double index);
     return index;
 }
