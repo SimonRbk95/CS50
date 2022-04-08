@@ -30,7 +30,7 @@ int count_letters(string text)
         // only consider ASCII values that represent uppercase letters
         if (l >= 65 && l <= 90)
         {
-           int letter_count += 1;
+           letter_count += 1;
         }
     }
     return letter_count;
@@ -42,7 +42,7 @@ int count_words(string text)
     for (int i = 0; i < strlen(text); i++)
     {
         char chr = text[i];
-        if (!= int isalpha(char chr))
+        if (int isalpha(char chr))
         {
             word_count +=1;
         }
