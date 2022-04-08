@@ -42,7 +42,7 @@ int count_words(string text)
     for (int i = 0; i < strlen(text); i++)
     {
         char chr = text[i];
-        if (! int isalpha(char chr))
+        if (! isalpha(chr))
         {
             word_count +=1;
         }
