@@ -39,13 +39,6 @@ int main(void)
 
 int compute_score(string word)
 {
-    // TODO: Compute and return score for string
-    // return the score for each player's word
-    // Ignore non-letter characters
-    // Handle both upper & lower case letters
-
-    // loop through string
-
     int score = 0;
     char chr;
     for (int i = 0; i < strlen(word); i++)
@@ -56,14 +49,11 @@ int compute_score(string word)
         chr = toupper(chr);
         // get the ASCII value
         int l = chr;
-
         // only consider ASCII values that represent uppercase letters
         if (l >= 65 && l <= 90)
         {
-
             // test
             printf("uppered: %c\n", chr);
-
             // loop through int CHARS, look for a letter that matches word[i]/chr and remember int CHARS' index
             for(int j = 0; j < strlen(CHARS); j++)
             {
@@ -77,9 +67,4 @@ int compute_score(string word)
         }
     }
      return score;
-    // compare each char's int value its ASCII value in alphabetical order starting at 65 through 90, inclusive
-    // either count or use algebra to determine which char corresponds to what score
-    // remember the score of each char
-    // add each char's score to compute the total score
-    // return the score
 }
