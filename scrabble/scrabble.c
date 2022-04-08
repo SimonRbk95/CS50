@@ -52,8 +52,6 @@ int compute_score(string word)
         // only consider ASCII values that represent uppercase letters
         if (l >= 65 && l <= 90)
         {
-            // test
-            printf("uppered: %c\n", chr);
             // loop through int CHARS, look for a letter that matches word[i]/chr and remember int CHARS' index
             for(int j = 0; j < strlen(CHARS); j++)
             {
@@ -63,7 +61,6 @@ int compute_score(string word)
                     score += POINTS[j];
                 }
             }
-
         }
     }
      return score;
