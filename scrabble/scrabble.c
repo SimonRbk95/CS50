@@ -44,7 +44,7 @@ int compute_score(string word)
         // test
         printf("toupper \n: %c", word[i]);
         // ignore non-letter characters by turning each char into its int value
-        char l = word[i];
+        int l = word[i];
         if (l >= 65 && l <= 90)
         {
             // loop through int CHARS, look for a letter that matches word[i] and remember int CHARS' index
