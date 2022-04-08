@@ -82,7 +82,7 @@ int grade_calculator(letters, words, sentences)
     double L = letters/words * 100;
     double S = sentences/words * 100;
     double index = 0.0588 * L - 0.296 * S - 15.8;
-    int round(index);
+    double round(index);
     return index;
 
 }
