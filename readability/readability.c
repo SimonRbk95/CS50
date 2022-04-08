@@ -47,6 +47,7 @@ int count_words(string text)
         {
             word_count +=1;
         }
+        if (! isalpha(chr) && ! isspace(next_chr))
 
     }
     return word_count;
