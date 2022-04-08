@@ -32,5 +32,11 @@ int count_letters(string text)
     return letter_count;
 }
 
+int count_words(string text)
+{
+    int word_count = 0;
+    
+}
+
 // count_words
 // count_sentences
