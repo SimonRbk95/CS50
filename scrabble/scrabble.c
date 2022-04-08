@@ -35,10 +35,12 @@ int compute_score(string word)
     // loop through string
 
     int score = 0;
+    char chr;
     for (int i = 0; i < strlen(word); i++)
     {
+        chr = word[i];
         // turn each char into upper or lower, consitency needed
-        toupper(word[i]);
+        chr = toupper(chr);
         // test
         printf("toupper: %c", word[i]);
         // ignore non-letter characters by turning each char into its int value
