@@ -43,10 +43,12 @@ int count_words(string text)
     {
         char chr = text[i];
         char next_chr = text[i + 1];
+        // count each word by checking spaces
         if (isspace(next_chr))
         {
             word_count +=1;
         }
+        // count the last word of the sentence
         if (i + 1 == strlen(text))
         {
             word_count += 1;
@@ -56,5 +58,28 @@ int count_words(string text)
     return word_count;
 }
 
+int count_sentences(string text)
+{
+    int sentence_count = 0;
+    for (int i = 0; i < strlen(text); i++)
+    {
+        char chr = text[i];
+        char next_chr = text[i + 1];
+        // count each word by checking spaces
+        if (isspace(next_chr))
+        {
+            word_count +=1;
+        }
+        // count the last word of the sentence
+        if (i + 1 == strlen(text))
+        {
+            word_count += 1;
+        }
+
+    }
+    return word_count;
+
+
+}
 // count_words
 // count_sentences
