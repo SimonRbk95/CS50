@@ -26,7 +26,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %d\n", grade);
+        printf("Grade %i\n", grade);
     }
 }
 
@@ -91,11 +91,11 @@ int count_sentences(string text)
 
 int grade_calculator(letters, words, sentences)
 {
-    double L = (float)letters / (float)words * 100;
-    double S = (float)sentences / (float)words * 100;
-    double index = 0.0588 * L - 0.296 * S - 15.8;
+    float L = (float)letters / (float)words * 100;
+    float S = (float)sentences / (float)words * 100;
+    float index = 0.0588 * L - 0.296 * S - 15.8;
     printf("index before round: %f", index);
-    double round(double index);
+    float round(float index);
     printf("index after round: %f", index);
     return index;
 }
