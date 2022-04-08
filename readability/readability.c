@@ -3,6 +3,6 @@
 
 int main(void)
 {
-input = getstring("Text: \n");
+string text = getstring("Text: \n");
 
 }
