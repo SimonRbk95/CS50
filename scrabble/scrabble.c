@@ -41,21 +41,22 @@ int compute_score(string word)
     char chr;
     for (int i = 0; i < strlen(word); i++)
     {
-        // store word[i] in a variable to be able use upper function on it
+        // store word[i] in a variable to use upper function on it
         chr = word[i];
-        // turn each char into upper or lower, consitency needed
+        // turn each char into uppercased letters
         chr = toupper(chr);
         // get the ASCII value
         int l = chr;
         // only consider ASCII values that represent uppercase letters
         if (l >= 65 && l <= 90)
         {
-            // loop through int CHARS, look for a letter that matches word[i]/chr and remember int CHARS' index
+            // loop through int CHARS and remember int CHARS' index
             for (int j = 0; j < strlen(CHARS); j++)
             {
+                // look for a letter that matches chr
                 if (CHARS[j] == chr)
                 {
-                    // add Points[CHARS' index] to a variable that keeps track of the points -> score += POINTS[chars' index]
+                    // add points to the score based on the matchin index
                     score += POINTS[j];
                 }
             }
