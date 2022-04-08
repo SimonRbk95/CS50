@@ -13,7 +13,20 @@ int main(void)
 
 int count_letters(string text)
 {
-    //
+    int letter_count = 0;
+    // loop through the text's letters
+    for (int i = 0; i < strlen(text); i++)
+    {
+        // store word[i] in a variable to use upper function on it
+        letter = text[i];
+        // turn each char into uppercased letters
+        chr = toupper(chr);
+        // get the ASCII value
+        int l = chr;
+        // only consider ASCII values that represent uppercase letters
+        if (l >= 65 && l <= 90)
+        {
+           int letter_count += 1;
     // return Grade
 }
 
