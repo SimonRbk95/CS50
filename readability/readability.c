@@ -45,6 +45,7 @@ int count_words(string text)
         }
 
     }
+    return word_count;
 }
 
 // count_words
