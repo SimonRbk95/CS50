@@ -7,12 +7,15 @@ int main(void)
 {
     string text = getstring("Text: \n");
     printf("%s", text);
-    printf(count_letter(text));
+    // printf(count_letter(text));
 
 }
 
 int count_letters(string text)
 {
-    // 
+    //
     // return Grade
 }
+
+// count_words
+// count_sentences
