@@ -17,7 +17,7 @@ int count_letters(string text)
     // loop through the text's letters
     for (int i = 0; i < strlen(text); i++)
     {
-        // store word[i] in a variable to use upper function on it
+        // store text[i] in a variable to use upper function on it
         letter = text[i];
         // turn each char into uppercased letters
         chr = toupper(chr);
@@ -27,7 +27,9 @@ int count_letters(string text)
         if (l >= 65 && l <= 90)
         {
            int letter_count += 1;
-    // return Grade
+        }
+    }
+    return letter_count;
 }
 
 // count_words
