@@ -38,10 +38,12 @@ int compute_score(string word)
     char chr;
     for (int i = 0; i < strlen(word); i++)
     {
+        // store word[i] into a variable to be able use upper function on it
         chr = word[i];
+        // get the ASCII value
         int l = chr;
 
-        // ignore non-letter characters by turning each char into its int value
+        // only consider ASCII values that represent uppercase letters
         if (l >= 65 && l <= 90)
         {
             // turn each char into upper or lower, consitency needed
@@ -53,7 +55,7 @@ int compute_score(string word)
             // loop through int CHARS, look for a letter that matches word[i] and remember int CHARS' index
             for(int j = 0; j < strlen(CHARS); j++)
             {
-                if (CHARS[j] == word[i])
+                if (CHARS[j] == chr)
                 {
                     // add Points[CHARS' index] to a variable that keeps track of the points -> score += POINTS[chars' index]
                     score += POINTS[j];
