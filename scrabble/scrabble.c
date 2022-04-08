@@ -40,14 +40,15 @@ int compute_score(string word)
     {
         // store word[i] into a variable to be able use upper function on it
         chr = word[i];
+        // turn each char into upper or lower, consitency needed
+        chr = toupper(chr);
         // get the ASCII value
         int l = chr;
 
         // only consider ASCII values that represent uppercase letters
         if (l >= 65 && l <= 90)
         {
-            // turn each char into upper or lower, consitency needed
-            chr = toupper(chr);
+
             // test
             printf("uppered: %c\n", chr);
 
