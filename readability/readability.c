@@ -69,7 +69,6 @@ int count_words(string text)
         {
             count += 1;
         }
-
     }
     return count;
 }
