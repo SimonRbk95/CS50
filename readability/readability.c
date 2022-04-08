@@ -80,10 +80,10 @@ int count_sentences(string text)
 
 int grade_calculator(letters, words, sentences)
 {
-    double L = float letters/words * 100;
-    double S = sentences/words * 100;
+    double L = (float)letters / (float)words * 100;
+    double S = (float)sentences / (float)words * 100;
     double index = 0.0588 * L - 0.296 * S - 15.8;
-    double round(float index);
+    double round(double index);
     return index;
 
 }
