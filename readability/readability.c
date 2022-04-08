@@ -16,6 +16,19 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
     int grade = grade_calculator(letters, words, sentences);
+    if (grade < 1)
+    {
+        printf("Grade: 1");
+    }
+    else if(grade >= 16)
+    {
+        printf("Grade: 16+");
+    }
+    else
+    {
+        printf("Grade: %d", grade);
+    }
+
     printf("Grade: %i \n", grade);
 }
 
@@ -85,7 +98,4 @@ int grade_calculator(letters, words, sentences)
     double index = 0.0588 * L - 0.296 * S - 15.8;
     double round(double index);
     return index;
-
 }
-// count_words
-// count_sentences
