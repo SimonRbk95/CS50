@@ -47,7 +47,10 @@ int count_words(string text)
         {
             word_count +=1;
         }
-        if (! isalpha(chr) && ! isspace(next_chr))
+        if (i + 1 == strlen(text))
+        {
+            word_count += 1;
+        }
 
     }
     return word_count;
