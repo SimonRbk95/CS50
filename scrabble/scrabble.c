@@ -46,17 +46,14 @@ int compute_score(string word)
             {
                 if (CHARS[j] == word[i])
                 {
-
+                    // add Points[CHARS' index] to a variable that keeps track of the points -> score += POINTS[chars' index]
+                    score += POINTS[j];
                 }
-
-
             }
-            // add Points[CHARS' index] to a variable that keeps track of the points -> score += POINTS[chars' index]
 
         }
-
-
     }
+     return score;
     // compare each char's int value its ASCII value in alphabetical order starting at 65 through 90, inclusive
     // either count or use algebra to determine which char corresponds to what score
     // remember the score of each char
