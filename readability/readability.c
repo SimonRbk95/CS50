@@ -94,7 +94,7 @@ int grade_calculator(letters, words, sentences)
     double L = (float)letters / (float)words * 100;
     double S = (float)sentences / (float)words * 100;
     double index = 0.0588 * L - 0.296 * S - 15.8;
-    printf("index before round: %d", index)
+    printf("index before round: %f", index);
     double round(double index);
     return index;
 }
