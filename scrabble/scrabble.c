@@ -38,17 +38,18 @@ int compute_score(string word)
     char chr;
     for (int i = 0; i < strlen(word); i++)
     {
-
+        chr = word[i];
         int l = chr;
+
+        // ignore non-letter characters by turning each char into its int value
         if (l >= 65 && l <= 90)
         {
-            chr = word[i];
             // turn each char into upper or lower, consitency needed
             chr = toupper(chr);
             // test
             printf("uppered: %c\n", chr);
-            
-            // ignore non-letter characters by turning each char into its int value
+
+
             // loop through int CHARS, look for a letter that matches word[i] and remember int CHARS' index
             for(int j = 0; j < strlen(CHARS); j++)
             {
