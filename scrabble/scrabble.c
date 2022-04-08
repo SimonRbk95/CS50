@@ -21,13 +21,11 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-    printf("Points Player 1: %i\n", score1);
-    printf("Points Player 2: %i\n", score2);
     if (score1 > score2)
     {
         printf("Player 1 wins!\n");
     }
-    else if(score1 < score2)
+    else if (score1 < score2)
     {
         printf("Player 2 wins!\n");
     }
@@ -43,7 +41,7 @@ int compute_score(string word)
     char chr;
     for (int i = 0; i < strlen(word); i++)
     {
-        // store word[i] into a variable to be able use upper function on it
+        // store word[i] in a variable to be able use upper function on it
         chr = word[i];
         // turn each char into upper or lower, consitency needed
         chr = toupper(chr);
@@ -53,7 +51,7 @@ int compute_score(string word)
         if (l >= 65 && l <= 90)
         {
             // loop through int CHARS, look for a letter that matches word[i]/chr and remember int CHARS' index
-            for(int j = 0; j < strlen(CHARS); j++)
+            for (int j = 0; j < strlen(CHARS); j++)
             {
                 if (CHARS[j] == chr)
                 {
@@ -63,5 +61,5 @@ int compute_score(string word)
             }
         }
     }
-     return score;
+    return score;
 }
