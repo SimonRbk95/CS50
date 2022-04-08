@@ -18,18 +18,16 @@ int main(void)
     int grade = grade_calculator(letters, words, sentences);
     if (grade < 1)
     {
-        printf("Grade: 1");
+        printf("Grade: 1 \n");
     }
     else if(grade >= 16)
     {
-        printf("Grade: 16+");
+        printf("Grade: 16+ \n");
     }
     else
     {
-        printf("Grade: %d", grade);
+        printf("Grade: %d \n", grade);
     }
-
-    printf("Grade: %i \n", grade);
 }
 
 int count_letters(string text)
