@@ -44,7 +44,10 @@ int compute_score(string word)
             // loop through int CHARS, look for a letter that matches word[i] and remember int CHARS' index
             for(int j = 0; j < strlen(CHARS); j++)
             {
-                
+                if (CHARS[j] == word[i])
+                {
+
+                }
 
 
             }
