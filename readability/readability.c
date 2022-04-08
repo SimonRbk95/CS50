@@ -18,7 +18,7 @@ int main(void)
     int grade = grade_calculator(letters, words, sentences);
     if (grade < 1)
     {
-        printf("Grade: 1\n");
+        printf("Before Grade: 1...\n");
     }
     else if(grade >= 16)
     {
