@@ -17,7 +17,7 @@ int main(void)
 
 int count_letters(string text)
 {
-    int letter_count = 0;
+    int count = 0;
     // loop through the text's letters
     for (int i = 0; i < strlen(text); i++)
     {
@@ -30,15 +30,15 @@ int count_letters(string text)
         // only consider ASCII values that represent uppercase letters
         if (l >= 65 && l <= 90)
         {
-           letter_count += 1;
+           count += 1;
         }
     }
-    return letter_count;
+    return count;
 }
 
 int count_words(string text)
 {
-    int word_count = 0;
+    int count = 0;
     for (int i = 0; i < strlen(text); i++)
     {
         char chr = text[i];
@@ -46,40 +46,33 @@ int count_words(string text)
         // count each word by checking spaces
         if (isspace(next_chr))
         {
-            word_count +=1;
+            count +=1;
         }
         // count the last word of the sentence
         if (i + 1 == strlen(text))
         {
-            word_count += 1;
+            count += 1;
         }
 
     }
-    return word_count;
+    return count;
 }
 
 int count_sentences(string text)
 {
-    int sentence_count = 0;
+    int count = 0;
     for (int i = 0; i < strlen(text); i++)
     {
         char chr = text[i];
-        char next_chr = text[i + 1];
+        int ascii = chr;
         // count each word by checking spaces
-        if (isspace(next_chr))
+        /// if (ascii == 46 || ascii == 63 || ascii == 33)
+        if (chr == '.' || chr == '!' || chr == "?")
         {
-            word_count +=1;
+            count +=1;
         }
-        // count the last word of the sentence
-        if (i + 1 == strlen(text))
-        {
-            word_count += 1;
-        }
-
     }
-    return word_count;
-
-
+    return count;
 }
 // count_words
 // count_sentences
