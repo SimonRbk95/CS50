@@ -33,7 +33,7 @@ int compute_score(string word)
     // loop through string
 
     int score = 0;
-    for (int i = 0; i == strlen(word); i++)
+    for (int i = 0; i < strlen(word); i++)
     {
         // turn each char into upper or lower, consitency needed
         toupper.(word[i]);
@@ -42,8 +42,9 @@ int compute_score(string word)
         if (l >= 65 && l <= 90)
         {
             // loop through int CHARS, look for a letter that matches word[i] and remember int CHARS' index
-            for()
+            for(int j = 0; j < strlen(CHARS); j++)
             {
+                
 
 
             }
