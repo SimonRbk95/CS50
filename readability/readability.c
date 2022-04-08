@@ -9,9 +9,9 @@ int count_words(string text);
 int main(void)
 {
     string text = get_string("Text: \n");
-    printf("%s", text);
-    printf("%i", count_letters(text));
-    printf("%i",count_words(text));
+    printf("%s \n", text);
+    printf("%i \n", count_letters(text));
+    printf("%i \n",count_words(text));
 
 }
 
