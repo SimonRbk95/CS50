@@ -23,6 +23,18 @@ int main(void)
     // TODO: Print the winner
     printf("Points Player 1: %i\n", score1);
     printf("Points Player 2: %i\n", score2);
+    if (score1 > score2)
+    {
+        printf("Player 1 wins!\n");
+    }
+    else if(score1 < score2)
+    {
+        printf("Player 2 wins!\n");
+    }
+    else
+    {
+        printf("Tie!\n");
+    }
 }
 
 int compute_score(string word)
