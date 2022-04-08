@@ -43,7 +43,7 @@ int count_words(string text)
     {
         char chr = text[i];
         char next_chr = text[i + 1];
-        if (! isalpha(chr) && ! isspace(next_chr))
+        if (isspace(next_chr))
         {
             word_count +=1;
         }
