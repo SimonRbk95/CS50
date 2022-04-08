@@ -15,7 +15,8 @@ int main(void)
     int letters = count_letters(text);
     int words = count_words(text);
     int sentences = count_sentences(text);
-    grade_calculator(letters, words, sentences);
+    int grade = grade_calculator(letters, words, sentences);
+    printf("Grade: %i \n", grade);
 }
 
 int count_letters(string text)
@@ -82,7 +83,7 @@ int grade_calculator(letters, words, sentences)
     double L = letters/words * 100;
     double S = sentences/words * 100;
     double index = 0.0588 * L - 0.296 * S - 15.8;
-    double round(index);
+    double round(double index);
     return index;
 
 }
