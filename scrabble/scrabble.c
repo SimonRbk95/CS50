@@ -6,7 +6,7 @@
 // Points assigned to each letter of the alphabet
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 // Array of letters of the alphabet
-char CHARS[] = {A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z};
+char CHARS[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 
 int compute_score(string word);
 
@@ -21,8 +21,8 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-    printf("Points Player 1: %i\n", word1);
-    printf("Points Player 2: %i\n", word2);
+    printf("Points Player 1: %i\n", score1);
+    printf("Points Player 2: %i\n", score2);
 }
 
 int compute_score(string word)
