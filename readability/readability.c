@@ -5,13 +5,14 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
     string text = get_string("Text: \n");
-    printf("%s \n", text);
     printf("%i \n", count_letters(text));
     printf("%i \n",count_words(text));
+    printf("%i \n", count_sentences(text));
 
 }
 
@@ -66,8 +67,7 @@ int count_sentences(string text)
         char chr = text[i];
         int ascii = chr;
         // count each word by checking spaces
-        /// if (ascii == 46 || ascii == 63 || ascii == 33)
-        if (chr == '.' || chr == '!' || chr == "?")
+        if (ascii == 46 || ascii == 63 || ascii == 33)
         {
             count +=1;
         }
