@@ -18,7 +18,7 @@ int count_letters(string text)
     for (int i = 0; i < strlen(text); i++)
     {
         // store text[i] in a variable to use upper function on it
-        letter = text[i];
+        char chr = text[i];
         // turn each char into uppercased letters
         chr = toupper(chr);
         // get the ASCII value
@@ -35,7 +35,11 @@ int count_letters(string text)
 int count_words(string text)
 {
     int word_count = 0;
-    
+    for (int i = 0; i < strlen(text); i++)
+    {
+        char chr = text[i];
+        
+    }
 }
 
 // count_words
