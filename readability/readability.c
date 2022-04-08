@@ -12,10 +12,10 @@ int grade_calculator(int letters, int words, int sentences);
 int main(void)
 {
     string text = get_string("Text: \n");
-    int letters = count_letters(text));
+    int letters = count_letters(text);
     int words = count_words(text);
-    int sentences = count_sentences(text));
-    int grade_calculator(letters, words, sentences);
+    int sentences = count_sentences(text);
+    grade_calculator(letters, words, sentences);
 }
 
 int count_letters(string text)
