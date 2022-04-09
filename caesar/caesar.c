@@ -8,7 +8,9 @@ int main(int argc, string argv[])
 
     while(index < strlen(argv[1]))
     {
-            int argv[1][index];
+            // get ASCII value
+            (int) argv[1][index];
+            // check if it is a digit
             if (argv[1][index] == i)
             {
                 index += 1;
