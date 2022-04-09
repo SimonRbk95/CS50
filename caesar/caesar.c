@@ -21,7 +21,7 @@ string encrypt_message(string key)
     // prompt for user's message
     string plaintext = get_string("Plaintext:  \n");
     // encrypt the message
-    char ciphertext[] = {};
+    // char ciphertext[] = {};
 
 
     for(int index = 0; index < strlen(text); index++)
