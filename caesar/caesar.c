@@ -78,7 +78,7 @@ string encrypt_message(string key)
             // rotate letter by: (p + key)%26
             int rotation_value = (l + k) % 26;
             // keep track of alphabet starting at A
-            int count = l - 65;
+            int count = l - 97;
             // increase the count to rotate through the alphabet
             for (int n = rotation_value; n > 0; n--)
                 if(count < 25)
@@ -90,7 +90,7 @@ string encrypt_message(string key)
                     count = 0;
                 }
             // update the ascii value of rotated letter
-            l = count + 65;
+            l = count + 97;
             // convert new ascii value to letter
             char cipher = l;
             // replace the current letter in plaintext
