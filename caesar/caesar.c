@@ -37,7 +37,7 @@ string encrypt_message(string key)
             // then index = rotation value - (26 - current value)
 
             // if rotation_value is greater than the difference between the last letter of the alphabet and the current letter
-            if (rotation_value > (26 - (90 - l))
+            if (rotation_value > (26 - (90 - l)))
             {
                 // increase the current letter by the rotation_value
                 l += rotation_value;
