@@ -8,9 +8,9 @@ int valid_input(string key);
 int main(int argc, string argv[])
 {
     valid_input(argv[1]);
-    string text = get_string("Encrypt:  \n");
-    int x = atoi(argv[1]);
-    printf("X = %i", x);
+    // encrypt_message(argv[1]);
+
+
 
 }
 
@@ -25,6 +25,21 @@ int main(int argc, string argv[])
         // after outputting return 0 to exit main
 
 
+int encrypt_message(key)
+{
+    // turn key into an integer
+    int key = atoi(key);
+    // prompt for user's message
+    string text = get_string("Encrypt:  \n");
+    // encrypt the message
+    for()
+    {
+        
+    }
+
+
+
+}
 
 
 
