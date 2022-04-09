@@ -12,18 +12,7 @@ int main(int argc, string argv[])
     string cipher = encrypt_message(argv[1]);
     printf("Ciphertext:  %s\n", cipher);
     return 0;
-
 }
-
-
-    // implement the encryption equation
-        // lower & upper case letters must remain lower and upper, respectively
-        // loop through the alphabet based on the input #.
-
-    // ask for input
-    // output the text using the encryption eqution
-        // after outputting return 0 to exit main
-
 
 string encrypt_message(string key)
 {
@@ -60,16 +49,8 @@ string encrypt_message(string key)
             plaintext[index] = l_cipher;
         }
     }
-return p;
+return plaintext;
 }
-
-
-
-
-
-
-
-
 
 int valid_input(string key)
 {
@@ -98,10 +79,3 @@ int valid_input(string key)
     }
     return 0;
 }
-
-
-
-
-
-
-
