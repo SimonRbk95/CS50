@@ -38,6 +38,10 @@ string encrypt_message(string key)
              // if rotation_value > 26 - current value
                 // then index = rotation value - (26 - current value)
 
+                
+            for (int n = l; n  )
+
+
              // test
              printf("new upper letter value: %i", l);
             // convert new ascii value to letter
