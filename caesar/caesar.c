@@ -4,10 +4,10 @@
 int main(int argc, string argv[])
 {
     char digits[] = "123456789";
-    char key[] = (int) argv[1];
+    char key[] = argv[1];
 
     printf("This the key's first index: %c", key[1]);
-    
+
     //must take one parameter
     // 1 if there is no parameter or more than one return 1 with an error message
     // 2 check if the argument's characters are digits
