@@ -3,6 +3,5 @@
 
 int main(int argc, string argv[])
 {
-
-    printf("%i", argv[1]);
+    printf("%s", argv[1]);
 }
