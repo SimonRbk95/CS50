@@ -34,12 +34,18 @@ int encrypt_message(key)
     // prompt for user's message
     string p = get_string("Plaintext:  \n");
     // encrypt the message
+    char ciphertext[] = {};
+
 
     for(int index = 0; index < strlen(text); index++)
     {
-        if(text)
+        if ((int) p[index] >= 65 && (int) p[index] <= 90)
         {
-            // rotate by: (p + key)%26
+            // rotate letter by: (p + key)%26
+        }
+        else if ((int) p[index] >= 97 && (int) p[index] <= 122)
+        {
+            // rotate letter by: (p + key)%26
         }
 
 
