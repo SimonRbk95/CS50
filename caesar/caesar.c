@@ -32,6 +32,7 @@ string encrypt_message(string key)
         {
             // rotate letter by: (p + key)%26
             int rotation_value = (l + k) % 26;
+            printf("rotation_value= %i", rotation_value)
 
             // if rotation_value > 26 - current value
             // then index = rotation value - (26 - current value)
