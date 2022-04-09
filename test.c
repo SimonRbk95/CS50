@@ -6,10 +6,8 @@
 
 int main(void)
 {
-    char upper[] = {'A', ' ', 'B', '!'};
-    printf("%s\n", upper);
-    char A = 'A';
-    int ascii = A;
+    char upper[] = {'A', 'B', '!'};
+    int ascii = upper[0];
     (printf("ascii: %i\n", ascii));
     char Anew = ascii + 1;
     (printf("new ascii: %c\n", Anew));
