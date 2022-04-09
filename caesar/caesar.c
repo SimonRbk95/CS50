@@ -3,16 +3,26 @@
 
 int main(int argc, string argv[])
 {
+    string digits = "123456789";
+    for ()
+    {
+
+    }
+
     // 1 if there is no parameter or more than one return 1 with an error message
     if(! argv[1])
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
+
+
+
+
     else if ()
     {
     // 2 check if the argument's characters are digits
-    string digits = "123456789";
+
     printf("This the key's first index: %c", argv[1][1]);
     // check
     }
