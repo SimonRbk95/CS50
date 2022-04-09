@@ -40,11 +40,7 @@ string encrypt_message(string key)
             // if rotation_value > 26 - current value
             // then index = rotation value - (26 - current value)
 
-
-            l -= 65;
-            l += rotation_value;
-            l += 65;
-            int count = 0;
+            int count = l - 65;
             for (rotation_value; rotation_value = 0; rotation_value--)
                 if(count < 25)
                 {
@@ -54,24 +50,7 @@ string encrypt_message(string key)
                 {
                     count = 0;
                 }
-            l +=
-
-
-            // if rotation_value is greater than the difference between the last letter of the alphabet and the current letter
-            if (rotation_value < (26 - (90 - l)))
-            {
-                // increase the current letter by the rotation_value
-                l += rotation_value;
-                // test
-                printf("a. new ascii: %i\n", l);
-            }
-            else
-            {
-                // otherwise, increase current letter, but consider starting again at letter 'A'
-                l = 65 + rotation_value - (26 - (90 - l));
-                // test
-                printf("b. new ascii: %i\n", l);
-            }
+            l = count + 65;
             // convert new ascii value to letter
              char l_cipher = l;
              printf("-> new letter: %c\n", l_cipher);

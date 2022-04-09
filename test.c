@@ -72,3 +72,19 @@ string encrypt_message(string key)
     }
 return plaintext;
 }
+
+// if rotation_value is greater than the difference between the last letter of the alphabet and the current letter
+            if (rotation_value < (26 - (90 - l)))
+            {
+                // increase the current letter by the rotation_value
+                l += rotation_value;
+                // test
+                printf("a. new ascii: %i\n", l);
+            }
+            else
+            {
+                // otherwise, increase current letter, but consider starting again at letter 'A'
+                l = 65 + rotation_value - (26 - (90 - l));
+                // test
+                printf("b. new ascii: %i\n", l);
+            }
