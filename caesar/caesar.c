@@ -7,7 +7,7 @@ int valid_input(string key);
 int main(int argc, string argv[])
 {
     int key = valid_input(argv[1]);
-    (printf("key = %i", key));
+    (printf("key = %i \n", key));
 }
 
 
