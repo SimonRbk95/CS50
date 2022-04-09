@@ -41,17 +41,18 @@ string encrypt_message(string key)
             // then index = rotation value - (26 - current value)
 
             int count = l - 65;
-            for (int n = rotation_value; n == 0; n--)
+            for (int n = rotation_value; n >= 0; n--)
                 if(count < 25)
                 {
                     count++;
+                    printf("count: %i", count);
                 }
                 else
                 {
                     count = 0;
                 }
             //test
-            printf("count = %i\n", count);
+            printf("loop ended: count = %i\n", count);
             l = count + 65;
             printf("l = %i\n", l);
             // convert new ascii value to letter
