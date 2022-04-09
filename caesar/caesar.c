@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 int valid_input(string key);
-int encrypt_message( string key);
+string encrypt_message( string key);
 
 int main(int argc, string argv[])
 {
@@ -24,7 +24,7 @@ string encrypt_message(string key)
     // char ciphertext[] = {};
 
 
-    for(int index = 0; index < strlen(text); index++)
+    for(int index = 0; index < strlen(plaintext); index++)
     {
         // get the ascii value of each character in plaintext
         int l = plaintext[index];
