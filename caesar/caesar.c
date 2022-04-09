@@ -57,7 +57,6 @@ string encrypt_message(string key)
                 if(count < 25)
                 {
                     count++;
-
                 }
                 else
                 {
