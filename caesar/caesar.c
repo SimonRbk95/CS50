@@ -4,16 +4,16 @@
 #include <stdlib.h>
 
 int valid_input(string key);
+int encrypt_message( string key);
+
 int main(int argc, string argv[])
 {
     valid_input(argv[1]);
-    // encrypt_message(argv[1]);
-
-
-
+    string cipher = encrypt_message(argv[1]);
+    printf("Ciphertext:  %s\n", cipher);
+    return 0;
 
 }
-
 
 
     // implement the encryption equation
@@ -25,10 +25,8 @@ int main(int argc, string argv[])
         // after outputting return 0 to exit main
 
 
-int encrypt_message(key)
+string encrypt_message(string key)
 {
-    char upper[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-
     // turn key into an integer
     int key = atoi(key);
     // prompt for user's message
@@ -36,12 +34,14 @@ int encrypt_message(key)
     // encrypt the message
     char ciphertext[] = {};
 
-
     for(int index = 0; index < strlen(text); index++)
     {
         if ((int) p[index] >= 65 && (int) p[index] <= 90)
         {
             // rotate letter by: (p + key)%26
+             int U = p[index];
+             
+
             // plug new letter to current index
         }
         else if ((int) p[index] >= 97 && (int) p[index] <= 122)
