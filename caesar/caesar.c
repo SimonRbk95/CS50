@@ -15,7 +15,7 @@ int main(int argc, string argv[])
             // get ASCII value
             int ascii = argv[1][index];
             // check if it is a digit
-            if (argv[1][index] >= 48  argv[1][index] <= 57)
+            if (argv[1][index] >= 48 && argv[1][index] <= 57)
             {
                 index += 1;
                 printf("ascii: %i",argv[1][index]);
@@ -47,7 +47,7 @@ int main(int argc, string argv[])
     // ask for input
     // output the text using the encryption eqution
         // after outputting return 0 to exit main
-    int a = (int) argv[1] + 2;
+  
 
 
 }
