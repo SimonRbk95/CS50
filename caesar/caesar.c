@@ -57,6 +57,8 @@ string encrypt_message(string key)
         // check if l is lowercase
         else if (l >= 97 && l <= 122)
         {
+            // rotate letter by: (p + key)%26
+            int rotation_value = (l + k) % 26;
             // keep track of alphabet starting at A
             int count = l - 65;
             // increase the count to rotate through the alphabet
