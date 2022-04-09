@@ -52,10 +52,10 @@ string encrypt_message(string key)
                 }
             l = count + 65;
             // convert new ascii value to letter
-             char l_cipher = l;
-             printf("-> new letter: %c\n", l_cipher);
+            char l_cipher = l;
+            printf("-> new letter: %c\n", l_cipher);
             // replace the current letter in plaintext
-             plaintext[index] = l_cipher;
+            plaintext[index] = l_cipher;
         }
 
         // check if l is lowercase
