@@ -32,9 +32,14 @@ int encrypt_message(key)
     // prompt for user's message
     string text = get_string("Encrypt:  \n");
     // encrypt the message
-    for()
+    for(int index = 0; index < strlen(text); index++)
     {
-        
+        if(text)
+        {
+
+        }
+
+
     }
 
 
