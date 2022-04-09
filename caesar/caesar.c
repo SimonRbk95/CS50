@@ -33,13 +33,15 @@ string encrypt_message(string key)
         {
             // rotate letter by: (p + key)%26
              int rotation_value = (l + k) % 26;
-             l 26 - current
              // increase ascii value by ++ until 26
              // if rotation_value > 26 - current value
-                // then index = rotation value - (26 - current value)
+             // then index = rotation value - (26 - current value)
+             if (rotation_value > (26 - (90 - l))
+             {
+                 l 
 
-                
-            for (int n = l; n  )
+
+             }
 
 
              // test
