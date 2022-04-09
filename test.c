@@ -9,10 +9,10 @@ int main(void)
     char upper[] = {'A', ' ', 'B', '!'};
     printf("%s\n", upper);
     char A = 'A';
-    int ascii = A;
-    (printf("ascii: %i\n",ascii));
-    char Anew = ascii;
-    (printf("ascii: %c\n",Anew));
-
-
+    int ascii = 1;
+    (printf("ascii: %i\n", ascii));
+    char Anew = ascii + 1;
+    (printf("ascii: %c\n", Anew));
+    upper[0] = Anew;
+    (printf("new array: %s", upper));
 }
