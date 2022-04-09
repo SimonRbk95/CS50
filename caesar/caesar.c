@@ -6,8 +6,8 @@ int valid_input(string key);
 
 int main(int argc, string argv[])
 {
-    int key = valid_input(argv[1]);
-    (printf("key = %i \n", key));
+    valid_input(argv[1]);
+    
 }
 
 
@@ -55,7 +55,7 @@ int valid_input(string key)
                 return 1;
             }
     }
-    return key;
+    return 0;
 }
 
 
