@@ -90,10 +90,13 @@ string encrypt_message(string key)
                 }
             // update the ascii value of rotated letter
             l = count + 97;
+            printf("count: %i, l: %i\n",count, l);
             // convert new ascii value to letter
             char cipher = l;
+            printf("count: %i, cipher: %c\n",count, cipher);
             // replace the current letter in plaintext
             plaintext[index] = cipher;
+            printf("plaintext[%i] = %c\n", index, plaintext[index]);
         }
     }
 return plaintext;
