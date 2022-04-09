@@ -45,15 +45,17 @@ string encrypt_message(string key)
             }
             else
             {
+                // otherwise, increase current letter, but consider starting again at letter 'A'
                 l = 65 + rotation_value - (26 - (90 - l));
             }
-        }
+
              // test
              printf("new upper letter value: %i", l);
             // convert new ascii value to letter
              char l_cipher = l;
             // replace the current letter in plaintext
              plaintext[index] = l_cipher;
+        }
 
         // check if l is lowercase
         else if (l >= 97 && l <= 122)
