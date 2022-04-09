@@ -42,9 +42,9 @@ string encrypt_message(string key)
              }
              else
              {
-                 l = 65 + 
+                 l = 65 + rotation_value - (26 - (90 -l));
              }
-
+        }
 
              // test
              printf("new upper letter value: %i", l);
@@ -52,7 +52,7 @@ string encrypt_message(string key)
             char l_cipher = l;
             // replace the current letter in plaintext
             plaintext[index] = l_cipher;
-        }
+        
         // check if l is lowercase
         else if (l >= 97 && l <= 122)
         {
