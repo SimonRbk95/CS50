@@ -6,6 +6,11 @@ int valid_input(string key);
 
 int main(int argc, string argv[])
 {
+    printf("First Digit: %c\n",argv[1][0]);
+    printf("Second Digit: %c\n",argv[1][1]);
+    printf("key = %s", argv[1]);
+    printf("First ascii convert: %i\n", (int) argv[1][0]);
+    printf("Secon ascii convert: %i\n", (int) argv[1][1]);
     valid_input(argv[1]);
 }
 
