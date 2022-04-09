@@ -46,6 +46,7 @@ string encrypt_message(string key)
     {
         // get the ascii value of each character in plaintext
         int l = plaintext[index];
+        printf("l: %i\n", l);
         // check if l is uppercase
         if (l >= 65 && l <= 90)
         {
