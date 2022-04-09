@@ -41,7 +41,7 @@ string encrypt_message(string key)
             // then index = rotation value - (26 - current value)
 
             int count = l - 65;
-            for (rotation_value; rotation_value = 0; rotation_value--)
+            for (int n = rotation_value; n == 0; n--)
                 if(count < 25)
                 {
                     count++;
