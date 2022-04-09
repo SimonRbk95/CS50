@@ -8,6 +8,8 @@ int main(int argc, string argv[])
 {
     valid_input(argv[1]);
     string text = get_string("Encrypt:  \n");
+    int x = atoi(argv[1]);
+    printf("X = %i", x);
 
 }
 
