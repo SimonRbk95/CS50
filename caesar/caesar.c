@@ -49,10 +49,9 @@ string encrypt_message(string key)
         // check if l is uppercase
         if (l >= 65 && l <= 90)
         {
-            // rotate letter by: (p + key)%26
-            int rotation_value = (l + k) % 26;
             // keep track of alphabet starting at A
             int count = l - 65;
+            int rotation_value = (count + k) % 26;
             // increase the count to rotate through the alphabet
             for (int n = rotation_value; n > 0; n--)
                 if(count < 25)
@@ -76,9 +75,10 @@ string encrypt_message(string key)
         else if (l >= 97 && l <= 122)
         {
             // rotate letter by: (p + key)%26
-            int rotation_value = (l + k) % 26;
+
             // keep track of alphabet starting at A
             int count = l - 97;
+            int rotation_value = (count + k) % 26;
             // increase the count to rotate through the alphabet
             for (int n = rotation_value; n > 0; n--)
                 if(count < 25)
