@@ -83,7 +83,7 @@ string encrypt_message(string key)
             int rotation_value = (count + k) % 26;
             printf("roation_value: %i\n", rotation_value);
             // increase the count to rotate through the alphabet
-            for (int n = 0; n > rotationvalue; n++)
+            for (int n = 0; n > rotation_value; n++)
                 if(count < 25)
                 {
                     count++;
