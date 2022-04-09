@@ -42,10 +42,12 @@ int encrypt_message(key)
         if ((int) p[index] >= 65 && (int) p[index] <= 90)
         {
             // rotate letter by: (p + key)%26
+            // plug new letter to current index
         }
         else if ((int) p[index] >= 97 && (int) p[index] <= 122)
         {
             // rotate letter by: (p + key)%26
+            // plug new letter
         }
 
 
