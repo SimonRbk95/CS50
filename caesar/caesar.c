@@ -3,5 +3,6 @@
 
 int main(int argc, char *argv[])
 {
-    printf("%c", argv);
+    a = atoi(argv[1]);
+    printf("%i", argv[1]);
 }
