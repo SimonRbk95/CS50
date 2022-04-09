@@ -4,7 +4,7 @@
 int main(int argc, string argv[])
 {
     // 1 if there is no parameter or more than one return 1 with an error message
-    if(argv[1] == nul])
+    if(argv[1] == exists)
     {
         return 1;
     }    // 2 check if the argument's characters are digits
