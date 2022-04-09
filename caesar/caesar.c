@@ -34,11 +34,12 @@ int encrypt_message(key)
     // prompt for user's message
     string p = get_string("Plaintext:  \n");
     // encrypt the message
+
     for(int index = 0; index < strlen(text); index++)
     {
         if(text)
         {
-
+            // rotate by: (p + key)%26
         }
 
 
