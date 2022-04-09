@@ -52,9 +52,9 @@ string encrypt_message(string key)
         {
             // keep track of alphabet starting at A
             int count = l - 65;
-            int rotation_value = (count + k) % 26;
+            int new_l = (count + k) % 26;
             // increase the count to rotate through the alphabet
-            for (int n = rotation_value; n > 0; n--)
+            for (int n = 0; n > new_l; n++)
                 if(count < 25)
                 {
                     count++;
@@ -80,10 +80,10 @@ string encrypt_message(string key)
             int count = l - 97;
             printf("count: %i, l: %i\n",count, l);
             // the value to which the letter in the alphabet should be rotated
-            int rotation_value = (count + k) % 26;
-            printf("roation_value: %i\n", rotation_value);
+            int new_l = (count + k) % 26;
+            printf("roation_value: %i\n", new_l);
             // increase the count to rotate through the alphabet
-            for (int n = 0; n > rotation_value; n++)
+            for (int n = 0; n > new_l; n++)
                 if(count < 25)
                 {
                     count++;
