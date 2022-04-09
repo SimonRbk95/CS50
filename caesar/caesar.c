@@ -82,7 +82,7 @@ int valid_input(string key)
 {
     int index = 0;
     // check if
-    if(! key)
+    if(!key)
     {
         printf("Usage: ./caesar key\n");
         return 1;
