@@ -18,14 +18,12 @@ string encrypt_message(string key)
     // turn key into an integer
     int k = atoi(key);
     // prompt for user's message
-    string plaintext = get_string("Plaintext:  \n");
+    string plaintext = get_string("Plaintext:  ");
     // replace each char of plaintext
     for(int index = 0; index < strlen(plaintext); index++)
     {
         // get the ascii value of each character in plaintext
         int l = plaintext[index];
-        // test
-        printf("current ascii: %i\n", l);
         // check if l is uppercase
         if (l >= 65 && l <= 90)
         {
@@ -46,10 +44,8 @@ string encrypt_message(string key)
                 }
             // update the ascii value of rotated letter
             l = count + 65;
-            printf("l = %i\n", l);
             // convert new ascii value to letter
             char cipher = l;
-            printf("-> new letter: %c\n", cipher);
             // replace the current letter in plaintext
             plaintext[index] = cipher;
         }
@@ -73,10 +69,8 @@ string encrypt_message(string key)
                 }
             // update the ascii value of rotated letter
             l = count + 65;
-            printf("l = %i\n", l);
             // convert new ascii value to letter
             char cipher = l;
-            printf("-> new letter: %c\n", cipher);
             // replace the current letter in plaintext
             plaintext[index] = cipher;
         }
