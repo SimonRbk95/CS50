@@ -30,19 +30,22 @@ string encrypt_message(string key)
     // turn key into an integer
     int key = atoi(key);
     // prompt for user's message
-    string p = get_string("Plaintext:  \n");
+    string plaintext = get_string("Plaintext:  \n");
     // encrypt the message
     char ciphertext[] = {};
 
+    
     for(int index = 0; index < strlen(text); index++)
     {
         if ((int) p[index] >= 65 && (int) p[index] <= 90)
         {
             // rotate letter by: (p + key)%26
-             int U = p[index];
-             
+             int l = p[index];
+             U =
+
 
             // plug new letter to current index
+            char U_cipher = U;
         }
         else if ((int) p[index] >= 97 && (int) p[index] <= 122)
         {
