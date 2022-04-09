@@ -9,6 +9,7 @@ int main(int argc, string argv[])
     // 3 if not step 2
     // implement the encryption equation
         // lower & upper case letters must remain lower and upper, respectively
+        // loop through the alphabet based on the input #. 
 
     // ask for input
     // output the text using the encryption eqution
