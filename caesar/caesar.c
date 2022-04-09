@@ -11,7 +11,7 @@ int main(int argc, string argv[])
 
     // 1 if there is no parameter or more than one return 1 with an error message
 
-void valid_input(string key)
+int valid_input(string key)
 {
     int index = 0;
     // check if
@@ -36,6 +36,7 @@ void valid_input(string key)
                 return 1;
             }
     }
+    return 0;
 }
 
 
