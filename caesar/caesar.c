@@ -50,7 +50,10 @@ string encrypt_message(string key)
                 {
                     count = 0;
                 }
+            //test
+            printf("count = %i\n", count);
             l = count + 65;
+            printf("l = %i\n", l);
             // convert new ascii value to letter
             char l_cipher = l;
             printf("-> new letter: %c\n", l_cipher);
