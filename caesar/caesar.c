@@ -10,7 +10,7 @@ int main(int argc, string argv[])
 {
     valid_input(argv[1]);
     string cipher = encrypt_message(argv[1]);
-    printf("Ciphertext:  %s\n", cipher);
+    printf("Ciphertext: %s\n", cipher);
 }
 
 string encrypt_message(string key)
