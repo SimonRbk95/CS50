@@ -55,7 +55,7 @@ int valid_input(string key)
                 return 1;
             }
     }
-    return (int) key;
+    return key;
 }
 
 
