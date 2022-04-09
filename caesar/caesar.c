@@ -3,5 +3,6 @@
 
 int main(int argc, string argv[])
 {
-    printf("%s", argv[1]);
+    printf("This is your parameter: %s\n", argv[1]);
+    
 }
