@@ -23,7 +23,6 @@ string encrypt_message(string key)
     // encrypt the message
     // char ciphertext[] = {};
 
-
     for(int index = 0; index < strlen(plaintext); index++)
     {
         // get the ascii value of each character in plaintext
