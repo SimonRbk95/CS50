@@ -2,30 +2,41 @@
 #include <stdio.h>
 #include <string.h>
 
+int valid_input(string key);
+
 int main(int argc, string argv[])
 {
-    int index = 0;
-    if(! argv[1])
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
-    while(index < strlen(argv[1]))
-    {
-            // get ASCII value
-
-            // check if it is a digit
-            if ((int) argv[1][index] >= 48 && (int) argv[1][index] <= 57)
-            {
-                index += 1;
-                printf("ascii: %i",argv[1][index]);
-            }
-    }
+    valid_input(argv[1]);
 }
 
     // 1 if there is no parameter or more than one return 1 with an error message
 
-
+int valid_input(string key)
+{
+    int index = 0;
+    // check if
+    if(! key)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
+    // check if it is a digit
+    while(index < strlen(key))
+    {
+            // cast parameter into integer to get ascii
+            if ((int) key[index] >= 48 && (int) key[index] <= 57)
+            {
+                index += 1;
+                // test
+                printf("ascii: %i\n",key[index]);
+            }
+            else
+            {
+                printf("Usage: ./caesar key\n");
+                return 1;
+            }
+    }
+}
 
 
 
