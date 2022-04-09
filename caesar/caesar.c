@@ -44,6 +44,17 @@ string encrypt_message(string key)
             l -= 65;
             l += rotation_value;
             l += 65;
+            int count = 0;
+            for (rotation_value; rotation_value = 0; rotation_value--)
+                if(count < 25)
+                {
+                    count++;
+                }
+                else
+                {
+                    count = 0;
+                }
+
             // if rotation_value is greater than the difference between the last letter of the alphabet and the current letter
             if (rotation_value < (26 - (90 - l)))
             {
