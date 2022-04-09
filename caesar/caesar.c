@@ -8,8 +8,7 @@ int main(int argc, string argv[])
 
     while(index < strlen(argv[1]))
     {
-        for (int i = 0; int i < 9; i++)
-        {
+        
             if (argv[1][index] == i)
             {
                 index += 1;
