@@ -45,14 +45,13 @@ string encrypt_message(string key)
                 if(count < 25)
                 {
                     count++;
-                    printf("count: %i", count);
+                    
                 }
                 else
                 {
                     count = 0;
                 }
-            //test
-            printf("loop ended: count = %i\n", count);
+
             l = count + 65;
             printf("l = %i\n", l);
             // convert new ascii value to letter
