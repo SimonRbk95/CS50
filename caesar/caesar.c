@@ -38,9 +38,11 @@ string encrypt_message(string key)
              // then index = rotation value - (26 - current value)
              if (rotation_value > (26 - (90 - l))
              {
-                 l 
-
-
+                 l += rotation_value;
+             }
+             else
+             {
+                 
              }
 
 
