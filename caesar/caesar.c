@@ -54,6 +54,8 @@ string encrypt_message(string key)
                 {
                     count = 0;
                 }
+            l +=
+
 
             // if rotation_value is greater than the difference between the last letter of the alphabet and the current letter
             if (rotation_value < (26 - (90 - l)))
