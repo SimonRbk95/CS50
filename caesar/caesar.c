@@ -7,7 +7,7 @@ int valid_input(string key);
 int main(int argc, string argv[])
 {
     valid_input(argv[1]);
-    string text = get_string("Encrypt: \n");
+    string text = get_string("Encrypt:  \n");
 
 }
 
