@@ -6,7 +6,8 @@ int valid_input(string key);
 
 int main(int argc, string argv[])
 {
-    valid_input(argv[1]);
+    int key = valid_input(argv[1]);
+    (printf("key = %i", key));
 }
 
 
@@ -44,8 +45,6 @@ int valid_input(string key)
             // cast parameter into integer to get ascii
             if ((int) key[index] >= 48 && (int) key[index] <= 57)
             {
-                // test
-                printf("ascii: %i\n",key[index]);
                 // check next digit
                 index += 1;
             }
@@ -56,7 +55,7 @@ int valid_input(string key)
                 return 1;
             }
     }
-    return 0;
+    return (int) key;
 }
 
 
