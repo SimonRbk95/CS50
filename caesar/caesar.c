@@ -4,9 +4,17 @@
 int main(int argc, string argv[])
 {
     string digits = "123456789";
-    for ()
-    {
+    int index = 0;
 
+    while(index < strlen(argv[1]))
+    {
+        for (int i = 0; int i < 9; i++)
+        {
+            if (argv[1][index] == i)
+            {
+                index += 1;
+            }
+        }
     }
 
     // 1 if there is no parameter or more than one return 1 with an error message
