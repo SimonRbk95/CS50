@@ -4,12 +4,11 @@
 #include <stdlib.h>
 
 int valid_input(string key);
-
 int main(int argc, string argv[])
 {
     valid_input(argv[1]);
     // encrypt_message(argv[1]);
-    
+
 
 
 
@@ -28,6 +27,7 @@ int main(int argc, string argv[])
 
 int encrypt_message(key)
 {
+    char upper[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
     // turn key into an integer
     int key = atoi(key);
     // prompt for user's message
