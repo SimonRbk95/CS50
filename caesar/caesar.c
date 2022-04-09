@@ -4,7 +4,9 @@
 int main(int argc, string argv[])
 {
     //must take one parameter
-    // if there is no parameter or more than one return 1 with an error message
+    // 1 if there is no parameter or more than one return 1 with an error message
+    // 2 check if the argument's characters are digits
+    // 3 if not step 2
     // 
     int a = (int) argv[1] + 2;
 
