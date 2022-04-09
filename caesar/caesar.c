@@ -79,10 +79,11 @@ string encrypt_message(string key)
             // keep track of alphabet starting at A
             int count = l - 97;
             printf("count: %i, l: %i\n",count, l);
+            // the value to which the letter in the alphabet should be rotated
             int rotation_value = (count + k) % 26;
             printf("roation_value: %i\n", rotation_value);
             // increase the count to rotate through the alphabet
-            for (int n = rotation_value; n > 0; n--)
+            for (int n = 0; n > rotationvalue; n++)
                 if(count < 25)
                 {
                     count++;
