@@ -34,44 +34,52 @@ string encrypt_message(string key)
         {
             // rotate letter by: (p + key)%26
             int rotation_value = (l + k) % 26;
-            //test
-            printf("rotation_value= %i\n", rotation_value);
-
-            // if rotation_value > 26 - current value
-            // then index = rotation value - (26 - current value)
-
+            // keep track of alphabet starting at A
             int count = l - 65;
+            // increase the count to rotate through the alphabet
             for (int n = rotation_value; n > 0; n--)
                 if(count < 25)
                 {
                     count++;
-                    
+
                 }
                 else
                 {
                     count = 0;
                 }
-
+            // update the ascii value of rotated letter
             l = count + 65;
             printf("l = %i\n", l);
             // convert new ascii value to letter
-            char l_cipher = l;
-            printf("-> new letter: %c\n", l_cipher);
+            char cipher = l;
+            printf("-> new letter: %c\n", cipher);
             // replace the current letter in plaintext
-            plaintext[index] = l_cipher;
+            plaintext[index] = cipher;
         }
 
         // check if l is lowercase
         else if (l >= 97 && l <= 122)
         {
-            // rotate letter by: (p + key)%26
-             l = (l + k) % 26;
-             //test
-             printf("new lower letter value: %i\n", l);
+            // keep track of alphabet starting at A
+            int count = l - 65;
+            // increase the count to rotate through the alphabet
+            for (int n = rotation_value; n > 0; n--)
+                if(count < 25)
+                {
+                    count++;
+                }
+                else
+                {
+                    count = 0;
+                }
+            // update the ascii value of rotated letter
+            l = count + 65;
+            printf("l = %i\n", l);
             // convert new ascii value to letter
-             char l_cipher = l;
+            char cipher = l;
+            printf("-> new letter: %c\n", cipher);
             // replace the current letter in plaintext
-             plaintext[index] = l_cipher;
+            plaintext[index] = cipher;
         }
     }
 return plaintext;
