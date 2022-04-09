@@ -28,29 +28,36 @@ int main(int argc, string argv[])
 string encrypt_message(string key)
 {
     // turn key into an integer
-    int key = atoi(key);
+    int k = atoi(key);
     // prompt for user's message
     string plaintext = get_string("Plaintext:  \n");
     // encrypt the message
     char ciphertext[] = {};
 
-    
+
     for(int index = 0; index < strlen(text); index++)
     {
-        if ((int) p[index] >= 65 && (int) p[index] <= 90)
+        // get the ascii value of each character in plaintext
+        int l = plaintext[index];
+        // check if l is uppercase
+        if (l >= 65 && l <= 90)
         {
             // rotate letter by: (p + key)%26
-             int l = p[index];
-             U =
-
-
-            // plug new letter to current index
-            char U_cipher = U;
+             l = (l + k) % 26;
+            // convert new ascii value to letter
+            char l_cipher = l;
+            // replace the current letter in plaintext
+            plaintext[index] = l_cipher;
         }
-        else if ((int) p[index] >= 97 && (int) p[index] <= 122)
+        // check if l is lowercase
+        else if (l >= 97 && l <= 122)
         {
             // rotate letter by: (p + key)%26
-            // plug new letter
+             l = (l + k) % 26;
+            // convert new ascii value to letter
+            char l_cipher = l;
+            // replace the current letter in plaintext
+            plaintext[index] = l_cipher;
         }
     }
 return p;
