@@ -53,18 +53,7 @@ string encrypt_message(string key)
             // keep track of alphabet starting at A
             int count = l - 65;
             int new_l = (count + k) % 26;
-            // increase the count to rotate through the alphabet
-            for (int n = 0; n > new_l; n++)
-                if(count < 25)
-                {
-                    count++;
-                }
-                else
-                {
-                    count = 0;
-                }
-            // update the ascii value of rotated letter
-            l = count + 65;
+            l = new_l + 65;
             // convert new ascii value to letter
             char cipher = l;
             // replace the current letter in plaintext
@@ -74,29 +63,14 @@ string encrypt_message(string key)
         // check if l is lowercase
         else if (l >= 97 && l <= 122)
         {
-            // rotate letter by: (p + key)%26
-
             // keep track of alphabet starting at A, count = current letter
             int count = l - 97;
             printf("count: %i, l: %i\n",count, l);
             // the value to which the letter in the alphabet should be rotated
             int new_l = (count + k) % 26;
-            l = count + new_l;
-            printf("roation_value: %i\n", new_l);
-            //increase the count to rotate through the alphabet
-            for (int n = 0; n > new_l; n++)
-                if(count < 25)
-                {
-                    count++;
-                }
-                else
-                {
-                    count = 0;
-                }
             // update the ascii value of rotated letter
-            l = count + 97;
-            printf("count: %i, l: %i\n",count, l);
-            // convert new ascii value to letter
+            l = new_l + 97;
+            // turn ascii int value back to char
             char cipher = l;
             printf("count: %i, cipher: %c\n",count, cipher);
             // replace the current letter in plaintext
