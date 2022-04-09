@@ -49,12 +49,8 @@ int encrypt_message(key)
             // rotate letter by: (p + key)%26
             // plug new letter
         }
-
-
     }
-
-
-
+return p;
 }
 
 
