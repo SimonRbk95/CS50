@@ -8,8 +8,11 @@ int main(int argc, string argv[])
     // 2 check if the argument's characters are digits
     // 3 if not step 2
     // implement the encryption equation
+        // lower & upper case letters must remain lower and upper, respectively
+
     // ask for input
     // output the text using the encryption eqution
+        // after outputting return 0 to exit main
     int a = (int) argv[1] + 2;
 
 
