@@ -32,27 +32,26 @@ string encrypt_message(string key)
         if (l >= 65 && l <= 90)
         {
             // rotate letter by: (p + key)%26
-             int rotation_value = (l + k) % 26;
-             // increase ascii value by ++ until 26
-             // if rotation_value > 26 - current value
-             // then index = rotation value - (26 - current value)
-             if (rotation_value > (26 - (90 - l))
-             {
-                 l += rotation_value;
-             }
-             else
-             {
-                 l = 65 + rotation_value - (26 - (90 -l));
-             }
+            int rotation_value = (l + k) % 26;
+            // increase ascii value by ++ until 26
+            // if rotation_value > 26 - current value
+            // then index = rotation value - (26 - current value)
+            if (rotation_value > (26 - (90 - l))
+            {
+                l += rotation_value;
+            }
+            else
+            {
+                l = 65 + rotation_value - (26 - (90 -l));
+            }
         }
-
              // test
              printf("new upper letter value: %i", l);
             // convert new ascii value to letter
-            char l_cipher = l;
+             char l_cipher = l;
             // replace the current letter in plaintext
-            plaintext[index] = l_cipher;
-        
+             plaintext[index] = l_cipher;
+
         // check if l is lowercase
         else if (l >= 97 && l <= 122)
         {
@@ -61,9 +60,9 @@ string encrypt_message(string key)
              //test
              printf("new lower letter value: %i", l);
             // convert new ascii value to letter
-            char l_cipher = l;
+             char l_cipher = l;
             // replace the current letter in plaintext
-            plaintext[index] = l_cipher;
+             plaintext[index] = l_cipher;
         }
     }
 return plaintext;
