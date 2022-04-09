@@ -11,7 +11,6 @@ int main(int argc, string argv[])
     valid_input(argv[1]);
     string cipher = encrypt_message(argv[1]);
     printf("Ciphertext:  %s\n", cipher);
-    return 0;
 }
 
 string encrypt_message(string key)
@@ -20,9 +19,7 @@ string encrypt_message(string key)
     int k = atoi(key);
     // prompt for user's message
     string plaintext = get_string("Plaintext:  \n");
-    // encrypt the message
-    // char ciphertext[] = {};
-
+    // replace each char of plaintext
     for(int index = 0; index < strlen(plaintext); index++)
     {
         // get the ascii value of each character in plaintext
