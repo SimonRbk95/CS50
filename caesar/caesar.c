@@ -76,7 +76,7 @@ string encrypt_message(string key)
         {
             // rotate letter by: (p + key)%26
 
-            // keep track of alphabet starting at A
+            // keep track of alphabet starting at A, count = current letter
             int count = l - 97;
             printf("count: %i, l: %i\n",count, l);
             // the value to which the letter in the alphabet should be rotated
