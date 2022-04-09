@@ -3,7 +3,7 @@
 
 int main(int argc, string argv[])
 {
-    char digits = []
+    char digits = ["0","1","2", "3",]
     //must take one parameter
     // 1 if there is no parameter or more than one return 1 with an error message
     // 2 check if the argument's characters are digits
