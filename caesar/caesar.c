@@ -33,6 +33,8 @@ string encrypt_message(string key)
         {
             // rotate letter by: (p + key)%26
              l = (l + k) % 26;
+             // test
+             printf("new upper letter value: %i", l);
             // convert new ascii value to letter
             char l_cipher = l;
             // replace the current letter in plaintext
@@ -43,6 +45,8 @@ string encrypt_message(string key)
         {
             // rotate letter by: (p + key)%26
              l = (l + k) % 26;
+             //test
+             printf("new lower letter value: %i", l);
             // convert new ascii value to letter
             char l_cipher = l;
             // replace the current letter in plaintext
