@@ -13,14 +13,8 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    int key = argv[1]
+    int key = argv[1];
     int index = 0;
-    // check if
-    if(!key)
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
     // check if it is a digit
     while(index < strlen(key))
     {
