@@ -33,16 +33,19 @@ string encrypt_message(string key)
         {
             // rotate letter by: (p + key)%26
             int rotation_value = (l + k) % 26;
-            // increase ascii value by ++ until 26
+
             // if rotation_value > 26 - current value
             // then index = rotation value - (26 - current value)
+
+            // if rotation_value is greater than the difference between the last letter of the alphabet and the current letter
             if (rotation_value > (26 - (90 - l))
             {
+                // increase the current letter by the rotation_value
                 l += rotation_value;
             }
             else
             {
-                l = 65 + rotation_value - (26 - (90 -l));
+                l = 65 + rotation_value - (26 - (90 - l));
             }
         }
              // test
