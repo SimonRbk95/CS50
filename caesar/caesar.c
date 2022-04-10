@@ -80,13 +80,13 @@ return plaintext;
 
 int valid_input(int argc, string key)
 {
-    int index = 0;
-    // check if
-    if(!key)
+    if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
+    // string key = argv[1];
+    int index = 0;
     // check if it is a digit
     while(index < strlen(key))
     {
@@ -102,6 +102,5 @@ int valid_input(int argc, string key)
                 printf("Usage: ./caesar key\n");
                 return 1;
             }
-    }
     return 0;
 }
