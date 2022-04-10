@@ -61,7 +61,7 @@ int valid_input(int argc, string key)
     if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
-        return 1;
+        exit(0);
     }
     // string key = argv[1];
     int index = 0;
@@ -78,7 +78,7 @@ int valid_input(int argc, string key)
             else
             {
                 printf("Usage: ./caesar key\n");
-                return 1;
+                exit(0);
             }
     }
     return 0;
