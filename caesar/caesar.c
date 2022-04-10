@@ -90,8 +90,7 @@ char rotate(int letter)
     // the value to which the letter in the alphabet should be rotated
     int new_l = (letter + k) % 26;
     // update the ascii value of rotated letter
-    int l = new_l + 97;
-    // turn ascii int value back to char
-    char cipher = l;
-    return l;
+    int cipher = new_l + 97;
+    // return the char of new ascii value
+    return (char) cipher;
 }
