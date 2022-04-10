@@ -42,13 +42,14 @@ string encrypt_message(string key)
         {
             // keep track of alphabet starting at A = 0
             int count = l - 97;
-            rotate(count);
+            // get rotated letter
+            char cipher = rotate(count);
             // the value to which the letter in the alphabet should be rotated
-            int new_l = (count + k) % 26;
+            // int new_l = (count + k) % 26;
             // update the ascii value of rotated letter
-            l = new_l + 97;
+            // l = new_l + 97;
             // turn ascii int value back to char
-            char cipher = l;
+            //char cipher = l;
             // replace the current letter in plaintext
             plaintext[index] = cipher;
         }
@@ -89,12 +90,8 @@ char rotate(int letter)
     // the value to which the letter in the alphabet should be rotated
     int new_l = (letter + k) % 26;
     // update the ascii value of rotated letter
-    l = new_l + 97;
+    int l = new_l + 97;
     // turn ascii int value back to char
     char cipher = l;
-    // replace the current letter in plaintext
-    plaintext[index] = cipher;
-
-
-
+    return l;
 }
