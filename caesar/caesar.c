@@ -3,34 +3,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-int valid_input(string key);
+int valid_input(int argc, string key);
 string encrypt_message( string key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2)
-    {
-        printf("Usage: ./caesar key\n");
-        return 1;
-    }
-    string key = argv[1];
-    int index = 0;
-    // check if it is a digit
-    while(index < strlen(key))
-    {
-            // cast parameter into integer to get ascii
-            if ((int) key[index] >= 48 && (int) key[index] <= 57)
-            {
-                // check next digit
-                index += 1;
-            }
-            // if it is not a digit exit out
-            else
-            {
-                printf("Usage: ./caesar key\n");
-                return 1;
-            }
-    }
+    valid_input(argc, argv[1]);
     string cipher = encrypt_message(argv[1]);
     printf("Ciphertext: %s\n", cipher);
 }
