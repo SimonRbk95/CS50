@@ -53,7 +53,6 @@ int valid_input(int argc, string key)
         printf("Usage: ./caesar key\n");
         exit(1);
     }
-    // string key = argv[1];
     int index = 0;
     // check if it is a digit
     while (index < strlen(key))
