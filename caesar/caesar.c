@@ -4,8 +4,8 @@
 #include <stdlib.h>
 
 int valid_input(int argc, string key);
-string encrypt_message( string key);
-char rotate(int count, int k);
+string encrypt_message(string key);
+char rotate(int count, int k, int first_L);
 
 
 int main(int argc, string argv[])
@@ -22,7 +22,7 @@ string encrypt_message(string key)
     // prompt for user's message
     string plaintext = get_string("Plaintext:  ");
     // replace each char of plaintext
-    for(int index = 0; index < strlen(plaintext); index++)
+    for (int index = 0; index < strlen(plaintext); index++)
     {
         // get the ascii value of each character in plaintext
         int l = plaintext[index];
@@ -32,19 +32,18 @@ string encrypt_message(string key)
             // keep track of alphabet starting at A
             int count = l - 65;
             // call
-            plaintext[index] = rotate(count, k);
+            plaintext[index] = rotate(count, k, 65);
         }
-
         // check if l is lowercase
         else if (l >= 97 && l <= 122)
         {
             // keep track of alphabet starting at A = 0
             int count = l - 97;
             // get rotated letter
-            plaintext[index] = rotate(count, k);
+            plaintext[index] = rotate(count, k, 97);
         }
     }
-return plaintext;
+    return plaintext;
 }
 
 int valid_input(int argc, string key)
@@ -57,30 +56,31 @@ int valid_input(int argc, string key)
     // string key = argv[1];
     int index = 0;
     // check if it is a digit
-    while(index < strlen(key))
+    while (index < strlen(key))
     {
-            // cast parameter into integer to get ascii
-            if ((int) key[index] >= 48 && (int) key[index] <= 57)
-            {
-                // check next digit
-                index += 1;
-            }
-            // if it is not a digit exit out
-            else
-            {
-                printf("Usage: ./caesar key\n");
-                exit(1);
-            }
+        // cast parameter into integer to get ascii
+        if ((int) key[index] >= 48 && (int) key[index] <= 57)
+        {
+            // check next digit
+            index += 1;
+        }
+        // if it is not a digit exit out
+        else
+        {
+            printf("Usage: ./caesar key\n");
+            exit(1);
+        }
     }
     return 0;
 }
 
-char rotate(int letter, int k)
+// rotates the letter and returns the new one
+char rotate(int letter, int k, int first_L)
 {
     // the value to which the letter in the alphabet should be rotated
     int new_l = (letter + k) % 26;
     // update the ascii value of rotated letter
-    int cipher = new_l + 97;
+    int cipher = new_l + first_L;
     // return the char of new ascii value
     return (char) cipher;
 }
