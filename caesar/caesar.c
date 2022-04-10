@@ -5,6 +5,8 @@
 
 int valid_input(int argc, string key);
 string encrypt_message( string key);
+char rotate(int count, int k);
+
 
 int main(int argc, string argv[])
 {
@@ -43,7 +45,7 @@ string encrypt_message(string key)
             // keep track of alphabet starting at A = 0
             int count = l - 97;
             // get rotated letter
-            char cipher = rotate(count);
+            char cipher = rotate(count, k);
             // the value to which the letter in the alphabet should be rotated
             // int new_l = (count + k) % 26;
             // update the ascii value of rotated letter
@@ -85,7 +87,7 @@ int valid_input(int argc, string key)
     return 0;
 }
 
-char rotate(int letter)
+char rotate(int letter, int k)
 {
     // the value to which the letter in the alphabet should be rotated
     int new_l = (letter + k) % 26;
