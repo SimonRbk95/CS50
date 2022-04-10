@@ -80,6 +80,6 @@ int valid_input(int argc, string key)
                 printf("Usage: ./caesar key\n");
                 return 1;
             }
-    return 0;
     }
+    return 0;
 }
