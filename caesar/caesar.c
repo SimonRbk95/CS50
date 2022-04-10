@@ -40,9 +40,9 @@ string encrypt_message(string key)
         // check if l is lowercase
         else if (l >= 97 && l <= 122)
         {
-            // keep track of alphabet starting at A, count = current letter
+            // keep track of alphabet starting at A = 0
             int count = l - 97;
-            // printf("count: %i, l: %i\n",count, l);
+            rotate(count, new_l)
             // the value to which the letter in the alphabet should be rotated
             int new_l = (count + k) % 26;
             // update the ascii value of rotated letter
@@ -86,5 +86,5 @@ int valid_input(int argc, string key)
 
 char rotate(char c, int n)
 {
-    
+
 }
