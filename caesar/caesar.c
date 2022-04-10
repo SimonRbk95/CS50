@@ -31,7 +31,7 @@ string encrypt_message(string key)
         {
             // keep track of alphabet starting at A
             int count = l - 65;
-            // call rotate function and return its value to
+            // call
             plaintext[index] = rotate(count, k);
         }
 
