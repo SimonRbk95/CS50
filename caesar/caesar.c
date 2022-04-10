@@ -81,4 +81,5 @@ int valid_input(int argc, string key)
                 return 1;
             }
     return 0;
+    }
 }
