@@ -78,7 +78,7 @@ string encrypt_message(string key)
 return plaintext;
 }
 
-int valid_input(string key)
+int valid_input(int argc, string key)
 {
     int index = 0;
     // check if
