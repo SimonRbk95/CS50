@@ -83,3 +83,8 @@ int valid_input(int argc, string key)
     }
     return 0;
 }
+
+char rotate(char c, int n)
+{
+    
+}
