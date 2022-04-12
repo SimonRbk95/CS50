@@ -1,5 +1,5 @@
 sort1 uses: TODO
-Selection Sort
+
 How do you know?: TODO
 It is the fastest algorithm when used for sorted files
 sort2 uses: TODO
@@ -7,6 +7,6 @@ Merge Sort
 How do you know?: TODO
 It is consistently fast in all text files and the fastest in all but the sorted ones.
 sort3 uses: TODO
-Bubble Sort
+
 How do you know?: TODO
-It's worst case scenario, the 
+It's worst case scenario, the
