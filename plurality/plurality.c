@@ -73,8 +73,10 @@ bool vote(string name, int i)
         return true;
     }
     else if (candidates[i])
+    {
     // if not found return false
      return false;
+    }
     // if found
     // increment his vote candidates[i].votes +=1
     // return True for successful ballot
