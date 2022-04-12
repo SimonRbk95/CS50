@@ -87,44 +87,40 @@ void print_winner(void)
 {
     // TODO
     // search the highest number in the candidates.votes array
-        // sort the array lowest to highest
-        // bubble sort
-            // set swap counter to non-zero value
-            int swap_counter = -1;
-            while (swap_counter > 0)
+    // sort the array lowest to highest
+    // bubble sort
+    // set swap counter to non-zero value
+    int swap_counter = -1;
+    while (swap_counter > 0)
+    {
+        swap_counter = 0;
+        // or candidate_count -1, because 1 is already subtracted in beginning???
+        for (int i = 0; i < candidate_count - 2; i++)
+        {
+            if (candidates[i].vote > candidates[i + 1].vote)
             {
-                swap_counter = 0;
-                // or candidate_count -1, because 1 is already subtracted in beginning???
-                for (int i = 0; i < candidate_count - 2; i++)
-                {
-                    if (candidates[i].vote > candidates[i + 1].vote)
-                    {
-                        swap_counter +=1;
-                        // temporary storage for array item to be swapped
-                        int temp = candidates[i].vote;
-                        // swap array elements
-                        candidates[i].vote = candidates[i + 1];
-                        candidates[i +1].vote = temp;
-                    }
-                }
-            // determine winner, go from highest to lowest
-            int winner_count = 1;
-            for (int i = candidate_count; i > 1; i--)
-            {
-                if (candidates[i].vote == candidates[i - 1].vote)
-                    winner_count += 1;
-                else
-                {
-                    for (int i = candidate_count; i > i - winner_count; i--)
-                    {
-                        printf("%s\n", candidates[i].name)
-                    }
-                    return;
-                }
+                swap_counter +=1;
+                // temporary storage for array item to be swapped
+                int temp = candidates[i].vote;
+                // swap array elements
+                candidates[i].vote = candidates[i + 1];
+                candidates[i +1].vote = temp;
             }
-            // loop through the sorted array
-            // when right element is larger than lef
-    // remember its index
-    // candidates.[index] is the winner
-    // if there are two highest scores it is a tie
+        }
+    }
+    // determine winner, searching from highest to lowest
+    int winner_count = 1;
+    for (int i = candidate_count; i > 1; i--)
+    {
+        if (candidates[i].vote == candidates[i - 1].vote)
+            winner_count += 1;
+        else
+        {
+            for (int i = candidate_count; i > i - winner_count; i--)
+            {
+                printf("%s\n", candidates[i].name)
+            }
+            return;
+        }
+    }
 }
