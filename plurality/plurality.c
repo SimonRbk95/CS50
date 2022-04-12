@@ -94,17 +94,12 @@ void print_winner(void)
             while (swap_counter > 0)
             {
                 swap_counter = 0;
-                for (int i = 0; i < candidate_count; i++)
+                for (int i = 0; i < candidate_count - 2; i++)
                 {
-                    if (candidates[i].vote == candidates[candidate_count])
-                    {
-                        return;
-                    }
-                    else if (candidates[i].vote > candidates[i + 1].vote)
+                    if (candidates[i].vote > candidates[i + 1].vote)
                     {
                         swap_counter +=1;
                         candidates[i].vote = candidates[i + 1];
-                        
                     }
                 }
             }
