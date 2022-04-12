@@ -94,8 +94,11 @@ void print_winner(void)
             while (swap_counter > 0)
             {
                 swap_counter = 0;
-                
-
+                for (int i = 0; i < candidate_count; i++)
+                {
+                    if (candidates[i].vote == candidates[i + 1])
+                    
+                }
             }
             // repeat until the swap counter is 0:
                 // reset swap counter to 0
