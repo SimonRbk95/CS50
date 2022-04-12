@@ -73,7 +73,7 @@ bool vote(string name)
         if (candidates[i].name == name)
         {
             // increment his vote candidates[i].votes +=1
-            candidates[i].vote +=1;
+            candidates[i].votes +=1;
             // successfull ballot
             return true;
         }
@@ -97,30 +97,29 @@ void print_winner(void)
         // or candidate_count -1, because 1 is already subtracted in beginning???
         for (int i = 0; i < candidate_count - 2; i++)
         {
-            if (candidates[i].vote > candidates[i + 1].vote)
+            if (candidates[i].votes > candidates[i + 1].votes)
             {
                 swap_counter +=1;
                 // temporary storage for array item to be swapped
-                int temp = candidates[i].vote;
+                int temp = candidates[i].votes;
                 // swap array elements
-                candidates[i].vote = candidates[i + 1];
-                candidates[i +1].vote = temp;
-            }
+                candidates[i].votes = candidates[i + 1].votes;
+                candidates[i +1].votes = temp;
         }
     }
     // determine winner, searching from highest to lowest
     int winner_count = 1;
     for (int i = candidate_count; i > -1; i--)
     {
-        if (candidates[i].vote == candidates[i - 1].vote)
+        if (candidates[i].votes == candidates[i - 1].votes)
             winner_count += 1;
         else
         {
-            for (int i = candidate_count; i > i - winner_count; i--)
+            for (int j = candidate_count; j > i - winner_count; j--)
             {
-                printf("%s\n", candidates[i].name)
+                printf("%s\n", candidates[i].name);
             }
             return;
         }
     }
-}
+}   
