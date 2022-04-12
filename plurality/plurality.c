@@ -70,7 +70,7 @@ bool vote(string name)
     // find candidate
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcompare(candidates[i].name, name) == 0)
+        if (strcmp(candidates[i].name, name) == 0)
         {
             // increment candidates' vote
             // test
@@ -81,7 +81,6 @@ bool vote(string name)
         }
         //test
         printf("name = %s\n", name);
-        printf("")
         printf("candidates[%i].name = %s\n", i, candidates[i].name);
     }
     // if not found return false
