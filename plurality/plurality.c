@@ -87,6 +87,16 @@ void print_winner(void)
 {
     // TODO
     // search the highest number in the candidates.votes array
+        // sort the array lowest to highest
+        // merge sort
+            // sort the left half of the array
+            // sort the right half of the array
+            // merge the two halves together
+
+        // loop through the sorted array from highest to lowest and remember the highest
+
+
+
     // remember its index
     // candidates.[index] is the winner
     // if there are two highest scores it is a tie
