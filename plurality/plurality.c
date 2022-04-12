@@ -67,11 +67,13 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    
     // find candidate
+    // if not found return false
+     return false;
+    // if found
     // increment his vote
     // return True for successful ballot
-    return false;
+
 }
 
 // Print the winner (or winners) of the election
