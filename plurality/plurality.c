@@ -108,14 +108,16 @@ void print_winner(void)
                     }
                 }
             // determine winner, go from highest to lowest
+            int winner_count = 0;
             for (int i = candidate_count; i > 1; i--)
             {
-                if (candidates[i].vote > candidates[i - 1].vote)
-                    printf("Winner: %s\n", candidates[i].name);
+                if (candidates[i].vote == candidates[i - 1].vote)
+                    winner_count += 1;
                 else
-                {
-                    candidates[i].name
-                }
+                    {
+                        for (int i = candidate_count; i > i - winner_count; i --)
+                        printf(" %s\n", candidates[i].name)
+                    }
             }
             // loop through the sorted array
             // when right element is larger than lef
