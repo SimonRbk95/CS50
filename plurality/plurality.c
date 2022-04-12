@@ -80,6 +80,7 @@ bool vote(string name)
             return true;
         }
         //test
+        printf("name = %s\n", name);
         printf("candidates[%i].name = %s\n", i, candidates[i].name);
     }
     // if not found return false
