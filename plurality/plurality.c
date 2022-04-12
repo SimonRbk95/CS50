@@ -81,6 +81,7 @@ bool vote(string name)
         }
     }
     // if not found return false
+    printf("false");
     return false;
 }
 
