@@ -107,9 +107,10 @@ void print_winner(void)
                     }
                 }
             // determine winner
-            for (int = candidate_count -1; candidate_count > 0; candidate_count--)
+            for (int i = candidate_count; i > 1; i--)
             {
-                
+                if (candidates[i].vote -)
+
             }
 
     // remember its index
