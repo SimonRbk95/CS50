@@ -117,7 +117,8 @@ void print_winner(void)
                     candidates[i].name
                 }
             }
-
+            // loop through the sorted array
+            // when right element is larger than lef
     // remember its index
     // candidates.[index] is the winner
     // if there are two highest scores it is a tie
