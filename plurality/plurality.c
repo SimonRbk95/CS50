@@ -105,6 +105,7 @@ void print_winner(void)
                 // swap array elements
                 candidates[i].votes = candidates[i + 1].votes;
                 candidates[i +1].votes = temp;
+            }
         }
     }
     // determine winner, searching from highest to lowest
@@ -112,7 +113,9 @@ void print_winner(void)
     for (int i = candidate_count; i > -1; i--)
     {
         if (candidates[i].votes == candidates[i - 1].votes)
+        {
             winner_count += 1;
+        }
         else
         {
             for (int j = candidate_count; j > i - winner_count; j--)
@@ -122,4 +125,4 @@ void print_winner(void)
             return;
         }
     }
-}   
+}
