@@ -110,12 +110,11 @@ void print_winner(void)
             // determine winner, go from highest to lowest
             for (int i = candidate_count; i > 1; i--)
             {
-                if (candidates[i].vote == candidates[i - 1].vote)
-
+                if (candidates[i].vote > candidates[i - 1].vote)
+                    printf("Winner: %s\n", candidates[i].name);
             }
 
     // remember its index
     // candidates.[index] is the winner
     // if there are two highest scores it is a tie
-    return;
 }
