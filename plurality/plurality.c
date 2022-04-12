@@ -107,7 +107,7 @@ void print_winner(void)
                         candidates[i +1].vote = temp;
                     }
                 }
-            // determine winner - go from highes to lowest
+            // determine winner, go from highest to lowest
             for (int i = candidate_count; i > 1; i--)
             {
                 if (candidates[i].vote == candidates[i - 1].vote)
