@@ -68,10 +68,11 @@ bool vote(string name)
 {
     // TODO
     // find candidate
-    
+    if (canditates[i].name == name)
     {
-
+        return true;
     }
+    else if (candidates[i])
     // if not found return false
      return false;
     // if found
