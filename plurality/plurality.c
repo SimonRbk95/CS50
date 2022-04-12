@@ -68,6 +68,10 @@ bool vote(string name)
 {
     // TODO
     // find candidate
+    
+    {
+
+    }
     // if not found return false
      return false;
     // if found
