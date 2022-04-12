@@ -1,13 +1,6 @@
-sort1 uses: TODO
-Bubble Sort
-How do you know?: TODO
-It is the fastest algorithm when used for sorted files
-sort2 uses: TODO
-Merge Sort
-How do you know?: TODO
-It is consistently fast in all text files and the fastest in all but the sorted ones, where bubble sort takes the stage.
-sort3 uses: TODO
-Selection Sort
-How do you know?: TODO
-It's worst case scenario, the
-random, reversed, and sorted text files produce a rather consistent run time.
+sort1 uses: Bubble Sort
+How do you know?: It is the fastest algorithm when used for sorted files and faster than sort3.
+sort2 uses: Merge Sort
+How do you know?: It is consistently fast in all text files and the fastest in all but the sorted ones, where bubble sort takes the stage.
+sort3 uses: Selection Sort
+How do you know?: It is consitently slow and the slowest out of the three for sorted files.
