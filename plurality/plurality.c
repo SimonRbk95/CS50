@@ -88,6 +88,21 @@ void print_winner(void)
     // TODO
     // search the highest number in the candidates.votes array
         // sort the array lowest to highest
+        // bubble sort
+            // set swap counter to non-zero value
+            int swap_counter = 0;
+            while (swap_counter > 0)
+            {
+                
+            }
+            // repeat until the swap counter is 0:
+                // reset swap counter to 0
+                // look at each adjacent pair
+                    //if to adjacent elements are not in order, swap them and add one to the swap counter
+
+
+
+
         // merge sort
             // sort the left half of the array
             // sort the right half of the array
