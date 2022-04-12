@@ -1,7 +1,7 @@
 sort1 uses: TODO
-
+Selection Sort
 How do you know?: TODO
-
+It is the fastest algorithm when used for sorted 
 sort2 uses: TODO
 
 How do you know?: TODO
