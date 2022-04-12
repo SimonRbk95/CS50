@@ -7,9 +7,14 @@ bool vote(string name);
 
 int main(int argc, string argv[])
 {
+    string name = get_string("Name: \n")
     if (!vote(name))
     {
         printf("Invalid vote.\n");
+    }
+    else
+    {
+        printf("Great Success!\n");
     }
 
     // Display winner of election
