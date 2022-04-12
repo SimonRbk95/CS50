@@ -58,7 +58,7 @@ int main(int argc, string argv[])
         {
             printf("Invalid vote.\n");
         }
-
+    }
     // Display winner of election
     print_winner();
 }
@@ -68,7 +68,7 @@ bool vote(string name)
 {
     // TODO
     // find candidate
-    for (int i = 0; i < strlen(candidates.name); i++)
+    for (int i = 0; i < strlen(candidates); i++)
     {
         if (candidates[i].name == name)
         {
