@@ -114,10 +114,13 @@ void print_winner(void)
                 if (candidates[i].vote == candidates[i - 1].vote)
                     winner_count += 1;
                 else
+                {
+                    for (int i = candidate_count; i > i - winner_count; i--)
                     {
-                        for (int i = candidate_count; i > i - winner_count; i --)
                         printf(" %s\n", candidates[i].name)
                     }
+                    return;
+                }
             }
             // loop through the sorted array
             // when right element is larger than lef
