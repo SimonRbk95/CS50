@@ -112,6 +112,10 @@ void print_winner(void)
             {
                 if (candidates[i].vote > candidates[i - 1].vote)
                     printf("Winner: %s\n", candidates[i].name);
+                else
+                {
+                    candidates[i].name
+                }
             }
 
     // remember its index
