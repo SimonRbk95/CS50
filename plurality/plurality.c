@@ -74,14 +74,14 @@ bool vote(string name)
         {
             // increment candidates' vote
             // test
-            printf("true");
+            // printf("true");
             candidates[i].votes +=1;
             // successfull ballot
             return true;
         }
         //test
-        printf("name = %s\n", name);
-        printf("candidates[%i].name = %s\n", i, candidates[i].name);
+        // printf("name = %s\n", name);
+        // printf("candidates[%i].name = %s\n", i, candidates[i].name);
     }
     // if not found return false
     //test
