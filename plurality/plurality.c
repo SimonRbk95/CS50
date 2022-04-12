@@ -70,7 +70,7 @@ bool vote(string name)
     // find candidate
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].name == name)
+        if ()
         {
             // increment candidates' vote
             // test
