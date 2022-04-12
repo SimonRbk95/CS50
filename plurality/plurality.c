@@ -75,7 +75,7 @@ bool vote(string name)
             // increment candidates' vote
             // test
             // printf("true");
-            candidates[i].votes +=1;
+            candidates[i].votes++;
             // successfull ballot
             return true;
         }
