@@ -77,7 +77,7 @@ bool vote(string name)
             printf("true");
             candidates[i].votes +=1;
             // successfull ballot
-        return true;
+            return true;
         }
         //test
         printf("name = %s\n", name);
