@@ -97,7 +97,7 @@ void print_winner(void)
     // sort the array lowest to highest
     // bubble sort
     // set swap counter to non-zero value
-    int swap_counter = -1;
+    int swap_counter = 1;
     while (swap_counter > 0)
     {
         swap_counter = 0;
