@@ -110,7 +110,7 @@ void print_winner(void)
             // determine winner - go from highes to lowest
             for (int i = candidate_count; i > 1; i--)
             {
-                if (candidates[i].vote -)
+                if (candidates[i].vote == candidates[i + 1].vote)
 
             }
 
