@@ -72,7 +72,7 @@ bool vote(string name)
     {
         if (candidates[i].name == name)
         {
-            // increment his vote candidates[i].votes +=1
+            // increment candidates' vote
             candidates[i].votes +=1;
             // successfull ballot
             return true;
