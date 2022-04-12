@@ -114,6 +114,7 @@ void print_winner(void)
                 candidates[i + 1].votes = temp;
             }
         }
+    printf("sorted array: %s", candidates.votes);
     }
     // determine winner, searching from highest to lowest
     int winner_count = 1;
