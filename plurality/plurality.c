@@ -117,7 +117,7 @@ void print_winner(void)
                 {
                     for (int i = candidate_count; i > i - winner_count; i--)
                     {
-                        printf(" %s\n", candidates[i].name)
+                        printf("%s\n", candidates[i].name)
                     }
                     return;
                 }
