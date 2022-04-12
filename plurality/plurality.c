@@ -71,6 +71,8 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
+    // find candidate
+    // increment his vote
     
     return false;
 }
