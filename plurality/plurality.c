@@ -73,7 +73,7 @@ bool vote(string name)
     // TODO
     // find candidate
     // increment his vote
-    
+    // return True for successful ballot
     return false;
 }
 
