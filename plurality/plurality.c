@@ -68,7 +68,7 @@ bool vote(string name)
 {
     // TODO
     // find candidate
-    for (int i = 0; i < strlen(candidates); i++)
+    for (int i = 0; i < strlen(argv); i++)
     {
         if (candidates[i].name == name)
         {
