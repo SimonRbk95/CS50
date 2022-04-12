@@ -2,15 +2,16 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 bool vote(string name);
 
 int main(int argc, string argv[])
 {
-    string name = get_string("Name: \n")
+    string name = get_string("Name: \n");
     if (!vote(name))
     {
-        printf("Invalid vote.\n");
+        printf("Invalid vote\n");
     }
     else
     {
