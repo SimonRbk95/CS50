@@ -28,5 +28,5 @@ bool vote(string name)
     // find candidate
     // increment his vote
     // return True for successful ballot
-    return false;
+    return true;
 }
