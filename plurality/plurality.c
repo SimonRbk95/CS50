@@ -79,9 +79,11 @@ bool vote(string name)
             // successfull ballot
             return true;
         }
+        //test
         printf("candidates[%i].name = %s", i, candidates[i].name)
     }
     // if not found return false
+    //test
     printf("false");
     return false;
 }
