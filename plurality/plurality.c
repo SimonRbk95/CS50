@@ -71,7 +71,7 @@ bool vote(string name)
     // if not found return false
      return false;
     // if found
-    // increment his vote
+    // increment his vote candidates[i].votes +=1
     // return True for successful ballot
 
 }
@@ -80,5 +80,6 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    // search the highest number in the 
     return;
 }
