@@ -72,14 +72,14 @@ bool vote(string name)
     {
         if (candidates[i].name == name)
         {
+            // increment his vote candidates[i].votes +=1
+            candidates[i].vote +=1;
+            // successfull ballot
             return true;
         }
+    }
     // if not found return false
     return false;
-    }
-    // if found
-    // increment his vote candidates[i].votes +=1
-    // return True for successful ballot
 }
 
 // Print the winner (or winners) of the election
