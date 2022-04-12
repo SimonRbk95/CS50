@@ -103,7 +103,7 @@ void print_winner(void)
                         int temp = candidates[i].vote;
                         // swap array elements
                         candidates[i].vote = candidates[i + 1];
-                        candidates[]
+                        candidates[i +1].vote = temp;
                     }
                 }
             }
