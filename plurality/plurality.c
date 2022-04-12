@@ -99,7 +99,11 @@ void print_winner(void)
                     if (candidates[i].vote > candidates[i + 1].vote)
                     {
                         swap_counter +=1;
+                        // temporary storage for array item to be swapped
+                        int temp = candidates[i].vote;
+                        // swap array elements
                         candidates[i].vote = candidates[i + 1];
+                        candidates[]
                     }
                 }
             }
