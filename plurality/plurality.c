@@ -94,6 +94,7 @@ void print_winner(void)
             while (swap_counter > 0)
             {
                 swap_counter = 0;
+                // or candidate_count -1, because 1 is already subtracted in beginning???
                 for (int i = 0; i < candidate_count - 2; i++)
                 {
                     if (candidates[i].vote > candidates[i + 1].vote)
@@ -106,7 +107,7 @@ void print_winner(void)
                         candidates[i +1].vote = temp;
                     }
                 }
-            // determine winner
+            // determine winner - go from highes to lowest
             for (int i = candidate_count; i > 1; i--)
             {
                 if (candidates[i].vote -)
