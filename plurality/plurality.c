@@ -117,7 +117,7 @@ void print_winner(void)
     }
     // determine winner, searching from highest to lowest
     int winner_count = 1;
-    for (int i = candidate_count; i > -1; i--)
+    for (int i = candidate_count; i > - 1; i--)
     {
         if (candidates[i].votes == candidates[i - 1].votes)
         {
@@ -125,7 +125,7 @@ void print_winner(void)
         }
         else
         {
-            for (int j = candidate_count; j >  - winner_count; j--)
+            for (int j = candidate_count; j > i - winner_count; j--)
             {
                 printf("%s\n", candidates[i].name);
             }
