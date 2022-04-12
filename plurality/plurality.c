@@ -53,6 +53,7 @@ int main(int argc, string argv[])
         string name = get_string("Vote: ");
 
         // Check for invalid vote
+        // ! means a False will be considered True, triggering the  if condition
         if (!vote(name))
         {
             printf("Invalid vote.\n");
@@ -66,6 +67,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
+    
     // find candidate
     // increment his vote
     // return True for successful ballot
