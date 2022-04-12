@@ -94,6 +94,7 @@ void print_winner(void)
             while (swap_counter > 0)
             {
                 swap_counter = 0;
+                
 
             }
             // repeat until the swap counter is 0:
