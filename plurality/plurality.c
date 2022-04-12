@@ -80,6 +80,9 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    // search the highest number in the 
+    // search the highest number in the candidates.votes array
+    // remember its index
+    // candidates.[index] is the winner
+    // if there are two highest scores it is a tie
     return;
 }
