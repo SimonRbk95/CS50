@@ -106,23 +106,11 @@ void print_winner(void)
                         candidates[i +1].vote = temp;
                     }
                 }
+            // determine winner
+            for (int = candidate_count -1; candidate_count > 0; candidate_count--)
+            {
+                
             }
-            // repeat until the swap counter is 0:
-                // reset swap counter to 0
-                // look at each adjacent pair
-                    //if to adjacent elements are not in order, swap them and add one to the swap counter
-
-
-
-
-        // merge sort
-            // sort the left half of the array
-            // sort the right half of the array
-            // merge the two halves together
-
-        // loop through the sorted array from highest to lowest and remember the highest
-
-
 
     // remember its index
     // candidates.[index] is the winner
