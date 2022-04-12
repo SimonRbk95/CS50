@@ -3,17 +3,24 @@
 #include <string.h>
 #include <stdlib.h>
 
-int main(void)
-{
+bool vote(string name);
 
+int main(int argc, string argv[])
+{
+    if (!vote(name))
+    {
+        printf("Invalid vote.\n");
+    }
+
+    // Display winner of election
 }
 
-int fact(int n)
+// Update vote totals given a new vote
+bool vote(string name)
 {
-    if (n==1)
-        return 1;
-    else
-
-        return n*(fact(n-1));
-        printf("current calculation: %i * (fact")
+    // TODO
+    // find candidate
+    // increment his vote
+    // return True for successful ballot
+    return false;
 }
