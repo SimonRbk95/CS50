@@ -54,7 +54,7 @@ int main(int argc, string argv[])
 
         // Check for invalid vote
         // ! means a False will be considered True, triggering the  if condition
-        if (!vote(name))
+        if (!vote(name, i))
         {
             printf("Invalid vote.\n");
         }
@@ -64,7 +64,7 @@ int main(int argc, string argv[])
 }
 
 // Update vote totals given a new vote
-bool vote(string name)
+bool vote(string name, int i)
 {
     // TODO
     // find candidate
