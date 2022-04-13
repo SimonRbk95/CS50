@@ -98,6 +98,11 @@ void print_winner(void)
     // bubble sort
     // set swap counter to non-zero value
     printf("Candidate Count: %i\n", candidate_count);
+    printf("Before the swap:\n");
+    printf("array index 0: %i\n", candidates[0].votes);
+    printf("array index 1: %i\n", candidates[1].votes);
+    printf("array index 2: %i\n", candidates[2].votes);
+
     int swap_counter = 1;
     while (swap_counter > 0)
     {
