@@ -135,7 +135,7 @@ void print_winner(void)
         }
         else
         {
-            for (int j = candidate_count - 1; j > candidate_count - winner_count; j--)
+            for (int j = candidate_count - 1; j > candidate_count - winner_count - 1; j--)
             {
                 printf("%s\n", candidates[j].name);
             }
