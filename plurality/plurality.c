@@ -72,37 +72,20 @@ bool vote(string name)
     {
         if (strcmp(candidates[i].name, name) == 0)
         {
-            // increment candidates' vote
-            // test
-            // printf("true");
             candidates[i].votes++;
             // successfull ballot
             return true;
         }
-        //test
-        // printf("name = %s\n", name);
-        // printf("candidates[%i].name = %s\n", i, candidates[i].name);
     }
-    // if not found return false
-    //test
-    // printf("false\n");
+    // if not found
     return false;
 }
 
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // TODO
     // search the highest number in the candidates.votes array
-    // sort the array lowest to highest
     // bubble sort
-    // set swap counter to non-zero value
-    // printf("Candidate Count: %i\n", candidate_count);
-    // printf("Before the swap:\n");
-    // printf("array index 0: %i\n", candidates[0].votes);
-    // printf("array index 1: %i\n", candidates[1].votes);
-    // printf("array index 2: %i\n", candidates[2].votes);
-
     int swap_counter = 1;
     while (swap_counter > 0)
     {
@@ -124,13 +107,6 @@ void print_winner(void)
             }
         }
     }
-    // printf("\narray index 0: %i\n", candidates[0].votes);
-    // printf("array index 1: %i\n", candidates[1].votes);
-    // printf("array index 2: %i\n", candidates[2].votes);
-    // printf("\narray index 0: %s\n", candidates[0].name);
-    // printf("array index 1: %s\n", candidates[1].name);
-    // printf("array index 2: %s\n", candidates[2].name);
-
     // determine winner, searching from highest to lowest
     for (int i = candidate_count - 1; i >= 0; i--)
     {
@@ -144,5 +120,4 @@ void print_winner(void)
             printf("%s\n", candidates[i].name);
         }
     }
-
 }
