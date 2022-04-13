@@ -121,7 +121,7 @@ void print_winner(void)
             }
         }
     }
-    printf("array index 0: %i\n", candidates[0].votes);
+    printf("\narray index 0: %i\n", candidates[0].votes);
     printf("array index 1: %i\n", candidates[1].votes);
     printf("array index 2: %i\n", candidates[2].votes);
 
