@@ -27,19 +27,19 @@ void createPyramide(int height)
         {
             printf(" ");
         }
-            // For each column print '#'
-            for (int j = 1; j <= i; j++)
-            {
-                printf("#");
-            }
-            // For each row print whitespace
-            printf("  ");
-            // For each column print mirrored '#'
-            for (int k = 1; k <= i; k++)
-            {
-                printf("#");
-            }
-            // Move to next row
-            printf("\n");
+        // For each column print '#'
+        for (int j = 1; j <= i; j++)
+        {
+            printf("#");
+        }
+        // For each row print whitespace
+        printf("  ");
+        // For each column print mirrored '#'
+        for (int k = 1; k <= i; k++)
+        {
+            printf("#");
+        }
+        // Move to next row
+        printf("\n");
     }
 }
