@@ -102,7 +102,7 @@ void print_winner(void)
     {
         swap_counter = 0;
         // or candidate_count -1, because 1 is already subtracted in beginning???
-        for (int i = 0; i < candidate_count - 1; i++)
+        for (int i = 0; i < candidate_count - 2; i++)
         {
             if (candidates[i].votes > candidates[i + 1].votes)
             {
@@ -118,7 +118,7 @@ void print_winner(void)
     printf("array index 1: %i\n", candidates[1].votes);
     // determine winner, searching from highest to lowest
     int winner_count = 1;
-    for (int i = candidate_count; i >= 0; i--)
+    for (int i = candidate_count - 1; i >= 0; i--)
     {
         if (candidates[i].votes == candidates[i - 1].votes)
         {
@@ -126,7 +126,7 @@ void print_winner(void)
         }
         else
         {
-            for (int j = candidate_count; j > j - winner_count; j--)
+            for (int j = candidate_count - 1; j > j - winner_count; j--)
             {
                 printf("%s\n", candidates[j].name);
             }
