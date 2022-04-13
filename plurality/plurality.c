@@ -127,9 +127,9 @@ void print_winner(void)
     // printf("\narray index 0: %i\n", candidates[0].votes);
     // printf("array index 1: %i\n", candidates[1].votes);
     // printf("array index 2: %i\n", candidates[2].votes);
-    printf("\narray index 0: %s\n", candidates[0].name);
-    printf("array index 1: %s\n", candidates[1].name);
-    printf("array index 2: %s\n", candidates[2].name);
+    // printf("\narray index 0: %s\n", candidates[0].name);
+    // printf("array index 1: %s\n", candidates[1].name);
+    // printf("array index 2: %s\n", candidates[2].name);
 
     // determine winner, searching from highest to lowest
     for (int i = candidate_count - 1; i >= 0; i--)
