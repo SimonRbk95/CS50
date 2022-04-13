@@ -41,7 +41,7 @@ bool vote(string name)
         }
         else
         {
-            for (int j = candidate_count - 1; j > j - winner_count; j--)
+            for (int j = candidate_count - 1; j > candidate_count - winner_count; j--)
             {
                 printf("%s\n", candidates[j].name);
             }
