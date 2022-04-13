@@ -102,7 +102,7 @@ void print_winner(void)
     {
         swap_counter = 0;
         // or candidate_count -1, because 1 is already subtracted in beginning???
-        for (int i = 0; i < candidate_count - 2; i++)
+        for (int i = 0; i < candidate_count - 1; i++)
         {
             if (candidates[i].votes > candidates[i + 1].votes)
             {
