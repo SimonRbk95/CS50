@@ -85,7 +85,7 @@ bool vote(string name)
     }
     // if not found return false
     //test
-    printf("false\n");
+    // printf("false\n");
     return false;
 }
 
@@ -97,11 +97,11 @@ void print_winner(void)
     // sort the array lowest to highest
     // bubble sort
     // set swap counter to non-zero value
-    printf("Candidate Count: %i\n", candidate_count);
-    printf("Before the swap:\n");
-    printf("array index 0: %i\n", candidates[0].votes);
-    printf("array index 1: %i\n", candidates[1].votes);
-    printf("array index 2: %i\n", candidates[2].votes);
+    // printf("Candidate Count: %i\n", candidate_count);
+    // printf("Before the swap:\n");
+    // printf("array index 0: %i\n", candidates[0].votes);
+    // printf("array index 1: %i\n", candidates[1].votes);
+    // printf("array index 2: %i\n", candidates[2].votes);
 
     int swap_counter = 1;
     while (swap_counter > 0)
@@ -124,12 +124,12 @@ void print_winner(void)
             }
         }
     }
-    printf("\narray index 0: %i\n", candidates[0].votes);
-    printf("array index 1: %i\n", candidates[1].votes);
-    printf("array index 2: %i\n", candidates[2].votes);
-    printf("\narray index 0: %i\n", candidates[0].names);
-    printf("array index 1: %i\n", candidates[1].names);
-    printf("array index 2: %i\n", candidates[2].names);
+    // printf("\narray index 0: %i\n", candidates[0].votes);
+    // printf("array index 1: %i\n", candidates[1].votes);
+    // printf("array index 2: %i\n", candidates[2].votes);
+    // printf("\narray index 0: %s\n", candidates[0].name);
+    // printf("array index 1: %s\n", candidates[1].name);
+    // printf("array index 2: %s\n", candidates[2].name);
 
     // determine winner, searching from highest to lowest
     for (int i = candidate_count - 1; i >= 0; i--)
