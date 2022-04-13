@@ -115,22 +115,10 @@ void print_winner(void)
             }
         }
     }
+    printf("array index 0: %i\n", candidates[0].votes);
     printf("array index 1: %i\n", candidates[1].votes);
+    printf("array index 2: %i\n", candidates[2].votes);
+
     // determine winner, searching from highest to lowest
-    int winner_count = 1;
-    for (int i = candidate_count - 1; i >= 0; i--)
-    {
-        if (candidates[i].votes == candidates[i - 1].votes)
-        {
-            winner_count += 1;
-        }
-        else
-        {
-            for (int j = candidate_count - 1; j > j - winner_count; j--)
-            {
-                printf("%s\n", candidates[j].name);
-            }
-            break;
-        }
-    }
+
 }

@@ -30,3 +30,21 @@ bool vote(string name)
     // return True for successful ballot
     return true;
 }
+
+
+    int winner_count = 1;
+    for (int i = candidate_count - 1; i >= 0; i--)
+    {
+        if (candidates[i].votes == candidates[i - 1].votes)
+        {
+            winner_count += 1;
+        }
+        else
+        {
+            for (int j = candidate_count - 1; j > j - winner_count; j--)
+            {
+                printf("%s\n", candidates[j].name);
+            }
+            break;
+        }
+    }
