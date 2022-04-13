@@ -97,6 +97,7 @@ void print_winner(void)
     // sort the array lowest to highest
     // bubble sort
     // set swap counter to non-zero value
+    printf("Candidate Count: %i\n", candidate_count);
     int swap_counter = 1;
     while (swap_counter > 0)
     {
