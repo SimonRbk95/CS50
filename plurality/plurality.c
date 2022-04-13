@@ -95,7 +95,7 @@ void print_winner(void)
         {
             if (candidates[i].votes > candidates[i + 1].votes)
             {
-                swap_counter +=1;
+                swap_counter++;
                 // temporary storage for array item to be swapped
                 int temp_vote = candidates[i].votes;
                 string temp_name = candidates[i].name;
