@@ -115,9 +115,12 @@ void print_winner(void)
                 swap_counter +=1;
                 // temporary storage for array item to be swapped
                 int temp_vote = candidates[i].votes;
+                string temp_name = candidates[i].name;
                 // swap array elements
                 candidates[i].votes = candidates[i + 1].votes;
                 candidates[i + 1].votes = temp_vote;
+                candidates[i].name = candidates[i + 1].name;
+                candidates[i + 1].name = temp_name;
             }
         }
     }
