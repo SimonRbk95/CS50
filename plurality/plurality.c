@@ -114,16 +114,20 @@ void print_winner(void)
             {
                 swap_counter +=1;
                 // temporary storage for array item to be swapped
-                int temp = candidates[i].votes;
+                int temp_vote = candidates[i].votes;
+                int temp_name = candidates[i].names;
                 // swap array elements
                 candidates[i].votes = candidates[i + 1].votes;
-                candidates[i + 1].votes = temp;
+                candidates[i + 1].votes = temp_vote;
             }
         }
     }
     printf("\narray index 0: %i\n", candidates[0].votes);
     printf("array index 1: %i\n", candidates[1].votes);
     printf("array index 2: %i\n", candidates[2].votes);
+    printf("\narray index 0: %i\n", candidates[0].names);
+    printf("array index 1: %i\n", candidates[1].names);
+    printf("array index 2: %i\n", candidates[2].names);
 
     // determine winner, searching from highest to lowest
     for (int i = candidate_count - 1; i >= 0; i--)
