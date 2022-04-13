@@ -107,7 +107,7 @@ void print_winner(void)
     while (swap_counter > 0)
     {
         swap_counter = 0;
-        // or candidate_count -1, because 1 is already subtracted in beginning???
+        // loop over candidates considering the last index is -1 the count and we are looking one further
         for (int i = 0; i <= candidate_count - 2; i++)
         {
             if (candidates[i].votes > candidates[i + 1].votes)
