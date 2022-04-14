@@ -182,7 +182,7 @@ int find_min(void)
     for (int i = 0; i < candidate_count; i++)
     {
         // only consider candidates that are not eliminated
-        // find candidate votes that are lower than the current minimum number of votes
+        // find the candidate votes that are lower than the minimum votes and update the latter
         if (candidates[i].eliminated == false && candidates[i].votes < min)
         {
             min = candidates[i].votes;
