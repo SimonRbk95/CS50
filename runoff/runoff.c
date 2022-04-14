@@ -145,7 +145,11 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
-    // loop through the preference array's 
+    // loop through the preference array's voters' first preference
+    perferences[voter][preference] = name of voters preferenced candidate
+    // loop through candidates
+    // look for match of preference and candidate
+    // update vot for this candidate
     return;
 }
 
