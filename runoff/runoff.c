@@ -149,9 +149,12 @@ void tabulate(void)
     // loop through the number of candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        // loop through each voters' votes
+        // loop through each voter
         for (int n = 0; n < voter_count; n++)
         {
+            // loop through the voter
+
+
             int i = 0;
             if (candidates[i].eliminated == true)
             // check preference
@@ -165,7 +168,7 @@ void tabulate(void)
             }
             else
             {
-                preferences[j[i] = 
+                preferences[j][i] =
             }
 
             // if not eliminated, increment vote for preferred candidate
