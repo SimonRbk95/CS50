@@ -149,7 +149,7 @@ void tabulate(void)
     // loop through the number of candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        // loop through each candidates's votes
+        // loop through each voters' votes
         for (int j = 0; j < voter_count; j++)
         {
             // check preference
