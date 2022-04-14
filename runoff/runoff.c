@@ -148,8 +148,11 @@ void tabulate(void)
     // loop through the preference array's voters' first preference
     perferences[voter][preference] = name of voters preferenced candidate
     // loop through candidates
-    // look for match of preference and candidate
-    // update vot for this candidate
+    // look for a match of preference and candidate
+    // if the candidate is not eliminated
+        // update vote for this candidate
+    // else the candidate is eliminated
+        // 
     return;
 }
 
