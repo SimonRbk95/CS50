@@ -147,23 +147,23 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-        // loop over each voter
-        for (int i = 0; i < voter_count; i++)
+    // loop over each voter
+    for (int i = 0; i < voter_count; i++)
+    {
+        // loop through the voter's preferences
+        for (int j = 0; j < candidate_count; j++)
         {
-            // loop through the voter's preferences
-            for (int j = 0; j < candidate_count; j++)
-            {
 
-                // preferences will return the candidate's index number
-                int index = preferences[i][j];
-                // check whether the person prefered is still in the race
-                if (candidates[index].eliminated == false)
-                {
-                    candidates[index].votes++;
-                    break;
-                }
+            // preferences will return the candidate's index number
+            int index = preferences[i][j];
+            // check whether the person prefered is still in the race
+            if (candidates[index].eliminated == false)
+            {
+                candidates[index].votes++;
+                break;
             }
         }
+    }
 }
 
 // Print the winner of the election, if there is one
@@ -202,10 +202,10 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    // TODO
+    // check if every candidate still in the race has the same votes as min
     for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates[i].eliminated == false && candidates[i].votes != min)
+        if (candidates[i].eliminated == false && candidates[i].votes != min)
         {
             return false;
         }
@@ -219,7 +219,7 @@ void eliminate(int min)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if(candidates[i].votes == min)
+        if (candidates[i].votes == min)
         {
             candidates[i].eliminated = true;
         }
