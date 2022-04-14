@@ -170,10 +170,10 @@ void tabulate(void)
 bool print_winner(void)
 {
     // check if a candidate has more than half of the total votes
+    int majority = round(voter_count / 2);
     for (int i = 0; i < candidate_count; i++)
     {
-        int majority = round(voter_count / 2);
-        if (candidates[i].votes > majority/2 )
+        if (candidates[i].votes > majority)
         {
             printf("%s", candidates[i].name);
             return true;
