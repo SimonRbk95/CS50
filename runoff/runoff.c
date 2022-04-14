@@ -153,7 +153,10 @@ void tabulate(void)
         for (int n = 0; n < voter_count; n++)
         {
             // loop through the voter's preferences
-            for (int i = 0; i < candidate)
+            for (int i = 0; i < candidate_count; i++)
+            {
+                
+            }
 
 
             int i = 0;
