@@ -178,6 +178,7 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
+    // set min to one point higher than the maximum votes one single candidate could get
     int min = MAX_VOTERS * MAX_CANDIDATES + 1;
     for (int i = 0; i < candidate_count; i++)
     {
