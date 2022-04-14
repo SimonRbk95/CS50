@@ -147,7 +147,7 @@ void tabulate(void)
     // TODO
     for (int i = 0, i < voter_count; i++)
     {
-
+        
     }
     // loop through the preference array's voters' first preference
     preferences[voter][preference] = name of voters preferenced candidate;
