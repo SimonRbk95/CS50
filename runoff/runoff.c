@@ -150,11 +150,12 @@ void tabulate(void)
     for (int i = 0; i < candidate_count; i++)
     {
         // loop through each voters' votes
-        for (int j = 0; j < voter_count; j++)
+        for (int n = 0; n < voter_count; n++)
         {
-            int 
+            int i = 0;
+            while(candidates[i].eliminated == false)
             // check preference
-            preferences[j][x] ==
+            preferences[j][i] ==
 
             // check whether the preference is eliminated
             if (candidates[j].eliminated == false)
