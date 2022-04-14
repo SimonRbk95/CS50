@@ -132,10 +132,11 @@ bool vote(int voter, int rank, string name)
     // loop through voters
     for (int i = 0; i < candidate_count; i++)
     {
-        // look for a match between voters and voter
+        // look for a match between candidates and person voted for
         if (strcmp(candidates[i].name, name) == 0)
         {
-            preferences[voter][rank] name;
+            // update preference by assigning current candidate index to preference rank
+            preferences[voter][rank] = i;
             return true;
         }
     }
