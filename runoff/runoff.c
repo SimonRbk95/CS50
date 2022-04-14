@@ -157,20 +157,8 @@ void tabulate(void)
                 candidates[j].votes++;
                 break;
             }
-
         }
     }
-    // loop through the preference array's voters' first preference
-    preferences[voter][preference] = name of voters preferenced candidate;
-    // loop through candidates
-    // look for a match of preference and candidate
-    // if the candidate is not eliminated
-        // update vote for this candidate
-    // else the candidate is eliminated
-        // check wheter this voters' second preference is not eliminated
-            // update vote for this candidate
-            // else
-    return;
 }
 
 // Print the winner of the election, if there is one
