@@ -147,15 +147,15 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // loop through the number of candidates
-    for (int i = 0; i < candidate_count; i++)
-    {
+    // for (int j = 0; j < candidate_count; i++)
+
         // loop over each voter
-        for (int n = 0; n < voter_count; n++)
+        for (int i = 0; i < voter_count; i++)
         {
             // loop through the voter's preferences
-            for (int i = 0; i < candidate_count; i++)
+            for (int j = 0; j < candidate_count; j++)
             {
-                
+                if (preferences[i][j] == can
             }
 
 
@@ -177,7 +177,7 @@ void tabulate(void)
 
             // if not eliminated, increment vote for preferred candidate
         }
-    }
+
 }
 
 // Print the winner of the election, if there is one
