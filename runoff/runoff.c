@@ -146,38 +146,23 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // loop through the number of candidates
-    // for (int j = 0; j < candidate_count; i++)
-
         // loop over each voter
         for (int i = 0; i < voter_count; i++)
         {
             // loop through the voter's preferences
             for (int j = 0; j < candidate_count; j++)
             {
-                if (preferences[i][j] == can
+
+                // preferences will return the candidate's index number
+                int index = preferences[i][j];
+                // check whether the person prefered is still in the race
+                if (candidates[index].eliminated == false)
+                {
+                    candidates[index].votes++;
+                    break;
+                }
             }
-
-
-            int i = 0;
-            if (candidates[i].eliminated == true)
-            // check preference
-            preferences[j][i] ==
-
-            // check whether the preference is eliminated
-            if (candidates[i].eliminated == false)
-            {
-                candidates[i].votes;
-                break;
-            }
-            else
-            {
-                preferences[j][i] =
-            }
-
-            // if not eliminated, increment vote for preferred candidate
         }
-
 }
 
 // Print the winner of the election, if there is one
