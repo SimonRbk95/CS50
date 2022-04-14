@@ -168,7 +168,7 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // check if on has more than half of the votes
+    // check if a candidate has more than half of the total votes
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes > (voter_count * candidate_count / 2))
