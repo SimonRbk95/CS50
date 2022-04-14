@@ -135,7 +135,7 @@ bool vote(int voter, int rank, string name)
         // look for a match between candidates and person voted for
         if (strcmp(candidates[i].name, name) == 0)
         {
-            // update preference by assigning current candidate index to preference rank
+            // populate preference array by assigning current candidate index to preference rank
             preferences[voter][rank] = i;
             return true;
         }
