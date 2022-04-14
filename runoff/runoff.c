@@ -171,7 +171,7 @@ bool print_winner(void)
     // check if a candidate has more than half of the total votes
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > )
+        if (candidates[i].votes >  )
         {
             printf("%s", candidates[i].name);
             return true;
