@@ -237,5 +237,4 @@ void eliminate(int min)
             candidates[i].eliminated = true;
         }
     }
-    return;
 }
