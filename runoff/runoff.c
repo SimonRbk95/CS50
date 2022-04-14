@@ -128,6 +128,17 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    // loop through voters
+    for (int i = 0; i < candidate_count; i++)
+    {
+        // look for a match between voters and voter
+        if ()
+        {
+            
+        }
+        // if matches, update preference array
+            // return true
+    }
     return false;
 }
 
