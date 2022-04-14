@@ -151,8 +151,9 @@ void tabulate(void)
         {
             if (candidate[i].eliminated == false)
             {
-                
+                candidate[i].votes++;
             }
+            else
         }
     }
     // loop through the preference array's voters' first preference
