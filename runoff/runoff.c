@@ -180,12 +180,12 @@ int find_min(void)
 {
     // search for lowest vote
     // only consider non-eliminated candidates
-    int min_vote = 0;
+    int min_vote = voter_count;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated == false)
+        if (candidates[i].eliminated == false && candidates[i].votes < min_vote)
         {
-            min = candidates[i].votes;
+            min_vote = candidates[i].votes;
         }
 
 
