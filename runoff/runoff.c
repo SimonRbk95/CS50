@@ -145,6 +145,10 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+    for (int i = 0,  )
+    {
+
+    }
     // loop through the preference array's voters' first preference
     perferences[voter][preference] = name of voters preferenced candidate
     // loop through candidates
@@ -154,7 +158,7 @@ void tabulate(void)
     // else the candidate is eliminated
         // check wheter this voters' second preference is not eliminated
             // update vote for this candidate
-            // else 
+            // else
     return;
 }
 
