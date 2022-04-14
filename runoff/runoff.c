@@ -129,17 +129,17 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    // loop through voters
+    // loop through voters, searching for a match between candidate and person voted for
     for (int i = 0; i < candidate_count; i++)
     {
-        // look for a match between candidates and person voted for
         if (strcmp(candidates[i].name, name) == 0)
         {
-            // populate preference array by assigning current candidate index to preference rank
+            // populate preference array by assigning current candidate at index i to preference at index rank
             preferences[voter][rank] = i;
             return true;
         }
     }
+    // if no candidate matches return false
     return false;
 }
 
