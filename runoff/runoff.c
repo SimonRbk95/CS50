@@ -152,7 +152,9 @@ void tabulate(void)
     // if the candidate is not eliminated
         // update vote for this candidate
     // else the candidate is eliminated
-        // 
+        // check wheter this voters' second preference is not eliminated
+            // update vote for this candidate
+            // else 
     return;
 }
 
