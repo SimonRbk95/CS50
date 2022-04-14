@@ -153,7 +153,7 @@ void tabulate(void)
         for (int j = 0; j < voter_count; j++)
         {
             // check preference
-            preferences[j][i]
+            preferences[j][]
 
             // check whether the preference is eliminated
             if (candidates[j].eliminated == false)
