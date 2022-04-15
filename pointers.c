@@ -43,8 +43,10 @@ int main(void)
     // prints out the integer value at address *p
     printf("%i\n", *p);
 
-    // strings are actually a char*
-    char* s;
+    // strings are actually a char array with a pointer that points to the first element of the array
+    char s [] = {"H","i"};
+
+
 
     printf("%s\n", s);
 
