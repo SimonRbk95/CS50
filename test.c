@@ -22,6 +22,11 @@ int main(int argc, string argv[])
     // *c overwrites its address onto *p
     *p = *c;
 
+    //
+    printf("%p\n", *c);
+
+    printf("%p\n", *p);
+
     // prints out the integer value at the address *c
     printf("%i\n", *c);
 
