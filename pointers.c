@@ -45,10 +45,8 @@ int main(void)
 
     // strings are actually a char array with a pointer that points to the first element of the array
     char s [] = {"H","i"};
-    char* string = 
+    char* string = &s[0];
 
-
-
-    printf("%s\n", s);
+    printf("%c\n", *string);
 
 }
