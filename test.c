@@ -10,7 +10,8 @@ int main(void)
     int a = 2;
 
     // '&' is the address extraction operator
-    // *
+    // variable declared as '*p' for instance gets assigned the address in memory
+    // variable declared as '*p' can also be used to 
     // &a gets the address and assigns it to *p
     int *p = &a;
 
