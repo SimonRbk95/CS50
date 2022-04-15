@@ -48,7 +48,7 @@ int main(void)
     char* str = &s[0];
 
     // printf("%p\n", *str);
-    printf("%p\n", *str);
+    printf("%c\n", *str);
     // printf("%p\n", *s);
 
 }
