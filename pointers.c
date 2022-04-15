@@ -44,7 +44,7 @@ int main(void)
     printf("%i\n", *p);
 
     // strings are actually a array of chars with a pointer that points to the first element of the array stored in a variable
-    // the compiler adds a \0 to indicate the end of the string/ array of chars
+    // the compiler adds a \0 to the end of the array to indicate the end of the string/ array of chars
 
     // creates a pointer to the first elemnt of the char array
     // char* is the data type and is a different data type from char (without the '*')
