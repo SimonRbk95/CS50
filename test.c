@@ -20,10 +20,11 @@ int main(int argc, string argv[])
     int *c = &b;
 
     // *c overwrites its address onto *p
-    *p = *c;
 
-    // overwrites the value stored at *p and, thus, 
+
+    // overwrites the value stored at *p and, thus,
     b = 3;
+    *p = *c;
 
     // prints out the address of *c (which is now equal to *p)
     printf("%p\n", c);
