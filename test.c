@@ -11,7 +11,9 @@ int main(void)
 
     // '&' is the address extraction operator
     // variable declared as '*p' for instance gets assigned the address in memory
-    // variable declared as '*p' can also be used to 
+    // variable declared as '*p' can also be used to store the value located at the address in a new variable
+    
+
     // &a gets the address and assigns it to *p
     int *p = &a;
 
