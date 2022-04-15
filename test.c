@@ -9,8 +9,9 @@ bool vote(string name);
 int main(int argc, string argv[])
 {
     int a = 2;
-    
-    int b = *a;
-    a++;
-    printf("%p", b);
+    int *p = &a;
+    int b = *p;
+    int *c = &b;
+    printf("%p\n", &a);
+    printf("%p\n", &b);
 }
