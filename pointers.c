@@ -43,14 +43,20 @@ int main(void)
     // prints out the integer value at address *p
     printf("%i\n", *p);
 
-    // strings are actually a char array with a pointer that points to the first element of the array
-    // the compiler adds a 
-    char *s = "Hi!";
+    // strings are actually a array of chars with a pointer that points to the first element of the array stored in a variable
+    // the compiler adds a \0 to indicate the end of the string/ array of chars
+
+    // creates a new string so to speak
+    char* s = "Hi!";
+
+    // stores the address of the array's second position "i"
     char* str = &s[1];
 
-    // prints the char or \0 at index [3] of char
+    // prints the char, or \0 in this case, at index [3] of the array
     printf("%c\n", s[3]);
+
+    // prints the address of index 3 of the array by using the & operator directly
     printf("%p\n", &s[3]);
 
-
+    char* s;
 }
