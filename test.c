@@ -4,9 +4,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-bool vote(string name);
 
-int main(int argc, string argv[])
+int main(void)
 {
     int a = 2;
 
@@ -19,11 +18,10 @@ int main(int argc, string argv[])
     // *c gets assigned the address of variable 'b'
     int *c = &b;
 
-    // *c overwrites its address onto *p
-
-
-    // overwrites the value stored at *p and, thus,
+    // overwrites the value stored at *p/ in variable 'b'
     b = 3;
+
+    // stores the value that *c points to in the variable stored at location *p
     *p = *c;
 
     // prints out the address of *c (which is now equal to *p)
