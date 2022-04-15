@@ -47,6 +47,9 @@ int main(void)
     // the compiler adds a \0 to indicate the end of the string/ array of chars
 
     // creates a pointer to the first elemnt of the char array
+    // char* is the data type and is a different data type from char (without the '*')
+    // a regular char data type takes 1 byte in memory, for storing a binary representation for an ASCII value that represents a char
+    // char* takes 4 or 8 bytes, depending on the system, and they represent the size of the address, which points to the first element in the array 'Hi!"
     char* s = "Hi!";
 
     // stores the address of the array's second position "i"
@@ -55,7 +58,7 @@ int main(void)
     // prints the char, or \0 in this case, at index [3] of the array
     printf("%c\n", s[3]);
 
-    // prints the address of index 3 of the array by using the & operator directly
+    // prints the address of index 3 of the array by using the '&' operator directly
     printf("%p\n", &s[3]);
 
     // uninitialized char variable
