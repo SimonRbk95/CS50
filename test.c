@@ -10,7 +10,7 @@ int main(void)
     int a = 2;
 
     // '&' is the address extraction operator
-    // 
+    // *
     // &a gets the address and assigns it to *p
     int *p = &a;
 
