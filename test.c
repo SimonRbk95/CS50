@@ -12,6 +12,6 @@ int main(int argc, string argv[])
     int *p = &a;
     int b = *p;
     int *c = &b;
-    printf("%p\n", &a);
-    printf("%p\n", &b);
+    printf("%i\n", *c);
+    printf("%i\n", *p);
 }
