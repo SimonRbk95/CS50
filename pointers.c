@@ -46,7 +46,7 @@ int main(void)
     // strings are actually a array of chars with a pointer that points to the first element of the array stored in a variable
     // the compiler adds a \0 to indicate the end of the string/ array of chars
 
-    // creates a new string so to speak
+    // creates a pointer to the first elemnt of the char array
     char* s = "Hi!";
 
     // stores the address of the array's second position "i"
