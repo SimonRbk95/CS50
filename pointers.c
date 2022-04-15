@@ -58,7 +58,8 @@ int main(void)
     // prints the address of index 3 of the array by using the & operator directly
     printf("%p\n", &s[3]);
 
-    char* t;
+    // uninitialized char variable
+    char* t = NULL;
 
-    printf("", &)
+    printf("%c", *t);
 }
