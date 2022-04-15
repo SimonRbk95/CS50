@@ -44,8 +44,8 @@ int main(void)
     printf("%i\n", *p);
 
     // strings are actually a char*
-    char* s = "Hi!";
+    char* s;
 
-    printf("%s\n", s)
+    printf("%s\n", s);
 
 }
