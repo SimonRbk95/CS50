@@ -22,10 +22,14 @@ int main(int argc, string argv[])
     // *c overwrites its address onto *p
     *p = *c;
 
-    //
-    printf("%p\n", *c);
+    
+    b = 3;
 
-    printf("%p\n", *p);
+    // prints out the address of *c (which is now equal to *p)
+    printf("%p\n", c);
+
+    // prints out the address of *p
+    printf("%p\n", p);
 
     // prints out the integer value at the address *c
     printf("%i\n", *c);
