@@ -8,43 +8,8 @@ bool vote(string name);
 
 int main(int argc, string argv[])
 {
-    string name = get_string("Name: \n");
-    if (!vote(name))
-    {
-        printf("Invalid vote\n");
-    }
-    else
-    {
-        printf("Great Success!\n");
-    }
-
-    // Display winner of election
+    int a = 2;
+    int b = a;
+    a++;
+    printf("%i", b);
 }
-
-// Update vote totals given a new vote
-bool vote(string name)
-{
-    // TODO
-    // find candidate
-    // increment his vote
-    // return True for successful ballot
-    return true;
-}
-
-
-    int winner_count = 1;
-    for (int i = candidate_count - 1; i >= 0; i--)
-    {
-        if (candidates[i].votes == candidates[i - 1].votes)
-        {
-            winner_count++;
-        }
-        else
-        {
-            for (int j = candidate_count - 1; j > candidate_count - winner_count; j--)
-            {
-                printf("%s\n", candidates[j].name);
-            }
-            break;
-        }
-    }
