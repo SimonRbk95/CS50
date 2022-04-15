@@ -22,7 +22,7 @@ int main(int argc, string argv[])
     // *c overwrites its address onto *p
     *p = *c;
 
-    
+    // overwrites the value stored at *p and, thus, 
     b = 3;
 
     // prints out the address of *c (which is now equal to *p)
