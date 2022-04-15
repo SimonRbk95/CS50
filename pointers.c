@@ -48,8 +48,8 @@ int main(void)
     char* str = &s[1];
 
     // printf("%p\n", *str);
-    printf("%p\n", str);
-    printf("%p\n", &s[1]);
+    printf("%c\n", *s[3]);
+    printf("%p\n", &s[3]);
 
 
 }
