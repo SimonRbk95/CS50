@@ -15,13 +15,13 @@ int main(void)
 
 
     // &a gets the address and assigns it to *p
-    int *p = &a;
+    int* p = &a;
 
     // b gets assigned the value located at the adress that is assigned to *p
     int b = *p;
 
     // *c gets assigned the address of variable 'b'
-    int *c = &b;
+    int* c = &b;
 
     // overwrites the value stored at *p/ in variable 'b'
     b = 3;
