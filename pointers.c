@@ -13,6 +13,8 @@ int main(void)
     // variable declared as '*p' for instance gets assigned the address in memory
     // variable declared as '*p' can also be used to store the value located at its address in a new variable
 
+    // how to create multiple pointers in one line
+    int* pa, *pb, *pc;
 
     // &a gets the address and assigns it to *p
     int* p = &a;
@@ -38,6 +40,12 @@ int main(void)
     // prints out the integer value at the address *c
     printf("%i\n", *c);
 
-    //prints out the integer value at address *p
+    // prints out the integer value at address *p
     printf("%i\n", *p);
+
+    // strings are actually a char*
+    char* s = "Hi!";
+
+    printf("%s\n", s)
+
 }
