@@ -44,11 +44,12 @@ int main(void)
     printf("%i\n", *p);
 
     // strings are actually a char array with a pointer that points to the first element of the array
+    // the compiler adds a 
     char *s = "Hi!";
     char* str = &s[1];
 
-    // printf("%p\n", *str);
-    printf("%c\n", *s[3]);
+    // prints the char or \0 at index [3] of char
+    printf("%c\n", s[3]);
     printf("%p\n", &s[3]);
 
 
