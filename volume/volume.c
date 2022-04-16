@@ -55,8 +55,10 @@ int main(int argc, char *argv[])
     while (fread(buffer, sizeof(uint16_t), 1, input))
     {
         fwrite(buffer, sizeof(uint16_t), 1, output);
+        
     }
 
+    free(buffer);
 
     // TODO: Read samples from input file and write updated data to output file
     // read sample data, 2-bytes at a time, might require loop
