@@ -59,7 +59,7 @@ int main(void)
     printf("%c\n", s[3]);
 
     // prints the address of index 3 of the array by using the '&' operator directly
-    printf("%p\n", &s[3]);
+    printf("address s[3]: %p\n", &s[3]);
 
     // uninitialized char variable
     // char* t = NULL;
@@ -69,7 +69,7 @@ int main(void)
     // t = s;
 
     // printf("%p\n", t);
-    printf("%p\n", s);
+    printf("address *s: %p\n", s);
 
     // create a proper copy of a variable by making space in memory first
     // creates memory for whatever is the length of t plus one byte for the Nul character at the end
