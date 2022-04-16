@@ -80,11 +80,11 @@ int main(void)
         return 1;
         }
 
-    // copies whatever is at address s to t
+    // copies whatever is at address s to x
     strcpy(x, s);
 
     //
-    printf("t: %s\n", x);
+    printf("x: %s\n", x);
     printf("s: %s\n", s);
 
     free(x);
