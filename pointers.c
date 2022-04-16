@@ -64,5 +64,7 @@ int main(void)
     // uninitialized char variable
     char* t = NULL;
 
+    t = *s;
+
     printf("%c", *t);
 }
