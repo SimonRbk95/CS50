@@ -75,5 +75,6 @@ int main(void)
     // creates memory for whatever is the length of t plus one byte for the Nul character at the end
     char *t = malloc(strlen(t) + 1);
 
-    
+    // copies whatever is at address s to t
+    strcpy(t, s);
 }
