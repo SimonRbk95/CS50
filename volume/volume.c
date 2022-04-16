@@ -38,7 +38,10 @@ int main(int argc, char *argv[])
 
 
     // TODO: Read samples from input file and write updated data to output file
-    // creat
+    // read sample data, 2-bytes
+    // store it in a temp variable
+    // change temp
+    // 
 
     // Close files
     fclose(input);
