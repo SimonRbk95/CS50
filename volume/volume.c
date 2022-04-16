@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     uint8_t *header = malloc(sizeof(uint8_t)*HEADER_SIZE);
-    if (header == NULL);
+    if (header == NULL)
         {
             printf("no memory for you");
             return 1;
@@ -43,10 +43,10 @@ int main(int argc, char *argv[])
     fread(header, HEADER_SIZE, 1, input);
     fwrite(header,HEADER_SIZE, 1, output);
 
-    free(arr1);
+    free(header);
 
     uint16_t *buffer = malloc(sizeof(uint16_t));
-    if (buffer == NULL);
+    if (buffer == NULL)
         {
             printf("no memory for you");
             return 1;
