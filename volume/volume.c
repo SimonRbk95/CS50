@@ -53,8 +53,10 @@ int main(int argc, char *argv[])
         }
     // loop that reads and writes to another file
     while (fread(buffer, sizeof(uint16_t), 1, input))
-    []
+    {
+        
     }
+
 
     // TODO: Read samples from input file and write updated data to output file
     // read sample data, 2-bytes at a time, might require loop
