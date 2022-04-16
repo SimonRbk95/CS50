@@ -74,6 +74,11 @@ int main(void)
     // create a proper copy of a variable by making space in memory first
     // creates memory for whatever is the length of t plus one byte for the Nul character at the end
     char *t = malloc(strlen(t) + 1);
+    if (t==NULL)
+        {
+        printf("error");
+        return 1;
+        }
 
     // copies whatever is at address s to t
     strcpy(t, s);
