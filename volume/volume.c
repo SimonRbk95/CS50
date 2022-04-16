@@ -52,9 +52,8 @@ int main(int argc, char *argv[])
             return 1;
         }
     // loop that reads and writes to another file
-    for()
-    {
-    fread(buffer, sizeof(uint16_t),input);
+    while (fread(buffer, sizeof(uint16_t), 1, input))
+    []
     }
 
     // TODO: Read samples from input file and write updated data to output file
