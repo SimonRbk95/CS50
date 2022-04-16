@@ -34,23 +34,23 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
-    uint8_t *header = malloc(sizeof(uint8_t)*HEADER_SIZE);
+    uint8_t *header = malloc(sizeof(uint8_t) * HEADER_SIZE);
     if (header == NULL)
-        {
-            printf("no memory for you");
-            return 1;
-        }
+    {
+        printf("no memory for you");
+        return 1;
+    }
     fread(header, HEADER_SIZE, 1, input);
-    fwrite(header,HEADER_SIZE, 1, output);
+    fwrite(header, HEADER_SIZE, 1, output);
 
     free(header);
 
     int16_t *buffer = malloc(sizeof(uint16_t));
     if (buffer == NULL)
-        {
-            printf("no memory for you");
-            return 1;
-        }
+    {
+        printf("no memory for you");
+        return 1;
+    }
 
     // loop that reads and writes to another file
     while (fread(buffer, sizeof(int16_t), 1, input))
