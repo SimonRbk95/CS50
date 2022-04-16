@@ -72,5 +72,8 @@ int main(void)
     printf("%p", s);
 
     // create a proper copy of a variable by making space in memory first
+    // creates memory for whatever is the length of t plus one byte for the Nul character at the end
+    char *t = malloc(strlen(t) + 1);
+
     
 }
