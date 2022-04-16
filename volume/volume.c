@@ -40,8 +40,8 @@ int main(int argc, char *argv[])
             printf("no memory for you");
             return 1;
         }
-    fread(header, sizeof(uint8_t), HEADER_SIZE, 1, input);
-    fwrite(header,sizeof(uint8_t), HEADER_SIZE, 1, output);
+    fread(header, HEADER_SIZE, 1, input);
+    fwrite(header,HEADER_SIZE, 1, output);
 
     free(arr1);
 
