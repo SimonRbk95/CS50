@@ -53,11 +53,11 @@ int main(int argc, char *argv[])
         }
 
     // loop that reads and writes to another file
-    while (fread(buffer, sizeof(uint16_t), 1, input))
+    while (fread(buffer, sizeof(int16_t), 1, input))
     {
         // change volume
         *buffer *= factor;
-        fwrite(buffer, sizeof(uint16_t), 1, output);
+        fwrite(buffer, sizeof(int16_t), 1, output);
     }
 
     free(buffer);
