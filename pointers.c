@@ -64,7 +64,13 @@ int main(void)
     // uninitialized char variable
     char* t = NULL;
 
+    // t refers now to the same variable
+    // t and s have the same address
     t = s;
 
-    printf("%c", *t);
+    printf("%p", t);
+    printf("%p", s);
+
+    // create a proper copy of a variable by making space in memory first
+    
 }
