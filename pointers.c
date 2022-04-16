@@ -73,7 +73,7 @@ int main(void)
 
     // create a proper copy of a variable by making space in memory first
     // creates memory for whatever is the length of t plus one byte for the Nul character at the end
-    char *x = malloc(strlen(x) + 1);
+    char *x = malloc(strlen(s) + 1);
     if (x==NULL)
         {
         printf("error");
@@ -83,7 +83,9 @@ int main(void)
     // copies whatever is at address s to x
     strcpy(x, s);
 
-    //
+    // make changes to string x to prove *x, *s point to different addresses
+    x[0] = toupper(x[0]);
+
     printf("x: %s\n", x);
     printf("s: %s\n", s);
 
