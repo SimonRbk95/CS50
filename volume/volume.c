@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
     free(header);
 
-    uint16_t *buffer = malloc(sizeof(uint16_t));
+    int16_t *buffer = malloc(sizeof(uint16_t));
     if (buffer == NULL)
         {
             printf("no memory for you");
@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
     // loop that reads and writes to another file
     while (fread(buffer, sizeof(uint16_t), 1, input))
     {
+        // change volume
         *buffer *= factor;
         fwrite(buffer, sizeof(uint16_t), 1, output);
     }
