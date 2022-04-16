@@ -40,10 +40,22 @@ int main(int argc, char *argv[])
             printf("no memory for you");
             return 1;
         }
-    fread(arr1, sizeof(uint8_t, 44, input));
-    fwrite(arr1,sizeof(uint8_t, 44, output));
+    fread(arr1, sizeof(uint8_t), 44, input);
+    fwrite(arr1,sizeof(uint8_t), 44, output);
 
     free(arr1);
+
+    uint16_t *buffer = malloc(sizeof(uint16_t));
+    if (buffer == NULL);
+        {
+            printf("no memory for you");
+            return 1;
+        }
+    // loop that reads and writes to another file
+    for()
+    {
+    fread(buffer, sizeof(uint16_t),)
+    }
 
     // TODO: Read samples from input file and write updated data to output file
     // read sample data, 2-bytes at a time, might require loop
