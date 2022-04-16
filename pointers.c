@@ -92,5 +92,8 @@ int main(void)
     printf("x: %s\n", x);
     printf("s: %s\n", s);
 
+    // malloc generated memory has to be freed
+    // only memory that was generated with malloc should be free()d
+    // do not free more than once
     free(x);
 }
