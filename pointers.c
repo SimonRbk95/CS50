@@ -30,10 +30,10 @@ int main(void)
     b = 3;
 
     // stores the value that *c points to in the variable stored at location *p
-    //*p = *c;
+    *p = 4;
 
     // prints out the address of *c (which is now equal to *p)
-    printf("%p\n", c);
+    printf("a: %i\n", a);
 
     // prints out the address of *p
     printf("%p\n", p);

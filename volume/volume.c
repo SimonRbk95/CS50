@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     uint8_t *header = malloc(sizeof(uint8_t)*HEADER_SIZE);
-    if (arr1 == NULL);
+    if (header == NULL);
         {
             printf("no memory for you");
             return 1;
@@ -54,18 +54,11 @@ int main(int argc, char *argv[])
     // loop that reads and writes to another file
     while (fread(buffer, sizeof(uint16_t), 1, input))
     {
-        *
+        *buffer *= factor;
         fwrite(buffer, sizeof(uint16_t), 1, output);
-
     }
 
     free(buffer);
-
-    // TODO: Read samples from input file and write updated data to output file
-    // read sample data, 2-bytes at a time, might require loop
-    // store it in a temp variable int16_t data type
-    // change temp
-    //
 
     // Close files
     fclose(input);
