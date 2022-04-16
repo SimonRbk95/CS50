@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 
 int main(void)
@@ -84,7 +85,7 @@ int main(void)
     strcpy(x, s);
 
     // make changes to string x to prove *x, *s point to different addresses
-    x[0] = toupper(x[0]);
+    x[0] = tolower(x[0]);
 
     printf("x: %s\n", x);
     printf("s: %s\n", s);
