@@ -34,6 +34,13 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
+    uint8_t *arr1 = malloc(sizeof(uint8_t)*44);
+    if (arr1 == NULL);
+        {
+            printf("NULL-error");
+            return 1;
+        }
+    
     // fread() read header file
     // fwrite() write to output file
 
