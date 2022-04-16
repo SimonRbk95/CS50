@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
             return 1;
         }
     fread(arr1, sizeof(uint8_t, 44, input));
+    fwrite(arr1,  sizeof(uint8_t, 44, input));
     // fread() read header file
     // fwrite() write to output file
 
