@@ -37,10 +37,10 @@ int main(int argc, char *argv[])
     uint8_t *arr1 = malloc(sizeof(uint8_t)*44);
     if (arr1 == NULL);
         {
-            printf("NULL-error");
+            printf("no memory for you");
             return 1;
         }
-    
+    fread(arr1, sizeof(uint8_t, 44, input));
     // fread() read header file
     // fwrite() write to output file
 
