@@ -74,7 +74,9 @@ int main(void)
 
     // create a proper copy of a variable by making space in memory first
     // creates memory for whatever is the length of t plus one byte for the Nul character at the end
+    // malloc returns a pointer to the memory
     char *x = malloc(strlen(s) + 1);
+    // if malloc cannot give you memory it returns NULL
     if (x==NULL)
         {
         printf("error");
