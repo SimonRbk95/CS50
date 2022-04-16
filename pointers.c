@@ -62,14 +62,14 @@ int main(void)
     printf("%p\n", &s[3]);
 
     // uninitialized char variable
-    char* t = NULL;
+    // char* t = NULL;
 
     // t refers now to the same variable
     // t and s have the same address
-    t = s;
+    // t = s;
 
-    printf("%p", t);
-    printf("%p", s);
+    // printf("%p\n", t);
+    printf("%p\n", s);
 
     // create a proper copy of a variable by making space in memory first
     // creates memory for whatever is the length of t plus one byte for the Nul character at the end
@@ -77,4 +77,8 @@ int main(void)
 
     // copies whatever is at address s to t
     strcpy(t, s);
+
+    //
+    printf("t: %s\n", t);
+    printf("s: %s\n", s);
 }
