@@ -44,9 +44,6 @@ int main(int argc, char *argv[])
     fwrite(arr1,sizeof(uint8_t, 44, output));
 
     free(arr1);
-    // fread() read header file
-    // fwrite() write to output file
-
 
     // TODO: Read samples from input file and write updated data to output file
     // read sample data, 2-bytes at a time, might require loop
