@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     // loop that reads and writes to another file
     while (fread(buffer, sizeof(uint16_t), 1, input))
     {
-        
+        fwrite(buffer, sizeof(uint16_t), 1, output);
     }
 
 
