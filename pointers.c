@@ -29,7 +29,7 @@ int main(void)
     b = 3;
 
     // stores the value that *c points to in the variable stored at location *p
-    *p = *c;
+    //*p = *c;
 
     // prints out the address of *c (which is now equal to *p)
     printf("%p\n", c);
