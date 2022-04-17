@@ -41,10 +41,20 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 r = image[i][j].rgbtRed;
                 g = image[i][j].rgbtGreen;
                 // get the adequate shade of grey
-                int avg = round((b + r + g)/3);
-                if (avg > 255)
+                int sepiaRed = round(.393 * r + .769 * g + .189 * b);
+                int sepiaGreen = round(.349 * r + .686 * g + .168 * b);
+                int sepiaBlue = round(.272 * r + .534 * g + .131 * b);
+                if (sepiaRed > 255)
                 {
-                    avg = 255;
+                    sepiaRed = 255;
+                }
+                if (sepiaGreen > 255)
+                {
+                    sepiaGreen = 255;
+                }
+                if(sepiaBlue)
+                {
+                    
                 }
                 // turn the pixel grey
                 image[i][j].rgbtBlue = avg;
