@@ -40,7 +40,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 b = image[i][j].rgbtBlue;
                 r = image[i][j].rgbtRed;
                 g = image[i][j].rgbtGreen;
-                // get the adequate shade of grey
+                // get sepia color
                 int sepiaRed = round(.393 * r + .769 * g + .189 * b);
                 int sepiaGreen = round(.349 * r + .686 * g + .168 * b);
                 int sepiaBlue = round(.272 * r + .534 * g + .131 * b);
