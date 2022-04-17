@@ -54,7 +54,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 }
                 if(sepiaBlue)
                 {
-                    
+                    sepiaBlue = 255;
                 }
                 // turn the pixel grey
                 image[i][j].rgbtBlue = avg;
