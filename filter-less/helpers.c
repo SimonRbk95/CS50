@@ -9,16 +9,17 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
             {
                 // float variables for easier calculation and rounding precision
-                float b = image[i][j].rgbtBlue;
-                float r = image[i][j].rgbtRed;
-                float g = image[i][j].rgbtGreen;
+                float b, r, g;
+                b = image[i][j].rgbtBlue;
+                r = image[i][j].rgbtRed;
+                g = image[i][j].rgbtGreen;
                 // get the adequate shade of grey
                 int avg = round((b + r + g)/3);
-                //
                 if (avg > 255)
                 {
                     avg = 255;
                 }
+                // turn the pixel grey
                 image[i][j].rgbtBlue = avg;
                 image[i][j].rgbtRed = avg;
                 image[i][j].rgbtGreen = avg;
