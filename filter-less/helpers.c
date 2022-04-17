@@ -46,7 +46,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 int sepiaRed = round(.393 * r + .769 * g + .189 * b);
                 int sepiaGreen = round(.349 * r + .686 * g + .168 * b);
                 int sepiaBlue = round(.272 * r + .534 * g + .131 * b);
-                printf("sepiaRed %i", sepiaRed);
                 if (sepiaRed > 255)
                 {
                     sepiaRed = 255;
