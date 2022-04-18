@@ -71,7 +71,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-
     // !!!! width is already the length of the array's index
     // so width/2 if width is even
     // each pixel is represented by 8 bits, so swap 24 bits
@@ -105,7 +104,16 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 // in case width is odd
                 else
                 {
+                    // skip the pixel in the middle
                     if (j != (width + 1) / 2)
+                    {
+                        tempRed = image[i][width - j - 1].rgbtRed;
+                        tempGreen = image[i][width - j - 1].rgbtGreen;
+                        tempBlue = image[i][width - j - 1].rgbtBlue;
+                        image[i][j].rgbtBlue = tempBlue;
+                        image[i][j].rgbtRed = tempRed;
+                        image[i][j].rgbtGreen = tempGreen;
+                    }
                 }
             }
     }
