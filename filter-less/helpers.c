@@ -128,9 +128,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int counter = 0;
 
             // check the adajcent pixels in a 3x3 pattern
-            for (int x = -1; x < 3; x++)
+            for (int x = -1; x < 2; x++)
             {
-                for (int y = 0; y < 3; y++)
+                for (int y = -1; y < 2; y++)
                 {
                     // temporary pixel that we are investigating
                     int tempX = i + x;
