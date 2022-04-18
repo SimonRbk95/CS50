@@ -34,7 +34,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     float b, r, g;
-    float sepiaRed, sepiaGreen, sepiaBlue;
+    int sepiaRed, sepiaGreen, sepiaBlue;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -66,10 +66,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             }
     }
     return;
-
-
-
-
 }
 
 // Reflect image horizontally
