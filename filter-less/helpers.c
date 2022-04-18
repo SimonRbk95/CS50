@@ -118,7 +118,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE temp[height][width];
+    RGBTRIPLE copy[height][width];
     // change the pixel based on the algorithm
     for (int i = 0; i < height; i++)
     {
@@ -128,7 +128,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 // consider corner case
                 // save the pixel into copy
                 // read temp and copy each pixel from temp into image
-
+             // adapted matrixes logic found on github
              int avgRGB[3] = {0,0,0}, n = 0;
              int a[3][3] = { {i-1, i-1, i-1}, {i, i, i}, {i+1, i+1,i+1} }, b[3][3] = { {j-1, j, j+1}, {j-1, j, j+1}, {j-1, j, j+1} };
              for(int x = 0; x < 3; x++)
