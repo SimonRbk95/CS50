@@ -86,7 +86,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 int *tempRed = malloc(len);
                 int *tempGreen = malloc(len);
                 // check if memory is available
-                if (tempBlue == NULL)
+                if (tempBlue || tempRed || tempGreen == NULL)
                 {
                     printf("mallocError");
                     return 1;
@@ -94,33 +94,21 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 // if the number of pixels in a row is even
                 if (width % 2 == 0)
                 {
-                    // get the first and outter pixel
-                    for (int a = 0, int middle = (len/2 - 1), a > middle; )
-                // swap all of them
+                    // start from the last pixel
+                    tempRed = image[i][width - j - 1].rgbtRed;
+                    tempGreen = image[i][width - j - 1].rgbtGreen;
+                    tempBlue = image[i][width - j - 1].rgbtBlue;
+                    image[i][j].rgbtBlue = tempBlue;
+                    image[i][j].rgbtRed = tempRed;
+                    image[i][j].rgbtGreen = tempGreen;
                 }
-                // pixel in the middle stays the same
+                // in case width is odd
                 else
                 {
-                    for (int a = 0, int middle = (len/2 - .5); a < middle; a++)
-                    {
-                        for (int c = len -1; c > middle; c--)
-                        {
-                            // start from the last pixel
-                            tempRed = image[i][c].rgbtRed;
-                            tempGreen = image[i][c].rgbtGreen;
-                            tempBlue = image[i][c].rgbtBlue;
-                            image[i][j].rgbtBlue = tempBlue;
-                            image[i][j].rgbtRed = tempRed;
-                            image[i][j].rgbtGreen = tempGreen;
-
-                        }
-                    }
-
-
+                    if (width)
                 }
-
-
             }
+    }
     return;
 }
 
