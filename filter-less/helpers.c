@@ -95,7 +95,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 // pixel in the middle stays the same
                 else
                 {
-                    for (int a = 0, int middle = (len)/2 - 1, a > middle; a++)
+                    for (int a = 0, int middle = (len)/2 - .5, a > middle; a++)
 
 
                 }
