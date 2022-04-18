@@ -78,12 +78,18 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 // find out size of array
                 int len = sizeof(image[i].rgbtBlue)/8;
                 // create dynamic memory for the swap
-                
-
+                int *swapped = malloc(len);
+                // check if memory is available
+                if (swapped == NULL)
+                {
+                    printf("mallocError");
+                    return 1;
+                }
                 // if the number of pixels in a row is even
                 if (len % 2 == 0)
                 {
-                // get the first and outter pixel
+                    // get the first and outter pixel
+                    for (int a = 0, int middle = (len)/2 - 1, a > middle; )
                 // swap all of them
                 }
                 // pixel in the middle stays the same
