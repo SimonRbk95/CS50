@@ -143,7 +143,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         continue;
                     }
 
-                    //Get the image value
+                    //Get the image's pixel values
                     sum_Red += image[tempX][tempY].rgbtRed;
                     sum_Green += image[tempX][tempY].rgbtGreen;
                     sum_Blue += image[tempX][tempY].rgbtBlue;
