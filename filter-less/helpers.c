@@ -76,7 +76,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
             {
                 // find out size of array
-                int len = sizeof(image[i].rgbtBlue)/8;
+                int len = sizeof(image[i].rgbtBlue)/8 * 3;
                 // create dynamic memory for the swap
                 int *swapped = malloc(len);
                 // check if memory is available
@@ -99,7 +99,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                     {
                         for (int b = len -1; b > middle; b--)
                         {
-                            
+
                         }
                     }
 
