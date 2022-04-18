@@ -77,6 +77,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             {
                 // find out size of array
                 int len = sizeof(image[i].rgbtBlue)/8;
+                // create dynamic memory for the swap
+                
+
                 // if the number of pixels in a row is even
                 if (len % 2 == 0)
                 {
