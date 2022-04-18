@@ -122,11 +122,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             // variables needed to get average
-            int total_Red, total_Blue, total_Green;
-            total_Red = total_Blue = total_Green = 0;
+            int sum_Red, sum_Blue, sum_Green;
+            sum_Red = sum_Blue = sum_Green = 0;
             int counter = 0;
 
-            //Get the adajcent pixels in a 3x3 pattern
+            // check the adajcent pixels in a 3x3 pattern
             for (int x = -1; x < 2; x++)
             {
                 for (int y = -1; y < 2; y++)
@@ -142,17 +142,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
 
                     //Get the image value
-                    total_Red += image[currentX][currentY].rgbtRed;
-                    total_Green += image[currentX][currentY].rgbtGreen;
-                    total_Blue += image[currentX][currentY].rgbtBlue;
+                    sum_Red += image[currentX][currentY].rgbtRed;
+                    sum_Green += image[currentX][currentY].rgbtGreen;
+                    sum_Blue += image[currentX][currentY].rgbtBlue;
 
                     counter++;
                 }
 
                 //do the average of neigbhouring pexels
-                copy[i][j].rgbtRed = round(total_Red / counter);
-                copy[i][j].rgbtGreen = round(total_Green / counter);
-                copy[i][j].rgbtBlue = round(total_Blue / counter);
+                copy[i][j].rgbtRed = round(sum_Red / counter);
+                copy[i][j].rgbtGreen = round(sum_Green / counter);
+                copy[i][j].rgbtBlue = round(sum_Blue / counter);
             }
         }
 
