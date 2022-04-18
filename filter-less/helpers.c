@@ -38,7 +38,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
             {
                 // float variables for easier calculation and rounding precision
-                float b, r, g;
+                int b, r, g;
                 b = image[i][j].rgbtBlue;
                 r = image[i][j].rgbtRed;
                 g = image[i][j].rgbtGreen;
