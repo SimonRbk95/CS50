@@ -150,6 +150,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
              avgRGB[1] /= n;
              avgRGB[2] /= n;
 
+             for()
+             {
+                 
+             }
              copy[i][j].rgbtRed = avgRGB[0];
              copy[i][j].rgbtGreen = avgRGB[1];
              copy[i][j].rgbtBlue = avgRGB[2];
