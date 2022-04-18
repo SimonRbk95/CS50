@@ -87,9 +87,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 if (width % 2 == 0)
                 {
                     // start from the last pixel and swap them with the counterparts starting from the beginning
-                    image[i][j].rgbtBlue = image[i][width - j - 1].rgbtRed;
-                    image[i][j].rgbtRed = image[i][width - j - 1].rgbtGreen;
-                    image[i][j].rgbtGreen = image[i][width - j - 1].rgbtBlue;
+                    image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
+                    image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
+                    image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
 
                     image[i][width - j - 1].rgbtRed = tempRed;
                     image[i][width - j - 1].rgbtGreen = tempGreen;
@@ -101,9 +101,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                     // skip the pixel in the middle
                     if (j != (width + 1) / 2)
                     {
-                    image[i][j].rgbtBlue = image[i][width - j - 1].rgbtRed;
-                    image[i][j].rgbtRed = image[i][width - j - 1].rgbtGreen;
-                    image[i][j].rgbtGreen = image[i][width - j - 1].rgbtBlue;
+                    image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
+                    image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
+                    image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
 
                     image[i][width - j - 1].rgbtRed = tempRed;
                     image[i][width - j - 1].rgbtGreen = tempGreen;
