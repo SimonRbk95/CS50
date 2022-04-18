@@ -76,11 +76,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
             {
                 // find out size of array
-                int len = sizeof(image[i].rgbtBlue)/8 * 3;
+                int len = sizeof(image[i].rgbtBlue);
                 // create dynamic memory for the swap
-                int *swapped = malloc(len);
+                int *tempBlue = malloc(len);
+                int *tempRed = malloc(len);
+                int *tempGreen = malloc(len);
                 // check if memory is available
-                if (swapped == NULL)
+                if (tempBlue == NULL)
                 {
                     printf("mallocError");
                     return 1;
@@ -99,6 +101,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                     {
                         for (int b = len -1; b > middle; b--)
                         {
+
+                            image[i][j].rgbtBlue = ;
+                            image[i][j].rgbtRed = sepiaRed;
+                            image[i][j].rgbtGreen = sepiaGreen;
 
                         }
                     }
