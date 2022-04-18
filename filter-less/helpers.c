@@ -120,3 +120,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     return;
 }
+
+
+int swap(tempRed, tempBlue, tempGreen, i, j)
+{
+    image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
+    image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
+    image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
+
+    image[i][width - j - 1].rgbtRed = tempRed;
+    image[i][width - j - 1].rgbtGreen = tempGreen;
+    image[i][width - j - 1].rgbtBlue = tempBlue;
+}
