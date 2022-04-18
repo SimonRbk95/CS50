@@ -83,7 +83,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 // if the number of pixels in a row is even
                 if (width % 2 == 0)
                 {
-                    // start from the first pixel and swap them with the counterparts starting from the beginning
+                    // start from the first pixel and swap them with the countparts starting from the beginning
                     image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
                     image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
                     image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
@@ -125,7 +125,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int sum_Red, sum_Blue, sum_Green;
             sum_Red = sum_Blue = sum_Green = 0;
             // count valid pixels
-            float counter = 0.00;
+            float count = 0.00;
 
             // check the adajcent pixels in a 3x3 pattern
             // x has to be the starting point here for the if condition to work, because the array starts at position 0
@@ -148,13 +148,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     sum_Green += image[tempX][tempY].rgbtGreen;
                     sum_Blue += image[tempX][tempY].rgbtBlue;
 
-                    counter++;
+                    count++;
                 }
 
                 //do the average of neigbhouring pexels
-                copy[i][j].rgbtRed = round(sum_Red / counter);
-                copy[i][j].rgbtGreen = round(sum_Green / counter);
-                copy[i][j].rgbtBlue = round(sum_Blue / counter);
+                copy[i][j].rgbtRed = round(sum_Red / count);
+                copy[i][j].rgbtGreen = round(sum_Green / count);
+                copy[i][j].rgbtBlue = round(sum_Blue / count);
             }
         }
 
