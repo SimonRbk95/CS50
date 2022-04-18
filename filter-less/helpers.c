@@ -77,7 +77,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // each pixel is represented by 8 bits, so swap 24 bits
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j < width/2; j++)
             {
                 // find out size of array
                 int len = sizeof(image[i].rgbtBlue);
