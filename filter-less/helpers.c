@@ -128,7 +128,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 // consider corner case
                 // save the pixel into copy
                 // read temp and copy each pixel from temp into image
-             // adapted matrixes logic found on github
+             // adapted matrices logic found on github
              int avgRGB[3] = {0,0,0}, n = 0;
              int a[3][3] = { {i-1, i-1, i-1}, {i, i, i}, {i+1, i+1,i+1} }, b[3][3] = { {j-1, j, j+1}, {j-1, j, j+1}, {j-1, j, j+1} };
              for(int x = 0; x < 3; x++)
@@ -150,17 +150,22 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
              avgRGB[1] /= n;
              avgRGB[2] /= n;
 
-             for()
-             {
-                 
-             }
              copy[i][j].rgbtRed = avgRGB[0];
              copy[i][j].rgbtGreen = avgRGB[1];
              copy[i][j].rgbtBlue = avgRGB[2];
-         }
+            }
      }
-     return;
+
+    //copy the blurred image to the original 
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtRed = copy[i][j].rgbtRed;
+            image[i][j].rgbtGreen = copy[i][j].rgbtGreen;
+            image[i][j].rgbtBlue = copy[i][j].rgbtBlue;
+        }
+    }
+    return;
  }
 
-    return;
-}
