@@ -71,9 +71,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    // !!!! width is already the length of the array's index
-    // so width/2 if width is even
-    // each pixel is represented by 8 bits, so swap 24 bits
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < (width/2); j++)
@@ -124,19 +121,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            // variables needed to get average
             int total_Red, total_Blue, total_Green;
             total_Red = total_Blue = total_Green = 0;
             int counter = 0;
 
-            //Get the neighbouring pixels
+            //Get the adajcent pixels in a 3x3 pattern
             for (int x = -1; x < 2; x++)
             {
                 for (int y = -1; y < 2; y++)
                 {
+                    // temporary pixel that we are investigating
                     int tempX = i + x;
                     int tempY = j + y;
 
-                    //check if the neighbouring pixels are valid
+                    //check if the neighbouring pixels fit the pattern
                     if (tempX < 0 || tempX > (height - 1) || tempY < 0 || tempY > (width - 1))
                     {
                         continue;
