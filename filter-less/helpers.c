@@ -105,7 +105,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                     {
                         for (int c = len -1; c > middle; c--)
                         {
-                            //
+                            // start from the last pixel
                             tempRed = image[i][c].rgbtRed;
                             tempGreen = image[i][c].rgbtGreen;
                             tempBlue = image[i][c].rgbtBlue;
