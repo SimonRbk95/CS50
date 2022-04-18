@@ -105,7 +105,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 // in case width is odd
                 else
                 {
-                    if (j != (width -1)/2)
+                    if (j != (width + 1) / 2)
                 }
             }
     }
