@@ -118,7 +118,16 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE copy[height][width];
-    // 
+    RGBTRIPLE temp[height][width];
+    // change the pixel based on the algorithm
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < (width); j++)
+            {
+                // analyze the average of RGB from all pixels that surround the current pixel by 3x3
+                // consider corner case
+                // save the pixel into copy
+                // read temp and copy each pixel from temp into image
+            }
     return;
 }
