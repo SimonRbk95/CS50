@@ -66,55 +66,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 
-    int originalRed, originalGreen, originalBlue;
-    int sepiaRed, sepiaBlue, sepiaGreen;
-    //iterate through the height
-    for ( int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            //assign each value to variable created
-            originalRed = image[i][j].rgbtRed;
-            originalGreen = image[i][j].rgbtGreen;
-            originalBlue = image[i][j].rgbtBlue;
-
-            //calculate for sepiaColor and assign new value
-            sepiaRed = round(0.393 * originalRed + 0.769 * originalGreen + 0.189 * originalBlue);
-
-
-            if (sepiaRed > 255)
-            {
-                image[i][j].rgbtRed = 255;
-            }
-            else
-            {
-                image[i][j].rgbtRed = sepiaRed;
-            }
-
-            //calculate for sepiaGreen and assign new value
-            sepiaGreen = round(0.349 * originalRed + 0.686 * originalGreen + 0.168 * originalBlue);
-            if (sepiaGreen > 255)
-            {
-                image[i][j].rgbtGreen = 255;
-            }
-            else
-            {
-                image[i][j].rgbtGreen = sepiaGreen;
-            }
-            //Calculate for sepiaBlue and assign new value
-            sepiaBlue = round(0.272 * originalRed + 0.534 * originalGreen + 0.131 * originalBlue);
-            if (sepiaBlue > 255)
-            {
-                image[i][j].rgbtBlue = 255;
-            }
-            else
-            {
-                image[i][j].rgbtBlue = sepiaBlue;
-            }
-        }
-
-    }
-    return;
 
 
 
