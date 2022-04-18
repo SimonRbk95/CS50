@@ -137,21 +137,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                  {
                      if (a[x][y] >= 0 && a[x][y] >= 0)
                      {
-                         avgrgb[0] += image[a[x][y]][b[x][y]].rgbtRed;
-                         avgrgb[1] += image[a[x][y]][b[x][y]].rgbtGreen;
-                         avgrgb[2] += image[a[x][y]][b[x][y]].rgbtBlue;
+                         avgRGB[0] += image[a[x][y]][b[x][y]].rgbtRed;
+                         avgRGB[1] += image[a[x][y]][b[x][y]].rgbtGreen;
+                         avgRGB[2] += image[a[x][y]][b[x][y]].rgbtBlue;
                          n++;
                      }
                  }
              }
 
-             avgrgb[0] /= n;
-             avgrgb[1] /= n;
-             avgrgb[2] /= n;
+             avgRGB[0] /= n;
+             avgRGB[1] /= n;
+             avgRGB[2] /= n;
 
-             image[i][j].rgbtRed = avgrgb[0];
-             image[i][j].rgbtGreen = avgrgb[1];
-             image[i][j].rgbtBlue = avgrgb[2];
+             image[i][j].rgbtRed = avgRGB[0];
+             image[i][j].rgbtGreen = avgRGB[1];
+             image[i][j].rgbtBlue = avgRGB[2];
          }
      }
      return;
