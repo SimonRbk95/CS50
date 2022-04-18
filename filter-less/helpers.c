@@ -75,6 +75,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
             {
+                // find out size of array
                 // get the first and outter pixel
                 // if the number of pixels in a row is even
                 // swap all of them
