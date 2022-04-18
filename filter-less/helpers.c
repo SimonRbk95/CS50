@@ -138,7 +138,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     int tempY = j + y;
 
                     //check if the neighbouring pixels fit the pattern
-                    if (tempX < 1 || tempX > (height - 1) || tempY < 1 || tempY > (width - 1))
+                    if (tempX < 0 || tempX > (height - 1) || tempY < 0 || tempY > (width - 1))
                     {
                         continue;
                     }
