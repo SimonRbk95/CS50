@@ -71,7 +71,16 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+            {
+                // get the first and outter pixel
+                // if the number of pixels in a row is even
+                // swap all of them
+                // else the pixel in the middle stays the same
+
+            }
     return;
 }
 
