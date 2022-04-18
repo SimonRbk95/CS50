@@ -80,7 +80,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width/2; j++)
             {
                 // find out size of array
-                int len = sizeof(image[i].rgbtBlue);
+                int len = sizeof(8);
                 // create dynamic memory for the swap
                 int *tempBlue = malloc(len);
                 int *tempRed = malloc(len);
