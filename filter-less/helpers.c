@@ -124,27 +124,28 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // variables needed to get average
             int sum_Red, sum_Blue, sum_Green;
             sum_Red = sum_Blue = sum_Green = 0;
+            // count valid pixels
             int counter = 0;
 
             // check the adajcent pixels in a 3x3 pattern
-            for (int x = -1; x < 2; x++)
+            for (int x = -1; x < 3; x++)
             {
-                for (int y = -1; y < 2; y++)
+                for (int y = 0; y < 3; y++)
                 {
                     // temporary pixel that we are investigating
                     int tempX = i + x;
                     int tempY = j + y;
 
                     //check if the neighbouring pixels fit the pattern
-                    if (tempX < 0 || tempX > (height - 1) || tempY < 0 || tempY > (width - 1))
+                    if (tempX < 1 || tempX > (height - 1) || tempY < 1 || tempY > (width - 1))
                     {
                         continue;
                     }
 
                     //Get the image value
-                    sum_Red += image[currentX][currentY].rgbtRed;
-                    sum_Green += image[currentX][currentY].rgbtGreen;
-                    sum_Blue += image[currentX][currentY].rgbtBlue;
+                    sum_Red += image[tempX][tempY].rgbtRed;
+                    sum_Green += image[tempX][tempY].rgbtGreen;
+                    sum_Blue += image[tempX][tempY].rgbtBlue;
 
                     counter++;
                 }
