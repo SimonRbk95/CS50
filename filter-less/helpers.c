@@ -43,9 +43,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 r = image[i][j].rgbtRed;
                 g = image[i][j].rgbtGreen;
                 // get sepia color
-                int sepiaRed = round(.393 * r + .769 * g + .189 * b);
-                int sepiaGreen = round(.349 * r + .686 * g + .168 * b);
-                int sepiaBlue = round(.272 * r + .534 * g + .131 * b);
+                int sepiaRed = round(0.393 * r + 0.769 * g + 0.189 * b);
+                int sepiaGreen = round(0.349 * r + 0.686 * g + 0.168 * b);
+                int sepiaBlue = round(0.272 * r + 0.534 * g + 0.131 * b);
                 if (sepiaRed > 255)
                 {
                     sepiaRed = 255;
