@@ -76,7 +76,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // each pixel is represented by 8 bits, so swap 24 bits
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width/2; j++)
+        for (int j = 0; j < (width/2); j++)
             {
                 // find out size of array
                 // create dynamic memory for the swap
