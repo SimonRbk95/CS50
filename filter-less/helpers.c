@@ -3,6 +3,8 @@
 #include "cs50.h"
 #include "stdio.h"
 
+int swap(tempRed, tempBlue, tempGreen, i, j);
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
