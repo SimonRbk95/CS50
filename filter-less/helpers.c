@@ -79,14 +79,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < (width/2); j++)
             {
                 // find out size of array
-                // create dynamic memory for the swap
+                // create temporary variables for the swap
                 int tempRed = image[i][j].rgbtRed;
                 int tempGreen = image[i][j].rgbtGreen;
                 int tempBlue = image[i][j].rgbtBlue;
                 // if the number of pixels in a row is even
                 if (width % 2 == 0)
                 {
-                    // start from the last pixel and swap them with the counterparts starting from the beginning
+                    // start from the first pixel and swap them with the counterparts starting from the beginning
                     image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
                     image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
                     image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
