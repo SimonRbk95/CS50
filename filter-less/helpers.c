@@ -89,13 +89,19 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 if (len % 2 == 0)
                 {
                     // get the first and outter pixel
-                    for (int a = 0, int middle = (len)/2 - 1, a > middle; )
+                    for (int a = 0, int middle = (len/2 - 1), a > middle; )
                 // swap all of them
                 }
                 // pixel in the middle stays the same
                 else
                 {
-                    for (int a = 0, int middle = (len)/2 - .5, a > middle; a++)
+                    for (int a = 0, int middle = (len/2 - .5); a < middle; a++)
+                    {
+                        for (int b = len -1; b > middle; b--)
+                        {
+                            
+                        }
+                    }
 
 
                 }
