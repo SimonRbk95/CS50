@@ -80,15 +80,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             {
                 // find out size of array
                 // create dynamic memory for the swap
-                int *tempBlue = malloc(8);
-                int *tempRed = malloc(8);
-                int *tempGreen = malloc(8);
-                // check if memory is available
-                if (tempBlue || tempRed || tempGreen == NULL)
-                {
-                    printf("mallocError");
-                    exit(1);
-                }
+                int tempRed = image[i][j].rgbtRed;
+                int tempGreen = image[i][j].rgbtGreen;
+                int tempBlue = image[i][j].rgbtBlue;
                 // if the number of pixels in a row is even
                 if (width % 2 == 0)
                 {
