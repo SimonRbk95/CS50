@@ -58,7 +58,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 {
                     sepiaBlue = 255;
                 }
-                // turn the pixel grey
+                //
                 image[i][j].rgbtBlue = sepiaBlue;
                 image[i][j].rgbtRed = sepiaRed;
                 image[i][j].rgbtGreen = sepiaGreen;
