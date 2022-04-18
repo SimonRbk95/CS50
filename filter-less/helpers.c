@@ -77,11 +77,18 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             {
                 // find out size of array
                 int len = sizeof(image[i].rgbtBlue)/8;
-                
-                // get the first and outter pixel
                 // if the number of pixels in a row is even
+                if (len % 2 == 0)
+                {
+                // get the first and outter pixel
                 // swap all of them
-                // else the pixel in the middle stays the same
+                }
+                // pixel in the middle stays the same
+                else
+                {
+
+                }
+
 
             }
     return;
