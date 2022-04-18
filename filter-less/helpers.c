@@ -83,7 +83,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 // if the number of pixels in a row is even
                 if (width % 2 == 0)
                 {
-                    // start from the first pixel and swap them with the countparts starting from the beginning
+                    // start from the first pixel and swap them with the counterparts starting from the beginning
                     image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
                     image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
                     image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
