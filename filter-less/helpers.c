@@ -88,7 +88,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 if (tempBlue || tempRed || tempGreen == NULL)
                 {
                     printf("mallocError");
-                    return 1;
+                    exit(1);
                 }
                 // if the number of pixels in a row is even
                 if (width % 2 == 0)
