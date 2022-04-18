@@ -72,7 +72,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
 
-    // !!!! width is already the length 
+    // !!!! width is already the length of the array's index
+    // so width/2 if width is even
+    // each pixel 
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
