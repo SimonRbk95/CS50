@@ -92,7 +92,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                     return 1;
                 }
                 // if the number of pixels in a row is even
-                if (len % 2 == 0)
+                if (width % 2 == 0)
                 {
                     // get the first and outter pixel
                     for (int a = 0, int middle = (len/2 - 1), a > middle; )
