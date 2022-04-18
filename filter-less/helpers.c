@@ -122,41 +122,44 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // change the pixel based on the algorithm
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < (width); j++)
+        for (int j = 0; j < width; j++)
+        {
+            int total_Red, total_Blue, total_Green;
+            total_Red = total_Blue = total_Green = 0;
+            float counter = 0.00;
+
+            //Get the neighbouring pixels
+            for (int x = -1; x < 2; x++)
             {
-                // analyze the average of RGB from all pixels that surround the current pixel by 3x3
-                // consider corner case
-                // save the pixel into copy
-                // read temp and copy each pixel from temp into image
-             // adapted matrices logic found on github
-             int avgRGB[3] = {0,0,0}, n = 0;
-             int a[3][3] = { {i-1, i-1, i-1}, {i, i, i}, {i+1, i+1,i+1} }, b[3][3] = { {j-1, j, j+1}, {j-1, j, j+1}, {j-1, j, j+1} };
-             for(int x = 0; x < 3; x++)
-             {
-                 for(int y = 0; y < 3; y++)
-                 {
-                     // disregard corner cases
-                     if (a[x][y] >= 0 && a[x][y] >= 0)
-                     {
-                         avgRGB[0] += image[a[x][y]][b[x][y]].rgbtRed;
-                         avgRGB[1] += image[a[x][y]][b[x][y]].rgbtGreen;
-                         avgRGB[2] += image[a[x][y]][b[x][y]].rgbtBlue;
-                         n++;
-                     }
-                 }
-             }
+                for (int y = -1; y < 2; y++)
+                {
+                    int currentX = i + x;
+                    int currentY = j + y;
 
-             avgRGB[0] /= n;
-             avgRGB[1] /= n;
-             avgRGB[2] /= n;
+                    //check if the neighbouring pixels are valid
+                    if (currentX < 0 || currentX > (height - 1) || currentY < 0 || currentY > (width - 1))
+                    {
+                        continue;
+                    }
 
-             copy[i][j].rgbtRed = avgRGB[0];
-             copy[i][j].rgbtGreen = avgRGB[1];
-             copy[i][j].rgbtBlue = avgRGB[2];
+                    //Get the image value
+                    total_Red += image[currentX][currentY].rgbtRed;
+                    total_Green += image[currentX][currentY].rgbtGreen;
+                    total_Blue += image[currentX][currentY].rgbtBlue;
+
+                    counter++;
+                }
+
+                //do the average of neigbhouring pexels
+                copy[i][j].rgbtRed = round(total_Red / counter);
+                copy[i][j].rgbtGreen = round(total_Green / counter);
+                copy[i][j].rgbtBlue = round(total_Blue / counter);
             }
-     }
+        }
 
-    //copy the blurred image to the original 
+    }
+
+    //copy the blurred image to the original
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
