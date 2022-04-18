@@ -3,8 +3,6 @@
 #include "cs50.h"
 #include "stdio.h"
 
-int swap(tempRed, tempBlue, tempGreen, i, j);
-
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -88,15 +86,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 // if the number of pixels in a row is even
                 if (width % 2 == 0)
                 {
-                    swap(tempRed, tempBlue, tempGreen, i, j);
                     // start from the last pixel and swap them with the counterparts starting from the beginning
-                    //image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
-                    //image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
-                    //image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
+                    image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
+                    image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
+                    image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
 
-                    //image[i][width - j - 1].rgbtRed = tempRed;
-                    //image[i][width - j - 1].rgbtGreen = tempGreen;
-                    //image[i][width - j - 1].rgbtBlue = tempBlue;
+                    image[i][width - j - 1].rgbtRed = tempRed;
+                    image[i][width - j - 1].rgbtGreen = tempGreen;
+                    image[i][width - j - 1].rgbtBlue = tempBlue;
                 }
                 // in case width is odd
                 else
@@ -104,14 +101,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                     // skip the pixel in the middle
                     if (j != (width + 1) / 2)
                     {
-                    swap(tempRed, tempBlue, tempGreen, i, j)
-                    //image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
-                    //image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
-                    //image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
+                    image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
+                    image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
+                    image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
 
-                    //image[i][width - j - 1].rgbtRed = tempRed;
-                    //image[i][width - j - 1].rgbtGreen = tempGreen;
-                    //image[i][width - j - 1].rgbtBlue = tempBlue;
+                    image[i][width - j - 1].rgbtRed = tempRed;
+                    image[i][width - j - 1].rgbtGreen = tempGreen;
+                    image[i][width - j - 1].rgbtBlue = tempBlue;
                     }
                 }
             }
@@ -123,16 +119,4 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     return;
-}
-
-
-int swap(tempRed, tempBlue, tempGreen, i, j)
-{
-    image[i][j].rgbtBlue = image[i][width - j - 1].rgbtBlue;
-    image[i][j].rgbtRed = image[i][width - j - 1].rgbtRed;
-    image[i][j].rgbtGreen = image[i][width - j - 1].rgbtGreen;
-
-    image[i][width - j - 1].rgbtRed = tempRed;
-    image[i][width - j - 1].rgbtGreen = tempGreen;
-    image[i][width - j - 1].rgbtBlue = tempBlue;
 }
