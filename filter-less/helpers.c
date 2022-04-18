@@ -126,18 +126,18 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             int total_Red, total_Blue, total_Green;
             total_Red = total_Blue = total_Green = 0;
-            float counter = 0.00;
+            int counter = 0;
 
             //Get the neighbouring pixels
             for (int x = -1; x < 2; x++)
             {
                 for (int y = -1; y < 2; y++)
                 {
-                    int currentX = i + x;
-                    int currentY = j + y;
+                    int tempX = i + x;
+                    int tempY = j + y;
 
                     //check if the neighbouring pixels are valid
-                    if (currentX < 0 || currentX > (height - 1) || currentY < 0 || currentY > (width - 1))
+                    if (tempX < 0 || tempX > (height - 1) || tempY < 0 || tempY > (width - 1))
                     {
                         continue;
                     }
