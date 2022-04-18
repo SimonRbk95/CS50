@@ -74,7 +74,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
     // !!!! width is already the length of the array's index
     // so width/2 if width is even
-    // each pixel 
+    // each pixel is represented by 8 bits, so swap 24 bits
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -107,8 +107,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                         {
                             //
                             tempRed = image[i][c];
-                            tempGreen = image[i][c - 1];
-                            tempBlue = image[i][c - 2];
+                            tempGreen = image[i][c];
+                            tempBlue = image[i][c];
                             image[i][j].rgbtBlue = ;
                             image[i][j].rgbtRed = sepiaRed;
                             image[i][j].rgbtGreen = sepiaGreen;
