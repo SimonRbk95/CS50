@@ -94,11 +94,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
                 {
                     // start from the last pixel
                     *tempRed = image[i][width - j - 1].rgbtRed;
-                    tempGreen = image[i][width - j - 1].rgbtGreen;
-                    tempBlue = image[i][width - j - 1].rgbtBlue;
-                    image[i][j].rgbtBlue = tempBlue;
-                    image[i][j].rgbtRed = tempRed;
-                    image[i][j].rgbtGreen = tempGreen;
+                    *tempGreen = image[i][width - j - 1].rgbtGreen;
+                    *tempBlue = image[i][width - j - 1].rgbtBlue;
+                    image[i][j].rgbtBlue = *tempBlue;
+                    image[i][j].rgbtRed = *tempRed;
+                    image[i][j].rgbtGreen = *tempGreen;
                 }
                 // in case width is odd
                 else
