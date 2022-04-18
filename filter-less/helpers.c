@@ -128,7 +128,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             float count = 0.00;
 
             // check the adajcent pixels in a 3x3 pattern
-            // x has to be the starting point here for the if condition to work, because the array starts at position 0
+            // x has to be the starting point here at -1 for the if condition to work, because the array starts at position 0
             for (int x = -1; x < 2; x++)
             {
                 for (int y = -1; y < 2; y++)
