@@ -16,6 +16,7 @@ FILE *file = fopen(argv[1], "r");
 while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
 {
 // If start of new JPEG
+
     // If first JPEG
         // make a new JPEG and open it
         // f(write) to the new file
