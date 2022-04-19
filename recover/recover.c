@@ -21,6 +21,12 @@ FILE *img = NULL;
 // keep track of files created
 int JPEG_COUNTER = 0;
 
+if (argc != 2)
+{
+    printf("Usage: ./recover Filename");
+    return 1;
+}
+
 // repeat until end of block:
 while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
 {
