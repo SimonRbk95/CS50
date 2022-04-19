@@ -15,6 +15,9 @@ BYTE *buffer = malloc(block_size);
 // open memory card
 FILE *raw_file = fopen(argv[1], "r");
 
+// write to
+FILE *img = NULL;
+
 // keep track of files created
 int JPEG_COUNTER = 0;
 
@@ -41,7 +44,7 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         sprintf(filename, "%03i.jpg", JPEG_COUNTER);
 
         // open the file with write privileges
-        FILE *img = fopen(filename, "w");
+        *img = fopen(filename, "w");
 
         // write the current block to it
         fwrite(buffer, block_size, 1, filename);
