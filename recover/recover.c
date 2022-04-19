@@ -6,11 +6,12 @@ int main(int argc, char *argv[])
 
 // new type to store a byte of data
 typedef uint8_t BYTE;
+int block = BYTE * 512
  // open memory card
     FILE *file = fopen(argv[1], "r");
  // repeat until end of card:
     // Read 512 byte into a buffer
-    *buffer = malloc(512)
+    *buffer = malloc(block);
     // If start of new JPEG
         // If first JPEG
             // make a new JPEG and open it
