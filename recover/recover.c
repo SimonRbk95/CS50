@@ -47,12 +47,6 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
         // count the number of images
         JPEG_COUNTER++;
 
-        // check if file opened
-        if (img != NULL)
-        {
-            // close file
-            fclose(img);
-
         // make a new JPEG and keep track of it
         sprintf(filename, "%03i.jpg", JPEG_COUNTER);
 
@@ -63,7 +57,7 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
         fwrite(buffer, sizeof(buffer), 1, img);
         }
     }
-    else
+    if 
     {
         fwrite(buffer, block_size, 1, img);
     }
