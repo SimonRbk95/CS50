@@ -56,7 +56,6 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
             // write the current block to it
             fwrite(buffer, sizeof(buffer), 1, img);
         }
-
         else
         {
             // close previous image
@@ -65,13 +64,11 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
             sprintf(filename, "%03i.jpg", JPEG_COUNTER - 1);
             img = fopen(filename, "w");
             fwrite(buffer, sizeof(buffer), 1, img);
-
-        }
         }
     }
-    if
+    else
     {
-        fwrite(buffer, block_size, 1, img);
+        fwrite(buffer, sizeof(buffer), 1, img);
     }
 }
 free(buffer);
