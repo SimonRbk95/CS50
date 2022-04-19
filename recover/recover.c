@@ -28,20 +28,21 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         && (buffer[3] & 0xf0) == 0xe0)
     {
         JPEG_COUNTER++;
-        // file opened
+        // check if file opened
         if (img != NULL)
         {
             // close file
             fclose(filename);
-            // make a new JPEG and keep track of it
-            char filename[8];
-            sprintf(filename, "%03i.jpg", JPEG_COUNTER);
 
-            // open the file with write privileges
-            FILE *img = fopen(filename, "w");
+        // make a new JPEG and keep track of it
+        char filename[8];
+        sprintf(filename, "%03i.jpg", JPEG_COUNTER);
 
-            // write the current block to it
-            fwrite(buffer, block_size, 1, filename);
+        // open the file with write privileges
+        FILE *img = fopen(filename, "w");
+
+        // write the current block to it
+        fwrite(buffer, block_size, 1, filename);
         }
     }
     else
