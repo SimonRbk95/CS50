@@ -137,15 +137,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     int tempX = i + x;
                     int tempY = j + y;
 
-                    //check if the neighbouring pixels fit the pattern
+                    // check if the neighbouring pixels do not fit the pattern
                     if (tempX < 0 || tempX > (height - 1) || tempY < 0 || tempY > (width - 1))
                     {
+                        // jump back to the for loop and try the next pixel
                         continue;
                     }
                     count++;
                 }
 
-                //do the average of neigbhouring pexels
+                // calculate the average of the adjacent pixels
                 copy[i][j].rgbtRed = round(sum_Red / count);
                 copy[i][j].rgbtGreen = round(sum_Green / count);
                 copy[i][j].rgbtBlue = round(sum_Blue / count);
