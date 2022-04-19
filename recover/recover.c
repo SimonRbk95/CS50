@@ -39,11 +39,9 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         // write the current block to it
         fwrite(buffer, block_size, 1, filename);
     }
-    // If first JPEG
-        // make a new JPEG and open it
-        // f(write) to the new file
-    // Else
+    else
         // close the file I've been already writing to
+        fclose(filename);
 // Else
     // If already found JPEG
         // keep writing to it
