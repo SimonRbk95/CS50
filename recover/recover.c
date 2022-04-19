@@ -22,7 +22,7 @@ FILE *img = NULL;
 int JPEG_COUNTER = 0;
 
 // repeat until end of block:
-while (fread(buffer, sizeof(BYTE), block-size, raw_file) != 0)
+while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
 {
     // If start of new JPEG
     if (buffer[0] == 0xff
@@ -57,4 +57,5 @@ while (fread(buffer, sizeof(BYTE), block-size, raw_file) != 0)
 }
 free(buffer);
 fclose(img);
+fclose(raw_file);
 }
