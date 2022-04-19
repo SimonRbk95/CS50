@@ -3,7 +3,9 @@
 
 int main(int argc, char *argv[])
 {
+
  // open memory card
+    FILE *file = fopen(argv[1], "r");
  // repeat until end of card:
     // Read 512 byte into a buffer
     // If start of new JPEG
