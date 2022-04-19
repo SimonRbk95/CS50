@@ -16,7 +16,7 @@ typedef uint8_t BYTE;
 int block_size = 512;
 
 // pointer to dynamic memory for blocks to be read
-BYTE *buffer = malloc(sizeof(BYTE) * block_size);
+// BYTE *buffer = malloc(sizeof(BYTE) * block_size);
 
 // open memory card
 FILE *raw_file = fopen(argv[1], "r");
@@ -61,7 +61,7 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
         // open the file with write privileges
         img = fopen(filename, "w");
         // write the current block to it
-        
+
     }
     if (img != NULL)
     {
