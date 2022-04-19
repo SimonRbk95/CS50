@@ -8,14 +8,20 @@ int main(int argc, char *argv[])
 // new type to store a byte of data
 typedef uint8_t BYTE;
 int block_size = 512;
+
 // pointer to dynamic memory for blocks to be read
 BYTE *buffer = malloc(block_size);
- // open memory card
+
+// open memory card
 FILE *raw_file = fopen(argv[1], "r");
+
+// keep track of files created
+int JPEG_COUNTER = 0;
+
 // repeat until end of block:
 while (fread(buffer, 1, block_size, raw_file) == block_size)
 {
-// If start of new JPEG
+    // If start of new JPEG
     if (buffer[0] == 0xff
         && buffer[1] == 0xd8
         && buffer[2] == 0xff
