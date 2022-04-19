@@ -37,7 +37,7 @@ int found = 0;
 char filename[8];
 
 // repeat until end of block:
-while (fread(buffer, sizeof(BYTE), 512, raw_file) != 0)
+while (fread(buffer, sizeof(BYTE), 512, raw_file))
 {
     // If start of new JPEG
     if (buffer[0] == 0xff
