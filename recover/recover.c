@@ -37,7 +37,7 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         if (img != NULL)
         {
             // close file
-            fclose(filename);
+            fclose(img);
 
         // make a new JPEG and keep track of it
         char filename[8];
