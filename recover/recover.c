@@ -13,7 +13,7 @@ int block_size = 512;
 BYTE *buffer = malloc(block_size);
 
 // open memory card
-FILE *raw_file = fopen(argv[1], "r");
+FILE *raw_file = fopen(argv[1], "rb");
 
 // write to
 FILE *img = NULL;
