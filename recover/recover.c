@@ -48,7 +48,7 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         }
     }
     else
-        // close the file I've been already writing to
+
         ;
 // Else
     // If already found JPEG
