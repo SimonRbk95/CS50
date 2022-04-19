@@ -13,10 +13,10 @@ if (argc != 2)
 
 // new type to store a byte of data
 typedef uint8_t BYTE;
-int block_size = 512;
+// int block_size = 512;
 
 // pointer to dynamic memory for blocks to be read
-// BYTE *buffer = malloc(sizeof(BYTE) * block_size);
+BYTE *buffer = malloc(sizeof(BYTE) * 512);
 
 // open memory card
 FILE *raw_file = fopen(argv[1], "r");
@@ -37,7 +37,7 @@ int found = 0;
 char filename[8];
 
 // repeat until end of block:
-while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
+while (fread(buffer, sizeof(BYTE), 512, raw_file) != 0)
 {
     // If start of new JPEG
     if (buffer[0] == 0xff
@@ -65,7 +65,7 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
     }
     if (img != NULL)
     {
-        fwrite(buffer, block_size, 1, img);
+        fwrite(buffer, 512, 1, img);
     }
 }
 free(buffer);
