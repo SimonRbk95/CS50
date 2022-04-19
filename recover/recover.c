@@ -9,11 +9,11 @@ int main(int argc, char *argv[])
 typedef uint8_t BYTE;
 int block_size = 512;
 // pointer to dynamic memory for blocks to be read
-BYTE *buffer = malloc(block_size);
+BYTE *buffer = malloc(block_size * sizeof(BYTE));
  // open memory card
 FILE *raw_file = fopen(argv[1], "r");
 // repeat until end of block:
-while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+while (fread(buffer, 1, block_size, raw_file) == block_size)
 {
 // If start of new JPEG
 
