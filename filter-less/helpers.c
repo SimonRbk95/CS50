@@ -145,14 +145,18 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         // jump back to the for loop and try the next pixel
                         continue;
                     }
+                    // get the image's RGB pixel value
+                    sum_Red += image[tempX][tempY].rgbtRed;
+                    sum_Blue += image[tempX][tempY].rgbtBlue;
+                    sum_Green += image[tempX][tempY].rgbtGreen;
                     // count the existing adjacent pixels
                     count++;
                 }
 
                 // calculate the average of the adjacent pixels
                 copy[i][j].rgbtRed = round(sum_Red / count);
-                copy[i][j].rgbtGreen = round(sum_Green / count);
                 copy[i][j].rgbtBlue = round(sum_Blue / count);
+                copy[i][j].rgbtGreen = round(sum_Green / count);
             }
         }
 
