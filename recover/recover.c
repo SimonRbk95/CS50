@@ -16,7 +16,7 @@ typedef uint8_t BYTE;
 int block_size = 512;
 
 // pointer to dynamic memory for blocks to be read
-BYTE *buffer = malloc(block_size);
+BYTE *buffer = malloc(sizeof(BYTE) * block_size);
 
 // open memory card
 FILE *raw_file = fopen(argv[1], "rb");
