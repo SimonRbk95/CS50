@@ -44,7 +44,7 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         sprintf(filename, "%03i.jpg", JPEG_COUNTER);
 
         // open the file with write privileges
-        *img = fopen(filename, "w");
+        img = fopen(filename, "w");
 
         // write the current block to it
         fwrite(buffer, block_size, 1, filename);
