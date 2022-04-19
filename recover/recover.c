@@ -19,7 +19,7 @@ int block_size = 512;
 BYTE *buffer = malloc(sizeof(BYTE) * block_size);
 
 // open memory card
-FILE *raw_file = fopen(argv[1], "rb");
+FILE *raw_file = fopen(argv[1], "r");
 
 if(raw_file == NULL)
 {
