@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 typedef uint8_t BYTE;
 int block_size = 512;
 // pointer to dynamic memory for blocks to be read
-BYTE *buffer = malloc(block_size * sizeof(BYTE));
+unsigned char *buffer = malloc(block_size);
  // open memory card
 FILE *raw_file = fopen(argv[1], "r");
 // repeat until end of block:
@@ -21,7 +21,7 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         && buffer[2] == 0xff
         && (buffer[3] == 0xf0) == 0xe0)
     {
-        
+
     }
     // If first JPEG
         // make a new JPEG and open it
