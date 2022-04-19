@@ -27,7 +27,9 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         && buffer[2] == 0xff
         && (buffer[3] & 0xf0) == 0xe0)
     {
+        // count the number of images
         JPEG_COUNTER++;
+
         // check if file opened
         if (img != NULL)
         {
