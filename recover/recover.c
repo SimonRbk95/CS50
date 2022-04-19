@@ -47,12 +47,12 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         img = fopen(filename, "w");
 
         // write the current block to it
-        fwrite(buffer, block_size, 1, filename);
+        fwrite(buffer, block_size, 1, img);
         }
     }
     else
     {
-        fwrite(buffer, block_size, 1, filename);
+        fwrite(buffer, block_size, 1, img);
     }
 }
 free(buffer);
