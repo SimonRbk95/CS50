@@ -5,6 +5,12 @@
 int main(int argc, char *argv[])
 {
 
+if (argc != 2)
+{
+    printf("Usage: ./recover Filename");
+    return 1;
+}
+
 // new type to store a byte of data
 typedef uint8_t BYTE;
 int block_size = 512;
@@ -15,17 +21,18 @@ BYTE *buffer = malloc(block_size);
 // open memory card
 FILE *raw_file = fopen(argv[1], "rb");
 
+if(raw_file == NULL)
+{
+    printf("File cannot be opened!");
+    return 1;
+}
+
 // write to
 FILE *img = NULL;
 
 // keep track of files created
 int JPEG_COUNTER = 0;
 
-if (argc != 2)
-{
-    printf("Usage: ./recover Filename");
-    return 1;
-}
 
 // repeat until end of block:
 while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
