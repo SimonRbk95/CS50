@@ -37,7 +37,7 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         FILE *img = fopen(filename, "w");
 
         // write the current block to it
-        fwrite(buffer, sizeof(BYTE), block_size, filename);
+        fwrite(buffer, block_size, 1, filename);
     }
     // If first JPEG
         // make a new JPEG and open it
