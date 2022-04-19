@@ -12,7 +12,8 @@ int block_size = 512;
 
 // pointer to dynamic memory for blocks to be read
 BYTE *buffer = malloc(block_size);
+BYTE BUFFER[512];
 
-printf("size: %lu\n", sizeof(buffer));
+printf("size: %s\n", BUFFER);
 
 }
