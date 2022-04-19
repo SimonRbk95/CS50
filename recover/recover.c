@@ -29,6 +29,7 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
     {
         JPEG_COUNTER++;
         // make a new JPEG and keep track of it
+        char filename[8];
         sprintf(filename, "%03i.jpg", JPEG_COUNTER);
         FILE *img = fopen(filename, "w");
         fwrite(buffer, sizeof(BYTE),  , filename);
