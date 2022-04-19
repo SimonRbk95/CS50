@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 typedef uint8_t BYTE;
 int block_size = 512;
 // pointer to dynamic memory for blocks to be read
-unsigned char *buffer = malloc(block_size);
+BYTE *buffer = malloc(block_size);
  // open memory card
 FILE *raw_file = fopen(argv[1], "r");
 // repeat until end of block:
@@ -19,7 +19,8 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
     if (buffer[0] == 0xff
         && buffer[1] == 0xd8
         && buffer[2] == 0xff
-        && (buffer[3] == 0xe0 || buffer[3] == 0xe1))
+        && 
+        // (buffer[3] == 0xe0 || buffer[3] == 0xe1))
     {
 
     }
