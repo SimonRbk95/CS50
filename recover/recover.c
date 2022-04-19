@@ -32,6 +32,7 @@ FILE *img = NULL;
 
 // keep track of files created
 int JPEG_COUNTER = 0;
+int found = 0;
 
 char filename[8];
 
@@ -47,6 +48,14 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
         // count the number of images
         JPEG_COUNTER++;
         // if first image
+        if (found == 1)
+        {
+            fclose(output);
+        }
+        else
+        {
+            found = 1;
+        }
         if(JPEG_COUNTER == 1)
         {
             // make a new JPEG and keep track of it
