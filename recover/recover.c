@@ -24,7 +24,7 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         // make a new JPEG and keep track of it
         sprintf(filename, "%03i.jpg", 2);
         FILE *img = fopen(filename, "w");
-        fwrite(buffer,  );
+        fwrite(buffer, sizeof(BYTE),  );
     }
     // If first JPEG
         // make a new JPEG and open it
