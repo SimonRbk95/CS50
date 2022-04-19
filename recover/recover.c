@@ -33,6 +33,7 @@ FILE *img = NULL;
 // keep track of files created
 int JPEG_COUNTER = 0;
 
+char filename[8];
 
 // repeat until end of block:
 while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
@@ -53,7 +54,6 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
             fclose(img);
 
         // make a new JPEG and keep track of it
-        char filename[8];
         sprintf(filename, "%03i.jpg", JPEG_COUNTER);
 
         // open the file with write privileges
