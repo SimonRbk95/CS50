@@ -123,7 +123,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             // variables needed to get average
             int sum_Red, sum_Blue, sum_Green;
-            sum_Red = sum_Blue = sum_Green = 0;
+            sum_Red = 0;
+            sum_Blue = 0;
+            sum_Green = 0;
             // count valid pixels
             float count = 0.00;
 
