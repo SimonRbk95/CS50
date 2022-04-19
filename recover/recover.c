@@ -50,12 +50,12 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
         if(JPEG_COUNTER == 1)
         {
             // make a new JPEG and keep track of it
-            sprintf(filename, "%03i.jpg", JPEG_COUNTER);
+            sprintf(filename, "%03i.jpg", 0);
             // open the file with write privileges
             img = fopen(filename, "w");
             // write the current block to it
             fwrite(buffer, sizeof(buffer), 1, img);
-            printf("sizeof(buffer)= %i", sizeof(buffer));
+            // printf("sizeof(buffer)= %i", sizeof(buffer));
         }
         else
         {
