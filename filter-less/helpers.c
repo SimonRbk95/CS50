@@ -140,13 +140,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     //check if the neighbouring pixels fit the pattern
                     if (tempX < 0 || tempX > (height - 1) || tempY < 0 || tempY > (width - 1))
                     {
-                        continue;
+                        //Get the image's pixel values
+                        sum_Red += image[tempX][tempY].rgbtRed;
+                        sum_Green += image[tempX][tempY].rgbtGreen;
+                        sum_Blue += image[tempX][tempY].rgbtBlue;
                     }
-
-                    //Get the image's pixel values
-                    sum_Red += image[tempX][tempY].rgbtRed;
-                    sum_Green += image[tempX][tempY].rgbtGreen;
-                    sum_Blue += image[tempX][tempY].rgbtBlue;
 
                     count++;
                 }
