@@ -52,10 +52,6 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         fwrite(buffer, block_size, 1, filename);
     }
 }
-
-
-
-
-// close any remaining files
-
+free(buffer);
+fclose(img);
 }
