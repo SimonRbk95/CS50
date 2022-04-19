@@ -22,7 +22,7 @@ FILE *img = NULL;
 int JPEG_COUNTER = 0;
 
 // repeat until end of block:
-while (fread(buffer, 1, block_size, raw_file) == block_size)
+while (fread(buffer, block_size, 1, raw_file) == block_size)
 {
     // If start of new JPEG
     if (buffer[0] == 0xff
