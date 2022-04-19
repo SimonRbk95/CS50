@@ -63,7 +63,7 @@ while (fread(buffer, sizeof(BYTE), 512, raw_file))
         // write the current block to it
 
     }
-    if (img != NULL)
+    if (found == 1)
     {
         fwrite(buffer, 512, 1, img);
     }
