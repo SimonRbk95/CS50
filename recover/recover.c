@@ -69,7 +69,7 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
     }
     if (img != NULL)
     {
-        fwrite(buffer, sizeof(buffer), 1, img);
+        fwrite(buffer, block_size, 1, img);
     }
 }
 free(buffer);
