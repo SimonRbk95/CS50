@@ -48,12 +48,12 @@ while (fread(buffer, 1, block_size, raw_file) == block_size)
         }
     }
     else
-
-        ;
-// Else
-    // If already found JPEG
-        // keep writing to it
+    {
+        fwrite(buffer, block_size, 1, filename);
+    }
 }
+
+
 
 
 // close any remaining files
