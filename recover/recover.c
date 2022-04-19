@@ -55,6 +55,7 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
             img = fopen(filename, "w");
             // write the current block to it
             fwrite(buffer, sizeof(buffer), 1, img);
+            printf("sizeof(buffer)= %i", sizeof(buffer));
         }
         else
         {
