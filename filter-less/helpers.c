@@ -143,6 +143,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         // jump back to the for loop and try the next pixel
                         continue;
                     }
+                    // count the existing adjacent pixels
                     count++;
                 }
 
