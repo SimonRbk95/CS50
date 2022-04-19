@@ -60,7 +60,7 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
         img = fopen(filename, "w");
 
         // write the current block to it
-        fwrite(buffer, block_size, 1, img);
+        fwrite(buffer, sizeof(buffer), 1, img);
         }
     }
     else
