@@ -66,7 +66,7 @@ while (fread(buffer, sizeof(BYTE), block_size, raw_file) != 0)
             fwrite(buffer, sizeof(buffer), 1, img);
         }
     }
-    else
+    if 
     {
         fwrite(buffer, sizeof(buffer), 1, img);
     }
