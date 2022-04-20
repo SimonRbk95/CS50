@@ -51,7 +51,7 @@ while (fread(buffer, sizeof(BYTE), 512, raw_file))
         img = fopen(filename, "w");
         JPEG_COUNTER++;
     }
-
+    // prevent programm from trying to write if 
     if (img != NULL)
     {
         fwrite(buffer, 512, 1, img);
