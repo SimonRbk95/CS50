@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     typedef uint8_t BYTE;
 
     // pointer to dynamic memory for one block
-    BYTE *buffer = malloc(512);
+    BYTE *buffer = malloc(512 * sizeof(BYTE));
 
     // open memory card
     FILE *raw_file = fopen(argv[1], "r");
