@@ -13,9 +13,8 @@ if (argc != 2)
 
 // new type to store a byte of data
 typedef uint8_t BYTE;
-// int block_size = 512;
 
-// pointer to dynamic memory for blocks to be read
+// pointer to dynamic memory for one block
 BYTE *buffer = malloc(512);
 
 // open memory card
@@ -32,7 +31,6 @@ FILE *img = NULL;
 
 // keep track of files created
 int JPEG_COUNTER = 0;
-int found = 0;
 
 char filename[8];
 
@@ -51,7 +49,7 @@ while (fread(buffer, sizeof(BYTE), 512, raw_file))
         img = fopen(filename, "w");
         JPEG_COUNTER++;
     }
-    // prevent programm from trying to write if 
+    // prevent programm from trying to write if input is invalid, i.e. not the start of the first image
     if (img != NULL)
     {
         fwrite(buffer, 512, 1, img);
