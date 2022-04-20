@@ -45,17 +45,6 @@ while (fread(buffer, sizeof(BYTE), 512, raw_file))
         && buffer[2] == 0xff
         && (buffer[3] & 0xf0) == 0xe0)
     {
-        // count the number of images
-
-        // if first image
-        if (found == 1)
-        {
-            fclose(img);
-        }
-        else
-        {
-            found = 1;
-        }
         // make a new JPEG and keep track of it
         sprintf(filename, "%03i.jpg", JPEG_COUNTER);
         // open the file with write privileges
