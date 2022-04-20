@@ -46,7 +46,7 @@ while (fread(buffer, sizeof(BYTE), 512, raw_file))
         && (buffer[3] & 0xf0) == 0xe0)
     {
         // count the number of images
-        JPEG_COUNTER++;
+
         // if first image
         if (found == 1)
         {
@@ -60,9 +60,9 @@ while (fread(buffer, sizeof(BYTE), 512, raw_file))
         sprintf(filename, "%03i.jpg", JPEG_COUNTER);
         // open the file with write privileges
         img = fopen(filename, "w");
-        // write the current block to it
-
+        JPEG_COUNTER++;
     }
+
     if (img != NULL)
     {
         fwrite(buffer, 512, 1, img);
