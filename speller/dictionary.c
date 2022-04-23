@@ -85,6 +85,7 @@ bool load(const char *dictionary)
         // hash table's corresponding index's next field points to the new node
         table[index]->next = new;
         }
+        
     }
     fclose(dict);
     return true;
