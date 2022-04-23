@@ -45,11 +45,11 @@ bool load(const char *dictionary)
     if (dict == NULL)
     {
         printf("Could not open file.\n");
-        return;
+        return false;
     }
 
     // read from the file until EOF
-    while (fscanf(dict, %s, word_output) != EOF)
+    while (fscanf(dict, %s, char *word_output) != EOF)
     {
     // loop through the dictionary, scanfing every word
     // for every word
