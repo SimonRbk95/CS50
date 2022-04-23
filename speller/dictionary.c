@@ -47,7 +47,10 @@ bool load(const char *dictionary)
         printf("Could not open file.\n");
         return;
     }
-    // fscanf to read from the file
+
+    // read from the file until EOF
+    while (fscanf(dict, %s, word) != EOF)
+    {
     // loop through the dictionary, scanfing every word
     // for every word
     // create a new node
@@ -57,6 +60,7 @@ bool load(const char *dictionary)
         // hash the word to determine at which index of the hash table the new node should be inserted into
         // index into the hash table
         // add the new node the linked list at the index
+    }
     fscanf(file, %s, word);
 
 
