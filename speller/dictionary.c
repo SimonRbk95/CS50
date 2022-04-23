@@ -64,7 +64,8 @@ bool load(const char *dictionary)
         n->next = NULL;
 
         int index = hash(word_output);
-        
+        table[index]->
+
         // hash the word to determine at which index of the hash table the new node should be inserted into
         // index into the hash table
         // add the new node the linked list at the index
