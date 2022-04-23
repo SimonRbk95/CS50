@@ -33,15 +33,16 @@ bool check(const char *word)
     char *cursor;
     int index = hash(word);
     cursor = table[index]->next;
-    while (cursor != NULL)
+    while (true)
     {
-        if (strcasecmp(word, cursor) == 0)
+        if (cursor == 0)
         {
             return true;
         }
-        else if (strace)
+        else if (strcasecmp(word, cursor == 0))
+        {
 
-        else
+        }
     }
 
     return false;
