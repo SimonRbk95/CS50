@@ -31,7 +31,13 @@ bool check(const char *word)
 {
     // TODO
     char *cursor;
+    int index = hash(word);
     
+    while (cursor->next != NULL)
+    {
+
+    }
+
     return false;
 }
 
