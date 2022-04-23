@@ -48,6 +48,9 @@ bool load(const char *dictionary)
         return;
     }
     // fscanf to read from the file
+    fscanf(file, %s, word);
+
+
     return false;
 }
 
