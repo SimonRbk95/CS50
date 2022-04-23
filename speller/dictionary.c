@@ -31,7 +31,7 @@ int word_count = 0;
 bool check(const char *word)
 {
     // TODO
-    char *cursor;
+    node *cursor;
     int index = hash(word);
     cursor = table[index]->next;
     while (true)
