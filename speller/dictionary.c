@@ -32,10 +32,12 @@ bool check(const char *word)
     // TODO
     char *cursor;
     int index = hash(word);
-    
+    cursor = table[index]->next;
     while (cursor->next != NULL)
     {
-
+        if (strcasecmp)
+        else if
+        else
     }
 
     return false;
