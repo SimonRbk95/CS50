@@ -80,7 +80,6 @@ bool load(const char *dictionary)
         table[index]->next = new;
         }
     }
-    free(new);
     fclose(dict);
     return true;
 }
