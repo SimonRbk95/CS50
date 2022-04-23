@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <strings.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -30,7 +31,7 @@ int word_count = 0;
 bool check(const char *word)
 {
     // TODO
-    char *cursor;
+    char *cursor[];
     int index = hash(word);
     cursor = table[index]->next;
     while (true)
