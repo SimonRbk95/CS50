@@ -95,16 +95,16 @@ bool load(const char *dictionary)
         int index = hash(word_output);
 
         // if it is the first word
-        if (table[index]->next == NULL)
+        if (table[index] == NULL)
         {
-            table[index]->next = new;
+            table[index] = new;
         }
         else
         {
-        // set new node's next pointer to the first element in the linked list
-        new->next = table[index]->next;
-        // hash table's corresponding index's next field points to the new node
-        table[index]->next = new;
+            // set new node's next pointer to the first element in the linked list
+            new->next = table[index];
+            // hash table's corresponding index's next field points to the new node
+            table[index] = new;
         }
     word_count++;
     }
