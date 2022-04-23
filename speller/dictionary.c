@@ -30,6 +30,8 @@ int word_count = 0;
 bool check(const char *word)
 {
     // TODO
+    char *cursor;
+    
     return false;
 }
 
