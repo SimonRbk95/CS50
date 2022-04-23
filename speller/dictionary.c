@@ -141,6 +141,5 @@ bool unload(void)
             free(tmp);
         }
     }
-    if 
-    return false;
+    return true;
 }
