@@ -33,7 +33,7 @@ bool check(const char *word)
     // TODO
     node *cursor;
     int index = hash(word);
-    cursor = table[index]->next;
+    cursor = table[index];
     while (true)
     {
         if (cursor == NULL)
