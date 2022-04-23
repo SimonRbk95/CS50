@@ -23,6 +23,9 @@ const unsigned int N = 76;
 // Hash table
 node *table[N];
 
+// global variable that counts the number of words in the dictionary
+int word_count = 0;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -85,7 +88,7 @@ bool load(const char *dictionary)
         // hash table's corresponding index's next field points to the new node
         table[index]->next = new;
         }
-        
+    word_count++;
     }
     fclose(dict);
     return true;
@@ -94,8 +97,14 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return 0;
+    if (word_count > 0)
+    {
+        return word_count;
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
