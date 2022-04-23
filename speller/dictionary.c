@@ -38,6 +38,7 @@ bool load(const char *dictionary)
 {
     // TODO
     // fopen the dictionary
+    FILE 
         // check if null
     // fscanf to read from the file
     return false;
