@@ -35,17 +35,19 @@ bool check(const char *word)
     cursor = table[index]->next;
     while (true)
     {
-        if (cursor == 0)
+        if (cursor == NULL)
         {
-            return true;
+            return false;
         }
         else if (strcasecmp(word, cursor == 0))
         {
-
+            return true;
+        }
+        else
+        {
+            cursor = cursor->next;
         }
     }
-
-    return false;
 }
 
 // Hashes word to a number
