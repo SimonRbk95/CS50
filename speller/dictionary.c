@@ -42,7 +42,11 @@ bool load(const char *dictionary)
     // TODO
     // fopen the dictionary
     FILE *dict = fopen(dictionary, "r");
-        // check if null
+    if (dict == NULL)
+    {
+        printf("Could not open file.\n");
+        return;
+    }
     // fscanf to read from the file
     return false;
 }
