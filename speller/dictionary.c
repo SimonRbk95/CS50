@@ -129,11 +129,13 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    node *cursor;
+    node *temp;
     for (int i = 0; i < N; i++)
     {
         while (cursor != NULL)
         {
-            
+
         }
     }
     return false;
