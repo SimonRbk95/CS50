@@ -55,16 +55,16 @@ bool load(const char *dictionary)
     // for every word
     // create a new node
         // use malloc
-        node *n = malloc(sizeof(node));
+        node *new = malloc(sizeof(node));
         if (n == NULL)
         {
             return false;
         }
-        strcpy(n->word, word_output);
-        n->next = NULL;
+        strcpy(new->word, word_output);
+        new->next = NULL;
 
         int index = hash(word_output);
-        table[index]->
+        new = table[index]->next;
 
         // hash the word to determine at which index of the hash table the new node should be inserted into
         // index into the hash table
