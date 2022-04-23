@@ -49,7 +49,7 @@ bool load(const char *dictionary)
     }
 
     // read from the file until EOF
-    while (fscanf(dict, %s, word) != EOF)
+    while (fscanf(dict, %s, word_output) != EOF)
     {
     // loop through the dictionary, scanfing every word
     // for every word
@@ -60,10 +60,10 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        strcpy(n->word, )
+        strcpy(n->word, word_output);
+        n->next = NULL;
 
-            // check if return is Null
-        // copy word into a node using strcpy
+        int index = hash(word_output);
         // hash the word to determine at which index of the hash table the new node should be inserted into
         // index into the hash table
         // add the new node the linked list at the index
