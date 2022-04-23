@@ -36,7 +36,10 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO 
+    // TODO
+    // fopen the dictionary
+        // check if null
+    // fscanf to read from the file
     return false;
 }
 
