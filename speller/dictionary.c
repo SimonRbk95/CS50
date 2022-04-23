@@ -51,7 +51,7 @@ bool load(const char *dictionary)
 
     char word_output[LENGTH + 1];
     // read from the file until EOF
-    while (fscanf(dict, %s, word_output) != EOF)
+    while (fscanf(dict, "%s", word_output) != EOF)
     {
     // loop through the dictionary, scanfing every word
     // for every word
@@ -69,7 +69,7 @@ bool load(const char *dictionary)
         // set new node's next pointer to the first element in the linked list
         new->next = table[index]->next;
         // hash table's corresponding index's next field points to the new word
-        table[index]->next = new->word;
+        table[index]->next = new;
 
 
         // hash the word to determine at which index of the hash table the new node should be inserted into
