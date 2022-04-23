@@ -130,7 +130,7 @@ bool unload(void)
 {
     // TODO
     node *cursor;
-    node *temp;
+    node *tmp;
     for (int i = 0; i < N; i++)
     {
         while (cursor != NULL)
