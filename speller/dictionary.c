@@ -48,6 +48,14 @@ bool load(const char *dictionary)
         return;
     }
     // fscanf to read from the file
+    // loop through the dictionary scanfing every word
+    // for every word create a new node
+    // use malloc
+        // check if return is Null
+    // copy word into a node using strcpy
+    // hash the word to determine at which index of the hash table the new node should be inserted into
+    // index into the hash table
+    // add the new node the linked list at the index
     fscanf(file, %s, word);
 
 
