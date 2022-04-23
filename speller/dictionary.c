@@ -34,6 +34,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    // add the first two letters' alphabetic index to create 51 distinct sums/ index
     int x = toupper(word[0] -'A');
     int y = toupper(word[1] - 'A');
     int index = x + y;
