@@ -64,17 +64,25 @@ bool load(const char *dictionary)
         }
         strcpy(new->word, word_output);
         new->next = NULL;
-
+        // get the index based on the hash function
         int index = hash(word_output);
+
+        // if it is the first word
+        if (table[index]->next == NULL)
+        {
+            table[index]->next = new;
+        }
+        else
+        {
         // set new node's next pointer to the first element in the linked list
         new->next = table[index]->next;
         // hash table's corresponding index's next field points to the new node
-        table[index]->next = new;   
+        table[index]->next = new;
+        }
     }
-
-
-
-    return false;
+    free(new);
+    fclose(dict);
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
