@@ -129,6 +129,12 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    
+    for (int i = 0; i < N; i++)
+    {
+        while (cursor != NULL)
+        {
+            
+        }
+    }
     return false;
 }
