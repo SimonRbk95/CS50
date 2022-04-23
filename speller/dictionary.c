@@ -135,6 +135,8 @@ bool unload(void)
     {
         while (cursor != NULL)
         {
+            tmp = table[i];
+            cursor = table[i]->next;
 
         }
     }
