@@ -60,7 +60,7 @@ bool load(const char *dictionary)
         {
             return false;
         }
-        strcpy()
+        strcpy(n->word, )
 
             // check if return is Null
         // copy word into a node using strcpy
