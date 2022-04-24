@@ -31,9 +31,8 @@ unsigned int word_count = 0;
 bool check(const char *word)
 {
     // TODO
-    node *cursor;
     int index = hash(word);
-    cursor = table[index];
+    node *cursor = table[index];
     while (true)
     {
         if (cursor == NULL)
