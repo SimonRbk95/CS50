@@ -97,21 +97,15 @@ unsigned int size(void)
     return Count_size;
 }
 
-// Unloads dictionary from memory, returning true if successful, else false
+// Unloads dictionary from memory, returning true if successful else false
 bool unload(void)
 {
-    // TODO
-    node *cursor;
-    node *tmp;
     for (int i = 0; i < N; i++)
+    while (table[i] != NULL)
     {
-        while (cursor != NULL)
-        {
-            cursor = table[i];
-            tmp = cursor;
-            cursor = table[i]->next;
-            free(tmp);
-        }
+        node *tmp = table[i] ->next;
+        free(table[i]);
+        table[i] = tmp;
     }
     return true;
 }
