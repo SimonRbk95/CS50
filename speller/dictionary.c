@@ -99,7 +99,7 @@ bool load(const char *dictionary)
             // hash table's corresponding index's next field points to the new node
             table[index] = new;
         }
-    word_count++;
+        word_count++;
     }
     fclose(dict);
     return true;
