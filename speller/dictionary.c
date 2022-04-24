@@ -74,7 +74,7 @@ bool load(const char *dictionary)
         }
         strcpy(newNode -> word, Dword);
         newNode -> next = NULL;
-        int index = hash(Dword);
+        int index = hash(newNode->word);
 
         if (table[index] == NULL)
         {
