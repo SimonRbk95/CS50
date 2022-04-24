@@ -117,7 +117,7 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         // set cursor to current bucket
-        node* cursor = table[i];
+        node *cursor = table[i];
         while (cursor != NULL)
         {
             // store current bucket as a temporary pointer
