@@ -19,7 +19,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 500;
+const unsigned int N = 76;
 
 // Hash table
 node *table[N];
@@ -50,14 +50,13 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    unsigned int value = 0;
-    unsigned int key_len = strlen(word);
-    for (int i = 0; i < key_len; i++)
-    {
-        value = value + 37 * tolower(word[i]);
-    }
-    value = value % N;
-    return value;
+    // TODO: Improve this hash function
+    // add the first three letters' alphabetic index to create 76 distinct sums/ index
+    unsigned int x = toupper(word[0] -'A');
+    unsigned int y = toupper(word[1] - 'A');
+    unsigned int z = toupper(word[2] - 'A');
+    unsigned int index = x + y + z;
+    return (index % 76);
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -114,15 +113,19 @@ bool unload(void)
 {
     for (int i = 0; i < N; i++)
     {
+        // set cursor to current bucket
         node* cursor = table[i];
         while (cursor != NULL)
         {
+            // store current bucket as a temporary pointer
             node *tmp = cursor;
+            // traverse to next bucket
             cursor = cursor->next;
+            // free current bucket
             free(tmp);
         }
+        // free last item in linked list
         free(cursor);
     }
-
     return true;
 }
