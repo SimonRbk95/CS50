@@ -19,6 +19,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
+// maximum number of distinct sums of the alphabetical indices with itself
 const unsigned int N = 1100;
 
 // Hash table
@@ -51,19 +52,14 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    // add the first three letters' alphabetic index to create 76 distinct sums/ index
+    // add all the letters in the word
+    // only consider distinct sums
     unsigned int index = 0;
     for (int i = 0; i < strlen(word); i++)
     {
         index += toupper(word[i]) - 'A';
     }
     return (index % N);
-
-    // unsigned int x = toupper(word[0]) -'A';
-    // unsigned int y = toupper(word[1]) - 'A';
-    // unsigned int z = toupper(word[2]) - 'A';
-    // unsigned int index = x + y + z;
-    // return (index % 76);
 }
 
 // Loads dictionary into memory, returning true if successful, else false
