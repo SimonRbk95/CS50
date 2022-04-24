@@ -1,13 +1,12 @@
 // Implements a dictionary's functionality
-#include <string.h>
-#include <stdbool.h>
+
 #include <ctype.h>
+#include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <strings.h>
-
-
-unsigned int Count_size = 0;
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -19,85 +18,99 @@ typedef struct node
 }
 node;
 
-// Number of buckets in hash table
-const unsigned int N = 500;
+// TODO: Choose number of buckets in hash table
+const unsigned int N = 26;
 
 // Hash table
 node *table[N];
 
-// Returns true if word is in dictionary else false
+// global variable that counts the number of words in the dictionary
+unsigned int word_count = 0;
+
+// Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    // TODO
     int index = hash(word);
-
     node *cursor = table[index];
-
-    while (cursor != NULL)
+    while (true)
     {
-        if(strcasecmp(cursor -> word, word) == 0)
+        if (cursor == NULL)
+        {
+            return false;
+        }
+        else if (strcasecmp(cursor->word, word) == 0)
         {
             return true;
         }
-        cursor = cursor -> next;
+        cursor = cursor->next;
     }
-    return false;
 }
 
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    unsigned int value = 0;
-    unsigned int key_len = strlen(word);
-    for (int i = 0; i < key_len; i++)
-    {
-        value = value + 37 * tolower(word[i]);
-    }
-    value = value % N;
-    return value;
+    // TODO: Improve this hash function
+    // add the first three letters' alphabetic index to create 76 distinct sums/ index
+    // int x = toupper(word[0] -'A');
+    // int y = toupper(word[1] - 'A');
+    // int z = toupper(word[2] - 'A');
+    // int index = x + y + z;
+    // return (index % 76);
+    return toupper(word[0] -'A');
+
 }
 
-// Loads dictionary into memory, returning true if successful else false
+// Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    FILE *open_dictionary = fopen(dictionary,"r");
-    if (open_dictionary == NULL)
+    // TODO
+    // fopen the dictionary
+    FILE *dict = fopen(dictionary, "r");
+    if (dict == NULL)
     {
         return false;
     }
-    char Dword[LENGTH + 1];
-    while(fscanf(open_dictionary,"%s", Dword) != EOF)
+    char word_output[LENGTH + 1];
+    // read from the file until EOF
+    while (fscanf(dict, "%s", word_output) != EOF)
     {
-        node *newNode = malloc(sizeof(node));
-        if (newNode == NULL)
+        // loop through the dictionary, scanfing every word
+        node *new = malloc(sizeof(node));
+        if (new == NULL)
         {
             return false;
         }
-        strcpy(newNode -> word, Dword);
-        newNode -> next = NULL;
-        int index = hash(newNode->word);
+        strcpy(new->word, word_output);
+        new->next = NULL;
+        // get the index based on the hash function
+        int index = hash(word_output);
 
+        // if it is the first word
         if (table[index] == NULL)
         {
-            table[index] = newNode;
+            table[index] = new;
         }
         else
         {
-            newNode -> next = table[index];
-            table[index] = newNode;
+            // set new node's next pointer to the first element in the linked list
+            new->next = table[index];
+            // hash table's corresponding index's next field points to the new node
+            table[index] = new;
         }
-        Count_size++;
+        word_count++;
     }
-    fclose(open_dictionary);
+    fclose(dict);
     return true;
 }
 
-// Returns number of words in dictionary if loaded else 0 if not yet loaded
+// Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    return Count_size;
+    return word_count;
 }
 
-// Unloads dictionary from memory, returning true if successful else false
+// Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
     for (int i = 0; i < N; i++)
