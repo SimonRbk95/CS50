@@ -19,7 +19,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 76;
+const unsigned int N = 1100;
 
 // Hash table
 node *table[N];
@@ -52,17 +52,18 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     // add the first three letters' alphabetic index to create 76 distinct sums/ index
+    unsigned int index = 0;
     for (int i = 0; i < strlen(word); i++)
     {
-        unsigned sum += toupper(word[i] - 'A');
+        index += toupper(word[i]) - 'A';
     }
-    return (sum % N);
+    return (index % N);
 
-    unsigned int x = toupper(word[0]) -'A';
-    unsigned int y = toupper(word[1]) - 'A';
-    unsigned int z = toupper(word[2]) - 'A';
-    unsigned int index = x + y + z;
-    return (index % 76);
+    // unsigned int x = toupper(word[0]) -'A';
+    // unsigned int y = toupper(word[1]) - 'A';
+    // unsigned int z = toupper(word[2]) - 'A';
+    // unsigned int index = x + y + z;
+    // return (index % 76);
 }
 
 // Loads dictionary into memory, returning true if successful, else false
