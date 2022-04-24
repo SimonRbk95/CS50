@@ -8,6 +8,6 @@
 
 int main (void){
     char *word = "string";
-    unsigned int x = toupper(word[0] -'A');
+    unsigned int x = toupper(word[0]) -'A';
     printf("%i\n", x);
 }
