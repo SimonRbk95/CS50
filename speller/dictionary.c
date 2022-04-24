@@ -96,7 +96,7 @@ bool load(const char *dictionary)
         {
             // set new node's next pointer to the first element in the linked list
             new->next = table[index];
-            // hash table's corresponding index's next field points to the new node
+            // 
             table[index] = new;
         }
         word_count++;
