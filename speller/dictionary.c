@@ -30,19 +30,21 @@ unsigned int word_count = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    // TODO
     int index = hash(word);
-
     node *cursor = table[index];
-
-    while (cursor != NULL)
+    while (true)
     {
-        if(strcasecmp(cursor -> word, word) == 0)
+        if (cursor == NULL)
+        {
+            return false;
+        }
+        else if (strcasecmp(cursor->word, word) == 0)
         {
             return true;
         }
-        cursor = cursor -> next;
+        cursor = cursor->next;
     }
-    return false;
 }
 
 // Hashes word to a number
@@ -62,43 +64,35 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
-    // fopen the dictionary
-    FILE *dict = fopen(dictionary, "r");
-    if (dict == NULL)
+ FILE *open_dictionary = fopen(dictionary,"r");
+    if (open_dictionary == NULL)
     {
         return false;
     }
-    char word_output[LENGTH + 1];
-    // read from the file until EOF
-    while (fscanf(dict, "%s", word_output) != EOF)
+    char Dword[LENGTH + 1];
+    while(fscanf(open_dictionary,"%s", Dword) != EOF)
     {
-        // loop through the dictionary, scanfing every word
-        node *new = malloc(sizeof(node));
-        if (new == NULL)
+        node *newNode = malloc(sizeof(node));
+        if (newNode == NULL)
         {
             return false;
         }
-        strcpy(new->word, word_output);
-        new->next = NULL;
-        // get the index based on the hash function
-        int index = hash(word_output);
+        strcpy(newNode -> word, Dword);
+        newNode -> next = NULL;
+        int index = hash(Dword);
 
-        // if it is the first word
         if (table[index] == NULL)
         {
-            table[index] = new;
+            table[index] = newNode;
         }
         else
         {
-            // set new node's next pointer to the first element in the linked list
-            new->next = table[index];
-            // hash table's corresponding index's next field points to the new node
-            table[index] = new;
+            newNode -> next = table[index];
+            table[index] = newNode;
         }
-        word_count++;
+        Count_size++;
     }
-    fclose(dict);
+    fclose(open_dictionary);
     return true;
 }
 
