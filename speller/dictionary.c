@@ -52,6 +52,7 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     // add the first three letters' alphabetic index to create 76 distinct sums/ index
+    for ()
     unsigned int x = toupper(word[0]) -'A';
     unsigned int y = toupper(word[1]) - 'A';
     unsigned int z = toupper(word[2]) - 'A';
