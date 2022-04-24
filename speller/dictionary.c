@@ -30,21 +30,19 @@ unsigned int word_count = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
     int index = hash(word);
+
     node *cursor = table[index];
-    while (true)
+
+    while (cursor != NULL)
     {
-        if (cursor == NULL)
-        {
-            return false;
-        }
-        else if (strcasecmp(cursor->word, word) == 0)
+        if(strcasecmp(cursor -> word, word) == 0)
         {
             return true;
         }
-        cursor = cursor->next;
+        cursor = cursor -> next;
     }
+    return false;
 }
 
 // Hashes word to a number
