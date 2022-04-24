@@ -105,7 +105,7 @@ bool unload(void)
         while (table[i] != NULL)
         {
             node *cursor = table[i]->next;
-            tmp = cursor;
+            node *tmp = cursor;
             cursor = table[i]->next;
             free(tmp);
         }
