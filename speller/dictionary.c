@@ -48,7 +48,7 @@ bool check(const char *word)
 }
 
 // Hashes word to a number
-int hash(const char* needs_hashing)
+unsigned int hash(const char* needs_hashing)
 {
     unsigned int hash = 0;
     for (int i=0, n=strlen(needs_hashing); i<n; i++)
