@@ -81,7 +81,7 @@ def simulate_tournament(teams):
     if len(teams) > 1:
         simulate_round(teams)
     else:
-        return teams[0][0]
+        return teams[0]
 
 
 
