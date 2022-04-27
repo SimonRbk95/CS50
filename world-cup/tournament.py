@@ -16,9 +16,12 @@ def main():
 
     teams = []
     # TODO: Read teams into memory from file
+    # create a dictionary with input from the csv file
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
+    # keys are names of team
+    # values are the number of wins of a team
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
