@@ -18,6 +18,10 @@ def main():
     # TODO: Read teams into memory from file
     with open(filename) as file:
         reader = csv.DictReader(file)
+        team_dict = {}
+        for row in reader:
+            team_dict = row[0]
+
 
 
 
