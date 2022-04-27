@@ -16,8 +16,7 @@ def make_pyramide(height):
         print(" " * (height-i), end="")
         print("#" * (i + 1), end="")
         print(" ", end="")
-        print("#" * (i + 1), end="")
-        print(" " * (height-i))
+        print("#" * (i + 1))
 
 if __name__ == "__main__":
     main()
