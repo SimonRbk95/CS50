@@ -18,7 +18,7 @@ def main():
     # TODO: Read teams into memory from file
     with open(filename) as file:
         reader = csv.DictReader(file)
-        
+
 
 
     # create a dictionary with input from the csv file
