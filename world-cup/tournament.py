@@ -23,7 +23,7 @@ def main():
             teams.append(team_dict)
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-    for i in range(N-1):
+    for i in range(N):
         winner = simulate_tournament(teams)
         if winner in counts:
             counts[winner] += 1
