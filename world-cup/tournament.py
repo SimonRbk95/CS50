@@ -20,8 +20,11 @@ def main():
         reader = csv.DictReader(file)
         team_dict = {}
         for row in reader:
-            team_dict[row[0]] = int(row[1])
-            teams.append(team_dict)
+            try:
+                team_dict[row[0]] = int(row[1])
+                teams.append(team_dict)
+            except:
+                print(row[0])
 
 
 
