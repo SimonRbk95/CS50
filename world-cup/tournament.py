@@ -21,6 +21,7 @@ def main():
         team_dict = {}
         for row in reader:
             team_dict[row[0]] = row[1]
+            teams.append(team_dict)
 
 
 
