@@ -24,7 +24,7 @@ def main():
                 team_dict[row[0]] = int(row[1])
                 teams.append(team_dict)
             except:
-                print(row[0])
+                print(row[1])
 
 
 
