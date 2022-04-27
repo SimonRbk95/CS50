@@ -44,7 +44,7 @@ def main():
             if winner in counts:
                 counts[winner] += 1
             else:
-                counts[teams[j][0]] = 1
+                counts[winner] = 1
     # keys are names of team
     # values are the number of wins of a team
 
