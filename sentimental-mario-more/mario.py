@@ -17,10 +17,16 @@ def valid_input():
 
 def make_pyramide(height):
     for i in range(height):
+        # print space before first pyramide half
         print(" " * (height - i - 1), end="")
+        # prints first row's pyramide half
         print("#" * (i + 1), end="")
+        # whitepsace in the middle
         print("  ", end="")
+        # prints second row's pyramide half, including a new line
         print("#" * (i + 1))
+
 
 if __name__ == "__main__":
     main()
+
