@@ -5,8 +5,9 @@ def valid_input():
         if height <= 8:
             return height
 
-for i in range(valid_input()):
-    print(" " * i, end="")
+height = valid_input()
+for i in range(height):
+    print(" " * height-i, end="")
     print("#")
 
 
