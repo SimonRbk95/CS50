@@ -36,8 +36,10 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-    for i in range(N - 1):
-        
+    for i in range(N-1):
+        for j in range(len(teams)-1):
+            simulate_round(teams[j][0])
+            count
     # keys are names of team
     # values are the number of wins of a team
 
