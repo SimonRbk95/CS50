@@ -39,7 +39,10 @@ def main():
     for i in range(N-1):
         for j in range(len(teams)-1):
             simulate_round(teams[j][0])
-            count
+            if teams[j][0] in counts:
+                counts[teams[j][0]] += 1
+            else:
+                countrs[teams[j][0]] = 1
     # keys are names of team
     # values are the number of wins of a team
 
