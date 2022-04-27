@@ -7,7 +7,7 @@ def main():
 def valid_input():
     while True:
         height = input("Height: ")
-        if height <= 8 and height > 0 and isinstance(height, int) == true:
+        if height <= 8 and height > 0:
             return int(height)
 
 
@@ -15,7 +15,7 @@ def make_pyramide(height):
     for i in range(height):
         print(" " * (height-i), end="")
         print("#" * (i + 1), end="")
-        print(" ", end="")
+        print("  ", end="")
         print("#" * (i + 1))
 
 if __name__ == "__main__":
