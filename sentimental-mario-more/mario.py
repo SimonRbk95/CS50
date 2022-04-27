@@ -7,7 +7,7 @@ def main():
 def valid_input():
     while True:
         height = int(input("Height: "))
-        if height <= 8:
+        if height <= 8 and height > 0:
             return height
 
 
