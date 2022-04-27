@@ -7,3 +7,4 @@ def valid_input():
 
 for i in range(height):
     for j in range(height):
+        
