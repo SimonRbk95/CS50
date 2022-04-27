@@ -7,7 +7,7 @@ def valid_input():
 
 height = valid_input()
 for i in range(height):
-    print(" " * height-i, end="")
+    print(" " * (height-i), end="")
     print("#")
 
 
