@@ -21,10 +21,10 @@ def main():
         team_dict = {}
         for row in reader:
             try:
-                team_dict[row[0]] = int(row[1])
+                team_dict['team'] = int(row['rating'])
                 teams.append(team_dict)
             except:
-                print(row[1])
+                print(row['team'])
 
 
 
