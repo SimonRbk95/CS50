@@ -17,10 +17,9 @@ def main():
     # TODO: Read teams into memory from file
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
-        team_dict = {}
         for row in reader:
-            team_dict["team"] = int(row["rating"])
-            teams.append(team_dict)
+            row["team"] = int(row["rating"])
+            teams.append(row)
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
     for i in range(N):
@@ -52,7 +51,6 @@ def simulate_round(teams):
             winners.append(teams[i])
         else:
             winners.append(teams[i + 1])
-
     return winners
 
 
@@ -62,7 +60,6 @@ def simulate_tournament(teams):
     while len(teams) > 1:
         teams = simulate_round(teams)
     return teams[0]["team"]
-
 
 
 if __name__ == "__main__":
