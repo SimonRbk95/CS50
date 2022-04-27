@@ -9,7 +9,7 @@ def valid_input():
         try:
             height = int(input("Height: "))
         # if user provides a string, prompt again
-        except:
+        except ValueError:
             height = int(input("Height: "))
         if height <= 8 and height > 0:
             return height
