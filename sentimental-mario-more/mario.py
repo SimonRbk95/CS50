@@ -6,7 +6,11 @@ def main():
 
 def valid_input():
     while True:
-        height = int(input("Height: "))
+        try:
+            height = int(input("Height: "))
+        # if user provides a string, prompt again
+        except:
+            height = int(input("Height: "))
         if height <= 8 and height > 0:
             return height
 
