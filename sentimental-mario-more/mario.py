@@ -5,6 +5,10 @@ def valid_input():
         if height <= 8:
             return height
 
-for i in range(height):
-    for j in range(height):
-        
+for i in range(valid_input()):
+    print(" " * i, end="")
+    print("#")
+
+
+
+
