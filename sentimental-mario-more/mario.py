@@ -1,7 +1,7 @@
 
 def main():
     height = valid_input()
-    make_pyramide(heigh)
+    make_pyramide(height)
 
 
 def valid_input():
