@@ -4,13 +4,16 @@ import string
 def main():
     text = input("Text: ")
     letters = count_letters(text)
-    print(letters)
     words = count_words(text)
-    print(words)
     sentences = count_sentences(text)
-    print(sentences)
     grade = grade_calculator(letters, words, sentences)
-    print(grade)
+    if grade < 1:
+        print("Before Grade 1")
+    elif grade >= 16:
+        print("Grade 16+")
+    else:
+        print(f"Grade {grade}")
+
 
 
 def count_letters(text):
@@ -42,11 +45,8 @@ def count_sentences(text):
 
 def grade_calculator(letters, words, sentences):
     L = letters / words * 100
-    print(L)
     S = sentences / words * 100
-    print(S)
     index = 0.0588 * L - 0.296 * S - 15.8
-    print(index)
     grade = round(index)
     return grade
 
