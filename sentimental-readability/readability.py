@@ -14,7 +14,7 @@ def count_letters(text):
     for word in words:
         for letter in word:
             if letter.isalpha:
-                print(letter)
+
                 count +=1
     return count
 
@@ -38,3 +38,4 @@ def grade_calculator():
 if __name__ == "__main__":
     text = main()
     print(count_letters(text))
+    print("Hi!".isalpha)
