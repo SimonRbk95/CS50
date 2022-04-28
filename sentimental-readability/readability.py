@@ -9,7 +9,10 @@ def main():
 
 def count_letters():
     # count character
-    pass
+    words = text.split()
+    for letter in words:
+        if ord(letter)
+
 
 
 def count_words(text):
