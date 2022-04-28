@@ -45,6 +45,7 @@ def calculate_pennies(dollars):
     return pennies
 
 
-
+if __name__ == "__main__":
+    main()
 
 
