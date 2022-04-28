@@ -26,7 +26,8 @@ def main():
     # Print total number of coins to give the customer
     print(coins)
 
-
+# prompt for user input
+# only accept positive number
 def get_cents():
     while True:
         dollars = get_float("Change owed: ")
@@ -36,6 +37,7 @@ def get_cents():
             return cents
 
 
+# same logic as in cash.c
 def calculate_quarters(dollars):
     quarters = 0
     while dollars >= 25:
