@@ -1,9 +1,17 @@
 from cs50 import get_float
 
+
 def main():
+    cents = get_cents()
+
+
+
+def get_cents():
     dollars = get_float("Change owed: ")
     # turn dollars into cents
     dollars *=100
+    return cents
+
 
 def calculate_quarters(dollars):
     quarters = 0
