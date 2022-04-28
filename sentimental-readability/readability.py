@@ -4,8 +4,11 @@ import string
 def main():
     text = input("Text: ")
     letters = count_letters(text)
+    print(letters)
     words = count_words(text)
+    print(words)
     sentences = count_sentences(text)
+    print(sentences)
     grade = grade_calculator(letters, words, sentences)
     print(grade)
 
@@ -41,6 +44,7 @@ def grade_calculator(letters, words, sentences):
     L = float(letters) / float(words) * 100
     S = float(sentences) / float(words) * 100
     index = 0.0588 * L - 0.296 * S - 15.8
+    print(index)
     grade = round(index)
     return grade
 
