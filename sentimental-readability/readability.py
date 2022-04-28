@@ -35,7 +35,6 @@ def count_sentences(text):
     for words in text:
         for word in words:
             for char in word:
-                print(char)
                 if ord(char) == 33 or ord(char) == 63 or ord(char) == 46:
                     count +=1
     return count
