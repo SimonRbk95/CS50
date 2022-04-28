@@ -8,7 +8,7 @@ def main():
 
 def get_cents():
     while True:
-        if dollars not >= 0:
+        if not dollars >= 0:
             dollars = get_float("Change owed: ")
         else:
             # turn dollars into cents
