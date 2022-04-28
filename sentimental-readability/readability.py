@@ -13,12 +13,9 @@ def count_letters(text):
     words = text.split()
     for word in words:
         for letter in word:
-            if letter.isalpha:
-
+            if letter.isalpha():
                 count +=1
     return count
-
-
 
 
 def count_words(text):
@@ -27,15 +24,20 @@ def count_words(text):
 
 
 def count_sentences(text):
-    count_one = len(text.split())
-    pass
+    count = 0
+    # count sentences by counting '.', '!', and '?'
+    for words in text:
+        for word in words:
+            for char in word:
+                if ord(char) != 33 or ord(char) != 63 or ord(char) != 46:
+                    count +=1
+    return count
 
 
 def grade_calculator():
-    pass
+    
 
 
 if __name__ == "__main__":
     text = main()
     print(count_letters(text))
-    print("Hi!".isalpha)
