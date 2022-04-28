@@ -3,8 +3,11 @@ import string
 
 def main():
     text = input("Text: ")
-    return text
-
+    letters = count_letters(text)
+    words = count_words(text)
+    sentences = count_sentences(text)
+    grade = grade_calculator(letters, words, sentences)
+    print(grade)
 
 
 def count_letters(text):
@@ -42,7 +45,5 @@ def grade_calculator(letters, words, sentences):
     return grade
 
 
-
 if __name__ == "__main__":
-    text = main()
-    print(count_letters(text))
+    main()
