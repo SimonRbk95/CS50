@@ -7,8 +7,9 @@ def count_letters():
     # count character
 
 
-def count_words():
-    pass
+def count_words(text):
+    word_count = len(text.split())
+    return word_count
 
 
 def count_sentences():
