@@ -37,7 +37,9 @@ def count_sentences(text):
 def grade_calculator(letters, words, sentences):
     L = float(letters) / float(words) * 100
     S = float(sentences) / float(words) * 100
-    
+    index = 0.0588 * L - 0.296 * S - 15.8
+    grade = round(index)
+    return grade
 
 
 
