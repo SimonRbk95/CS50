@@ -7,10 +7,15 @@ def main():
 
 
 def get_cents():
-    dollars = get_float("Change owed: ")
-    # turn dollars into cents
-    dollars *=100
-    return cents
+    while True:
+        if dollars not >= 0:
+            # turn dollars into cents
+            dollars *=100
+            return cents
+        else:
+            dollars = get_float("Change owed: ")
+
+
 
 
 def calculate_quarters(dollars):
