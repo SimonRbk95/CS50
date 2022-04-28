@@ -7,11 +7,17 @@ def main():
 
 
 
-def count_letters():
+def count_letters(text):
     # count character
+    count = 0
     words = text.split()
-    for letter in words:
-        if ord(letter)
+    for word in words:
+        for letter in word:
+            if letter.isalpha:
+                print(letter)
+                count +=1
+    return count
+
 
 
 
@@ -30,4 +36,5 @@ def grade_calculator():
 
 
 if __name__ == "__main__":
-    main()
+    text = main()
+    print(count_letters(text))
