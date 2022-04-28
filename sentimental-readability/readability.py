@@ -1,9 +1,10 @@
 import string
-import sys
+
 
 def main():
     text = input("Text: ")
-    pass
+    return text
+
 
 
 def count_letters():
@@ -13,7 +14,6 @@ def count_letters():
 
 def count_words(text):
     word_count = len(text.split())
-    print(word_count)
     return word_count
 
 
@@ -24,3 +24,7 @@ def count_sentences(text):
 
 def grade_calculator():
     pass
+
+
+if __name__ == "__main__":
+    main()
