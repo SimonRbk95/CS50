@@ -34,8 +34,11 @@ def count_sentences(text):
     return count
 
 
-def grade_calculator():
+def grade_calculator(letters, words, sentences):
+    L = float(letters) / float(words) * 100
+    S = float(sentences) / float(words) * 100
     
+
 
 
 if __name__ == "__main__":
