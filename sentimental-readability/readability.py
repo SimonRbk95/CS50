@@ -15,15 +15,14 @@ def main():
         print(f"Grade {grade}")
 
 
-
 def count_letters(text):
-    # count character
     count = 0
     words = text.split()
     for word in words:
         for letter in word:
+            # check whether letter is alphabetical
             if letter.isalpha():
-                count +=1
+                count += 1
     return count
 
 
@@ -38,8 +37,9 @@ def count_sentences(text):
     for words in text:
         for word in words:
             for char in word:
+                # check against ascii value
                 if ord(char) == 33 or ord(char) == 63 or ord(char) == 46:
-                    count +=1
+                    count += 1
     return count
 
 
