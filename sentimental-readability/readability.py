@@ -1,10 +1,10 @@
 def main():
-    text = input("Text: ")
+    text[] = input("Text: ")
     pass
 
 
 def count_letters():
-    pass
+    # count character
 
 
 def count_words():
