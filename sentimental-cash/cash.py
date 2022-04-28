@@ -38,7 +38,7 @@ def get_cents():
 
 def calculate_quarters(dollars):
     quarters = 0
-    while dollars>=25:
+    while dollars >= 25:
         dollars -= 25
         quarters += 1
     return quarters
@@ -46,7 +46,7 @@ def calculate_quarters(dollars):
 
 def calculate_dimes(dollars):
     dimes = 0
-    while dollars>=10:
+    while dollars >= 10:
         dollars -= 10
         dimes += 1
     return dimes
@@ -54,7 +54,7 @@ def calculate_dimes(dollars):
 
 def calculate_nickels(dollars):
     nickels = 0
-    while dollars>=10:
+    while dollars >= 10:
         dollars -= 10
         nickels += 1
     return nickels
@@ -62,7 +62,7 @@ def calculate_nickels(dollars):
 
 def calculate_pennies(dollars):
     pennies = 0
-    while dollars>=1:
+    while dollars >= 1:
         dollars -= 1
         pennies += 1
     return pennies
