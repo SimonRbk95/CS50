@@ -1,7 +1,7 @@
 import string
 
 def main():
-    text[] = input("Text: ")
+    text = input("Text: ")
     pass
 
 
