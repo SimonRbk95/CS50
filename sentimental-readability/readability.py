@@ -1,3 +1,5 @@
+import string
+
 def main():
     text[] = input("Text: ")
     pass
