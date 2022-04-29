@@ -2,6 +2,11 @@ import csv
 import sys
 
 
+# global variables of sequences
+sq1 = "AGATC"
+sq2 = "AATG"
+sq3 = "TATC"
+
 def main():
 
     # TODO: Check for command-line usage
@@ -14,9 +19,9 @@ def main():
     sequence = read_sequence()
 
     # TODO: Find longest match of each STR in DNA sequence
-    longest_AGATC = longest_match(sequence, "AGATC")
-    longest_AATG = longest_match(sequence, "AATG")
-    longest_TATC = longest_match(sequence, "TATC")
+    long_sq1 = longest_match(sequence, sq1)
+    long_sq2 = longest_match(sequence, sq1)
+    long_sq2 = longest_match(sequence, sq3)
 
     # TODO: Check database for matching profiles
 
@@ -42,9 +47,9 @@ def read_sequence():
         return sequence
 
 
-def check_database(DNA_dict, SRT):
+def check_database(DNA_dict, long_sq1, long_sq2, long_sq3):
     for suspect in range(DNA_dict):
-        if suspect["AGATC"] == longest
+        if suspect["AGATC"] == longest_AGATC and suspect[] and suspect[]
 
 
 
