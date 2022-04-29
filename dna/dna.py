@@ -33,6 +33,7 @@ def read_database():
     DNA_dict = []
     with open(sys.argv[1]) as database:
         reader = csv.DictReader(database)
+        # get first CSV's columns
         column_SRTs = reader.fieldnames
         for row in reader:
             DNA_dict.append(row)
