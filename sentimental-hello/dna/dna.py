@@ -32,8 +32,8 @@ def read_database():
 
 
 def read_sequence()
-    with open(sys.argv[2]) as sequence:
-        
+    with open(sys.argv[2]) as file:
+        sequence = read(file)
 
 
 
