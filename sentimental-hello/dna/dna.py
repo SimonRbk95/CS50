@@ -66,11 +66,12 @@ def read_sequence():
         return sequence
 
 
-def check_database(DNA_dict, long_sq1, long_sq2, long_sq3):
+def check_database(DNA_dict, column_SRTs, sequence):
      # assign suspect the dictionaries in the list DNA_dict
     for suspect in DNA_dict:
-        for seq in range(1, len(column_SRTs)):
-            if suspect[] !=
+        for seq in column_SRTs[1:]:
+            if suspect[seq] != longest_match(sequence, column_SRTs[])
+
 
         print(int(suspect[sq1]))
         # check if all longest sequences matches with the current name's sequence values
