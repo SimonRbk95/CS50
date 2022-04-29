@@ -5,18 +5,6 @@ import sys
 # longest_match in a loop, matching each index of column_names one at a time
 # if there is one that does not match, move to next person in data_base
 
-
-
-# global variables of sequences
-for seq in range(1, len(column_SRTs)):
-    if seq !=
-
-
-sq1 = "AGATC"
-sq2 = "AATG"
-sq3 = "TATC"
-
-
 def main():
 
     # TODO: Check for command-line usage
@@ -29,11 +17,7 @@ def main():
     sequence = read_sequence()
 
     # TODO: Find longest match of each STR in DNA sequence
-    for seq in range(1,len(column_names):
 
-    long_sq1 = longest_match(sequence, seq)
-    long_sq2 = longest_match(sequence, s)
-    long_sq3 = longest_match(sequence, sq3)
 
     # TODO: Check database for matching profiles
     match = check_database(DNA_dict, long_sq1, long_sq2, long_sq3)
@@ -54,10 +38,10 @@ def read_database():
     DNA_dict = []
     with open(sys.argv[1]) as database:
         reader = csv.DictReader(database)
-        column_names = reader.fieldnames
+        column_SRTs = reader.fieldnames
         for row in reader:
             DNA_dict.append(row)
-        return DNA_dict, column_names
+        return DNA_dict, column_SRTs
 
 
 def read_sequence():
@@ -67,19 +51,17 @@ def read_sequence():
 
 
 def check_database(DNA_dict, column_SRTs, sequence):
-
-    index = 1
     # assign suspect the dictionaries in the list DNA_dict
     for suspect in DNA_dict:
         # assigns the SRT we are looking for to seq
         for subsequence in column_SRTs[1:]:
             # subsequence is used as the key to check whether the suspect's SRT value eqauls the longest_match
             if suspect[seq] != longest_match(sequence, subsequence):
-                breaker = False
+                guilty = False
                 break
             else:
-                breaker = True
-        if breaker:
+                guilty = True
+        if guilty:
             return suspect["name"]
 
 
