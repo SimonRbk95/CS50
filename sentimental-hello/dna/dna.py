@@ -77,7 +77,8 @@ def check_database(DNA_dict, column_SRTs, sequence):
             if suspect[seq] != longest_match(sequence, subsequence):
                 break
             else:
-                return suspect["name"]
+                continue
+            return suspect["name"]
 
 
 def longest_match(sequence, subsequence):
