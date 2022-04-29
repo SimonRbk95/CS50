@@ -42,10 +42,6 @@ def read_database():
         reader = csv.DictReader(database)
         for row in reader:
             DNA_dict.append(row)
-        print(DNA_dict)
-
-        for suspect in DNA_dict:
-            print(suspect)
         return DNA_dict
 
 
@@ -57,7 +53,7 @@ def read_sequence():
 
 def check_database(DNA_dict, long_sq1, long_sq2, long_sq3):
      # assign suspect the dictionaries in the list DNA_dict
-    for suspect in range(DNA_dict):
+    for suspect in DNA_dict:
         # check if all longest sequences matches with the current name's sequence values
         if int(suspect[sq1]) == long_sq1 and int(suspect[sq2]) == long_sq2 and int(suspect[sq3]) == long_sq3:
             return suspect["name"]
