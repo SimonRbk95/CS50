@@ -1,10 +1,12 @@
 import csv
 import sys
 
-
+# check based one current name:
+# longest_match in a loop, matching each index of column_names one at a time
+# if there is one match
 # global variables of sequences
 for seq in range(1, len(column_names)):
-    
+
 sq1 = "AGATC"
 sq2 = "AATG"
 sq3 = "TATC"
