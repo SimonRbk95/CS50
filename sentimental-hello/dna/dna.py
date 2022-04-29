@@ -23,7 +23,7 @@ def valid_input():
 
 
 def read_database():
-    
+    with open(sys.argv[1])
 
 
 def longest_match(sequence, subsequence):
