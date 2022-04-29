@@ -8,15 +8,15 @@ def main():
     valid_input()
 
     # TODO: Read database file into a variable
-    read_database()
+    DNA_dict = read_database()
 
     # TODO: Read DNA sequence file into a variable
     sequence = read_sequence()
 
     # TODO: Find longest match of each STR in DNA sequence
-    run_AGATC = longest_match(sequence, "AGATC")
-    run_AATG = longest_match(sequence, "AATG")
-    run_TATC = longest_match(sequence, "TATC")
+    longest_AGATC = longest_match(sequence, "AGATC")
+    longest_AATG = longest_match(sequence, "AATG")
+    longest_TATC = longest_match(sequence, "TATC")
 
     # TODO: Check database for matching profiles
 
@@ -33,15 +33,21 @@ def read_database():
         reader = csv.DictReader(database)
         for row in reader:
             DNA_dict.append(row)
+        return DNA_dict
 
 
-def read_sequence()
+def read_sequence():
     with open(sys.argv[2]) as file:
         sequence = file.read()
         return sequence
 
 
-def check_database for matching profiles
+def check_database(DNA_dict, SRT):
+    for suspect in range(DNA_dict):
+        if suspect["AGATC"] == longest
+
+
+
 
 
 def longest_match(sequence, subsequence):
