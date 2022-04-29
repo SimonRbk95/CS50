@@ -25,7 +25,9 @@ def valid_input():
 def read_database():
     with open(sys.argv[1]) as database:
         reader = csv.DictReader(database)
-        print(reader)
+        for row in reader:
+            print(row['name'], row['AGATC'])
+
 
 
 def longest_match(sequence, subsequence):
