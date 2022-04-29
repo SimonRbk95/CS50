@@ -14,7 +14,7 @@ def main():
     valid_input()
 
     # TODO: Read database file into a variable
-    DNA_dict = read_database()
+    DNA_dict, column_names = read_database()
 
     # TODO: Read DNA sequence file into a variable
     sequence = read_sequence()
@@ -40,13 +40,13 @@ def valid_input():
 
 def read_database():
     # list of dictionaries about the DNA profiles
-    SRTs = []
     DNA_dict = []
     with open(sys.argv[1]) as database:
         reader = csv.DictReader(database)
         column_names = reader.fieldnames
         for row in reader:
             DNA_dict.append(row)
+        return DNA_dict, column_names
 
 
 def read_sequence():
