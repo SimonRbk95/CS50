@@ -27,7 +27,10 @@ def main():
     # TODO: Check database for matching profiles
     match = check_database(DNA_dict, long_sq1, long_sq2, long_sq3)
 
-    print(match)
+    if match != None:
+        print(match)
+    else:
+        print("no match")
 
 
 def valid_input():
