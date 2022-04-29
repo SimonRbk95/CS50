@@ -17,10 +17,8 @@ def main():
     sequence = read_sequence()
 
     # TODO: Find longest match of each STR in DNA sequence
-
-
     # TODO: Check database for matching profiles
-    match = check_database(DNA_dict, long_sq1, long_sq2, long_sq3)
+    match = check_database(DNA_dict,)
 
     if match != None:
         print(match)
