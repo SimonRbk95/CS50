@@ -67,10 +67,13 @@ def read_sequence():
 
 
 def check_database(DNA_dict, column_SRTs, sequence):
-    # assign suspect the dictionaries in the list DNA_dict
+
     index = 1
+    # assign suspect the dictionaries in the list DNA_dict
     for suspect in DNA_dict:
+        # assigns the SRT we are looking for to seq
         for seq in column_SRTs[1:]:
+            # seq is used as the key to check whether the suspect's SRT value equls the longest_match
             if suspect[seq] != longest_match(sequence, column_SRTs[index])
         else:
 
