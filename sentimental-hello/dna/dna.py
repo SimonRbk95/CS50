@@ -20,10 +20,9 @@ def main():
     sequence = read_sequence()
 
     # TODO: Find longest match of each STR in DNA sequence
-    for seq in len(1:column_names):
-
-    long_sq1 = longest_match(sequence, sq1)
-    long_sq2 = longest_match(sequence, sq1)
+    for seq in range(1,len(column_names):
+        long_sq1 = longest_match(sequence, seq)
+    long_sq2 = longest_match(sequence, s)
     long_sq3 = longest_match(sequence, sq3)
 
     # TODO: Check database for matching profiles
