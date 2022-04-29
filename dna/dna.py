@@ -1,9 +1,6 @@
 import csv
 import sys
 
-# check based one current name:
-# longest_match in a loop, matching each index of column_names one at a time
-# if there is one that does not match, move to next person in data_base
 
 def main():
 
@@ -49,9 +46,9 @@ def read_sequence():
 
 
 def check_database(DNA_dict, column_SRTs, sequence):
-    # assign suspect the dictionaries in the list DNA_dict
+    # assign to suspect the dictionaries in the list DNA_dict
     for suspect in DNA_dict:
-        # assigns the SRT we are looking for to seq
+        # assigns the SRT we are looking for to subsequence
         for subsequence in column_SRTs[1:]:
             # subsequence is used as the key to check whether the suspect's SRT value eqauls the longest_match
             if int(suspect[subsequence]) != longest_match(sequence, subsequence):
