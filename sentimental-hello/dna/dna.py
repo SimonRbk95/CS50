@@ -41,6 +41,8 @@ def read_sequence()
         return sequence
 
 
+def check_database for matching profiles
+
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
