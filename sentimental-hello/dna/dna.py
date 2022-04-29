@@ -40,12 +40,14 @@ def valid_input():
 
 def read_database():
     # list of dictionaries about the DNA profiles
+    SRTs = []
     DNA_dict = []
     with open(sys.argv[1]) as database:
         reader = csv.DictReader(database)
         for row in reader:
             DNA_dict.append(row)
-        return DNA_dict
+    with open(sys.argv[1]) as database:
+        reader = csv.reader()
 
 
 def read_sequence():
