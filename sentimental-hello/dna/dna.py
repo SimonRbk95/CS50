@@ -5,6 +5,7 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
+    valid_input()
 
     # TODO: Read database file into a variable
 
@@ -19,6 +20,10 @@ def main():
 def valid_input():
     if sys.argv != 2:
         print("Usage: python dna.py data.csv sequence.txt")
+
+
+def read_database():
+    
 
 
 def longest_match(sequence, subsequence):
