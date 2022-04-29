@@ -8,7 +8,9 @@ import sys
 
 
 # global variables of sequences
-for seq in range(1, len(column_names)):
+for seq in range(1, len(column_SRTs)):
+    if seq !=
+
 
 sq1 = "AGATC"
 sq2 = "AATG"
@@ -21,7 +23,7 @@ def main():
     valid_input()
 
     # TODO: Read database file into a variable
-    DNA_dict, column_names = read_database()
+    DNA_dict, column_SRTs = read_database()
 
     # TODO: Read DNA sequence file into a variable
     sequence = read_sequence()
@@ -67,6 +69,9 @@ def read_sequence():
 def check_database(DNA_dict, long_sq1, long_sq2, long_sq3):
      # assign suspect the dictionaries in the list DNA_dict
     for suspect in DNA_dict:
+        for seq in range(1, len(column_SRTs)):
+            if seq != 
+
         print(int(suspect[sq1]))
         # check if all longest sequences matches with the current name's sequence values
         if int(suspect[sq1]) == long_sq1 and int(suspect[sq2]) == long_sq2 and int(suspect[sq3]) == long_sq3:
