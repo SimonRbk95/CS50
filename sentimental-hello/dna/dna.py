@@ -7,6 +7,7 @@ sq1 = "AGATC"
 sq2 = "AATG"
 sq3 = "TATC"
 
+
 def main():
 
     # TODO: Check for command-line usage
@@ -21,11 +22,13 @@ def main():
     # TODO: Find longest match of each STR in DNA sequence
     long_sq1 = longest_match(sequence, sq1)
     long_sq2 = longest_match(sequence, sq1)
-    long_sq2 = longest_match(sequence, sq3)
+    long_sq3 = longest_match(sequence, sq3)
 
     # TODO: Check database for matching profiles
+    match = check_database(DNA_dict, long_sq1, long_sq2, long_sq3)
 
-    return
+    print(match)
+
 
 def valid_input():
     if sys.argv != 3:
@@ -54,9 +57,6 @@ def check_database(DNA_dict, long_sq1, long_sq2, long_sq3):
         # check if all longest sequences matches with the current name's sequence values
         if int(suspect[sq1]) == long_sq1 and int(suspect[sq2]) == long_sq2 and int(suspect[sq3]) == long_sq3:
             return suspect["name"]
-
-
-
 
 
 def longest_match(sequence, subsequence):
@@ -97,4 +97,5 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
-main()
+if __name__ == "__main__":
+    main()
