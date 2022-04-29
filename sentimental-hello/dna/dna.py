@@ -42,6 +42,7 @@ def read_database():
         reader = csv.DictReader(database)
         for row in reader:
             DNA_dict.append(row)
+        print(DNA_dict)
         return DNA_dict
 
 
