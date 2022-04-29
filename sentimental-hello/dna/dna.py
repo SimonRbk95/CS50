@@ -18,12 +18,14 @@ def main():
     return
 
 def valid_input():
-    if sys.argv != 2:
+    if sys.argv != 3:
         print("Usage: python dna.py data.csv sequence.txt")
 
 
 def read_database():
-    with open(sys.argv[1])
+    with open(sys.argv[1]) as database:
+        reader = csv.DictReader(database)
+        
 
 
 def longest_match(sequence, subsequence):
