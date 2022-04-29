@@ -44,7 +44,7 @@ def read_database():
             DNA_dict.append(row)
         print(DNA_dict)
 
-        for suspect in range(DNA_dict):
+        for suspect in range(len(DNA_dict)):
             print(suspect)
         return DNA_dict
 
