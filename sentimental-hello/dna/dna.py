@@ -23,11 +23,12 @@ def valid_input():
 
 
 def read_database():
-    DNA_dict = {}
+    DNA_dict = []
     with open(sys.argv[1]) as database:
         reader = csv.DictReader(database)
         for row in reader:
-            row['name'] = DNA_dict row['AGATC'])
+            DNA_dict.append(row)
+            
 
 
 
