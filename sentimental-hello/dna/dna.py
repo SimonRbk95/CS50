@@ -3,7 +3,10 @@ import sys
 
 # check based one current name:
 # longest_match in a loop, matching each index of column_names one at a time
-# if there is one match
+# if there is one that does not match, move to next person in data_base
+
+
+
 # global variables of sequences
 for seq in range(1, len(column_names)):
 
@@ -25,7 +28,8 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     for seq in range(1,len(column_names):
-        long_sq1 = longest_match(sequence, seq)
+
+    long_sq1 = longest_match(sequence, seq)
     long_sq2 = longest_match(sequence, s)
     long_sq3 = longest_match(sequence, sq3)
 
