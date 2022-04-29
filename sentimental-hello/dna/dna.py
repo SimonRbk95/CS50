@@ -8,7 +8,7 @@ def main():
     valid_input()
 
     # TODO: Read database file into a variable
-
+    read_database()
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
@@ -25,7 +25,7 @@ def valid_input():
 def read_database():
     with open(sys.argv[1]) as database:
         reader = csv.DictReader(database)
-        
+        print(reader)
 
 
 def longest_match(sequence, subsequence):
