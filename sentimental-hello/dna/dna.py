@@ -31,8 +31,11 @@ def main():
 
 
 def valid_input():
-    if sys.argv != 3:
-        print("Usage: python dna.py data.csv sequence.txt")
+    while True:
+        if sys.argv != 3:
+            sys.exkt("Usage: python dna.py data.csv sequence.txt")
+        else:
+            return
 
 
 def read_database():
