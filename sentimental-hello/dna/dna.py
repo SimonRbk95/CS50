@@ -11,8 +11,12 @@ def main():
     read_database()
 
     # TODO: Read DNA sequence file into a variable
+    sequence = read_sequence()
 
     # TODO: Find longest match of each STR in DNA sequence
+    run_AGATC = longest_match(sequence, "AGATC")
+    run_AATG = longest_match(sequence, "AATG")
+    run_TATC = longest_match(sequence, "TATC")
 
     # TODO: Check database for matching profiles
 
@@ -33,7 +37,8 @@ def read_database():
 
 def read_sequence()
     with open(sys.argv[2]) as file:
-        sequence = read(file)
+        sequence = file.read()
+        return sequence
 
 
 
