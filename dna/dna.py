@@ -54,7 +54,7 @@ def check_database(DNA_dict, column_SRTs, sequence):
         # assigns the SRT we are looking for to seq
         for subsequence in column_SRTs[1:]:
             # subsequence is used as the key to check whether the suspect's SRT value eqauls the longest_match
-            if suspect[seq] != longest_match(sequence, subsequence):
+            if int(suspect[subsequence]) != longest_match(sequence, subsequence):
                 guilty = False
                 break
             else:
