@@ -44,10 +44,9 @@ def read_database():
     DNA_dict = []
     with open(sys.argv[1]) as database:
         reader = csv.DictReader(database)
+        column_names = reader.fieldnames
         for row in reader:
             DNA_dict.append(row)
-    with open(sys.argv[1]) as database:
-        reader = csv.reader()
 
 
 def read_sequence():
