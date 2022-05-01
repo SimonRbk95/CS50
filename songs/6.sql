@@ -1,1 +1,1 @@
-SELECT songs.name FROM songs INNER JOIN artists ON artists.id = songs.artist_id;
+SELECT name FROM songs INNER JOIN artists ON artists.id = songs.artist_id;
