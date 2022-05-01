@@ -1,3 +1,1 @@
-SELECT songs.artist_ID, .CustomerName, Orders.OrderDate
-FROM Orders
-INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+SELECT songs.names FROM songs INNER JOIN artists ON songs.artist_id=artists.id;
