@@ -1,1 +1,1 @@
-SELECT TOP name FROM songs ORDER BY
+SELECT TOP name FROM songs ORDER BY duration_ms DESC;
