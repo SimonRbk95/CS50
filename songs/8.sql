@@ -1,1 +1,1 @@
-SELECT name from songs WHERE name = ['feat'];
+SELECT name from songs WHERE name REGEXP 'feat?';
