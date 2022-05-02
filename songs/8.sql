@@ -1,1 +1,1 @@
-SELECT name from songs WHERE "feat" in name;
+SELECT name from songs WHERE "feat" IN name;
