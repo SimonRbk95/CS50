@@ -1,1 +1,1 @@
-SELECT name FROM people WHERE id = (SELECT title from movies WHERE title = "Toy Story");
+SELECT name FROM people WHERE id = (SELECT id FROM movies);
