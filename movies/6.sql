@@ -1,1 +1,1 @@
-SELECT title FROM movies WHERE id = (SELECT movie_id FROM ratings WHERE AVG() )
+SELECT AVG(rating) FROM ratings WHERE movie_id = (SELECT id FROM movies WHERE year >= 2012);
