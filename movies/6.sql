@@ -1,1 +1,1 @@
-SELECT title FROM movies WHERE
+SELECT title FROM movies WHERE id = (SELECT movie_id FROM ratings WHERE AVG() )
