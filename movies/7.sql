@@ -1,1 +1,1 @@
-SELECT count(movies.title), ratings.rating FROM movies INNER JOIN ratings ON ratings.movie_id = movies.id WHERE movies.year = 2012 ORDER BY ratings.rating DESC, movies.title ASC;
+SELECT movies.title, ratings.rating FROM movies INNER JOIN ratings ON ratings.movie_id = movies.id WHERE movies.year = 2010 AND ratings.rating ORDER BY ratings.rating DESC, movies.title ASC;
