@@ -1,1 +1,1 @@
-Select title FROM movies WHERE year >= 2018 ORDER BY ;
+Select title FROM movies WHERE year >= 2018 ORDER BY title;
