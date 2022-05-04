@@ -8,6 +8,7 @@ JOIN people
 ON stars.person_id = people.id
 WHERE people.id = "Chadwick Bosemann"
 AND
+WHERE (SELECT TOP 5 FROM ratings.rating )
 
 
 WHERE people.name = "Chadwick Bosemann"
