@@ -14,5 +14,6 @@ WHERE description LIKE"%Theft%"
 -- check interviews
 SELECT transcript
 FROM interviews
-WHERE interviews LIKE "%bakery%";
+WHERE transcripts LIKE "%bakery%";
+--
 
