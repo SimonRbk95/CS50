@@ -15,5 +15,14 @@ WHERE description LIKE"%Theft%"
 SELECT transcript
 FROM interviews
 WHERE transcripts LIKE "%bakery%";
---
+-- each statement gives great insights, need to pursue each one of them
+
+-- 1st lead: car that left within 10 minutes of the theft.
+-- Look at parking lot security footage in that time frame
+
+-- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street
+
+-- 3rd lead: on the phone, the thief talked about taking the earliest flight out of Fiftyville on the next day
+-- thief asked the other guy on the phone to purchase the tickets
+
 
