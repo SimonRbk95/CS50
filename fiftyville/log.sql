@@ -11,5 +11,8 @@ WHERE description LIKE"%Theft%"
 -- Found theft of CS50 duck
 -- 10:15am at Humphrey Street bakery, three witnesses, each interview metions bakery
 
-
+-- check interviews
+SELECT transcript
+FROM interviews
+WHERE id = (SELECT)
 
