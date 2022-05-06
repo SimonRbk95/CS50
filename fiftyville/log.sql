@@ -14,5 +14,5 @@ WHERE description LIKE"%Theft%"
 -- check interviews
 SELECT transcript
 FROM interviews
-WHERE id = (SELECT)
+WHERE id = (SELECT )
 
