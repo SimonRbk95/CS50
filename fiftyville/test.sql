@@ -17,3 +17,12 @@ WHERE
        description LIKE "%Theft%";
 -- Found theft of CS50 duck
 -- 28th of July at 10:15am at Humphrey Street bakery, three witnesses, each interview metions bakery
+
+-- check interviews
+SELECT
+    transcript
+FROM
+    interviews
+WHERE
+    transcript LIKE "%bakery%";
+-- each statement gives great insights, need to pursue each one of them
