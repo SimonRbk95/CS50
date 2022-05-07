@@ -26,6 +26,7 @@ WHERE hour = 10
 AND activity = "exit"
 AND minute BETWEEN 15 AND 20
 ORDER BY minute;
+-- names of owners ban be looked up based upon license plate numbers
 
 -- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street withdrawing
 -- try to find possibe suspect's transaction and his account number
