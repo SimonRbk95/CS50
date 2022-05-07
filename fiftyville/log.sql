@@ -14,7 +14,7 @@ WHERE description LIKE"%Theft%"
 -- check interviews
 SELECT transcript
 FROM interviews
-WHERE transcripts LIKE "%bakery%";
+WHERE transcript LIKE "%bakery%";
 -- each statement gives great insights, need to pursue each one of them
 
 -- 1st lead: car that left within 10 minutes of the theft.
