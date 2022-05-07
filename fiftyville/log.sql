@@ -27,14 +27,12 @@ AND activity = "exit"
 AND minute BETWEEN 15 AND 20
 ORDER BY minute;
 
-
-
 -- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street withdrawing
 -- try to find possibe suspect's transaction and his account number
 SELECT account_number
 FROM atm_transactions
 WHERE year = 2021 AND month = 07 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
--- gives account number of the people who withdrew money
+-- gives account number of the people who withdrew money. names can be looked up
 
 -- 3rd lead: on the phone, the thief talked about taking the earliest flight out of Fiftyville on the next day (07/29/21)
 -- thief asked the other guy on the phone to purchase the tickets
