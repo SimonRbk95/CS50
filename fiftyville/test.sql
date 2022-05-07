@@ -183,7 +183,7 @@ JOIN
 ON
     airports.id = flights.destination_airport_id
 WHERE
-    id =
+    airports.id =
     (
         SELECT
             destination_airport_id
