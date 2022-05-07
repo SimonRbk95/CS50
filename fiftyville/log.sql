@@ -92,5 +92,22 @@ SELECT name FROM people WHERE phone_number IN
 
 -- try to match call receivers with people who flew from fiftyville
 
-SELECT name FROM people WHERE 
+SELECT name FROM people WHERE passport_number IN (
+       SELECT passport_number
+       FROM passengers
+       JOIN flights
+       ON passengers.flight_id = flights.id
+       INNER JOIN airports
+       ON flights.origin_airport_id = airports.id
+       WHERE airports.city = "Fiftyville"
+       AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
+)
+AND name IN (
+       SELECT name FROM people WHERE phone_number IN
+       (
+       SELECT receiver
+       FROM phone_calls
+       WHERE caller = (SELECT phone_number FROM people WHERE name = "Bruce") AND year = 2021 AND month = 07 AND day = 28
+       )
+)
 
