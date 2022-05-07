@@ -34,6 +34,7 @@ ORDER BY minute;
 SELECT transaction_type, account_number
 FROM atm_transactions
 WHERE year = 2021 AND month = 07 AND day = 28 AND atm_location = "Leggett Street";
+-
 
 -- 3rd lead: on the phone, the thief talked about taking the earliest flight out of Fiftyville on the next day (07/29/21)
 -- thief asked the other guy on the phone to purchase the tickets
