@@ -59,21 +59,27 @@ WHERE airports.city = "Fiftyville"
 AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
 
 
--- match phone number, license plate number, passport_number to get right name
-
-
+-- match license plate number and passport_number to get possible thiefs:
 SELECT name
 FROM people
 WHERE passport_number IN ()
 AND license_plate IN ()
+-- Sofia Luca Bruce,
 
--- Sofia Luca Bruce, can be narrowed down by looking at the calls and bank account holders
+-- suspects can be narrowed down by looking at the calls and bank account holders
 -- bank account:
 SELECT name
 FROM people
 JOIN bank_accounts
 ON bank_accounts.person_id = people.id
-WHERE account_number = (SELECT account_number
+WHERE account_number IN (SELECT account_number
                         FROM atm_transactions
                         WHERE year = 2021 AND month = 07 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw");
--- LUCA
+-- match: Luca, Bruce, Diana Brooke, Kenny, Iman, Taylor Benista
+
+-- phone calls:
+Select caller FROM phone_calls WHERE 
+
+
+
+
