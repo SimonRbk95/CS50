@@ -190,16 +190,16 @@ WHERE
         FROM
             flights
         WHERE
-            year = 2021
-            AND month = 07
-            AND day = 29
-            AND origin_airport_id =
             (
                 SELECT
                     id
                 FROM
                     airports
                 WHERE
+                    year = 2021
+                    AND month = 07
+                    AND day = 29
+                    AND origin_airport_id =
                     city = "Fiftyville"
             )
         ORDER BY
