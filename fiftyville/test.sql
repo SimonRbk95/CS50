@@ -156,7 +156,11 @@ WHERE
         FROM
             phone_calls
         WHERE
-            caller = "Bruce"
+            caller =
+                (
+                    SELECT
+                        
+                )
             AND year = 2021
             AND day = 28
             AND month = 07
