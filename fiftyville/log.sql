@@ -82,9 +82,13 @@ SELECT name FROM people WHERE phone_number IN (Select caller FROM phone_calls WH
 -- match: Bruce
 
 -- Find out whom Bruce called
-SELECT name FROM people WHERE phone_number IN(
+SELECT name FROM people WHERE phone_number IN
+       (
        SELECT receiver
        FROM phone_calls
        WHERE caller = (SELECT phone_number FROM people WHERE name = "Bruce") AND year = 2021 AND month = 07 AND day = 28
-);
+       );
+-- Gregory, Carl, Robin, Deborah
+
+-- try to match call receivers with people who flew from fiftyville
 
