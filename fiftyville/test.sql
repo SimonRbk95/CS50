@@ -103,8 +103,18 @@ JOIN
 ON
     people.passport_nubmer = passengers.passport_number
 WHERE
-    flight_id =
+    passengers.flight_id =
     (
-        
-
+        SELECT
+            id
+        FROM
+            flights
+        WHERE
+            year = 2021
+            AND month = 07
+            AND day = 29
+            Order by
+                hour, minute
+            LIMIT
+                1
     )
