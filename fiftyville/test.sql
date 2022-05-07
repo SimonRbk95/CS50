@@ -99,5 +99,12 @@ SELECT
 FROM
     people
 JOIN
-    flights
-ON people.
+    passengers
+ON
+    people.passport_nubmer = passengers.passport_number
+WHERE
+    flight_id =
+    (
+        
+
+    )
