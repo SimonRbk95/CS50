@@ -190,11 +190,12 @@ WHERE
         FROM
             flights
         WHERE
+            id =
             (
                 SELECT
                     id
                 FROM
-                    airports
+                    flights
                 WHERE
                     year = 2021
                     AND month = 07
