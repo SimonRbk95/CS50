@@ -19,10 +19,11 @@ WHERE transcripts LIKE "%bakery%";
 
 -- 1st lead: car that left within 10 minutes of the theft.
 -- Look at parking lot security footage in that time frame
-SELECT activity, license_plate
+SELECT activity, hour, minute, license_plate
 FROM bakery_security_logs
 WHERE hour = 10
 AND minute BETWEEN 15 AND 20
+ORDER BY minute;
 
 
 
