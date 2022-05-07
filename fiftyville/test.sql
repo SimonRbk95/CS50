@@ -135,5 +135,6 @@ IN
         year = 2021
         AND month = 07
         AND day = 28
-        AND hour < 10
-    );
+    )
+ORDER BY
+    name;
