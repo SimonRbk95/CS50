@@ -52,7 +52,6 @@ WHERE year = 2021 AND month = 07 AND day = 28 AND atm_location = "Leggett Street
 -- 2. the day of the booking
 -- 3. the day of the phone call
 -- 4. the person on the receiving end of the call booked the tickets
--- match phone number, license plate number, passport_number to get right name
 
 -- get passport number of people that flew to fif
 SELECT passport_number
@@ -64,17 +63,11 @@ ON flights.origin_airport_id = airports.id
 WHERE airports.city = "Fiftyville"
 AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
 
--- destinations that correspond to flights that depart from Fiftyville
-SELECT full_name
-FROM airports
-WHERE id IN (SELECT destination_airport_ID
-       FROM flights
-       WHERE origin_airport_id = "Fiftyville" AND year = 2021 AND month = 7 AND day = 29);
---- !!doesn't work because I need the airport id first
 
-SELECT full_name
-FROM airports
-JOIN flights
-ON flights.origin_airport_id = airports.id
+-- match phone number, license plate number, passport_number to get right name
 
 
+SELECT name
+FROM people
+WHERE passport_number IN ()
+AND license_plate IN ()
