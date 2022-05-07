@@ -59,7 +59,7 @@ SELECT passport_number
 FROM passengers
 JOIN flights
 ON passengers.flight_id = flights.id
-JOIN airports
+INNER JOIN airports
 ON flights.origin_airport_id = airports.id
 WHERE airports.city = "Fiftyville"
 AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
