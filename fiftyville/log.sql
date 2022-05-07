@@ -27,10 +27,9 @@ WHERE transcript LIKE "%bakery%";
 -- Look at parking lot security footage in that time frame
 -- check license plate numbers of the cars in the time frame:
 SELECT license_plate
-FROM bakery_security_logs WHERE hour = 10 AND activity = "exit" AND minute BETWEEN 15 AND 20 ORDER BY minute;
+FROM bakery_security_logs
+WHERE hour = 10 AND activity = "exit" AND minute BETWEEN 15 AND 20 ORDER BY minute;
 -- names of owners ban be looked up based upon license plate numbers
-
-
 
 -- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street withdrawing
 -- try to find possibe suspect's transaction and his account number
@@ -68,4 +67,13 @@ FROM people
 WHERE passport_number IN ()
 AND license_plate IN ()
 
--- Sofia Luca Bruce
+-- Sofia Luca Bruce, can be narrowed down by looking at the calls and bank account holders
+-- bank account:
+SELECT name
+FROM people
+JOIN bank_accounts
+ON bank_accounts.person_id = people.id
+WHERE account_number = (SELECT account_number
+                        FROM atm_transactions
+                        WHERE year = 2021 AND month = 07 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw");
+
