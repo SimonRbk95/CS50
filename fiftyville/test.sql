@@ -159,15 +159,15 @@ WHERE
             caller =
                 (
                     SELECT
-                        
+                        phone_number
+                    FROM
+                        people
+                    WHERE
+                        name = "Bruce"
                 )
             AND year = 2021
             AND day = 28
             AND month = 07
-        ORDER BY
-            hour, minute
-        LIMIT
-            1
     );
 
 
