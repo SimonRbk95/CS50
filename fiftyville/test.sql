@@ -89,8 +89,8 @@ WHERE
         AND month = 07
         AND day = 28
         AND atm_location = "Leggett Street"
-        AND transaction_type = "withdraw";
-    )
+        AND transaction_type = "withdraw"
+    );
 
 
 -- gives account number of the people who withdrew money. names can be looked up
