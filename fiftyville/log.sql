@@ -78,7 +78,7 @@ WHERE account_number IN (SELECT account_number
 -- match: Luca, Bruce, Diana Brooke, Kenny, Iman, Taylor Benista
 
 -- phone calls:
-Select caller FROM phone_calls WHERE 
+SELECT name FROM people WHERE phone_number IN (Select caller FROM phone_calls WHERE year = 2021 AND month = 07 AND day = 28) ORDER BY name;
 
 
 
