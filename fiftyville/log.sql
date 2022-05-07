@@ -49,7 +49,14 @@ WHERE year = 2021 AND month = 07 AND day = 28 AND atm_location = "Leggett Street
 -- 4. the person on the receiving end of the call booked the tickets
 
 -- get passport number of people that flew to fif
-SELECT passport_number FROM passengers JOIN flights ON passengers.flight_id = flights.id INNER JOIN airports ON flights.origin_airport_id = airports.id WHERE airports.city = "Fiftyville" AND flights.year = 2021 AND flights.month = 07 AND flights.day = 29 AND flights.day IN (SELECT MIN(hour) FROM flights WHERE city = "Fiftyville" AND year = 2021 AND month = 07 AND day = 29) AND flights.minute IN (SELECT MIN(minute) FROM flights WHERE city = "Fiftyville" AND year = 2021 AND month = 07 AND day = 29);
+SELECT passport_number
+FROM passengers
+JOIN flights
+ON passengers.flight_id = flights.id
+INNER JOIN airports
+ON flights.origin_airport_id = airports.id
+WHERE airports.city = "Fiftyville"
+AND flights.year = 2021 AND flights.month = 07 AND flights.day = 29;
 
 
 -- match license plate number and passport_number to get possible thiefs:
@@ -79,7 +86,7 @@ SELECT name FROM people WHERE phone_number IN
        (
        SELECT receiver
        FROM phone_calls
-       WHERE caller IN (SELECT phone_number FROM people WHERE name = "Bruce") AND year = 2021 AND month = 07 AND day = 28
+       WHERE caller (SELECT phone_number FROM people WHERE name = "Bruce") AND year = 2021 AND month = 07 AND day = 28
        );
 -- Gregory, Carl, Robin, Deborah
 
