@@ -101,7 +101,7 @@ FROM
 JOIN
     passengers
 ON
-    people.passport_nubmer = passengers.passport_number
+    people.passport_number = passengers.passport_number
 WHERE
     passengers.flight_id =
     (
