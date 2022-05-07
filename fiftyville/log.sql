@@ -45,8 +45,8 @@ JOIN flights
 ON passengers.flight_id = flights.id
 JOIN airports
 ON flights.origin_airport_id = airports.id
-WHERE flights.origin_airport_id = "Fiftyville"
-AND flights.year = 2021 AND flights.month = 07 AND flights.day = 29;
+WHERE flights.origin_airport_id LIKE "Fiftyville"
+AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
 
 -- match phone number, license plate number, passport_number to get right name
 
