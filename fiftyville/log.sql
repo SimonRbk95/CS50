@@ -58,6 +58,9 @@ AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
 -- match phone number, license plate number, passport_number to get right name
 
 
--- destination
-SELECT destination_aiport_ID
-WHERE (SELECT ID WHERE origin_airport_id = "Fiftiyville");
+-- destinations that correspond to flights that depart from Fiftyville
+SELECT full_name
+FROM airports
+WHERE id = (SELECT destination_aiport_ID
+       FROM flights
+       WHERE origin_airport_id = "Fiftyville" AND year = 2021 AND month = 7 AND day = 29);
