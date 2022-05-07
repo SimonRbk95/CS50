@@ -45,4 +45,24 @@ WHERE
     AND activity = "exit"
     AND minute BETWEEN 15 AND 20
     ORDER BY minute;
--- names of owners ban be looked up based upon license plate numbers
+-- names of owners ban be looked up based upon license plate numbers:
+SELECT
+    name
+FROM
+    people
+WHERE
+    license_plate IN
+    (
+        SELECT
+            license_plate
+        FROM
+            bakery_security_logs
+        WHERE
+            year = 2021
+            AND month = 07
+            AND day = 28
+            AND hour = 10
+            AND activity = "exit"
+            AND minute BETWEEN 15 AND 20
+            ORDER BY minute
+    );
