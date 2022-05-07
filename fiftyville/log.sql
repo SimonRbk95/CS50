@@ -31,7 +31,7 @@ ORDER BY minute;
 
 -- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street
 -- try to find possibe suspect's transaction and his account number
-SELECT transaction
+SELECT transaction_type, 
 FROM atm_transactions
 WHERE year = 2021 AND month = 07 AND day = 28;
 
