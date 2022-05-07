@@ -135,6 +135,7 @@ IN
         year = 2021
         AND month = 07
         AND day = 28
+        AND duration < 60
     )
 ORDER BY
     name;
@@ -170,6 +171,18 @@ WHERE
             AND month = 07
             AND duration < 60
     );
+
+-- find where the city of escape
+
+SELECT
+    city
+FROM
+    airports
+JOIN
+    flights
+ON
+    
+
 
 
 
