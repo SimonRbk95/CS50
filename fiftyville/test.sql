@@ -46,7 +46,7 @@ WHERE
     AND minute BETWEEN 15 AND 20
     ORDER BY minute;
 -- names of owners ban be looked up based upon license plate numbers:
-INTERSECT
+
 SELECT
     name
 FROM
