@@ -24,5 +24,8 @@ SELECT
 FROM
     interviews
 WHERE
-    transcript LIKE "%bakery%";
+    year = 2021
+    AND month = 07
+    AND day = 28
+    AND transcript LIKE "%bakery%";
 -- each statement gives great insights, need to pursue each one of them
