@@ -117,7 +117,7 @@ WHERE
                 hour, minute
             LIMIT
                 1
-    )
+    );
 
 SELECT
     name
@@ -136,4 +136,4 @@ IN
         AND month = 07
         AND day = 28
         AND hour < 10
-    )
+    );
