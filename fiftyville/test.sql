@@ -160,6 +160,10 @@ WHERE
             AND year = 2021
             AND day = 28
             AND month = 07
+        ORDER BY
+            hour, minute
+        LIMIT
+            1
     );
 
 
