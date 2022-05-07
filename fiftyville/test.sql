@@ -140,4 +140,23 @@ ORDER BY
     name;
 
 -- accomplice
+SELECT
+    name
+FROM
+    people
+JOIN
+    phone_calls
+ON
+    
+SELECT
+    receiver
+FROM
+    phone_calls
+WHERE
+    caller = "Bruce"
+    AND year = 2021
+    AND day = 28
+    AND month = 07
+
+
 
