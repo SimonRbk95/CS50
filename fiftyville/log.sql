@@ -109,5 +109,5 @@ AND name IN (
        FROM phone_calls
        WHERE caller = (SELECT phone_number FROM people WHERE name = "Bruce") AND year = 2021 AND month = 07 AND day = 28
        )
-)
+);
 
