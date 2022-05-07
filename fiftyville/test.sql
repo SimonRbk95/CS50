@@ -186,26 +186,19 @@ WHERE
         FROM
             flights
         WHERE
-            id =
-            (
-                SELECT
-                    id
-                FROM
-                    flights
-                WHERE
-                    origin_airport_id =
-                    (
-                        SELECT
-                            id
-                        FROM
-                            airports
-                        WHERE
-                            city = "Fiftyville"
-                    )
-                    AND year = 2021
-                    AND month = 07
-                    AND day = 29
-            )
+            origin_airport_id =
+                (
+                    SELECT
+                        id
+                    FROM
+                        airports
+                    WHERE
+                        city = "Fiftyville"
+                )
+            AND year = 2021
+            AND month = 07
+            AND day = 29
+        )
         ORDER BY
             hour, minute
         LIMIT 1
