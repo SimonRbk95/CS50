@@ -42,8 +42,11 @@ WHERE year = 2021 AND month = 07 AND day = 28 AND atm_location = "Leggett Street
 SELECT passport_number
 FROM passengers
 JOIN flights
-ON flight_id.flights =
-
+ON passengers.flight_id = flights.id
+JOIN airports
+ON flights.origin_airport_id = airports.id
+WHERE flights.origin_airport_id = "Fiftyville"
+AND flights.year = 2021 AND flights.month = 07 AND flights.day = 29;
 
 -- match phone number, license plate number, passport_number to get right name
 
