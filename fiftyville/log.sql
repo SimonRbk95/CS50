@@ -19,9 +19,9 @@ WHERE transcripts LIKE "%bakery%";
 
 -- 1st lead: car that left within 10 minutes of the theft.
 -- Look at parking lot security footage in that time frame
-SELECT activity
+SELECT activity, hour
 FROM bakery_security_logs
-WHERE 
+
 
 
 -- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street
