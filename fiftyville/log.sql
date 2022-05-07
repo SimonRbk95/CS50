@@ -44,6 +44,8 @@ WHERE year = 2021 AND month = 07 AND day = 28 AND atm_location = "Leggett Street
 -- 3. the day of the phone call
 -- 4. the person on the receiving end of the call booked the tickets
 
+
+
 SELECT passport_number
 FROM passengers
 JOIN flights
