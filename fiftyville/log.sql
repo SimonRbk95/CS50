@@ -92,3 +92,5 @@ SELECT name FROM people WHERE phone_number IN
 
 -- try to match call receivers with people who flew from fiftyville
 
+SELECT name FROM people WHERE 
+
