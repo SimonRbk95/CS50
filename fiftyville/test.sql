@@ -178,10 +178,6 @@ SELECT
     city
 FROM
     airports
-JOIN
-    flights
-ON
-    airports.id = flights.destination_airport_id
 WHERE
     id =
     (
@@ -200,13 +196,11 @@ WHERE
                     year = 2021
                     AND month = 07
                     AND day = 29
-                    AND origin_airport_id =
-                    city = "Fiftyville"
             )
         ORDER BY
             hour, minute
         LIMIT 1
-    )
+    );
 
 
 
