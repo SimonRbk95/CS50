@@ -31,7 +31,7 @@ ORDER BY minute;
 
 -- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street withdrawing
 -- try to find possibe suspect's transaction and his account number
-SELECT transaction_type, account_number
+SELECT account_number
 FROM atm_transactions
 WHERE year = 2021 AND month = 07 AND day = 28 AND atm_location = "Leggett Street" AND transaction_type = "withdraw";
 -
