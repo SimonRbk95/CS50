@@ -198,11 +198,11 @@ WHERE
             AND year = 2021
             AND month = 07
             AND day = 29
-        )
         ORDER BY
             hour, minute
+        )
         LIMIT 1
-    );
+;
 
 
 
