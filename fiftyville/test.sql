@@ -34,11 +34,14 @@ WHERE
 -- Look at parking lot security footage in that time frame
 -- check license plate numbers of the cars in the time frame:
 SELECT
-    license_plate
+    license_plate,hour, minute
 FROM
     bakery_security_logs
 WHERE
-    hour = 10
+    year = 2021
+    AND month = 07
+    AND day = 28
+    AND hour = 10
     AND activity = "exit"
     AND minute BETWEEN 15 AND 20
     ORDER BY minute;
