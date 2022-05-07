@@ -70,3 +70,11 @@ FROM airports
 WHERE id IN (SELECT destination_airport_ID
        FROM flights
        WHERE origin_airport_id = "Fiftyville" AND year = 2021 AND month = 7 AND day = 29);
+--- !!doesn't work because I need the airport id first
+
+SELECT full_name
+FROM airports
+JOIN flights
+ON flights.origin_airport_id = airports.id
+
+
