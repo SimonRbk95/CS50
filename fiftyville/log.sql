@@ -30,8 +30,10 @@ ORDER BY minute;
 
 
 -- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street
--- try to find possibe suspect's transaction
-SELECT transaction_type, 
+-- try to find possibe suspect's transaction and his account number
+SELECT transaction_type
+FROM atm_transactions
+WHERE year = 2021 AND month = 07 AND day = 28;
 
 -- 3rd lead: on the phone, the thief talked about taking the earliest flight out of Fiftyville on the next day (07/29/21)
 -- thief asked the other guy on the phone to purchase the tickets
