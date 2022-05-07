@@ -193,6 +193,7 @@ WHERE
                 FROM
                     flights
                 WHERE
+                    origin_airport_id =
                     (
                         SELECT
                             id
@@ -200,7 +201,7 @@ WHERE
                             airports
                         WHERE
                             city = "Fiftyville"
-                    ) = origin_airport_id
+                    )
                     AND year = 2021
                     AND month = 07
                     AND day = 29
