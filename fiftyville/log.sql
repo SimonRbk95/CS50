@@ -1,15 +1,15 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 
 -- check all descriptions
-SELECT description FROM crime_scene reports
+SELECT description FROM crime_scene reports;
 
 -- get descriptions of instances where stuff got stolen
 -- examining cases with keyword "theft" first
-SELECT description
+SELECT description, year, month, day
 FROM crime_scene_reports
 WHERE description LIKE"%Theft%"
 -- Found theft of CS50 duck
--- 10:15am at Humphrey Street bakery, three witnesses, each interview metions bakery
+-- 28th of July at 10:15am at Humphrey Street bakery, three witnesses, each interview metions bakery
 
 -- check interviews
 SELECT transcript
@@ -31,7 +31,7 @@ ORDER BY minute;
 
 -- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street
 
--- 3rd lead: on the phone, the thief talked about taking the earliest flight out of Fiftyville on the next day
+-- 3rd lead: on the phone, the thief talked about taking the earliest flight out of Fiftyville on the next day (07/29/21)
 -- thief asked the other guy on the phone to purchase the tickets
 
 
