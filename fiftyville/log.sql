@@ -84,6 +84,6 @@ SELECT name FROM people WHERE phone_number IN (Select caller FROM phone_calls WH
 -- Find out whom Bruce called
 SELECT receiver
 FROM phone_calls
-WHERE caller = (SELECT phone_number FROM people WHERE name = "Bruce");
+WHERE caller = (SELECT phone_number FROM people WHERE name = "Bruce") AND year = 2021 AND month = 07 AND day = 28;
 
 
