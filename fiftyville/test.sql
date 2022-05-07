@@ -46,6 +46,7 @@ WHERE
     AND minute BETWEEN 15 AND 20
     ORDER BY minute;
 -- names of owners ban be looked up based upon license plate numbers:
+INTERSECT
 SELECT
     name
 FROM
@@ -65,8 +66,8 @@ WHERE
             AND activity = "exit"
             AND minute BETWEEN 15 AND 20
             ORDER BY minute
-    );
-
+    )
+INTERSECT
 -- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street withdrawing
 -- try to find possibe suspect's transaction and his account number
 SELECT
@@ -90,9 +91,8 @@ WHERE
         AND day = 28
         AND atm_location = "Leggett Street"
         AND transaction_type = "withdraw"
-    );
-
-
+    )
+INTERSECT
 -- gives account number of the people who withdrew money. names can be looked up
 SELECT
     name
@@ -117,8 +117,8 @@ WHERE
                 hour, minute
             LIMIT
                 1
-    );
-
+    )
+INTERSECT
 SELECT
     name
 FROM
