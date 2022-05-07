@@ -29,3 +29,17 @@ WHERE
     AND day = 28
     AND transcript LIKE "%bakery%";
 -- each statement gives great insights, need to pursue each one of them
+
+-- 1st lead: car that left within 10 minutes of the theft.
+-- Look at parking lot security footage in that time frame
+-- check license plate numbers of the cars in the time frame:
+SELECT
+    license_plate
+FROM
+    bakery_security_logs
+WHERE
+    hour = 10
+    AND activity = "exit"
+    AND minute BETWEEN 15 AND 20
+    ORDER BY minute;
+-- names of owners ban be looked up based upon license plate numbers
