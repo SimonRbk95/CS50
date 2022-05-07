@@ -56,7 +56,8 @@ ON passengers.flight_id = flights.id
 INNER JOIN airports
 ON flights.origin_airport_id = airports.id
 WHERE airports.city = "Fiftyville"
-AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
+AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29
+AND flights.day
 
 
 -- match license plate number and passport_number to get possible thiefs:
