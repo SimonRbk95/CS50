@@ -94,3 +94,10 @@ WHERE
 
 
 -- gives account number of the people who withdrew money. names can be looked up
+SELECT
+    name
+FROM
+    people
+JOIN
+    flights
+ON people.
