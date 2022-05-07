@@ -147,16 +147,22 @@ FROM
 JOIN
     phone_calls
 ON
-    
-SELECT
-    receiver
-FROM
-    phone_calls
+    phone_calls.receiver = people.phone_number
 WHERE
-    caller = "Bruce"
-    AND year = 2021
-    AND day = 28
-    AND month = 07
+    phone_number =
+    (
+        SELECT
+            receiver
+        FROM
+            phone_calls
+        WHERE
+            caller = "Bruce"
+            AND year = 2021
+            AND day = 28
+            AND month = 07
+    );
+
+
 
 
 
