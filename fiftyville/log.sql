@@ -54,7 +54,7 @@ WHERE year = 2021 AND month = 07 AND day = 28 AND atm_location = "Leggett Street
 -- 4. the person on the receiving end of the call booked the tickets
 -- match phone number, license plate number, passport_number to get right name
 
--- get passport number of people that f
+-- get passport number of people that flew to fif
 SELECT passport_number
 FROM passengers
 JOIN flights
