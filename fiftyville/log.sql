@@ -58,3 +58,6 @@ AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
 -- match phone number, license plate number, passport_number to get right name
 
 
+-- destination
+SELECT destination_aiport_ID
+WHERE (SELECT ID WHERE origin_airport_id = "Fiftiyville");
