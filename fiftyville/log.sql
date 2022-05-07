@@ -31,7 +31,7 @@ ORDER BY minute;
 
 -- 2nd lead: earlier in the morning of the same day, the thief was seen at an ATM on Legett Street
 -- try to find possibe suspect's transaction
-SELECT 
+SELECT transaction_type, 
 
 -- 3rd lead: on the phone, the thief talked about taking the earliest flight out of Fiftyville on the next day (07/29/21)
 -- thief asked the other guy on the phone to purchase the tickets
