@@ -26,7 +26,8 @@ WHERE transcript LIKE "%bakery%";
 -- 1st lead: car that left within 10 minutes of the theft.
 -- Look at parking lot security footage in that time frame
 -- check license plate numbers of the cars in the time frame:
-SELECT license_plate FROM bakery_security_logs WHERE hour = 10 AND activity = "exit" AND minute BETWEEN 15 AND 20 ORDER BY minute;
+SELECT license_plate
+FROM bakery_security_logs WHERE hour = 10 AND activity = "exit" AND minute BETWEEN 15 AND 20 ORDER BY minute;
 -- names of owners ban be looked up based upon license plate numbers
 
 
@@ -66,3 +67,5 @@ SELECT name
 FROM people
 WHERE passport_number IN ()
 AND license_plate IN ()
+
+-- Sofia Luca Bruce
