@@ -61,7 +61,7 @@ JOIN flights
 ON passengers.flight_id = flights.id
 JOIN airports
 ON flights.origin_airport_id = airports.id
-WHERE airports.name = "Fiftyville"
+WHERE airports.city = "Fiftyville"
 AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
 
 -- destinations that correspond to flights that depart from Fiftyville
