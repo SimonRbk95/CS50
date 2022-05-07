@@ -100,7 +100,7 @@ SELECT name FROM people WHERE passport_number IN (
        INNER JOIN airports
        ON flights.origin_airport_id = airports.id
        WHERE airports.city = "Fiftyville"
-       AND flights.year = 2021 AND flights.month = 7 AND flights.day = 29;
+       AND flights.year = 2021 AND flights.month = 07 AND flights.day = 29;
 )
 AND name IN (
        SELECT name FROM people WHERE phone_number IN
