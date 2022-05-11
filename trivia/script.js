@@ -1,10 +1,12 @@
 for (let i= 0; i<3; i++)
 {
-    document.getElementById("Answer" + string(i)).addEventListener("click", function() {
-        if (document.getElementById("Answer" + string(i)) === "World Wide Web")
+    let btn = document.getElementById("Answer" + string(i));
+    btn.addEventListener("click", function onClick() {
+        if (btn.innerText === "World Wide Web")
         {
             // change color of box to green
-            
+            btn.style.backgroundColor = "green";
+
         }
         else
         {
