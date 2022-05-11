@@ -1,2 +1,3 @@
-for (i= )
-document.getElementById("myBtn").addEventListener("click", displayDate);
+for (let i= 0; i<3; i++){
+    document.getElementById("Answer" + str(i)).addEventListener("click", displayDate);
+}
