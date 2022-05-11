@@ -11,6 +11,7 @@ for (let i= 0; i<3; i++)
         else
         {
             // change color of box to red
+            btn.style.backgroundColor = "green";
         }
     }
     );
