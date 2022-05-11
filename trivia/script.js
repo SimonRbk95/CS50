@@ -4,10 +4,18 @@ let btn2 = document.getElementById("Answer2");
 let btn3 = document.getElementById("Answer3");
 let btn4 = document.getElementById("Answer4");
 
+
 while (true)
 {
-    checkAnswer(btnX);
+    checkAnswer(btn1);
+    checkAnswer(btn2);
+    checkAnswer(btn3);
+    checkAnswer(btn4);
 }
+
+
+
+
 
 
 function checkAnswer(btnX)
