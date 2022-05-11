@@ -5,4 +5,6 @@ document.addEventListener("DOMContentLoaded", function(){
         correct.style.backgroundColor = "green";
         document.getElementById("placeholder1").innerHTML = "Correct!";
     });
+
+    let incorrect = document.getElementById()
 });
