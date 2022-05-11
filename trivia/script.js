@@ -7,7 +7,12 @@ let btn4 = document.getElementById("Answer4");
 
 document.addEventListener("DOMContentLoaded", function (){
     // When correct answer is clicked
-    addEventListener("click", function onClick()
+    let correct = document.getElementById("Answer3");
+    correct.addEventListener("click", function (){
+        correct.style.backgroundColor = "green";
+        
+    }
+    ]
 })
 
 while (true)
