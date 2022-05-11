@@ -5,6 +5,11 @@ let btn3 = document.getElementById("Answer3");
 let btn4 = document.getElementById("Answer4");
 
 
+document.addEventListener("DOMContentLoaded", function (){
+    // When correct answer is clicked
+    addEventListener("click", function onClick()
+})
+
 while (true)
 {
     checkAnswer(btn1);
