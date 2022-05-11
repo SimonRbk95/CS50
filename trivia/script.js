@@ -1,18 +1,29 @@
-for (let i= 0; i<3; i++)
+
+let btn1 = document.getElementById("Answer1");
+let btn2 = document.getElementById("Answer2");
+let btn3 = document.getElementById("Answer3");
+let btn4 = document.getElementById("Answer4");
+
+while (true)
 {
-    let btn = document.getElementById("Answer" + string(i));
-    btn.addEventListener("click", function onClick() {
-        if (btn.innerText === "World Wide Web")
+    checkAnswer(btnX);
+}
+
+
+function checkAnswer(btnX)
+{
+    btnX.addEventListener("click", function onClick()
+    {
+        if (btnX.innerText === "World Wide Web")
         {
             // change color of box to green
-            btn.style.backgroundColor = "green";
+            btnX.style.backgroundColor = "green";
 
         }
         else
         {
             // change color of box to red
-            btn.style.backgroundColor = "green";
+            btnX.style.backgroundColor = "red";
         }
-    }
-    );
+    });
 }
