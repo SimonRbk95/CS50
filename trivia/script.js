@@ -4,4 +4,5 @@ document.addEventListener("DOMContentLoaded", function(){
     correct.addEventListener("click", function(){
         correct.style.backgroundColor = "green";
         document.getElemenById("placeholder1").innerText = "Correct!";
-    }
+    })
+}
