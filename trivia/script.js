@@ -3,6 +3,6 @@ document.addEventListener("DOMContentLoaded", function(){
     let correct = document.getElementById("Answer3");
     correct.addEventListener("click", function(){
         correct.style.backgroundColor = "green";
-        document.getElemenById("placeholder1").innerText = "Correct!";
+        document.getElementById("placeholder1").innerHTML = "Correct!";
     });
 });
