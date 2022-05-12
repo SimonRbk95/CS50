@@ -8,11 +8,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // inspired by Brian's walkthrough
     let incorrects = document.querySelectorAll("incorrect");
-    for (let i = 0; i < incorrects.length; i++)
-        {
-            incorrects[i].addEventListener("click", function(){
-                incorrects[i].style.backgroundColor = "red";
-                document.getElementById("placeholder1").innerHTML = "incorrect!";
+    for (let i = 0; i < incorrects.length; i++){
+        incorrects[i].addEventListener("click", function(){
+            incorrects[i].style.backgroundColor = "red";
+            document.getElementById("placeholder1").innerHTML = "incorrect!";
             });
         }
 });
