@@ -16,17 +16,14 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
     // text field question
-    let btn = document.getElementById("checkAnswer5");
-    btn.addEventListener("click", function(){
-        input = document.getElementById("Answer5")
-        input.addEventListener("input", function(){
-            if (input.innerHTML.toLowerCase() === "brown"){
-                document.getElementById("placeholder2").innerHTML = "Correct!";
-            }
-            else{
-                document.getElementById("placeholder1").innerHTML = "Incorrect!";
-            }
-        });
+    document.getElementById("checkAnswer5").addEventListener("click", function(){
+        input = document.getElementBySelector("input").value;
+        if (input.toLowerCase() === "brown"){
+            document.getElementById("placeholder2").innerHTML = "Correct!";
+        }
+        else{
+            document.getElementById("placeholder1").innerHTML = "Incorrect!";
+        }
     });
 
 });
