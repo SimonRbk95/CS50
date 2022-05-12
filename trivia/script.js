@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
             document.getElementById("placeholder1").innerHTML = "incorrect!";
             });
         }
+
     // text field question
     let btn = document.getElementById("checkAnswer5");
     btn.addEventListener("click", function(){
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function(){
             else{
                 document.getElementById("placeholder1").innerHTML = "Incorrect!";
             }
-        }
+        });
     });
+
 });
