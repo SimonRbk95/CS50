@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // text field question
     document.getElementById("checkAnswer5").addEventListener("click", function(){
-        input = document.getElementBySelector("input").value;
+        let input = document.querySelector("input").value;
         if (input.toLowerCase() === "brown"){
             document.getElementById("placeholder2").innerHTML = "Correct!";
         }
