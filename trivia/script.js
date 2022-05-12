@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById("placeholder1").innerHTML = "Correct!";
     });
 
-    
+    // inspired by Brian's walkthrough
     incorrect.addEventListener("click", function(){
         incorrect.style.backgroundColor = "red";
         document.getElementById("placeholder1").innerHTML = "incorrect!";
