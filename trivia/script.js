@@ -14,7 +14,4 @@ document.addEventListener("DOMContentLoaded", function(){
                 incorrects[i].style.backgroundColor = "red";
                 document.getElementById("placeholder1").innerHTML = "incorrect!";
         }
-
-    });
-
 });
