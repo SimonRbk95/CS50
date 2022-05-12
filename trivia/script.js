@@ -17,12 +17,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // text field question
     document.getElementById("checkAnswer5").addEventListener("click", function(){
-        let input = document.querySelector("input").value;
-        if (input.toLowerCase() === "brown"){
+        let input = document.querySelector("input");
+        if (input.value.toLowerCase() === "brown"){
             document.getElementById("placeholder2").innerHTML = "Correct!";
+            input.style.background = "green";
         }
         else{
-            document.getElementById("placeholder1").innerHTML = "Incorrect!";
+            document.getElementById("placeholder2").innerHTML = "Incorrect!";
+            input.style.background = "red";
         }
     });
 
