@@ -7,6 +7,9 @@ body {
     font-style: "Quicksand";
 }
 
+.nav.navbar-nav div a {
+    color: blue;
+}
 
 
 .header {
