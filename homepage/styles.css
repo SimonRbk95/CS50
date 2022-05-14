@@ -12,9 +12,8 @@ body {
 }
 
 .box1 {
-    background-color: #000;
+    background-color: rgba(0,0,0,.5);
     color: #fff;
-    opacity: .5;
 }
 
 @media only screen and (max-width: 400px) {
