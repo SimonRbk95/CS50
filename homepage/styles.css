@@ -11,7 +11,7 @@ body {
     padding: 4px;
 }
 
-.carousel-caption{
+.carousel-caption {
     position:absolute;
     top:50%
     transform: translateY(-50%);
