@@ -11,6 +11,12 @@ body {
     padding: 4px;
 }
 
+.carousel-caption{
+    position:absolute;
+    top:50%
+    transform: translateY(-50%);
+}
+
 .greyish {
     background-color: #f5f4f3;
 }
