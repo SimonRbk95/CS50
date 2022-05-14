@@ -13,13 +13,13 @@ body {
 
 @media only screen and (max-width: 400px) {
     .carousel-caption{
-        margin-bottom: 0%;
+        margin-bottom: 5%;
     }
     .carousel-caption h1{
-        font-size: 10px;
+        font-size: 20px;
     }
     .carousel-caption h3{
-        font-size: 5px;
+        font-size: 15px;
     }
 
 }
