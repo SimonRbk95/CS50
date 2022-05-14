@@ -13,8 +13,7 @@ body {
 
 .carousel-caption {
     position: absolute;
-    top: 50%
-    transform: translateY(-70%);
+    top: -1px;
 }
 
 .greyish {
