@@ -11,6 +11,12 @@ body {
     margin-bottom: 15%;
 }
 
+.box1 {
+    background-color: #000;
+    color: #fff;
+    opacity: .5;
+}
+
 @media only screen and (max-width: 400px) {
     .carousel-caption{
         margin-bottom: 5%;
