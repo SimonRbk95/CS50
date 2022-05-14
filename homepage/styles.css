@@ -11,13 +11,13 @@ body {
     margin-bottom: 15%;
 }
 
-@media only screen and (max-width: 400px) {
-    margin-bottom: 2%;
+@media only screen and (max-width: 300px) {
+    margin-bottom: 0%;
     .carousel-caption h1{
-        font-size: 8px;
+        font-size: 5px;
     }
     .carousel-caption p{
-        font-size: 5px;
+        font-size: 2px;
     }
 }
 
