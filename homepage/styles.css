@@ -7,6 +7,10 @@ body {
     font-style: "Quicksand";
 }
 
+.greybox{
+    padding: 4px;
+}
+
 .greyish {
     background-color: #f5f4f3;
 }
