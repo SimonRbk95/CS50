@@ -17,6 +17,10 @@ body {
     background-color:rgba(0,0,0,0.5);
   }
 
+.defaultBackground {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 
 .box {
     margin-bottom: 20%;
