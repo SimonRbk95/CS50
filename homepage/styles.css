@@ -18,10 +18,8 @@ body {
   }
 
 .custom-center {
-    .col-lg-6{
-    margin-left: auto;
+    margin-left: 10px;
     margin-right: auto;
-    }
 }
 
 
