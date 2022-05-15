@@ -17,8 +17,8 @@ body {
     background-color: rgba(0,0,0,0.5);
   }
 
-.navbar-customclass {
-    background-color: rgba(0, 0, 0, 0.6);
+.color-customclass {
+    background-color: black;
 }
 
 .box {
