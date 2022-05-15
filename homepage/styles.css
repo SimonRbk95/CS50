@@ -18,8 +18,10 @@ body {
   }
 
 .custom-center {
-    margin-left: 10px;
+    .col-md-3{
+    margin-left: auto;
     margin-right: auto;
+}
 }
 
 
