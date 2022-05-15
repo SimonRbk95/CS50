@@ -17,10 +17,9 @@ body {
     background-color:rgba(0,0,0,0.5);
   }
 
-.navbar-black {
-    background: "black";
+.navbar-customclass {
+    background-color: black;
 }
-
 
 .box {
     margin-bottom: 20%;
