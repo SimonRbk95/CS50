@@ -17,8 +17,8 @@ body {
     background-color:rgba(0,0,0,0.5);
   }
 
-.defaultBackground {
-    background-color: rgba(0, 0, 0, 0.2);
+.navbar-black {
+    background-color: "black";
 }
 
 
