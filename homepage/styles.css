@@ -19,17 +19,17 @@ body {
 
 
 .center{
-    margin-left: 48%;
-    margin-right: auto;
+    margin-left: 43%;
+    margin-right: 50%;
 }
 
 .footerText-Box{
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 .footerText{
-    font-size: 15px;
-    text-align: right;
+    font-size: 16px;
+    text-align: center;
 }
 
 
