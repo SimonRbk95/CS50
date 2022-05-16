@@ -20,16 +20,16 @@ body {
 
 @keyframes changeFilter {
 0% {
-    filter: brightness(50%);
+    filter: brightness(53%);
 }
 20%{
-    filter: brightness(55%);
+    filter: brightness(58%);
 }
 50% {
-    filter: brightness(60%);
+    filter: brightness(63%);
 }
 100% {
-    filter: brightness(65%);
+    filter: brightness(70%);
 }
 
 }
