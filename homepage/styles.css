@@ -9,6 +9,23 @@ body {
 
 
 
+@keyframes changeFilter {
+0% {
+    filter: brightness(10%);
+}
+20%{
+    filter: brightness(20%);
+}
+50% {
+    filter: brightness(30%);
+}
+70% {
+    filter: brightness(40%);
+}
+100%{
+    filter: brightness(50%);
+}
+}
 
 
 .bg {
@@ -36,8 +53,14 @@ body {
 }
 
 
+
+
+
+
+
+
 .darkened-image {
-    filter: brightness(50%);
+    animation: changeFilter 5s infinite;
     background-image: url(
 '/images/background.png');
     height: 100%;
