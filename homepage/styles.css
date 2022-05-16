@@ -20,13 +20,13 @@ body {
 
 @keyframes changeFilter {
 0% {
-    filter: brightness(55%);
+    filter: brightness(50%);
 }
 20%{
-    filter: brightness(60%);
+    filter: brightness(55%);
 }
 50% {
-    filter: brightness(62%);
+    filter: brightness(60%);
 }
 100% {
     filter: brightness(65%);
@@ -43,14 +43,14 @@ body {
 
 
 .darkened-image {
-    animation: changeFilter 15s infinite;
+    animation: changeFilter 6s infinite;
     background-image: url('/images/background.png');
     height: 100%;
     width: 100%;
 }
 
 .darkened-image-2 {
-    animation: changeFilter 15s infinite;
+    animation: changeFilter 6s infinite;
     background-image: url('/images/background_2.png');
     height: 100%;
     width: 100%;
