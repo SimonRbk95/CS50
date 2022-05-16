@@ -43,7 +43,7 @@ body {
 
 
 .darkened-image {
-    animation: changeFilter 20s infinite;
+    animation: changeFilter 15s infinite;
     background-image: url('/images/background.png');
     height: 100%;
     width: 100%;
