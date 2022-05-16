@@ -60,7 +60,7 @@ body {
 
 
 .darkened-image {
-    animation: changeFilter 5s infinite;
+    animation: changeFilter 20s infinite;
     background-image: url(
 '/images/background.png');
     height: 100%;
