@@ -114,36 +114,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.greybox{
-    padding: 4px;
-}
-
-
-
-.greyish {
-    background-color: #f5f4f3;
-}
-
 .carousel-inner img{
     width: 400px;
     height: 700px;
@@ -153,18 +123,11 @@ body {
 .carousel-caption{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-40%);
 }
 
 .carousel-caption h1 {
     font-family: 'Quicksand', sans-serif;
     font-size: 300%;
-    text-shadow: 1px 1px 10px;
+    text-shadow: 1px 1px 10px #000;
 }
-
-hr {
-    height:2px;
-    width:50%;
-    border-width:0;
-}
-
