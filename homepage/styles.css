@@ -16,22 +16,23 @@ body {
     animation: changeBackgroundColor 10s infinite;
   }
 
-  @keyframes changeBackgroundColor {
-    0% {
-      background-color: #001F3F;
-    }
-    50% {
-      background-color: #FF4136;
-    }
-    100% {
-      background-color: #001F3F;
-    }
-  }
+@keyframes changeBackgroundColor {
+0% {
+    background-color: #001F3F;
+}
+50% {
+    background-color: #FF4136;
+}
+100% {
+    background-color: #001F3F;
+}
+}
 
 
 
 .darkened-image {
     filter: brightness(50%);
+    animation: changeBackgroundColor 10s infinite;
     background-image: url(
 '/images/background.png');
     height: 100%;
