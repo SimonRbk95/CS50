@@ -96,7 +96,7 @@ body {
 .preview_image{
     position: absolute;
 }
-.iframe_example {
+.iframe_overlay {
     width: 270px;
     height: 155px;
     z-index: 1000;
