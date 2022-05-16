@@ -23,13 +23,11 @@ body {
     margin-right: 50%;
 }
 
-.footerText-Box{
-    margin-left: 30%;
-    margin-right: 30%;
-}
+
 .footerText{
     font-size: 16px;
     text-align: right;
+    margin-left: 50%;
 }
 
 
