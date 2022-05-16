@@ -53,11 +53,6 @@ body {
 
 
 
-
-
-
-
-
 .darkened-image {
     animation: changeFilter 20s infinite;
     background-image: url(
@@ -80,7 +75,6 @@ body {
     margin-top: 20%;
     margin-bottom: auto;
 }
-
 
 
 .container_i {
