@@ -12,10 +12,10 @@ body {
     transform: translateY(-40%);
 }
 
-.sizingText-Slide1 {
+.sizingText-Slide2 {
     top: 50%;
     transform: translateY(-40%);
-    transform: translateX(-40%);
+    margin-right:40%;
 }
 
 @keyframes changeFilter {
