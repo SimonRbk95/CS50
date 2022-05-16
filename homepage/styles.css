@@ -150,6 +150,12 @@ body {
 
 }
 
+.carousel-caption{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
