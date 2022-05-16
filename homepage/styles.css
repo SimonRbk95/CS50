@@ -73,10 +73,10 @@ body {
 
 
 .footerText{
-    font-size: 100%;
-    text-align: left;
+    font-size: 90%%;
+    text-align: right;
     margin-left: auto;
-    margin-top: auto;
+    margin-top: 20%;
     margin-bottom: auto;
 }
 
@@ -114,11 +114,9 @@ body {
     background-color: black;
 }
 
-#badge-center {
-    postion: absolute;
-    margin-right: 450%;
-    margin-left: 38.5%;
-    margin-top: 1%;
+.custom-badge {
+
+    margin-top: 2%;
 }
 
 .box {
