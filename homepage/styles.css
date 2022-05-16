@@ -7,6 +7,10 @@ body {
     font-style: "Quicksand";
 }
 
+.sizingText-Slide1 {
+    top: 50%;
+    transform: translateY(-40%);
+}
 
 
 @keyframes changeFilter {
@@ -26,25 +30,6 @@ body {
 }
 
 
-
-.bg {
-    filter: brightness(50%);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: 300% 300%;
-    background-image: linear-gradient(
-            -45deg,
-            rgba(59,173,227,1) 0%,
-            rgba(87,111,230,1) 25%,
-            rgba(152,68,183,1) 51%,
-            rgba(255,53,127,1) 100%
-    );
-    animation: AnimateBG 20s ease infinite;
-}
-
 @keyframes AnimateBG {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -52,17 +37,15 @@ body {
 }
 
 
-
 .darkened-image {
     animation: changeFilter 20s infinite;
-    background-image: url(
-'/images/background.png');
+    background-image: url('/images/background.png');
     height: 100%;
     width: 100%;
 }
 
 
-.center{
+.center {
     margin-left: 42.5%;
     margin-right: 50%;
 }
@@ -83,13 +66,18 @@ body {
     margin-left: 40%;
     margin-right: 40%;
 }
+
 .image_container {
     width: 421px;
     height: 365px;
 }
+
+
 .preview_image{
     position: absolute;
 }
+
+
 .iframe_overlay {
     width: 270px;
     height: 155px;
