@@ -115,6 +115,7 @@ body {
 }
 
 #badge-center {
+    postion: absolute;
     margin-right: 450%;
     margin-left: 38.5%;
     margin-top: 1%;
