@@ -84,6 +84,31 @@ body {
 
 
 
+.container_i {
+    position: relative;
+    top: 110px;
+    left: 68px
+}
+.image_container {
+    width: 421px;
+    height: 365px;
+}
+.preview_image{
+    position: absolute;
+}
+.iframe_example {
+    width: 270px;
+    height: 155px;
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+
 
 
 .color-customclass {
