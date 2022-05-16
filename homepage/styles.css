@@ -141,13 +141,13 @@ body {
 
 .carousel-inner img{
     width: 40%;
-    height: 40%;
+    height: 10%;
 
 }
 
 .carousel-caption{
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-40%);
 }
 
