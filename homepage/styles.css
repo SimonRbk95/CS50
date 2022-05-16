@@ -76,9 +76,9 @@ body {
 
 .footerText{
     font-size: 16px;
-    text-align: right;
-    margin-left: 45%;
-    margin-top: 10%;
+    text-align: center;
+    margin-left: auto;
+    margin-top: auto;
     margin-bottom: auto;
 }
 
