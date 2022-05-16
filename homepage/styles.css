@@ -12,6 +12,11 @@ body {
     transform: translateY(-40%);
 }
 
+.sizingText-Slide1 {
+    top: 50%;
+    transform: translateY(-40%);
+    transform: translateX(-40%);
+}
 
 @keyframes changeFilter {
 0% {
