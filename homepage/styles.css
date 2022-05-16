@@ -86,8 +86,9 @@ body {
 
 .container_i {
     position: absolute;
-    top: 110px;
-    margin-left: 50%;
+    top: 40%;
+    margin-left: 40%;
+    margin-right: 40%;
 }
 .image_container {
     width: 421px;
