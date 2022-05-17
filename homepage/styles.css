@@ -135,8 +135,8 @@ body {
         display: none;
 }
 
-    .sizingText-Slide2{
-        top: 10%;
+    .sizingText-Slide1{
+        float center;
 }
 
     .carousel-caption h1 {
