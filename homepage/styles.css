@@ -27,9 +27,9 @@ body {
     text-shadow: 1px 1px 10px #000;
 }
 
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    height: 50%;
-}
+.carousel-inner > .carousel-item > img {
+    height: 90vh;
+  }
 
 
 /*--- glow effect ---*/
