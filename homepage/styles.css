@@ -110,7 +110,7 @@ body {
 
 /*--- media queries ---*/
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 414px) {
     .sizingText-Slide1 {
         float: center;
     }
@@ -133,7 +133,7 @@ body {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 414px) and (max-width: 768px) {
     .footerText{
         font-size: 70%;
         text-align: center;
@@ -170,7 +170,7 @@ body {
 
 }
 
-@media only screen and (max-width: 1740px) {
+@media only screen and (min-width: 768px) and (max-width: 1740px) {
     .sizingText-Slide1 {
         top: 55%;
         transform: translateY(-40%);
