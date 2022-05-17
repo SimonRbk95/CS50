@@ -109,7 +109,7 @@ body {
 
 @media only screen and (max-width: 400px) {
     .sizingText-Slide1 {
-        top: 40%;
+        float: center;
     }
 
     .sizingText-Slide2 {
