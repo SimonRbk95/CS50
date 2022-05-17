@@ -147,9 +147,16 @@ body {
         display: none;
     }
 
-    .sizingText-Slide1{
-        float center;
-}
+    .sizingText-Slide1 {
+        top: 50%;
+        transform: translateY(-40%);
+    }
+
+    .sizingText-Slide2 {
+        top: 50%;
+        transform: translateY(-40%);
+        margin-right:40%;
+    }
 
     .carousel-caption h1 {
         font-family: 'Quicksand', sans-serif;
@@ -158,7 +165,7 @@ body {
 
     .carousel-caption p {
         font-family: 'Quicksand', sans-serif;
-        font-size: 100%;
+        font-size: 80%;
     }
 
 }
