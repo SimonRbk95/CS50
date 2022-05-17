@@ -8,18 +8,7 @@ body {
 }
 
 /*--- carousel customization ---*/
-.sizingText-Slide1 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-40%);
-}
 
-.sizingText-Slide2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-40%);
-    margin-right:40%;
-}
 
 .carousel-caption h1 {
     font-family: 'Quicksand', sans-serif;
