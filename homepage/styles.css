@@ -134,7 +134,7 @@ body {
 
 @media only screen and (max-width: 800px) {
     #my-badge {display: none;}
-    .carousel-caption h1{text-align: center;}
+    .carousel-caption h1{font-size: 10px;}
 }
 
 .carousel-inner img{
