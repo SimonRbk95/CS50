@@ -27,7 +27,10 @@ body {
     text-shadow: 1px 1px 10px #000;
 }
 
-
+.w-100 {
+    width: 100% !important;
+    height: 75% !important;
+  }
 
 
 /*--- glow effect ---*/
