@@ -86,7 +86,7 @@ body {
     text-align: right;
     margin-left: 30%;
     margin-right: 5%;
-    margin-top: 10%;
+    margin-top: 15%;
     margin-bottom: auto;
 }
 
@@ -97,9 +97,10 @@ body {
 
 .custom-badge {
 
-    margin-top: 2%;
+    margin-top: 3%;
     margin-right: 15%;
     margin-left: 0;
+    margin-bottom: 3%;
 }
 
 .box {
