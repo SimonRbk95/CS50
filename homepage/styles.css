@@ -133,8 +133,8 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-    #my-badge {display: none;};
-    #my-description{text-align: center;};
+    #my-badge {display: none;}
+    .carousel-caption h1{text-align: center;}
 }
 
 .carousel-inner img{
