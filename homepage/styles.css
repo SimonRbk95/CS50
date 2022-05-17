@@ -32,7 +32,7 @@ body {
 /*--- glow effect ---*/
 @keyframes changeFilter {
 0% {
-    filter: brightness(58%);
+    filter: brightness(50%);
 }
 20%{
     filter: brightness(63%);
