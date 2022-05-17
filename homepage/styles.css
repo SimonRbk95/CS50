@@ -27,9 +27,7 @@ body {
     text-shadow: 1px 1px 10px #000;
 }
 
-.carousel-inner > .carousel-item > img {
-    height: 90%;
-  }
+
 
 
 /*--- glow effect ---*/
@@ -128,10 +126,23 @@ body {
     .carousel-caption p {
         font-size: 80%;
     }
+
+    .footerText{
+        font-size: 70%;
+        text-align: center;
+        margin-bottom: 3%;
+        margin-top: 3%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .custom-badge{
+        display: none;
+    }
 }
 
 
-@media only screen and (min-width: 414px) and (max-width: 768px) {
+@media only screen and (min-width: 415px) and (max-width: 768px) {
     .footerText{
         font-size: 70%;
         text-align: center;
@@ -168,7 +179,7 @@ body {
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1740px) {
+@media only screen and (min-width: 769px) and (max-width: 1740px) {
     .sizingText-Slide1 {
         top: 55%;
         transform: translateY(-40%);
