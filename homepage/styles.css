@@ -20,6 +20,12 @@ body {
     margin-right:40%;
 }
 
+.carousel-caption h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 300%;
+    text-shadow: 1px 1px 10px #000;
+}
+
 
 .carousel-inner img{
     width: 40%;
@@ -27,12 +33,6 @@ body {
 
 }
 
-
-.sizingText-Slide1 h1 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 300%;
-    text-shadow: 1px 1px 10px #000;
-}
 
 @keyframes changeFilter {
 0% {
@@ -128,18 +128,26 @@ body {
 }
 
 @media only screen and (max-width: 400px) {
-    .carousel-caption{
-        margin-bottom: 5%;
-    }
-    .carousel-caption h1{
-        font-size: 20px;
-    }
-    .carousel-caption p{
-        font-size: 15px;
+    .sizingText-Slide1 {
+        top: 40%;
     }
 
+    .sizingText-Slide2 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-40%);
+        margin-right:40%;
+    }
+
+    .carousel-caption h1 {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 100%;
+    }
+
+    .carousel-caption p {
+        font-size: 80%;
+    }
 }
-
 @media only screen and (max-width: 800px) {
     #my-badge {
         display: none;
