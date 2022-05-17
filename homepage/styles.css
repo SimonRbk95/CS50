@@ -138,10 +138,15 @@ body {
 }
 
     .carousel-caption{
-        top: 45%;
+        top: 20%;
 }
 
     .carousel-caption h1 {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 100%;
+    }
+
+    carousel-caption p {
         font-family: 'Quicksand', sans-serif;
         font-size: 100%;
     }
