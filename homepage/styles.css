@@ -33,6 +33,12 @@ body {
 
 }
 
+.carousel-inner,.carousel,.item,.container,.fill {
+    height:100%;
+    width:100%;
+    background-position:center center;
+  }
+
 
 @keyframes changeFilter {
 0% {
