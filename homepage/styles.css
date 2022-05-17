@@ -82,10 +82,11 @@ body {
 
 
 .footerText{
-    font-size: 80%;
+    font-size: 90%;
     text-align: right;
-    margin-left: auto;
-    margin-top: 20%;
+    margin-left: 30%;
+    margin-right: 5%;
+    margin-top: 10%;
     margin-bottom: auto;
 }
 
@@ -97,6 +98,8 @@ body {
 .custom-badge {
 
     margin-top: 2%;
+    margin-right: 15%;
+    margin-left: 0;
 }
 
 .box {
@@ -137,7 +140,7 @@ body {
         margin-bottom: auto;
         margin-top: auto;
     }
-    
+
     .custom-badge{
         display: none;
     }
