@@ -7,6 +7,7 @@ body {
     font-style: "Quicksand";
 }
 
+/*--- carousel customization ---*/
 .sizingText-Slide1 {
     position: absolute;
     top: 50%;
@@ -33,13 +34,7 @@ body {
 
 }
 
-.carousel-inner,.carousel,.item,.container,.fill {
-    height:100%;
-    width:100%;
-    background-position:center center;
-  }
-
-
+/*--- glow effect ---*/
 @keyframes changeFilter {
 0% {
     filter: brightness(55%);
@@ -78,6 +73,7 @@ body {
     width: 100%;
 }
 
+/*--- footer customization ---*/
 
 .center {
     margin-left: 42.5%;
@@ -94,31 +90,6 @@ body {
 }
 
 
-.container_i {
-    position: absolute;
-    top: 40%;
-    margin-left: 40%;
-    margin-right: 40%;
-}
-
-.image_container {
-    width: 421px;
-    height: 365px;
-}
-
-
-.preview_image{
-    position: absolute;
-}
-
-
-.iframe_overlay {
-    width: 270px;
-    height: 155px;
-    z-index: 1000;
-}
-
-
 .color-customclass {
     background-color: black;
 }
@@ -132,6 +103,9 @@ body {
     margin-bottom: 20%;
     margin-top: 15%;
 }
+
+
+/*--- media queries ---*/
 
 @media only screen and (max-width: 400px) {
     .sizingText-Slide1 {
@@ -154,6 +128,8 @@ body {
         font-size: 80%;
     }
 }
+
+
 @media only screen and (max-width: 800px) {
     #my-badge {
         display: none;
