@@ -131,6 +131,14 @@ body {
 
 
 @media only screen and (max-width: 800px) {
+    .footerText{
+        font-size: 70%;
+        text-align: center;
+        margin-left: auto;
+        margin-top: 20%;
+        margin-bottom: auto;
+    }
+
 
     .sizingText-Slide1{
         float center;
