@@ -85,7 +85,7 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: auto;
 }
 
@@ -95,9 +95,9 @@ body {
 }
 
 .custom-badge {
-    margin-top: 5%;
-    margin-right: auto;
-    margin-left: auto;
+    margin-top: 2%;
+    margin-right: 0;
+    margin-left: 75%;
     margin-bottom: 3%;
 }
 
