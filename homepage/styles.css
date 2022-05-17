@@ -137,16 +137,16 @@ body {
         display: none;
 }
 
-    .carousel-caption{
+    .sizingText-Slide2{
         top: 20%;
 }
 
-    .carousel-caption h1 {
+    .sizingText-Slide1 h1 {
         font-family: 'Quicksand', sans-serif;
         font-size: 100%;
     }
 
-    carousel-caption p {
+    .sizingText-Slide2 p {
         font-family: 'Quicksand', sans-serif;
         font-size: 100%;
     }
