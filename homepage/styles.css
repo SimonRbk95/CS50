@@ -170,4 +170,26 @@ body {
 
 }
 
-@media only screen and (max-width: px) {
+@media only screen and (max-width: 1740px) {
+    .sizingText-Slide1 {
+        top: 50%;
+        transform: translateY(-40%);
+    }
+
+    .sizingText-Slide2 {
+        top: 40%;
+        transform: translateY(-40%);
+        margin-right:40%;
+    }
+
+    .carousel-caption h1 {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 250%;
+    }
+
+    .carousel-caption p {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 100%;
+    }
+
+}
