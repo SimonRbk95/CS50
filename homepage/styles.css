@@ -137,7 +137,9 @@ body {
         margin-bottom: auto;
         margin-top: auto;
     }
-
+    .custom-badge{
+        display: none;
+    }
 
     .sizingText-Slide1{
         float center;
