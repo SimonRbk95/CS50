@@ -157,7 +157,7 @@ body {
     }
 
     .carousel-indicators{
-        transform: translateY(-10%);
+        margin-top: 30%;
     }
 }
 
