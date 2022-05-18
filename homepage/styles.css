@@ -144,6 +144,11 @@ body {
     .custom-badge{
         display: none;
     }
+
+    .carousel-inner button{
+        height: 60px;
+        width: 80px;
+    }
 }
 
 
