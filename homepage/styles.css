@@ -156,8 +156,9 @@ body {
         font-size: 14px;
     }
 
-    .#carousel-ndicators{
-        margin-top: 30%;
+    .carousel-indicators{
+        position: relative;
+        
     }
 }
 
