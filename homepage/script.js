@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
+// asynchronously load the images before the carousel tries itsel
 let img = new Image(),
 url = "background_1.1.png",
 container = document.getElementById("img-holder-1");
