@@ -123,11 +123,11 @@ body {
 
     .carousel-caption h1 {
         font-family: 'Quicksand', sans-serif;
-        font-size: 100%;
+        font-size: 80%;
     }
 
     .carousel-caption p {
-        font-size: 80%;
+        font-size: 50%;
     }
 
     .footerText{
