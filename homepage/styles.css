@@ -81,9 +81,9 @@ body {
 
 
 .footerText{
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 0;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
@@ -95,7 +95,7 @@ body {
 }
 
 .custom-badge {
-    margin-top: 0;
+    margin-top: 2%;
     margin-right: 0;
     margin-left: 75%;
     margin-bottom: 3%;
@@ -135,6 +135,7 @@ body {
 
     .footerText{
         font-size: 12px;
+        margin-bottom: 5%;
     }
 
     .custom-badge{
@@ -161,6 +162,7 @@ body {
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     .footerText{
         font-size: 14px;
+        margin-bottom: 5%;
     }
 
     .custom-badge{
