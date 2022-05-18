@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 let img = new Image(),
 url = "background_2.1.png",
-container = document.getElementById("holder-div");
+container = document.getElementById("img-holder-1");
 
 img.onload = function () { container.appendChild(img); };
 img.src = url;
