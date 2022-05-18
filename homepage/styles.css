@@ -130,15 +130,15 @@ body {
 
     .carousel-caption h1 {
         font-family: 'Quicksand', sans-serif;
-        font-size: 80%;
+        font-size: 14px;
     }
 
     .carousel-caption p {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .footerText{
-        font-size: 12px;
+        font-size: 11px;
         margin-bottom: 5%;
     }
 
