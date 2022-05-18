@@ -149,9 +149,8 @@ body {
     .btn {
         width: 100px;
         height: 30px;
-        transform: translateY(-10%);
+        transform: translateY(-15%);
         padding: 0;
-        
 }
 
     .button-text-size {
