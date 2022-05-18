@@ -18,7 +18,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-40%);
-    margin-right:40%;
+    transform: translateX(-30%);
 }
 
 .carousel-caption h1 {
