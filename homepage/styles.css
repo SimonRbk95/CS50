@@ -157,8 +157,7 @@ body {
     }
 
     .carousel-indicators{
-        position: relative;
-        
+        bottom: -18px;
     }
 }
 
