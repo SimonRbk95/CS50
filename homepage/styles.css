@@ -157,7 +157,8 @@ body {
     }
 
     .carousel-control-prev {
-        transform
+        margin-top: 20%;
+
     }
 }
 
