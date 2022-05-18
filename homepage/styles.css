@@ -11,14 +11,14 @@ body {
 .sizingText-Slide1 {
     position: absolute;
     top: 50%;
-    transform: translateY(-35%);
+    transform: translateY(-40%);
 }
 
 .sizingText-Slide2 {
     position: absolute;
     top: 50%;
     transform: translateY(-40%);
-    transform: translateX(-30%);
+    margin-right:40%;
 }
 
 .carousel-caption h1 {
