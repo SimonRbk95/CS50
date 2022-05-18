@@ -156,9 +156,8 @@ body {
         font-size: 14px;
     }
 
-    .carousel-control-prev,
-    .carousel-control-next{
-          bottom: 75%;
+    .carousel-indicators{
+        transform: translateY(-10%);
     }
 }
 
