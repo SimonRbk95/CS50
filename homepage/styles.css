@@ -134,7 +134,7 @@ body {
     }
 
     .carousel-caption p {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .footerText{
@@ -146,7 +146,7 @@ body {
         display: none;
     }
 
-    .btn {
+    #btn-1 {
         width: 100px;
         height: 30px;
         transform: translateY(-15%);
