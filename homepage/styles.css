@@ -110,14 +110,16 @@ body {
 /*--- media queries ---*/
 
 @media only screen and (max-width: 414px) {
-    .sizingText-Slide1 {
+    .sizingText-Slide1{
         float: center;
-    }
+        top: 40%;
+        transform: translateY(-60%);
+}
 
     .sizingText-Slide2 {
         position: absolute;
         top: 50%;
-        transform: translateY(-40%);
+        transform: translateY(-60%);
         margin-right:40%;
     }
 
