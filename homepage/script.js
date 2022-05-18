@@ -6,7 +6,4 @@ document.addEventListener("DOMContentLoaded", function(){
             window.location.href = 'application.html';
             });
         }
-    ('.carousel').carousel({
-        interval: false,
-        });
     });
