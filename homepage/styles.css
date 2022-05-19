@@ -220,9 +220,13 @@ body {
     }
 
     #my-badge{
-        margin-left: 55%;
+        display: none;
     }
 
+    .footerText{
+        font-size: 16px;
+        margin-bottom: 5%;
+    }
 }
 
 
