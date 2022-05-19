@@ -38,8 +38,8 @@ body {
 }
 
 .carousel-inner img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
 }
 
 
@@ -71,15 +71,11 @@ body {
 .darkened-image {
     animation: changeFilter 6s infinite;
     background-image: url('/images/background_1.1.png');
-    height: 100%;
-    width: 100%;
 }
 
 .darkened-image-2 {
     animation: changeFilter 6s infinite;
     background-image: url('/images/background_2.1.png');
-    height: 100%;
-    width: 100%;
 }
 
 /*--- footer customization ---*/
