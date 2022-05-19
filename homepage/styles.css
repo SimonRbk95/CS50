@@ -224,3 +224,13 @@ body {
     }
 
 }
+
+
+@media only screen and (min-width: 1025px) and (max-width: 2200px) {
+
+    .sizingText-Slide2 {
+        top: 40%;
+        transform: translateY(-50%);
+        margin-right:40%;
+    }
+}
