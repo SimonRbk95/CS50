@@ -128,7 +128,7 @@ body {
 
     .sizingText-Slide2 {
         position: absolute;
-        top: 10%;
+        top: 40%;
         transform: translateY(-60%);
         margin-right:40%;
     }
@@ -151,7 +151,7 @@ body {
         display: none;
     }
 
-    #btn-1 {
+    .btn-lg {
         width: 100px;
         height: 30px;
         padding: 0;
