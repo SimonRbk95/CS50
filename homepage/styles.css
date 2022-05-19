@@ -8,13 +8,13 @@ body {
 }
 
 /*--- carousel customization ---*/
-.sizingText-Slide1 {
+.sizingText-div-1 {
     position: absolute;
     top: 50%;
     transform: translateY(-38%);
 }
 
-.sizingText-Slide2 {
+.sizingText-div-2 {
     position: absolute;
     top: 50%;
     transform: translateY(-45%);
@@ -123,13 +123,13 @@ footer {
 /*--- media queries ---*/
 
 @media only screen and (max-width: 575px) {
-    .sizingText-Slide1{
+    .sizingText-div-1{
         float: center;
         top: 40%;
         transform: translateY(-60%);
 }
 
-    .sizingText-Slide2 {
+    .sizingText-div-2 {
         position: absolute;
         top: 30%;
         transform: translateY(-60%);
@@ -176,12 +176,12 @@ footer {
         display: none;
     }
 
-    .sizingText-Slide1 {
+    .sizingText-div-1 {
         top: 50%;
         transform: translateY(-40%);
     }
 
-    .sizingText-Slide2 {
+    .sizingText-div-2 {
         top: 40%;
         transform: translateY(-40%);
         margin-right:40%;
@@ -200,12 +200,12 @@ footer {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    .sizingText-Slide1 {
+    .sizingText-div-1 {
         top: 50%;
         transform: translateY(-40%);
     }
 
-    .sizingText-Slide2 {
+    .sizingText-div-2 {
         top: 40%;
         transform: translateY(-50%);
         margin-right:40%;
@@ -234,13 +234,13 @@ footer {
 
 @media only screen and (min-width: 1025px) and (max-width: 1300px) {
 
-    .sizingText-Slide2 {
+    .sizingText-div-2 {
         top: 40%;
         transform: translateY(-50%);
         margin-right: 40%;
     }
 
-    .sizingText-Slide2 {
+    .sizingText-div-2 {
         top: 40%;
         transform: translateY(-40%);
         margin-right: 40%;
@@ -258,7 +258,7 @@ footer {
 }
 
 @media only screen and (min-width: 1301px) and (max-width: 1800px) {
-    .sizingText-Slide2 {
+    .sizingText-div-2 {
         top: 40%;
         transform: translateY(-32%);
         margin-right: 40%;
