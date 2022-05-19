@@ -128,7 +128,7 @@ body {
 
     .sizingText-Slide2 {
         position: absolute;
-        top: 50%;
+        top: 10%;
         transform: translateY(-60%);
         margin-right:40%;
     }
