@@ -253,6 +253,12 @@ body {
         font-family: 'Quicksand', sans-serif;
         font-size: 18px;
     }
+}
 
-
+@media only screen and (min-width: 1301px) and (max-width: 1300px) {
+    .sizingText-Slide2 {
+        top: 40%;
+        transform: translateY(-35%);
+        margin-right: 40%;
+    }
 }
