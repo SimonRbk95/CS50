@@ -33,9 +33,7 @@ body {
     font-size: 25px;
 }
 
-.max-height {
-    max-height: 100vh;
-}
+
 
 .carousel-inner img {
     width: 90%;
