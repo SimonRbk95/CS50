@@ -209,18 +209,18 @@ body {
 
     .sizingText-Slide2 {
         top: 40%;
-        transform: translateY(-42%);
+        transform: translateY(-50%);
         margin-right:40%;
     }
 
     .carousel-caption h1 {
         font-family: 'Quicksand', sans-serif;
-        font-size: 135%;
+        font-size: 28px;
     }
 
     .carousel-caption p {
         font-family: 'Quicksand', sans-serif;
-        font-size: 90%;
+        font-size: 14px;
     }
 
 }
