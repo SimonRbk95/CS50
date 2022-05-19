@@ -11,7 +11,7 @@ body {
 .sizingText-Slide1 {
     position: absolute;
     top: 50%;
-    transform: translateY(-40%);
+    transform: translateY(-38%);
 }
 
 .sizingText-Slide2 {
@@ -23,8 +23,14 @@ body {
 
 .carousel-caption h1 {
     font-family: 'Quicksand', sans-serif;
-    font-size: 300%;
+    font-size: 80px;
     text-shadow: 1px 1px 10px #000;
+}
+
+
+.carousel-caption p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
 }
 
 .max-height {
