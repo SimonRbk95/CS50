@@ -131,9 +131,9 @@ footer {
 
     .sizingText-Slide2 {
         position: absolute;
-        top: 20%;
+        top: 30%;
         transform: translateY(-60%);
-        margin-right:40%;
+        margin-right:30%;
     }
 
     .carousel-caption h1 {
