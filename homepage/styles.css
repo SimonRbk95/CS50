@@ -133,7 +133,7 @@ footer {
         position: absolute;
         top: 30%;
         transform: translateY(-60%);
-        margin-right: 0;
+        margin-right: 20%;
     }
 
     .carousel-caption h1 {
