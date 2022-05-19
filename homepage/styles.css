@@ -206,19 +206,20 @@ footer {
     }
 
     .sizingText-div-2 {
-        top: 40%;
+        top: 45%;
         transform: translateY(-50%);
-        margin-right:40%;
+        margin-right: 30%;
+        margin-left: 10%;
     }
 
     .carousel-caption h1 {
         font-family: 'Quicksand', sans-serif;
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .carousel-caption p {
         font-family: 'Quicksand', sans-serif;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     #my-badge{
