@@ -18,14 +18,13 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-40%);
-    margin-right:40%;
+    margin-right: 10%;
 }
 
 .carousel-caption h1 {
     font-family: 'Quicksand', sans-serif;
     font-size: 80px;
     text-shadow: 1px 1px 10px #000;
-    margin-left: 20%;
 }
 
 
