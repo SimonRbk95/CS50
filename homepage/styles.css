@@ -122,7 +122,7 @@ footer {
 }
 /*--- media queries ---*/
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575px) {
     .sizingText-div-1{
         position: absolute;
         top: 40%;
@@ -166,7 +166,7 @@ footer {
 }
 
 
-@media only screen and (min-width: 577px) and (max-width: 768px){
+@media only screen and (min-width: 576px) and (max-width: 768px) {
     .footerText{
         font-size: 14px;
         margin-bottom: 5%;
@@ -203,7 +203,7 @@ footer {
     }
 }
 
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
     .sizingText-div-1 {
         top: 50%;
         transform: translateY(-40%);
@@ -236,7 +236,7 @@ footer {
 }
 
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1025px) and (max-width: 1300px) {
 
     .sizingText-div-2 {
         top: 40%;
@@ -261,11 +261,11 @@ footer {
     }
 
     #my-badge{
-        margin-left: 65%;
+        display: none;
 }
 }
 
-@media only screen and (min-width: 1300px) and (max-width: 1800px) {
+@media only screen and (min-width: 1301px) and (max-width: 1800px) {
     .sizingText-div-2 {
         top: 40%;
         transform: translateY(-32%);
