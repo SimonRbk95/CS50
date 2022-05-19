@@ -132,17 +132,17 @@ footer {
     .sizingText-div-2 {
         position: absolute;
         top: 40%;
-        transform: translateY(-60%);
-        margin
+        transform: translateY(-70%);
+        margin-right: auto;
     }
 
     .carousel-caption h1 {
         font-family: 'Quicksand', sans-serif;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .carousel-caption p {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .footerText{
