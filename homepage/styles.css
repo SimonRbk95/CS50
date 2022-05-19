@@ -130,7 +130,7 @@ footer {
 }
 
     .sizingText-div-2 {
-        position: center;
+        position: absolute;
         top: 40%;
         transform: translateY(-60%);
     }
