@@ -40,6 +40,9 @@ body {
     height: 90%;
 }
 
+.navbar-nav a{
+    color: white;
+}
 
 /*--- glow effect ---*/
 @keyframes changeFilter {
