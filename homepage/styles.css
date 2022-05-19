@@ -231,6 +231,24 @@ body {
     .sizingText-Slide2 {
         top: 40%;
         transform: translateY(-50%);
-        margin-right:40%;
+        margin-right: 40%;
     }
+
+    .sizingText-Slide2 {
+        top: 40%;
+        transform: translateY(-50%);
+        margin-right: 40%;
+    }
+
+    .carousel-caption h1 {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 36px;
+    }
+
+    .carousel-caption p {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 18px;
+    }
+
+
 }
