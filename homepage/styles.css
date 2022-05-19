@@ -208,8 +208,7 @@ footer {
     .sizingText-div-2 {
         top: 45%;
         transform: translateY(-50%);
-        margin-right: 30%;
-        margin-left: 30%;
+        
     }
 
     .carousel-caption h1 {
