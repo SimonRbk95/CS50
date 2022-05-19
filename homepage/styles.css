@@ -259,6 +259,10 @@ footer {
         font-family: 'Quicksand', sans-serif;
         font-size: 18px;
     }
+
+    #my-badge{
+        margin-left: 65%;
+}
 }
 
 @media only screen and (min-width: 1301px) and (max-width: 1800px) {
