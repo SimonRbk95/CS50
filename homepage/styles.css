@@ -19,6 +19,7 @@ body {
     top: 50%;
     transform: translateY(-45%);
     margin-right: 38%;
+    margin-left: auto;
 }
 
 .carousel-caption h1 {
