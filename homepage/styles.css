@@ -199,7 +199,7 @@ footer {
 
     .carousel-inner img {
         width: 100%;
-        
+
     }
 }
 
@@ -210,8 +210,8 @@ footer {
     }
 
     .sizingText-div-2 {
-        top: 45%;
-        transform: translateY(-40%);
+        top: 40%;
+        transform: translateY(-45%);
 
     }
 
