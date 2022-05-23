@@ -39,8 +39,7 @@
                         {% for registrant in registrants %}
                         <tr>
                             <td>{{registrant["name"]}}</td>
-                            <td>{{registrant["month"]}}</td>
-                            <td>{{registrant["day"]}}</td>
+                            <td>{{registrant["month"]}}/{{registrant["day"]}}</td>
                         </tr>
                         {% endfor %}
                         <!-- TODO: Loop through the database entries to display them in this table -->
