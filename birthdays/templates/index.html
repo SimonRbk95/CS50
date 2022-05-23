@@ -19,8 +19,10 @@
                     <input autocomplete="off" autofocus name="name" placeholder="Name" required type="text"></input>
                 </form>
                 <form action"/" method="POST">
-                    <label for="quantity">Quantity (between 1 and 5):</label>
-                    <input autocomplete="off" autofocus name="month" placeholder="Month" required type="number"></input>
+                    <input autocomplete="off" autofocus name="month" placeholder="Month" required type="number" max="12" min="1"></input>
+                </form>
+                <form action"/" method="POST">
+                    <input autocomplete="off" autofocus name="day" placeholder="Day" required type="number" max="31" min="1"></input>
                 </form>
             </div>
 
