@@ -38,7 +38,9 @@
                     <tbody>
                         {%for registrant in registrants%}
                         <tr>
-                            <td>{</td>
+                            <td>{{ registrant["name"]}}</td>
+                            <td>{{registrant["month"]}}</td>
+                            <td>{{registrant["day"]}}</td>
                         </tr>
 
                         <!-- TODO: Loop through the database entries to display them in this table -->
