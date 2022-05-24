@@ -135,7 +135,12 @@ def register():
             # redirect to /register, a new template similair to login.html
 
 
-    return apology("TODO")
+
+        return apology("TODO")
+    else:
+        return render_template("register.html")
+
+
 
 
 @app.route("/sell", methods=["GET", "POST"])
