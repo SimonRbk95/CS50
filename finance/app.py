@@ -158,7 +158,7 @@ def check_password(password):
     pCounter = 0
     dCounter = 0
     # require that the password be at least 8 characters long
-    elif len(password) < 8:
+    if len(password) < 8:
         return apology("The password is too short", 403)
     for char in password:
         if char in string.punctuation:
