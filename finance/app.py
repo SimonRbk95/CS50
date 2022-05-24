@@ -125,23 +125,9 @@ def register():
         if not db.execute(SELECT username FROM users):
             # appropriate apology message
             return apology("The username already exists", 403)
-        # elif password is invalid
-        # require the passwor
-        elif len(password) < 8:
-            return apology("The password is too short", 403)
-        for char in password:
-            pCounter = 0
-            dCounter = 0
-            aCounter = 0
-            if char in string.punctuation:
-                pCounter += 1
-            elif char.isdigit():
-                dCounter +=1
-            elif char.
+        # check if password matches the requirements
+        check_password(pasword)
 
-
-            counter = 0
-            # appropriate error mes
         # elif password does not match the repeat password field
         # else submit the user's input via POST to /register
             # INSERT the new user and the password's hash into users
@@ -156,3 +142,29 @@ def register():
 def sell():
     """Sell shares of stock"""
     return apology("TODO")
+
+
+
+
+
+
+
+
+
+
+# check if password is valid
+def check_password(password):
+    # count the different type of characters in the password
+    pCounter = 0
+    dCounter = 0
+    # require that the password be at least 8 characters long
+    elif len(password) < 8:
+        return apology("The password is too short", 403)
+    for char in password:
+        if char in string.punctuation:
+            pCounter += 1
+        elif char.isdigit():
+            dCounter += 1
+    # require that the password includes at least 3 digits and 2 special characters
+    if not (pCounter >= 2 and dCounter >= 3):
+        return apology("Your password does not contain at least 3 digits and 2 special characters", 403)
