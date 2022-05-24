@@ -121,6 +121,7 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
+        
         # if username already exsits
         if not db.execute("SELECT username FROM users"):
             # appropriate apology message
@@ -159,7 +160,7 @@ def sell():
 
 
 # check if password is valid
-def valid_password(password):
+def valid_password(password, passwor_repeat):
     # count the different type of characters in the password
     pCounter = 0
     dCounter = 0
