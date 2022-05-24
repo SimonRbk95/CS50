@@ -126,7 +126,7 @@ def register():
             # appropriate apology message
             return apology("The username already exists", 403)
         # check if password matches the requirements
-        if valid_password(password):
+        elif valid_password(password):
 
         # elif password does not match the repeat password field
         # else submit the user's input via POST to /register
@@ -168,4 +168,6 @@ def valid_password(password):
     # require that the password includes at least 3 digits and 2 special characters
     if not (pCounter >= 2 and dCounter >= 3):
         return apology("Your password does not contain at least 3 digits and 2 special characters", 403)
+
+    # if password checks out
     return True
