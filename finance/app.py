@@ -119,10 +119,13 @@ def register():
     """Register user"""
     if request.method == "POST":
         username = request.form.get("username")
+        password = request.form.get("password")
         # if username already exsits
-        if != db.execute(SELECT username FROM users):
+        if not db.execute(SELECT username FROM users):
             # appropriate apology message
+            return apology("The username already exists", 403)
         # elif password is invalid
+        elif 
             # appropriate error message
         # elif password does not match the repeat password field
         # else submit the user's input via POST to /register
