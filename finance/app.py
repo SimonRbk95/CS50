@@ -166,7 +166,7 @@ def register():
         # require that the password includes at least 2 digits and 1 special character
         if not (pCounter >= 1 and dCounter >= 2):
             print(dCounter)
-            return apology("Your password does not contain at least 2 digits and 1 special characters", 403)
+            return apology("Your password does not contain at least 2 digits and 1 special character", 403)
         # check if the password has been repeated correctly
         elif password != password_repeat:
             print("no match")
