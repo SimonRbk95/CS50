@@ -119,8 +119,8 @@ def register():
     """Register user"""
     if request.method == "POST":
         username = request.form.get("username")
-        if db.execute(SELECT)
         # if username already exsits
+        if != db.execute(SELECT username FROM users):
             # appropriate apology message
         # elif password is invalid
             # appropriate error message
