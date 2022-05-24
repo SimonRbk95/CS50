@@ -118,6 +118,8 @@ def quote():
 def register():
     """Register user"""
     if request.method == "POST":
+        username = request.form.get("username")
+        if username != db.execute(SELCT)
         # if username already exsits
             # appropriate apology message
         # elif password is invalid
