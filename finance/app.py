@@ -54,7 +54,7 @@ def valid_password(password, password_repeat):
         return apology("Your passwords don't match", 403)
     # if password checks out
     print("checks out")
-    return True
+    return False
 
 @app.after_request
 def after_request(response):
