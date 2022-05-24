@@ -128,7 +128,7 @@ def register():
             return apology("The username already exists", 403)
         # check if password matches the requirements
         elif valid_password(password, password_repeat):
-            db.execute()
+            db.execute("INSERT INTO users (username,, day) VALUES (?, ?, ?);", name, month, day)
 
         # elif password does not match the repeat password field
         # else submit the user's input via POST to /register
