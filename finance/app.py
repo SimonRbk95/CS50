@@ -126,6 +126,7 @@ def register():
             # appropriate apology message
             return apology("The username already exists", 403)
         # elif password is invalid
+        # require the passwor
         elif len(password) < 8:
             return apology("The password is too short", 403)
         for char in password:
@@ -134,7 +135,9 @@ def register():
             aCounter = 0
             if char in string.punctuation:
                 pCounter += 1
-            if 
+            elif char.isdigit():
+                dCounter +=1
+            elif char.
 
 
             counter = 0
