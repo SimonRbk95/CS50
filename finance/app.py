@@ -126,7 +126,8 @@ def register():
             return apology("The username already exists", 403)
         # elif password is invalid
         for char in password:
-            if 
+            counter = 0
+            if char not in ["!","§","$","%","&","/","(",")","=","?","`","-","#","<",">","_","^","'","*","~"]
             # appropriate error message
         # elif password does not match the repeat password field
         # else submit the user's input via POST to /register
