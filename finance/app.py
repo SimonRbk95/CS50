@@ -129,14 +129,7 @@ def register():
         # check if password matches the requirements
         elif valid_password(password, password_repeat):
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?);", username, generate_password_hash(password))
-
-        # elif password does not match the repeat password field
-        # else submit the user's input via POST to /register
-            # INSERT the new user and the password's hash into users
-            # redirect to /register, a new template similair to login.html
-
-
-
+            return redirect("/login")
     else:
         return render_template("register.html")
 
