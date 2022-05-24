@@ -123,14 +123,14 @@ def register():
         password = request.form.get("password")
         password_repeat = request.form.get("password_repeat")
         # if username already exsits
-        if username == db.execute("SELECT ? FROM users", username):
+        if username == db.execute("SELECT (?) FROM users", username):
             # appropriate apology message
             print("GOT the double username")
             return apology("The username already exists", 403)
         # check if password matches the requirements
         elif valid_password(password, password_repeat):
             print("HERE is the MISTAKE")
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?);", username, generate_password_hash(password))
+            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(password))
             return redirect("/login")
     else:
         return render_template("register.html")
