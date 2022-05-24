@@ -16,8 +16,13 @@
             <input class="form-control mx-auto w-auto" id="password" name="password_repeat" placeholder="Repeat Password" type="password">
 
         </div>
-        <div><p style="color: grey; font-size: 8px;">must contain..</p></div>
-
+        <div><p style="color: grey; font-size: 13px;"> Password must contain at least:"
+            <ul>
+                <li>2 special characters: !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~./li>
+                <li>3 digits</li>
+                <li>8 characters</li>
+            </ul>
+            </p>
         <button class="btn btn-primary" type="submit">Register</button>
     </form>
 {% endblock %}
