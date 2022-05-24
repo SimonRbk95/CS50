@@ -1,4 +1,5 @@
 import os
+import string
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -125,8 +126,16 @@ def register():
             # appropriate apology message
             return apology("The username already exists", 403)
         # elif password is invalid
+        elif len(password) < 8:
+            return apology("The password is too short", 403)
         for char in password:
-            char.is
+            pCounter = 0
+            dCounter = 0
+            aCounter = 0
+            if char in string.punctuation:
+                pCounter += 1
+            if is.
+
 
             counter = 0
             # appropriate error mes
