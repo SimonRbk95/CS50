@@ -151,7 +151,7 @@ def register():
             # appropriate apology message
             return apology("The username already exists", 403)
 
-        elif valid_password(password, password_repeat):
+        elif valid_password(password, password_repeat) == True:
             print("validated")
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(password))
             return redirect("/login")
