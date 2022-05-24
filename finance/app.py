@@ -134,7 +134,7 @@ def register():
             aCounter = 0
             if char in string.punctuation:
                 pCounter += 1
-            if is.
+            if 
 
 
             counter = 0
