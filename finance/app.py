@@ -122,7 +122,7 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
         # if username already exsits
-        if not db.execute(SELECT username FROM users):
+        if not db.execute("SELECT username FROM users"):
             # appropriate apology message
             return apology("The username already exists", 403)
         # check if password matches the requirements
