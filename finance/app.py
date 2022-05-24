@@ -121,13 +121,13 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        
+        passwor_repeat = request.form.get("password_repeat")
         # if username already exsits
         if not db.execute("SELECT username FROM users"):
             # appropriate apology message
             return apology("The username already exists", 403)
         # check if password matches the requirements
-        elif valid_password(password):
+        elif valid_password(password, password_repeat):
             pass
 
         # elif password does not match the repeat password field
@@ -160,7 +160,7 @@ def sell():
 
 
 # check if password is valid
-def valid_password(password, passwor_repeat):
+def valid_password(password, password_repeat):
     # count the different type of characters in the password
     pCounter = 0
     dCounter = 0
@@ -175,6 +175,8 @@ def valid_password(password, passwor_repeat):
     # require that the password includes at least 3 digits and 2 special characters
     if not (pCounter >= 2 and dCounter >= 3):
         return apology("Your password does not contain at least 3 digits and 2 special characters", 403)
-
+    # check if the password has been repeated correctly
+    if password != password_repeat:
+        return apology("Your passwords don't match", 403)
     # if password checks out
     return True
