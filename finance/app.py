@@ -126,7 +126,7 @@ def register():
             # appropriate apology message
             return apology("The username already exists", 403)
         # check if password matches the requirements
-        check_password(password)
+        if valid_password(password):
 
         # elif password does not match the repeat password field
         # else submit the user's input via POST to /register
@@ -153,7 +153,7 @@ def sell():
 
 
 # check if password is valid
-def check_password(password):
+def valid_password(password):
     # count the different type of characters in the password
     pCounter = 0
     dCounter = 0
