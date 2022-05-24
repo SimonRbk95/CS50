@@ -53,6 +53,7 @@ def valid_password(password, password_repeat):
         print("no match")
         return apology("Your passwords don't match", 403)
     # if password checks out
+    print("checks out")
     return True
 
 @app.after_request
@@ -152,6 +153,7 @@ def register():
             return apology("The username already exists", 403)
         # check if password matches the requirements
         elif valid_password(password, password_repeat):
+            print("validated")
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(password))
             return redirect("/login")
     else:
