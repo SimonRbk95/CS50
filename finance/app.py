@@ -137,7 +137,6 @@ def register():
 
 
 
-        return apology("TODO")
     else:
         return render_template("register.html")
 
