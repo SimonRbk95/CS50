@@ -125,11 +125,9 @@ def register():
         # if username already exsits
         if db.execute("SELECT username FROM users WHERE username = %s", (username, )):
             # appropriate apology message
-            print("GOT the double username")
             return apology("The username already exists", 403)
         # check if password matches the requirements
         elif valid_password(password, password_repeat):
-            print("HERE is the MISTAKE")
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(password))
             return redirect("/login")
     else:
