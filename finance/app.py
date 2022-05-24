@@ -164,7 +164,7 @@ def valid_password(password, password_repeat):
             pCounter += 1
         elif char.isdigit():
             dCounter += 1
-    # require that the password includes at least 3 digits and 2 special characters
+    # require that the password includes at least 2 digits and 1 special character
     if not (pCounter >= 1 and dCounter >= 2):
         return apology("Your password does not contain at least 2 digits and 1 special characters", 403)
     # check if the password has been repeated correctly
