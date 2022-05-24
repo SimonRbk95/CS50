@@ -118,8 +118,12 @@ def quote():
 def register():
     """Register user"""
     if request.method == "POST":
-        # if username and password is valid
-        
+        # if username and password is valid and password matches the repeat password field
+            # submit the user's input via POST to /register
+            # INSERT the new user and the password's hash into users
+            # redirect to /register, a new template similair to login.html
+        # else render an apology ( if username exists or password does not match)
+
     return apology("TODO")
 
 
