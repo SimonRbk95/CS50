@@ -113,7 +113,8 @@ def logout():
 def quote():
     """Get stock quote."""
     if request.method == "POST":
-        if (quote = lookup(request.form.get("symbol"))):
+        quote = lookup(request.form.get("symbol"))
+        if quote:
             return render_template("quoted.html", quote = quote)
         else:
             apology("Inavlid stock symbol", 403)
