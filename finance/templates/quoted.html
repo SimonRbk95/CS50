@@ -6,8 +6,9 @@
 
 {% block main %}
 <p>
-    Stock []: {}
-    Price:    {}
-
+    Stock:    {{quote["name"]}} ({{quote["symbol"]}})
 </p>
+    Price:    {{quote["price"]}}
+
+
 {% endblock %}
