@@ -6,12 +6,13 @@
 
 {% block main %}
 <p>
-    Company:  {{quote["name"]}}
+
+    <b>{{quote["symbol"]}}</b>
 </p>
 <p>
-    Symbol:   {{quote["symbol"]}}
+    {{quote["name"]}}
 </p>
-    Price:    ${{quote["price"]}}
+    ${{quote["price"]}}
 
 
 {% endblock %}
