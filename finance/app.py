@@ -30,30 +30,6 @@ db = SQL("sqlite:///finance.db")
 if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
-# check if password is valid
-def valid_password(password, password_repeat):
-    # count the different type of characters in the password
-    pCounter = 0
-    dCounter = 0
-    # require that the password be at least 8 characters long
-    if len(password) < 8:
-        return apology("The password is too short", 403)
-    for char in password:
-        print(char)
-        if char in string.punctuation:
-            pCounter += 1
-        elif char.isdigit():
-            dCounter += 1
-    # require that the password includes at least 2 digits and 1 special character
-    if not (pCounter >= 1 and dCounter >= 2):
-        print(dCounter)
-        return apology("Your password does not contain at least 2 digits and 1 special characters", 403)
-    # check if the password has been repeated correctly
-    elif password != password_repeat:
-        print("no match")
-        return apology("Your passwords don't match", 403)
-    # if password checks out
-    return True
 
 @app.after_request
 def after_request(response):
