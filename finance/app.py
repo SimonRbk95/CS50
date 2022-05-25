@@ -117,7 +117,7 @@ def quote():
         if quote:
             return render_template("quoted.html", quote = quote)
         else:
-            apology("Inavlid stock symbol", 403)
+            return apology("Inavlid stock symbol", 403)
     else:
         return render_template("quote.html")
 
