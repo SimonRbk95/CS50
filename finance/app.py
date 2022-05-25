@@ -116,7 +116,7 @@ def quote():
         if (quote = lookup(request.form.get("symbol"))):
             return render_template("quoted.html", quote = quote)
         else:
-            apology()
+            apology("Inavlid stock symbol", 403)
     else:
         return render_template("quote.html")
 
