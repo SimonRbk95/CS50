@@ -11,4 +11,5 @@ CREATE TABLE portfolio(
          ON UPDATE NO ACTION
 );
 
-INSERT INTO portfolio (symbol)
+("INSERT INTO portfolio (symbol) VALUES(?)", ())
+(INSERT INTO portfolio)
