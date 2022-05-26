@@ -51,7 +51,9 @@ def index():
 @login_required
 def buy():
     if request.method == "POST":
-        
+        if not (request.form.get("symbol")):
+            return 
+        request.from.get("number")
     return apology("TODO")
 
 
