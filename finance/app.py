@@ -44,10 +44,15 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    # stocks owned
-    # symbol
-    # quantity
-    
+    # stocks owned dictionary:
+        # symbol
+        # quantity
+        # current price
+        # total value of the shares owned
+
+    # cash balance
+    # grand total
+
     return render_template("index.html", #TODO)
 
 
