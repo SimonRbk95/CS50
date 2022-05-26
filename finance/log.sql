@@ -10,3 +10,5 @@ CREATE TABLE portfolio(
          ON DELETE CASCADE
          ON UPDATE NO ACTION
 );
+
+SELECT 
