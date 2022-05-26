@@ -60,7 +60,7 @@ def index():
                         }
                     )
 
-    cash_dict = db.execute("SELECT cash FROM users WHERE user_id = (?)", session["user_id"])
+    cash_dict = db.execute("SELECT cash FROM users WHERE id = (?)", session["user_id"])
     cash_balance = cash_dict["cash"]
 
     # cash balance
