@@ -45,7 +45,6 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     table = []
-    values = []
 
     # dictionary with stocks and total quantites owned
     stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM users WHERE user_id = (?) GROUP BY symbol", session["user_id"])
@@ -68,9 +67,7 @@ def index():
     # grand total
 
     return render_template("index.html",
-                            stocks_owned = stocks_owned,
-                            prices = prices,
-                            values = values,
+                            table = table,
                             total = sum(values),
                             cash_balance = cash_balance)
 
