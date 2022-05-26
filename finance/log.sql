@@ -11,4 +11,4 @@ CREATE TABLE portfolio(
          ON UPDATE NO ACTION
 );
 
-UPDATE portfolio SET purchase_price 
+INSERT INTO 
