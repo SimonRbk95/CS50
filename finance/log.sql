@@ -11,3 +11,11 @@ CREATE TABLE portfolio(
          ON UPDATE NO ACTION
 );
 
+("INSERT INTO portfolio (symbol, quantity, purchase_price, purchase_date) VALUES(?,?,?,?) WHERE user_id = (?)", ())
+(INSERT INTO portfolio)
+
+
+
+
+   purchase_price INTEGER NOT NULL,
+   purchase_date INTEGER NOT NULL,
