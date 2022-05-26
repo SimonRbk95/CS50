@@ -52,8 +52,14 @@ def index():
 
     for stock in stocks_owned:
         quote = lookup(stock["symbol"])
-        table.append(quote["price"])
-        values.append(stock["quantity"]*quote["price"])
+        table.append(
+                        {
+                        "symbol": stock["symbol"],
+                        "quantity": stock["quantity"],
+                        "price": quote["price"],
+                        "value": stock["quantity"]*quote["price"]
+                        }
+                    )
 
     cash_dict = db.execute("SELECT cash FROM users WHERE user_id = (?)", session["user_id"])
     cash_balance = cash_dict["cash"]
