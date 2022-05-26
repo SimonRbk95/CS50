@@ -69,7 +69,7 @@ def index():
     # grand total
     return render_template("index.html",
                             table = table,
-                            total = round(total, 2)
+                            total = round(total, 2),
                             cash_balance = cash_balance)
 
 
