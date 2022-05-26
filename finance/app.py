@@ -69,7 +69,6 @@ def index():
 
     return render_template("index.html",
                             table = table,
-                            total = sum(values),
                             cash_balance = cash_balance)
 
 
