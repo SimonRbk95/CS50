@@ -4,7 +4,6 @@ CREATE TABLE portfolio(
    symbol TEXT NOT NULL,
    quantity INTEGER NOT NULL,
    purchase_price INTEGER NOT NULL,
-   purchase_date INTEGER NOT NULL,
    Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
    FOREIGN KEY (user_id)
       REFERENCES users (id)
@@ -12,11 +11,3 @@ CREATE TABLE portfolio(
          ON UPDATE NO ACTION
 );
 
-("INSERT INTO portfolio (symbol, quantity, purchase_price, purchase_date) VALUES(?,?,?,?) WHERE user_id = (?)", ())
-(INSERT INTO portfolio)
-
-
-
-
-   purchase_price INTEGER NOT NULL,
-   purchase_date INTEGER NOT NULL,
