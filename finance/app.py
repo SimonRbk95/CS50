@@ -53,7 +53,7 @@ def buy():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         number = int(request.form.get("number"))
-        if not symbol:
+        if symbol == None:
             return apology("This stock symbol does not exist.", 400)
         elif number < 0:
             return apology("Number of stocks to be purchased must be positive", 400)
@@ -72,8 +72,8 @@ def buy():
             return apology("Not enough money", 403)
         # insert into the table:
         else:
-            db.execute("INSERT INTO portfolio (symbol, quantity, purchase_price) VALUES(?,?,?) WHERE user_id = (?)",
-                        (symbol, number, price, session["user_id"]))
+            db.execute("INSERT INTO portfolio (user_id, symbol, quantity, purchase_price) VALUES(?,?,?,?)",
+                        (session["user_id"], symbol, number, price))
             # adjust user's budget
             db.execute("UPDATE users SET cash = cash - (?) WHERE id = (?)",
                         (purchase, session["user_id"]))
