@@ -4,14 +4,14 @@ CREATE TABLE portfolio(
    symbol TEXT NOT NULL,
    quantity INTEGER NOT NULL,
    purchase_price INTEGER NOT NULL,
-   pruchase_date INTEGER NOT NULL,
+   purchase_date INTEGER NOT NULL,
    FOREIGN KEY (user_id)
       REFERENCES users (id)
          ON DELETE CASCADE
          ON UPDATE NO ACTION
 );
 
-("INSERT INTO portfolio (symbol) VALUES(?)", ())
+("INSERT INTO portfolio (symbol, quantity, purchase_price, purchase_date) VALUES(?,?,?,?)", ())
 (INSERT INTO portfolio)
 
 
