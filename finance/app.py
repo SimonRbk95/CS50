@@ -52,8 +52,7 @@ def index():
 def buy():
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        number = request.form.get("number")
-        print(number.isdigit())
+        number = int(request.form.get("number"))
         if not symbol:
             return apology("This stock symbol does not exist.", 400)
         elif number < 0:
