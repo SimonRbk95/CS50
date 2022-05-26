@@ -44,10 +44,17 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    prices = []
+    # dictionary with stocks and total quantites owned
     stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'Total' FROM users WHERE user_id = 1 GROUP BY symbol")
-    # stocks owned dictionary:
-        # symbol
-        # quantity
+
+    for stock in stocks_owned:
+        quote = lookup(stock["symbol"])
+        
+
+
+
+
     # lookup:
         # current price
 
