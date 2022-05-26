@@ -45,13 +45,14 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     table = []
+    total = 0
 
     # dictionary with stocks and total quantites owned
     stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) GROUP BY symbol", session["user_id"])
 
     for stock in stocks_owned:
         quote = lookup(stock["symbol"])
-        total += 
+        
         table.append(
                         {
                         "symbol": stock["symbol"],
@@ -70,6 +71,7 @@ def index():
 
     return render_template("index.html",
                             table = table,
+                            total = total,
                             cash_balance = cash_balance)
 
 
