@@ -44,6 +44,8 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    List = []
+    db.execute("SELECT symbol, quantity FROM users WHERE user_id")
     # stocks owned dictionary:
         # symbol
         # quantity
