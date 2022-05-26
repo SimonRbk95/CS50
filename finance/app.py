@@ -50,7 +50,8 @@ def index():
 
     for stock in stocks_owned:
         quote = lookup(stock["symbol"])
-        prices.append(quote[])
+        prices.append(quote["price"])
+
 
 
 
@@ -63,7 +64,7 @@ def index():
     # cash balance
     # grand total
 
-    return render_template("index.html", stocks_owned = stocks_owned)
+    return render_template("index.html", stocks_owned = stocks_owned, prices = prices)
     return apology("TODO", 403)
 
 
