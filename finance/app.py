@@ -64,8 +64,8 @@ def buy():
         # check the user's budget
         # apology if user cannot afford prices
         cash = db.execute("SELECT cash FROM users WHERE id = (?)", (session["user_id"]))
-        budget = cash["cash"]
-        print(budget)
+        budget = cash[0]
+        print(cash)
         purchase = price * number
         if purchase > budget:
             return apology("Not enough money", 403)
