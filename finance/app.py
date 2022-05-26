@@ -44,18 +44,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    List = []
-    db.execute("SELECT symbol, quantity FROM users WHERE user_id")
-    # stocks owned dictionary:
-        # symbol
-        # quantity
-        # current price
-        # total value of the shares owned
-
-    # cash balance
-    # grand total
-
-    return render_template("index.html", #TODO)
+    pass
 
 
 @app.route("/buy", methods=["GET", "POST"])
