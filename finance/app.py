@@ -68,7 +68,7 @@ def index():
 
     # cash balance
     # grand total
-
+    print(total)
     return render_template("index.html",
                             table = table,
                             total = total,
