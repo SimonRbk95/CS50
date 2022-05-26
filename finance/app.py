@@ -55,8 +55,11 @@ def buy():
             return apology("This stock symbol does not exist.", 400)
         elif request.form.get("number") < 0:
             return apology("Number of stocks to be purchased must be positive", 400)
-        
-    return apology("TODO")
+        # look up prices
+        # work with SQLite database to insert into it the purchases
+        #
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/history")
