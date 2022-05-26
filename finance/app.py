@@ -56,6 +56,7 @@ def buy():
         elif request.form.get("number") < 0:
             return apology("Number of stocks to be purchased must be positive", 400)
         # look up prices
+        quote = lookup(request.method.form("symbol"))
         
         # work with SQLite database table to:
         # check the user's budget
