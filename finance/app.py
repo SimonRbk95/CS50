@@ -44,7 +44,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    prices = []
+    table = []
     values = []
 
     # dictionary with stocks and total quantites owned
@@ -52,7 +52,7 @@ def index():
 
     for stock in stocks_owned:
         quote = lookup(stock["symbol"])
-        prices.append(quote["price"])
+        table.append(quote["price"])
         values.append(stock["quantity"]*quote["price"])
 
     cash_dict = db.execute("SELECT cash FROM users WHERE user_id = (?)", session["user_id"])
