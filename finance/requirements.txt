@@ -3,8 +3,13 @@ Flask
 Flask-Session
 requests
 
-CREATE TABLE budget(
-   Cash INTEGER
+CREATE TABLE portfolio(
+   user_id INTEGER
+   symbol TEXT NOT NULL
+   quantity INTEGER NOT NULL
+   purchase_price INTEGER NOT NULL
+   pruchase_date Integer NOT NULL
+   id INTEGER PRIMARY KEY
    FOREIGN KEY (user_id)
       REFERENCES users (id)
          ON DELETE CASCADE
