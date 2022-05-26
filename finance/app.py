@@ -50,7 +50,7 @@ def index():
 
     for stock in stocks_owned:
         quote = lookup(stock["symbol"])
-        
+        prices.append(quote[])
 
 
 
