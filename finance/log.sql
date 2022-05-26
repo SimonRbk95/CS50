@@ -13,3 +13,9 @@ CREATE TABLE portfolio(
 
 ("INSERT INTO portfolio (symbol) VALUES(?)", ())
 (INSERT INTO portfolio)
+
+
+
+
+   purchase_price INTEGER NOT NULL,
+   pruchase_date INTEGER NOT NULL,
