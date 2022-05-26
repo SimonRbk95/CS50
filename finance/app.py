@@ -60,7 +60,9 @@ def buy():
         # check the user's budget
         # apology if user cannot afford prices
         # insert into the table:
-            # increment the number of stocks of 
+            # increment the number of stocks of purchased by User
+            # adjust user's budget
+            # 
         #
     else:
         return render_template("buy.html")
