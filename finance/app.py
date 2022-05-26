@@ -74,7 +74,6 @@ def buy():
             # adjust user's budget
             db.execute("UPDATE users SET cash = cash - (?) WHERE id = (?)",
                         purchase, session["user_id"])
-        #
     else:
         return render_template("buy.html")
 
