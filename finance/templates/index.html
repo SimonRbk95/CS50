@@ -11,7 +11,7 @@
         <th scope="col">Symbol</th>
         <th scope="col">Quantity</th>
         <th scope="col">Current Price</th>
-        <th scope="col">Total Value</th>
+        <th scope="col">Value</th>
       </tr>
     </thead>
     <tbody>
@@ -20,7 +20,8 @@
         <th scope="row">1</th>
         <td>{{item.symbol}}</td>
         <td>{{item["quantity"]}}</td>
-        <td>{{item[p]}}@mdo</td>
+        <td>{{item["purchase_price"]}}@mdo</td>
+        <td>{{item[""]}}@mdo</td>
       </tr>
     {% endfor %}
 
