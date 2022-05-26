@@ -5,7 +5,7 @@ requests
 
 CREATE TABLE portfolio(
    user_id INTEGER,
-
+    stock
    FOREIGN KEY (user_id)
       REFERENCES users (id)
          ON DELETE CASCADE
