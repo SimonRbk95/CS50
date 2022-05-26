@@ -3,9 +3,8 @@ Flask
 Flask-Session
 requests
 
-CREATE TABLE portfolio(
-   user_id INTEGER,
-    stock
+CREATE TABLE budget(
+   Cash INTEGER
    FOREIGN KEY (user_id)
       REFERENCES users (id)
          ON DELETE CASCADE
