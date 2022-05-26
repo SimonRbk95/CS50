@@ -21,7 +21,7 @@ CREATE TABLE portfolio(
    purchase_date INTEGER NOT NULL,
 
        List = []
-    db.execute("SELECT symbol, quantity FROM users WHERE user_id")
+    db.execute("SELECT symbol, SUM(quantity) AS 'Total' FROM users WHERE user_id = 1 GROUP BY symbol")
     # stocks owned dictionary:
         # symbol
         # quantity
