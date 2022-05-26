@@ -58,7 +58,7 @@ def index():
                         "symbol": stock["symbol"],
                         "quantity": stock["quantity"],
                         "price": quote["price"],
-                        "value": stock["quantity"]*quote["price"]
+                        "value": round(stock["quantity"]*quote["price"], 2)
                         }
                     )
 
@@ -69,7 +69,7 @@ def index():
     # grand total
     return render_template("index.html",
                             table = table,
-                            total = total,
+                            total = round(total, 2)
                             cash_balance = cash_balance)
 
 
