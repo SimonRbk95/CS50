@@ -69,7 +69,8 @@ def buy():
             return apology("Not enough money", 403)
         # insert into the table:
         else:
-            db.execute()
+            db.execute(("INSERT INTO portfolio (symbol, quantity, purchase_price, purchase_date) VALUES(?,?,?,?) WHERE user_id = (?)", (symbol, number, price, ))
+)
 
             # increment the number of stocks of purchased by User
             # adjust user's budget
