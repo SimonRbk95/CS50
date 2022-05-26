@@ -44,8 +44,7 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    List = []
-    odb.execute("SELECT symbol, SUM(quantity) AS 'Total' FROM users WHERE user_id = 1 GROUP BY symbol")
+    stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'Total' FROM users WHERE user_id = 1 GROUP BY symbol")
     # stocks owned dictionary:
         # symbol
         # quantity
@@ -57,7 +56,7 @@ def index():
     # cash balance
     # grand total
 
-    return render_template("index.html", #TODO)
+    return render_template("index.html", stocks_owned = stocks_owned)
     return apology("TODO", 403)
 
 
