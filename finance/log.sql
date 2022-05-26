@@ -18,4 +18,4 @@ CREATE TABLE portfolio(
 
 
    purchase_price INTEGER NOT NULL,
-   pruchase_date INTEGER NOT NULL,
+   purchase_date INTEGER NOT NULL,
