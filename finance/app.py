@@ -56,13 +56,14 @@ def buy():
         elif request.form.get("number") < 0:
             return apology("Number of stocks to be purchased must be positive", 400)
         # look up prices
+        
         # work with SQLite database table to:
         # check the user's budget
         # apology if user cannot afford prices
         # insert into the table:
             # increment the number of stocks of purchased by User
             # adjust user's budget
-            # 
+            #
         #
     else:
         return render_template("buy.html")
