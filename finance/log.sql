@@ -5,6 +5,7 @@ CREATE TABLE portfolio(
    quantity INTEGER NOT NULL,
    purchase_price INTEGER NOT NULL,
    purchase_date INTEGER NOT NULL,
+   Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
    FOREIGN KEY (user_id)
       REFERENCES users (id)
          ON DELETE CASCADE
