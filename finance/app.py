@@ -55,11 +55,13 @@ def index():
         prices.append(quote["price"])
         values.append(stock["quantity"]*quote["price"])
 
+    total = sum(values)
+    cash_balance = 
 
     # cash balance
     # grand total
 
-    return render_template("index.html", stocks_owned = stocks_owned, prices = prices)
+    return render_template("index.html", stocks_owned = stocks_owned, prices = prices, values = values, total = sum(values),)
     return apology("TODO", 403)
 
 
