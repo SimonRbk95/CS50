@@ -48,21 +48,25 @@ def index():
     values = []
 
     # dictionary with stocks and total quantites owned
-    stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'Total' FROM users WHERE user_id = 1 GROUP BY symbol")
+    stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'Total' FROM users WHERE user_id = (?) GROUP BY symbol", session["user_id"])
 
     for stock in stocks_owned:
         quote = lookup(stock["symbol"])
         prices.append(quote["price"])
         values.append(stock["quantity"]*quote["price"])
 
-    total = sum(values)
-    cash_balance = 
+    cash_dict = db.execute("SELECT cash FROM users WHERE user_id = (?)", session["user_id"])
+    cash_balance = cash_dict["cash"]
 
     # cash balance
     # grand total
 
-    return render_template("index.html", stocks_owned = stocks_owned, prices = prices, values = values, total = sum(values),)
-    return apology("TODO", 403)
+    return render_template("index.html",
+                            stocks_owned = stocks_owned,
+                            prices = prices,
+                            values = values,
+                            total = sum(values),
+                            cash_balance = cash_balance)
 
 
 @app.route("/buy", methods=["GET", "POST"])
