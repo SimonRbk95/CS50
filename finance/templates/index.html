@@ -15,14 +15,16 @@
       </tr>
     </thead>
     <tbody>
-    {% for stock in stocks_owned %}
       <tr>
-        <th scope="row">1</th>
+      <th scope="row">1</th>
+    {% for stock in stocks_owned %}
         <td>{{stock["symbol"]</td>
         <td>{{item["quantity"]</td>
-      </tr>
     {% endfor %}
 
+    {% for price in prices %}
+
+       </tr>
     </tbody>
   </table>
 
