@@ -59,7 +59,7 @@ def buy():
         # work with SQLite database table to:
         # check the user's budget
         # apology if user cannot afford prices
-        # insert into it the purchases
+        # insert it into the purchases
         #
     else:
         return render_template("buy.html")
