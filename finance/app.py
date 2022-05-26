@@ -51,16 +51,20 @@ def index():
 @login_required
 def buy():
     if request.method == "POST":
-        if not (request.form.get("symbol")):
+        symbol = request.form.get("symbol")
+        number = request.form.get("number")
+        if not symbol:
             return apology("This stock symbol does not exist.", 400)
-        elif request.form.get("number") < 0:
+        elif number < 0:
             return apology("Number of stocks to be purchased must be positive", 400)
         # look up prices
-        quote = lookup(request.method.form("symbol"))
-        
+        quote = lookup(symbol)
+        price = quote["price"]
         # work with SQLite database table to:
         # check the user's budget
         # apology if user cannot afford prices
+        budget = db.execute(SELECT cash FROM users WHERE id = )
+        if
         # insert into the table:
             # increment the number of stocks of purchased by User
             # adjust user's budget
