@@ -52,8 +52,10 @@ def index():
 def buy():
     if request.method == "POST":
         if not (request.form.get("symbol")):
-            return 
-        request.from.get("number")
+            return apology("This stock symbol does not exist.", 400)
+        elif request.form.get("number") < 0:
+            return apology("Number of stocks to be purchased must be positive", 400)
+        
     return apology("TODO")
 
 
