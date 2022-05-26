@@ -52,7 +52,7 @@ def index():
 
     for stock in stocks_owned:
         quote = lookup(stock["symbol"])
-        
+        total += quote["price"]*stock["quantity"]
         table.append(
                         {
                         "symbol": stock["symbol"],
