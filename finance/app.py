@@ -63,9 +63,13 @@ def buy():
         # work with SQLite database table to:
         # check the user's budget
         # apology if user cannot afford prices
-        budget = db.execute(SELECT cash FROM users WHERE id = )
-        if
+        budget = db.execute("SELECT cash FROM users WHERE id = (?)", session.get("user_id"))
+        purchase = price * number
+        if purchase > budget:
+            return apology("Not enough money", 403)
         # insert into the table:
+        else:
+            
             # increment the number of stocks of purchased by User
             # adjust user's budget
             #
