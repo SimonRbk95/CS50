@@ -15,9 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-
-    {% for t in table %}
+     {% for t in table %}
       </tr>
         <th scope="row">{{t["symbol"]}}</th>
         <td>{{t["quantity"]}}</td>
@@ -25,10 +23,13 @@
         <td>{{t["value"]}}</td>
       </tr>
     {% endfor %}
-    
-
-       </tr>
     </tbody>
   </table>
+  <div class="mb-3">
+    <h5>Portfolio Value:</h5>
+    <p>${{total}}</p>
+    <h5>Cash Balance:</h3>
+    <p>${{cash_balance}}</p>
+  </div>
 
 {% endblock %}

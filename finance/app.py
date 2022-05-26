@@ -63,12 +63,10 @@ def index():
                     )
 
     cash_dict = db.execute("SELECT cash FROM users WHERE id = (?)", session["user_id"])
-    print(cash_dict)
     cash_balance = cash_dict[0]["cash"]
 
     # cash balance
     # grand total
-    print(total)
     return render_template("index.html",
                             table = table,
                             total = total,
