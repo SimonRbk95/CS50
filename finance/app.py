@@ -55,6 +55,7 @@ def buy():
         number = request.form.get("number")
         if not symbol:
             return apology("This stock symbol does not exist.", 400)
+            print(number.isdigit())
         elif number < 0:
             return apology("Number of stocks to be purchased must be positive", 400)
         # look up prices
