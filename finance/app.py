@@ -80,13 +80,14 @@ def buy():
         symbol = request.form.get("symbol")
         quote = lookup(symbol)
 
+        if quote == None:
+            return apology("This stock symbol does not exist.", 400)
+
         try:
             shares = int(request.form.get("shares"))
         except:
             apology("shares must be positive integers.", 400)
 
-        if quote == None:
-            return apology("This stock symbol does not exist.", 400)
         elif shares <= 0:
             return apology("shares of stocks to be purchased must be positive.", 400)
 
@@ -96,9 +97,6 @@ def buy():
         cash = db.execute("SELECT cash FROM users WHERE id = (?)", (session["user_id"]))
         budget = cash[0]["cash"]
 
-        #debug
-        print(cash)
-        print(session["user_id"])
         purchase = price * shares
         if purchase > budget:
             return apology("Not enough money", 403)
