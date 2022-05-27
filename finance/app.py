@@ -101,7 +101,7 @@ def buy():
         # insert into the table:
         else:
             db.execute("INSERT INTO portfolio (user_id, symbol, quantity, price, purchase) VALUES(?, ?, ?, ?, ?)",
-                        session["user_id"], symbol, number, price, true)
+                        session["user_id"], symbol, number, price, 1)
             # adjust user's budget
             db.execute("UPDATE users SET cash = cash - (?) WHERE id = (?)",
                         purchase, session["user_id"])
@@ -243,7 +243,7 @@ def sell():
             return apology("Invalid number. You can't sell more than you own.", 403)
 
         # record the transacation
-        db.execute("INSERT INTO portfolio (user_id, quantity, price, symbol, purchase) VALUES (?, ?, ?, ?)", session["user_id"], -(number), price, symbol, false)
+        db.execute("INSERT INTO portfolio (user_id, quantity, price, symbol, purchase) VALUES (?, ?, ?, ?)", session["user_id"], -(number), price, symbol, 0)
         db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", price*quantity, session["user_id"])
 
         return redirect("/")
