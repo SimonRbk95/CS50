@@ -21,7 +21,7 @@
         <th scope="row">{{t["symbol"]}}</th>
         <td>{{t["quantity"]|abs}}</td>
         <td>{{t["price"]}}</td>
-        {% if t["value"] > 0 %}
+        {% if t["quantity"] > 0 %}
         <td style="color: green">{{t["quantity"]*t["price"]}}</td>
         {% else %}
         <td style="color: red">-{{t["quantity"]*t["price"]}}</td>
