@@ -243,11 +243,8 @@ def sell():
             return apology("Invalid number. You can't sell more than you own.", 403)
 
         # record the transacation
-        db.execute("INSERT INTO portfolio (quantity) VALUES (?) quantity = quantity - (?) WHERE id = (?)", number, session["user_id"])
+        db.execute("INSERT INTO portfolio (user_id, quantity, price, symbol, purchase) VALUES (?, ?, ?, ?)", session["user_id"], -(number), price, symbol, false)
         db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", price*quantity, session["user_id"])
-
-        # record the sale
-        db.execute("INSERT INTO portfolio (quantity, sale_price) VALUES (?,?) WHERE user_id = (?) AND symbol = (?)", -(number), price, session["user_id"], symbol)
 
         return redirect("/")
 
