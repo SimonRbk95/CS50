@@ -221,7 +221,7 @@ def sell():
     """Sell shares of stock"""
     if request.method == "POST":
         pass
-        # submit data from user
+        # submitted data by user
         symbol = request.form.get("symbol")
         number = int(request.form.get("number"))
 
@@ -229,20 +229,18 @@ def sell():
         quote = lookup(symbol)
         price = quote["price"]
 
-        # validate input
-        if quote == None:
-            apology("symbol does not exist", 403)
-        if number >= 0:
-            apology("invalid number", 403)
-
-
-
         # user db stock data
         stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) AND symbol = (?)", session["user_id"], symbol)
         quantity = stocks_owned[0]["quantity"]
 
+        # validate input data
+        if quote == None:
+            return apology("symbol does not exist", 403)
+        elif number <= 0 or not is_integer(number):
+            return apology("Invalid number. Number must be a positive integer", 403)
         # check if number is less or equal than quantity
-        if number > quantity:
+        elif number > quantity:
+            return apology("Invalid number. You can't sell more than you own.", 403)
 
         # update balance after sale
         db.execute("UPDATE portfolio SET quantity = quantity - (?) WHERE id = (?)", number, session["user_id"])
