@@ -234,15 +234,18 @@ def sell():
             apology("symbol does not exist", 403)
         if number >= 0:
             apology("invalid number", 403)
+        if number > 
 
         # user db stock data
         stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) AND symbol = (?)", session["user_id"], symbol)
         quantity = stocks_owned[0]["quantity"]
 
-        # update balance after sell
+        # update balance after sale
         db.execute("UPDATE portfolio SET quantity = quantity - (?) WHERE id = (?)", number, session["user_id"])
         db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", price*quantity, session["user_id"])
 
+        # record the sell price
+        db.execute("")
         return redirect("/")
 
     else:
