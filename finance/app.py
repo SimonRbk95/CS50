@@ -247,10 +247,8 @@ def sell():
         db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", price*quantity, session["user_id"])
 
         # record the sale
-        db.execute("INSERT INTO portfolio (symbol_sold, quantity_sold, sale_price)VALUES (?,?)", symbol, number, price)
+        db.execute("INSERT INTO portfolio (quantity_sold, sale_price) VALUES (?,?) WHERE user_id = (?) AND symbol = (?)", number, price, session["user_id"], symbol)
 
-        # record the sell price
-        db.execute("")
         return redirect("/")
 
     else:
