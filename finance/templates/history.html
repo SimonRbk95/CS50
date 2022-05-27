@@ -18,8 +18,9 @@
      {% for t in transactions %}
       </tr>
         <th scope="row">{{t["symbol"]}}</th>
-        <td>{{t["quantity"]}}</td>
+        <td>{{abs(t["quantity"])}}</td>
         <td>{{t["price"]}}</td>
+        {% if t["value"] }
         <td>{{t["value"]}}</td>
       </tr>
     {% endfor %}
