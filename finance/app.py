@@ -107,7 +107,7 @@ def buy():
             # adjust user's budget
             db.execute("UPDATE users SET cash = cash - (?) WHERE id = (?)",
                         purchase, session["user_id"])
-        return redirect("/")
+        return redirect(url_for("index"))
     else:
         return render_template("buy.html")
 
