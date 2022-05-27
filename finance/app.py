@@ -223,10 +223,11 @@ def sell():
         pass
         # submit data from user
         symbol = request.form.get("symbol")
-        number = request.form.get("number")
+        number = int(request.form.get("number"))
 
         # current stock data
         quote = lookup(symbol)
+        price = quote["price"]
 
         # validate input
         if quote == None:
@@ -236,11 +237,11 @@ def sell():
 
         # user db stock data
         stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) AND symbol = (?)", session["user_id"], symbol)
+        print(stocks_owned["quantity"])
         quantity = stocks_owned["quantity"]
 
         # update balance after sell
-        db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", session["user_id"])
-
+        db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", price*quantity, session["user_id"])
 
     else:
         return render_template("sell.html")
