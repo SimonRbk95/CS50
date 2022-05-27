@@ -100,8 +100,8 @@ def buy():
             return apology("Not enough money", 403)
         # insert into the table:
         else:
-            db.execute("INSERT INTO portfolio (user_id, symbol, quantity, purchase_price) VALUES(?, ?, ?, ?)",
-                        session["user_id"], symbol, number, price)
+            db.execute("INSERT INTO portfolio (user_id, symbol, quantity, price, purchase) VALUES(?, ?, ?, ?, ?)",
+                        session["user_id"], symbol, number, price, true)
             # adjust user's budget
             db.execute("UPDATE users SET cash = cash - (?) WHERE id = (?)",
                         purchase, session["user_id"])
