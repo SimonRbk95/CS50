@@ -17,5 +17,4 @@ CREATE TABLE portfolio(
 
 
 
-ALTER TABLE portfolio
-  ADD quantity_sold INTEGER NOT NULL
+ALTER TABLE portfolio ADD quantity_sold INTEGER NOT NULL;
