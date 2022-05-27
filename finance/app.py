@@ -86,7 +86,7 @@ def buy():
         try:
             shares = int(request.form.get("shares"))
         except:
-            apology("shares must be positive integers.", 400)
+            return apology("shares must be positive integers.", 400)
 
         if shares <= 0:
             return apology("shares of stocks to be purchased must be positive.", 400)
