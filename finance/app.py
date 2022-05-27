@@ -114,7 +114,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-
+    transactions = db.execute(SELECT symbol, quantity, price)
 
 
     return render_template("history.html")
