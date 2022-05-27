@@ -238,8 +238,8 @@ def sell():
             return apology("symbol does not exist", 403)
         elif number <= 0:
             return apology("Invalid number. Number must be a positive integer", 403)
-        # check if number is less or equal than quantity
-        elif number > quantity:
+        # check if user owns the stock and if number is less or equal than quantity
+        elif number > quantity or quantity == None:
             return apology("Invalid number. You can't sell more than you own.", 403)
 
         # record the transacation
