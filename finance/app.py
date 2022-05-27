@@ -114,7 +114,9 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    transactions = db.execute("SELECT symbol, quantity, price FROM portfolio WHERE user_id = (?)", session["user_id"])
+    transactions = db.execute("SELECT symbol, quantity, price, Timestamp FROM portfolio WHERE user_id = (?)", session["user_id"])
+    if transactions == None:
+        return apology("No transactions yet.", 403)
     return render_template("history.html", transactions = transactions)
 
 

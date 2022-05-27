@@ -12,6 +12,7 @@
         <th scope="col">Quantity</th>
         <th scope="col">Price</th>
         <th scope="col">Transaction</th>
+        <th scope="col">Date</th>
       </tr>
     </thead>
     <tbody>
@@ -24,7 +25,8 @@
         <td style="color: green">{{t["value"]}}</td>
         {% else %}
         <td style="color: red">-{{t["value"]}}</td>
-        {% endif }
+        {% endif %}
+        <td>{{t["Timestamp"]}}</td>
       </tr>
     {% endfor %}
     </tbody>
