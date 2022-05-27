@@ -241,7 +241,7 @@ def sell():
         # check if user owns the stock and if number is less or equal than quantity
 
         elif quantity == None:
-            return apology(f"Invalid entry. You don't own any.{symbol} stock.", 403)
+            return apology(f"Invalid entry. You don't own any '{symbol}' stock.", 403)
 
         elif number > quantity:
             return apology("Invalid number. You can't sell more than you own.", 403)
