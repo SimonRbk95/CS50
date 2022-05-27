@@ -187,7 +187,7 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        password_repeat = request.form.get("password_repeat")
+        password_repeat = request.form.get("confirmation")
         # if username already exsits
         if db.execute("SELECT username FROM users WHERE username = %s", (username, )):
             # appropriate apology message
