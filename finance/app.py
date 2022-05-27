@@ -242,8 +242,8 @@ def sell():
         elif number > quantity:
             return apology("Invalid number. You can't sell more than you own.", 403)
 
-        # update balance after sale
-        db.execute("UPDATE portfolio SET quantity_purchased = quantity - (?) WHERE id = (?)", number, session["user_id"])
+        # record the transacation
+        db.execute("INSERT INTO portfolio (quantity) VALUES (?) quantity = quantity - (?) WHERE id = (?)", number, session["user_id"])
         db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", price*quantity, session["user_id"])
 
         # record the sale
