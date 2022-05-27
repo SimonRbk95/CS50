@@ -88,7 +88,7 @@ def buy():
         except:
             apology("shares must be positive integers.", 400)
 
-        elif shares <= 0:
+        if shares <= 0:
             return apology("shares of stocks to be purchased must be positive.", 400)
 
         # look up prices
