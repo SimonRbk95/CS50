@@ -176,7 +176,7 @@ def quote():
         if quote:
             return render_template("quoted.html", quote = quote)
         else:
-            return apology("Inavlid stock symbol", 403)
+            return apology("Inavlid stock symbol", 400)
     else:
         return render_template("quote.html")
 
@@ -191,14 +191,14 @@ def register():
         # if username already exsits
         if db.execute("SELECT username FROM users WHERE username = %s", (username, )):
             # appropriate apology message
-            return apology("The username already exists", 403)
+            return apology("The username already exists", 400)
 
             # check if password matches the requirements
         pCounter = 0
         dCounter = 0
         # require that the password be at least 8 characters long
         if len(password) < 8:
-            return apology("The password is too short", 403)
+            return apology("The password is too short", 40)
         for char in password:
             if char in string.punctuation:
                 pCounter += 1
@@ -209,7 +209,7 @@ def register():
             return apology("Your password does not contain at least 2 digits and 1 special character", 403)
         # check if the password has been repeated correctly
         elif password != confirmation:
-            return apology("Your passwords don't match", 403)
+            return apology("Your passwords don't match", 400)
         # if password checks out
         else:
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(password))
