@@ -223,7 +223,15 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+    if request.method == "POST":
+        pass
+        symbol = request.form.get("symbol")
+        number = request.form.get("number")
+        quote = lookup(symbol)
+        stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) AND symbol = (?) GROUP BY symbol", session["user_id"], symbol)
+
+    else:
+        return render_template("sell.html")
 
 
 
