@@ -239,7 +239,7 @@ def sell():
         quantity = stocks_owned["quantity"]
 
         # update balance after sell
-        db.execute("UPDATE ")
+        db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", session["user_id"])
 
 
     else:
