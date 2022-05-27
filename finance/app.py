@@ -83,7 +83,7 @@ def buy():
 
         if quote == None:
             return apology("This stock symbol does not exist.", 400)
-        elif shares < 0 or not is_integer(shares):
+        elif shares <= 0 or not is_integer(shares):
             return apology("shares of stocks to be purchased must be positive integers.", 400)
 
         # look up prices
