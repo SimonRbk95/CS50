@@ -197,22 +197,18 @@ def register():
         if len(password) < 8:
             return apology("The password is too short", 403)
         for char in password:
-            print(char)
             if char in string.punctuation:
                 pCounter += 1
             elif char.isdigit():
                 dCounter += 1
-        # require that the password includes at least 2 digits and 1 special character
+        # require that the password include at least 2 digits and 1 special character
         if not (pCounter >= 1 and dCounter >= 2):
-            print(dCounter)
             return apology("Your password does not contain at least 2 digits and 1 special character", 403)
         # check if the password has been repeated correctly
         elif password != password_repeat:
-            print("no match")
             return apology("Your passwords don't match", 403)
         # if password checks out
         else:
-            print("validated")
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, generate_password_hash(password))
             return redirect("/login")
     else:
