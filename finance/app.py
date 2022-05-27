@@ -63,7 +63,7 @@ def index():
                     )
 
     cash_dict = db.execute("SELECT cash FROM users WHERE id = (?)", session["user_id"])
-    cash_balance = cash_dict[0]["cash"]
+    cash_balance = round(cash_dict[0]["cash"], 2)
 
     # cash balance
     # grand total
