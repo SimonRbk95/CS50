@@ -17,18 +17,5 @@ CREATE TABLE portfolio(
 
 
 
-   purchase_price INTEGER NOT NULL,
-   purchase_date INTEGER NOT NULL,
-
-       List = []
-    db.execute("SELECT symbol, SUM(quantity) AS 'Total' FROM users WHERE user_id = 1 GROUP BY symbol")
-    # stocks owned dictionary:
-        # symbol
-        # quantity
-        # current price
-        # total value of the shares owned
-
-    # cash balance
-    # grand total
-
-    return render_template("index.html", #TODO)
+ALTER TABLE portfolio
+  ADD quantity_sold INTEGER NOT NULL
