@@ -239,7 +239,6 @@ def sell():
         elif number <= 0:
             return apology("Invalid number. Number must be a positive integer", 403)
         # check if user owns the stock and if number is less or equal than quantity
-
         elif quantity == None:
             return apology(f"Invalid entry. You don't own any '{symbol}' stock.", 403)
 
