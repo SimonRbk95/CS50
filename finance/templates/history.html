@@ -20,8 +20,11 @@
         <th scope="row">{{t["symbol"]}}</th>
         <td>{{abs(t["quantity"])}}</td>
         <td>{{t["price"]}}</td>
-        {% if t["value"] }
-        <td>{{t["value"]}}</td>
+        {% if t["value"] > 0}
+        <td style="color: green">{{t["value"]}}</td>
+        {% else %}
+        <td style="color: red">-{{t["value"]}}</td>
+        {% endif }
       </tr>
     {% endfor %}
     </tbody>
@@ -32,5 +35,4 @@
     <h5>Cash Balance:</h3>
     <p>${{cash_balance}}</p>
   </div>
-
 {% endblock %}
