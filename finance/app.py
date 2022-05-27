@@ -234,7 +234,9 @@ def sell():
             apology("symbol does not exist", 403)
         if number >= 0:
             apology("invalid number", 403)
-        if number > 
+
+        # check if number is less or equal than quantity
+        if number >
 
         # user db stock data
         stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) AND symbol = (?)", session["user_id"], symbol)
