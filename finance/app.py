@@ -187,7 +187,7 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        password_repeat = request.form.get("confirmation")
+        confirmation = request.form.get("confirmation")
         # if username already exsits
         if db.execute("SELECT username FROM users WHERE username = %s", (username, )):
             # appropriate apology message
@@ -208,7 +208,7 @@ def register():
         if not (pCounter >= 1 and dCounter >= 2):
             return apology("Your password does not contain at least 2 digits and 1 special character", 403)
         # check if the password has been repeated correctly
-        elif password != password_repeat:
+        elif password != confirmation:
             return apology("Your passwords don't match", 403)
         # if password checks out
         else:
