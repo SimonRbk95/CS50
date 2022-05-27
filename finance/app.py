@@ -221,19 +221,25 @@ def sell():
     """Sell shares of stock"""
     if request.method == "POST":
         pass
+        # submit data from user
         symbol = request.form.get("symbol")
         number = request.form.get("number")
-        quote = lookup(symbol)
-        
 
+        # current stock data
+        quote = lookup(symbol)
+
+        # validate input
         if quote == None:
             apology("symbol does not exist", 403)
         if number >= 0:
             apology("invalid number", 403)
-        if number * quote["price"]
 
-
+        # user db stock data
         stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) AND symbol = (?)", session["user_id"], symbol)
+        quantity = stocks_owned["quantity"]
+
+        # update balance after sell
+        db.execute("UPDATE ")
 
 
     else:
