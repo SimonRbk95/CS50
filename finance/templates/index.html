@@ -19,17 +19,17 @@
       </tr>
         <th scope="row">{{t["symbol"]}}</th>
         <td>{{t["quantity"]}}</td>
-        <td>{{t["price"]}}</td>
-        <td>{{t["value"]}}</td>
+        <td>{{t["price"] | usd }}</td>
+        <td>{{t["value"] | usd }}</td>
       </tr>
     {% endfor %}
     </tbody>
   </table>
   <div class="mb-3">
     <h5>Portfolio Value:</h5>
-    <p>${{total}}</p>
+    <p>{{total | usd }}</p>
     <h5>Cash Balance:</h3>
-    <p>${{cash_balance}}</p>
+    <p>{{cash_balance | usd }}</p>
   </div>
 
 {% endblock %}
