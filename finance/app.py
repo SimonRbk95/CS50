@@ -58,18 +58,18 @@ def index():
                         "symbol": stock["symbol"],
                         "quantity": stock["quantity"],
                         "price": quote["price"],
-                        "value": round(stock["quantity"]*quote["price"], 2)
+                        "value": stock["quantity"]*quote["price"],
                         }
                     )
 
     cash_dict = db.execute("SELECT cash FROM users WHERE id = (?)", session["user_id"])
-    cash_balance = round(cash_dict[0]["cash"], 2)
+    cash_balance = cash_dict[0]["cash"]
 
     # cash balance
     # grand total
     return render_template("index.html",
                             table = table,
-                            total = round(total, 2),
+                            total = total, 2,
                             cash_balance = cash_balance)
 
 
