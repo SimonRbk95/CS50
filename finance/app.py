@@ -178,7 +178,7 @@ def quote():
         if quote == None:
             return apology("Inavlid stock symbol", 400)
         else:
-            return render_template("quoted.html", quote = quote)
+            return render_template("quoted.html", quote=quote)
     else:
         return render_template("quote.html")
 
