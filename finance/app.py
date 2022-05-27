@@ -236,14 +236,14 @@ def sell():
         # validate input data
         if quote == None:
             return apology("symbol does not exist", 403)
-        elif number <= 0 or not is_integer(number):
+        elif number <= 0:
             return apology("Invalid number. Number must be a positive integer", 403)
         # check if number is less or equal than quantity
         elif number > quantity:
             return apology("Invalid number. You can't sell more than you own.", 403)
 
         # record the transacation
-        db.execute("INSERT INTO portfolio (user_id, quantity, price, symbol, purchase) VALUES (?, ?, ?, ?)", session["user_id"], -(number), price, symbol, 0)
+        db.execute("INSERT INTO portfolio (user_id, quantity, price, symbol, purchase) VALUES (?, ?, ?, ?, ?)", session["user_id"], -(number), price, symbol, 0)
         db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", price*quantity, session["user_id"])
 
         return redirect("/")
