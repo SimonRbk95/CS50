@@ -48,7 +48,7 @@ def index():
     total = 0
 
     # dictionary with stocks and total quantites owned
-    stocks_owned = db.execute("SELECT symbol, SUM(SELECT quantity FROM portfolio WHERE quantity > 0) AS 'quantity' FROM portfolio WHERE user_id = (?) GROUP BY symbol", session["user_id"])
+    stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) GROUP BY symbol", session["user_id"])
 
     for stock in stocks_owned:
         quote = lookup(stock["symbol"])
