@@ -173,7 +173,7 @@ def quote():
     """Get stock quote."""
     if request.method == "POST":
         quote = lookup(request.form.get("symbol"))
-        if quote:
+        if quote not None:
             return render_template("quoted.html", quote = quote)
         else:
             return apology("Inavlid stock symbol", 400)
@@ -198,7 +198,7 @@ def register():
         dCounter = 0
         # require that the password be at least 8 characters long
         if len(password) < 8:
-            return apology("The password is too short", 40)
+            return apology("The password is too short", 400)
         for char in password:
             if char in string.punctuation:
                 pCounter += 1
@@ -206,7 +206,7 @@ def register():
                 dCounter += 1
         # require that the password include at least 2 digits and 1 special character
         if not (pCounter >= 1 and dCounter >= 2):
-            return apology("Your password does not contain at least 2 digits and 1 special character", 403)
+            return apology("Your password does not contain at least 2 digits and 1 special character", 400)
         # check if the password has been repeated correctly
         elif password != confirmation:
             return apology("Your passwords don't match", 400)
