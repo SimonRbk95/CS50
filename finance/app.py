@@ -78,13 +78,17 @@ def index():
 def buy():
     if request.method == "POST":
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
         quote = lookup(symbol)
+
+        try:
+            shares = int(request.form.get("shares"))
+        except:
+            apology("shares must be positive integers.", 400)
 
         if quote == None:
             return apology("This stock symbol does not exist.", 400)
-        elif shares <= 0 or not is_integer(shares):
-            return apology("shares of stocks to be purchased must be positive integers.", 400)
+        elif shares <= 0:
+            return apology("shares of stocks to be purchased must be positive.", 400)
 
         # look up prices
         price = quote["price"]
