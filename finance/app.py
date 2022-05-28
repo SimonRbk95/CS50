@@ -224,8 +224,6 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    # shares owned to be displayed in drop down menu
-    stocks_owned = db.execute("SELECT DISTINCT symbol FROM portfolio WHERE user_id = (?)", session["user_id"])
 
     if request.method == "POST":
         pass
@@ -247,12 +245,12 @@ def sell():
 
         # validate input data
         if quote == None:
-            return apology("symbol does not exist", 403)
+            return apology("symbol does not exist", 400)
         elif number <= 0:
             return apology("Invalid number. Number must be a positive integer", 400)
         # check if user owns the stock and if number is less or equal than quantity
         elif quantity == None:
-            return apology(f"Invalid entry. You don't own any '{symbol}' stock.", 403)
+            return apology(f"Invalid entry. You don't own any '{symbol}' stock.", 400)
 
         elif number > quantity:
             return apology("Invalid number. You can't sell more than you own.", 400)
@@ -265,6 +263,8 @@ def sell():
         return redirect("/history")
 
     else:
+        # shares owned to be displayed in drop down menu
+        stocks_owned = db.execute("SELECT DISTINCT symbol FROM portfolio WHERE user_id = (?)", session["user_id"])
         return render_template("sell.html", symbols=stocks_owned)
 
 
