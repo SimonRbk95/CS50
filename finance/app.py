@@ -231,7 +231,11 @@ def sell():
         pass
         # submitted data by user
         symbol = request.form.get("symbol")
-        number = int(request.form.get("number"))
+
+        try:
+            number = int(request.form.get("number"))
+        except:
+            return apology("Invalid entry.", 400)
 
         # current stock data
         quote = lookup(symbol)
