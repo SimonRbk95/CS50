@@ -233,7 +233,7 @@ def sell():
         symbol = request.form.get("symbol")
 
         try:
-            number = int(request.form.get("number"))
+            number = int(request.form.get("shares"))
         except:
             return apology("Invalid entry.", 400)
 
