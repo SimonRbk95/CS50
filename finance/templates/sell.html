@@ -12,10 +12,9 @@
         <label>Choose a symbol:</label>
 
         <select name="symbol" id="symbols">
-        <option value="AAPL">AAPL</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+        {% for s in symbols_owned %}
+        <option value="{{  }}">{{  }}</option>
+        {% endfor %}
         </select>
     </div>
 
