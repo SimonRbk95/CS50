@@ -260,7 +260,7 @@ def sell():
         # update the user's cash balance
         db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", price*quantity, session["user_id"])
 
-        return redirect("/history")
+        return redirect("/")
 
     else:
         # shares owned to be displayed in drop down menu
