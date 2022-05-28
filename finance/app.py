@@ -55,11 +55,10 @@ def index():
         quote = lookup(stock["symbol"])
         total += quote["price"]*stock["quantity"]
         table.append({
-                    "symbol": stock["symbol"],
-                    "quantity": stock["quantity"],
-                    "price": quote["price"],
-                    "value": stock["quantity"]*quote["price"],
-                    })
+            "symbol": stock["symbol"],
+            "quantity": stock["quantity"],
+            "price": quote["price"],
+            "value": stock["quantity"]*quote["price"]})
 
     cash_dict = db.execute("SELECT cash FROM users WHERE id = (?)", session["user_id"])
     cash_balance = cash_dict[0]["cash"]
@@ -98,7 +97,8 @@ def buy():
             return apology("Not enough money", 403)
         # insert into the table:
         else:
-            db.execute("INSERT INTO portfolio (user_id, symbol, quantity, price) VALUES(?, ?, ?, ?)", session["user_id"], symbol, shares, price)
+            db.execute("INSERT INTO portfolio (user_id, symbol, quantity, price) VALUES(?, ?, ?, ?)",
+                       session["user_id"], symbol, shares, price)
             # adjust user's budget
             db.execute("UPDATE users SET cash = cash - (?) WHERE id = (?)", purchase, session["user_id"])
         return redirect("/")
