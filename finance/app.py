@@ -262,7 +262,7 @@ def sell():
         # update the user's cash balance
         db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", price*quantity, session["user_id"])
 
-        return redirect("/")
+        return redirect("/history")
 
     else:
         return render_template("sell.html", symbols=stocks_owned)
