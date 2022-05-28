@@ -224,6 +224,9 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
+    # shares owned to be displayed in drop down menu
+    stocks_owned = db.execute("SELECT DISTINCT symbol FROM portfolio WHERE user_id = (?)", seesion["user_id"])
+
     if request.method == "POST":
         pass
         # submitted data by user
@@ -258,7 +261,7 @@ def sell():
         return redirect("/")
 
     else:
-        return render_template("sell.html")
+        return render_template("sell.html", symbols=stocks_owned)
 
 
 
