@@ -48,29 +48,25 @@ def index():
     total = 0
 
     # dictionary with stocks and total quantites owned
-    stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) GROUP BY symbol", session["user_id"])
+    stocks_owned = db.execute(
+        "SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) GROUP BY symbol", session["user_id"])
 
     for stock in stocks_owned:
         quote = lookup(stock["symbol"])
         total += quote["price"]*stock["quantity"]
-        table.append(
-                        {
-                        "symbol": stock["symbol"],
-                        "quantity": stock["quantity"],
-                        "price": quote["price"],
-                        "value": stock["quantity"]*quote["price"],
-                        }
-                    )
+        table.append({
+                    "symbol": stock["symbol"],
+                    "quantity": stock["quantity"],
+                    "price": quote["price"],
+                    "value": stock["quantity"]*quote["price"],
+                    })
 
     cash_dict = db.execute("SELECT cash FROM users WHERE id = (?)", session["user_id"])
     cash_balance = cash_dict[0]["cash"]
 
     # cash balance
     # grand total
-    return render_template("index.html",
-                            table = table,
-                            total = total,
-                            cash_balance = cash_balance)
+    return render_template("index.html", table=table, total=total, cash_balance=cash_balance)
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -102,11 +98,9 @@ def buy():
             return apology("Not enough money", 403)
         # insert into the table:
         else:
-            db.execute("INSERT INTO portfolio (user_id, symbol, quantity, price) VALUES(?, ?, ?, ?)",
-                        session["user_id"], symbol, shares, price)
+            db.execute("INSERT INTO portfolio (user_id, symbol, quantity, price) VALUES(?, ?, ?, ?)", session["user_id"], symbol, shares, price)
             # adjust user's budget
-            db.execute("UPDATE users SET cash = cash - (?) WHERE id = (?)",
-                        purchase, session["user_id"])
+            db.execute("UPDATE users SET cash = cash - (?) WHERE id = (?)", purchase, session["user_id"])
         return redirect("/")
     else:
         return render_template("buy.html")
@@ -119,7 +113,7 @@ def history():
     transactions = db.execute("SELECT symbol, quantity, price, Timestamp FROM portfolio WHERE user_id = (?)", session["user_id"])
     if transactions == None:
         return apology("No transactions yet.", 403)
-    return render_template("history.html", transactions = transactions)
+    return render_template("history.html", transactions=transactions)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -240,7 +234,9 @@ def sell():
         price = quote["price"]
 
         # user db stock data
-        stocks_owned = db.execute("SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) AND symbol = (?)", session["user_id"], symbol)
+        stocks_owned = db.execute(
+            "SELECT symbol, SUM(quantity) AS 'quantity' FROM portfolio WHERE user_id = (?) AND symbol = (?)", session["user_id"], symbol)
+
         quantity = stocks_owned[0]["quantity"]
 
         # validate input data
@@ -256,7 +252,8 @@ def sell():
             return apology("Invalid number. You can't sell more than you own.", 400)
 
         # record the transacation
-        db.execute("INSERT INTO portfolio (user_id, quantity, price, symbol) VALUES (?, ?, ?, ?)", session["user_id"], -(number), price, symbol)
+        db.execute("INSERT INTO portfolio (user_id, quantity, price, symbol) VALUES (?, ?, ?, ?)",
+                   session["user_id"], -(number), price, symbol)
         # update the user's cash balance
         db.execute("UPDATE users SET cash = cash + (?) WHERE id = (?)", price*number, session["user_id"])
 
@@ -266,14 +263,4 @@ def sell():
         # shares owned to be displayed in drop down menu
         stocks_owned = db.execute("SELECT DISTINCT symbol FROM portfolio WHERE user_id = (?)", session["user_id"])
         return render_template("sell.html", symbols=stocks_owned)
-
-
-
-
-
-
-
-
-
-
 
