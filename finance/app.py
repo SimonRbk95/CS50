@@ -225,7 +225,7 @@ def register():
 def sell():
     """Sell shares of stock"""
     # shares owned to be displayed in drop down menu
-    stocks_owned = db.execute("SELECT DISTINCT symbol FROM portfolio WHERE user_id = (?)", seesion["user_id"])
+    stocks_owned = db.execute("SELECT DISTINCT symbol FROM portfolio WHERE user_id = (?)", session["user_id"])
 
     if request.method == "POST":
         pass
