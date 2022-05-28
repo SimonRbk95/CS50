@@ -249,13 +249,13 @@ def sell():
         if quote == None:
             return apology("symbol does not exist", 403)
         elif number <= 0:
-            return apology("Invalid number. Number must be a positive integer", 403)
+            return apology("Invalid number. Number must be a positive integer", 400)
         # check if user owns the stock and if number is less or equal than quantity
         elif quantity == None:
             return apology(f"Invalid entry. You don't own any '{symbol}' stock.", 403)
 
         elif number > quantity:
-            return apology("Invalid number. You can't sell more than you own.", 403)
+            return apology("Invalid number. You can't sell more than you own.", 400)
 
         # record the transacation
         db.execute("INSERT INTO portfolio (user_id, quantity, price, symbol) VALUES (?, ?, ?, ?)", session["user_id"], -(number), price, symbol)
