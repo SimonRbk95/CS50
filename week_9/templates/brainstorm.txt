@@ -1,2 +1,3 @@
 10 Questions
 personlized questions:
+Age, profession, digital_level, 
