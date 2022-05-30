@@ -16,6 +16,7 @@ country,
 Age,
 profession,
 perceived d-level,
+calculated d-level,
 creation date
 
 online-materials;
