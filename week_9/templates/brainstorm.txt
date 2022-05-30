@@ -1,7 +1,6 @@
 10 Questions
 personalized questions/ info:
-country, Age, profession, preceived digital_level,
-
+country, Age, profession, perceived digital_level,
 assess digital level & goals
 
 fetch personalized course suggestions via Udacity, coursera, youtube, API
