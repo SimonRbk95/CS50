@@ -9,7 +9,17 @@ distinguish between:
 certified courses to boost CV
 free of cost
 
+DB:
 
+users:
+country,
+Age,
+profession,
+perceived d-level,
+creation date
+
+online-materials;
+blog articles
 
 
 suggest blog articles
