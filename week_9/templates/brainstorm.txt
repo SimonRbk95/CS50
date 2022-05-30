@@ -1,3 +1,4 @@
 10 Questions
-personlized questions:
-Age, profession, digital_level, 
+personalized questions/ info:
+country, Age, profession, preceived digital_level,
+
