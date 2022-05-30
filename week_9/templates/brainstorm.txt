@@ -19,7 +19,9 @@ perceived d-level,
 creation date
 
 online-materials;
-blog articles
+type (.ie. blog article)
+link
+
 
 
 suggest blog articles
