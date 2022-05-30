@@ -4,7 +4,7 @@ country, Age, profession, preceived digital_level,
 
 assess digital level & goals
 
-fetch course data from Udacity API, coursera, youtube, 
+fetch personalized course suggestions via Udacity, coursera, youtube, API
 
 
 other project ideas:
