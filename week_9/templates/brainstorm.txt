@@ -5,6 +5,14 @@ country, Age, profession, preceived digital_level,
 assess digital level & goals
 
 fetch personalized course suggestions via Udacity, coursera, youtube, API
+
+distinguish between:
+certified courses to boost CV
+free of cost
+
+
+
+
 suggest blog articles
 
 
