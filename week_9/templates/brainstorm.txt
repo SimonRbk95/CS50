@@ -3,7 +3,7 @@ personalized questions/ info:
 country, Age, profession, perceived digital_level,
 assess digital level & goals
 
-fetch personalized course suggestions via Udacity, coursera, youtube, API
+fetch personalized course suggestions via Udacity, coursera, youtube, API, edx
 
 distinguish between:
 certified courses to boost CV
