@@ -5,6 +5,7 @@ country, Age, profession, preceived digital_level,
 assess digital level & goals
 
 fetch personalized course suggestions via Udacity, coursera, youtube, API
+suggest blog articles
 
 
 other project ideas:
