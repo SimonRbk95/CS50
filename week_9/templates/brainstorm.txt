@@ -3,3 +3,5 @@ personalized questions/ info:
 country, Age, profession, preceived digital_level,
 
 
+other project ideas:
+upload image, product info keywords, state & get ebay average price prediction
