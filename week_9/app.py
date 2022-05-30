@@ -2,7 +2,7 @@ import os
 import string
 
 from flask_session import Session
-from flask import Flask, render_template, request
+from flask import Flask, flash, redirect, render_template, request, session
 from cs50 import SQL
 
 app = Flask(__name__)
