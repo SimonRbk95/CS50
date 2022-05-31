@@ -21,6 +21,6 @@ def index():
 def about():
     return render_template("about.html")
 
-@app.route("/q1")
-def index():
-    return render_template("q1")
+@app.route("/q1", methods=["GET", "POST"])
+def q1():
+    return render_template("q1.html")
