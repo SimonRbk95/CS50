@@ -24,6 +24,6 @@ def about():
 
 @app.route("/q1", methods=["GET", "POST"])
 def q1():
-    age = request.form.get("age")
+    age = request.args.get("age")
     print(age)
     return render_template("q1.html")
