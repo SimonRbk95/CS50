@@ -6,12 +6,12 @@
 
 {% block main %}
 
-<form action="/q1" method="post" >
-    <div class="form-group">
+<form action="/q1" method="get" >
+    <div class="mb-3 form-group">
       <label for="exampleFormControlInput1">Age</label>
       <input type="text" class="form-control" id="exampleFormControlInput1" name = "age" placeholder="27">
     </div>
-    <div class="form-group">
+    <div class="mb-3 form-group">
       <label for="exampleFormControlSelect1">Example select</label>
       <select class="form-control" id="exampleFormControlSelect1" name="industry">
         <option>1</option>
@@ -21,7 +21,7 @@
         <option>5</option>
       </select>
     </div>
-    <div class="form-group">
+    <div class="mb-3 form-group">
       <label for="exampleFormControlSelect2">Example multiple select</label>
       <select multiple class="form-control" id="exampleFormControlSelect2" name="level">
         <option>1</option>
@@ -31,7 +31,7 @@
         <option>5</option>
       </select>
     </div>
-    <button class="btn btn-primary" type="submit">Next Question</button>>
+    <button class="btn btn-primary" type="submit">Next Question</button>
   </form>
 
 {% endblock %}
