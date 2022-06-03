@@ -41,5 +41,7 @@ def results():
         # based on input display Top 5 edx courses
 
         # based on input display Top5 udacity courses
+        # based on input display Top 5 coursera courses
+        # differentiate between professional certificate, specialization, standalone
 
         # based on input display Top 5 youtube Videos
