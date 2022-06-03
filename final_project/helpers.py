@@ -9,7 +9,7 @@ def read_csv(csv_file):
     with open(csv_file, new_line= "") as file:
         reader = csv.DictReader(file, delimiter="\t")
         for row in reader:
-            contents.append(row)
+            contents.append(dict(row))
         return contents
 
 
