@@ -18,6 +18,8 @@ app.static_folder = 'static'
 @app.route("/")
 def index():
     contents = read_csv("static/coursera_db")
+    for type in contents:
+        print(type["Product Type"])
     return render_template("index.html")
 
 
