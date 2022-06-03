@@ -3,7 +3,6 @@ import urllib.parse
 import csv
 
 from flask import redirect, render_template, request, session
-from functools import wraps
 
 def read_csv(csv_file):
     contents = []
@@ -12,4 +11,5 @@ def read_csv(csv_file):
         for row in reader:
             contents.append(row)
         return contents
+
 
