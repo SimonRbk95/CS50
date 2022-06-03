@@ -18,7 +18,6 @@ app.static_folder = 'static'
 @app.route("/")
 def index():
     contents = read_csv("static/coursera_db")
-    print(contents[0])
     return render_template("index.html")
 
 
