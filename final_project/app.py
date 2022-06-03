@@ -5,6 +5,8 @@ from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session
 from cs50 import SQL
 
+from helpers import read_csv
+
 app = Flask(__name__)
 
 app.config["SESSION_PERMANENT"] = False
@@ -15,6 +17,8 @@ app.static_folder = 'static'
 
 @app.route("/")
 def index():
+    contents = read_csv("static/coursera_db")
+    print(contents)
     return render_template("index.html")
 
 
@@ -30,9 +34,10 @@ def q1():
     return render_template("q1.html")
 
 @app.route("/result")
-    def results():
-        # based on input display Top 5 coursera courses
-        # differentiate between professional certificate, specialization, standalone
+def results():
+    # based on input display Top 5 coursera courses
+    # differentiate between professional certificate, specialization, standalone
+    pass
 
         # based on input display Top 5 edx courses
 
