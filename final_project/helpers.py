@@ -5,13 +5,11 @@ import csv
 from flask import redirect, render_template, request, session
 from functools import wraps
 
-def read_file():
-    coursera_100 = []
-    with open("") as file:
+def read_csv(csv_file):
+    contents = []
+    with open(csv_file) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            coursera_100.append(row)
-        return coursera_100
+            contents.append(row)
+        return contents
 
-def read_txt():
-    
