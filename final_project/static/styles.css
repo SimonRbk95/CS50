@@ -38,6 +38,14 @@ body {
     color: white;
 }
 
+.bd-example {
+    --bd-example-padding: 1rem;
+    position:relative;
+    padding:var(--bd-example-padding);
+    margin:0 -1.5rem;
+    border:solid #dee2e6;
+    border-width:1px 0
+}
 
 /*--- fixed height will get rid of the flickering but requires specification in all media queries---*/
 .carousel-inner img {
