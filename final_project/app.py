@@ -15,11 +15,14 @@ Session(app)
 
 app.static_folder = 'static'
 
+contents = read_csv("static/coursera_db")
+for type in contents:
+    print(type["Stock Description"])
+print("done")
+
 @app.route("/")
 def index():
-    contents = read_csv("static/coursera_db")
-    for type in contents:
-        print(type["Product Bullet Point 2"])
+
     return render_template("index.html")
 
 
