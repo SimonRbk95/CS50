@@ -38,11 +38,10 @@ body {
     color: white;
 }
 
-.bd-example {
-    
-    max-height: 300px;
-    max-width:400px;
-
+.scrollspy-example {
+    position: relative;
+    height: 200px;
+    overflow: auto;
 }
 
 /*--- fixed height will get rid of the flickering but requires specification in all media queries---*/
