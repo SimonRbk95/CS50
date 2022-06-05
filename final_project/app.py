@@ -17,7 +17,7 @@ app.static_folder = 'static'
 
 contents = read_csv("static/coursera_db")
 for type in contents:
-    print(type["Product Description"])
+    print(type["Image URL"])
 print("done")
 
 @app.route("/")
