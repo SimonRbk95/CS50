@@ -41,7 +41,7 @@ body {
 .scrollspy-example {
     position: relative;
     height: 200px;
-    overflow: auto;
+    overflow-y: scroll;
 }
 
 /*--- fixed height will get rid of the flickering but requires specification in all media queries---*/
