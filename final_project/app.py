@@ -17,7 +17,12 @@ app.static_folder = 'static'
 
 contents = read_csv("static/coursera_db")
 for type in contents:
-    print(type["Stock Description"])
+    print(type["Product Bullet Point 1"])
+    print(type["Product Bullet Point 2"])
+    print(type["Product Bullet Point 3"])
+    print(type["Product Bullet Point 4"])
+    print(type["Product Bullet Point 5"])
+
 print("done")
 
 @app.route("/")
