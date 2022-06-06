@@ -49,7 +49,10 @@ html::-webkit-scrollbar {
     color: white;
 }
 
-
+.img-thumbnail{
+    margin-right: 5%;
+    margin-bottom: 20%;
+}
 
 /*--- fixed height will get rid of the flickering but requires specification in all media queries---*/
 .carousel-inner img {
