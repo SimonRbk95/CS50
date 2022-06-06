@@ -7,6 +7,7 @@ body {
     font-family: "Arial", sans-serif;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
+    overflow: -moz-scrollbars-none;
     overflow-y: scroll;
 }
 
