@@ -111,8 +111,10 @@ body {
     background-color: black;
 }
 
-#my-badge {
+.profile-badge {
     margin-top: 2%;
+    margin-left: 70%;
+    margin-right: 0;
     margin-bottom: 3%;
     text-align: center;
 }
