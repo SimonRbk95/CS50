@@ -55,8 +55,6 @@ html::-webkit-scrollbar {
 }
 
 .boxlayout {
-
-
     display: inline-block;
     vertical-align: top;
 }
