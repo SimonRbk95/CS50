@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
             window.location.href = '/q1';
             });
         }
-    elem = document.querySelector('.profile-badge');
+    elem = document.querySelector('div.profile-badge');
     elem.style.marginRight = 'auto';
     elem.style.marginLeft = 'auto';
     });
