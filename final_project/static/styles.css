@@ -5,13 +5,16 @@ body {
     font-weight: 400;;
     margin: 0;
     font-family: "Arial", sans-serif;
+}
+
+html{
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow: -moz-scrollbars-none;
     overflow-y: scroll;
 }
 
-  body::-webkit-scrollbar {
+  html::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
   }
 
