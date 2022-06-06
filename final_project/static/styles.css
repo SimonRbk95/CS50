@@ -111,12 +111,10 @@ body {
     background-color: black;
 }
 
+/*-- this can only be used to center the badge via JS once the DOM is fully loaded because many divs get imported--*/
 .profile-badge {
-    margin-top: 2%;
-    margin-left: 70%;
-    margin-right: 0;
-    margin-bottom: 3%;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .box {
