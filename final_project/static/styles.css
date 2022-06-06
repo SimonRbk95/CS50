@@ -51,7 +51,14 @@ html::-webkit-scrollbar {
 
 .img-thumbnail{
     margin-right: 5%;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
+}
+
+.boxlayout {
+
+
+    display: inline-block;
+    vertical-align: top;
 }
 
 /*--- fixed height will get rid of the flickering but requires specification in all media queries---*/
