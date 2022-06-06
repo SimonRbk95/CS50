@@ -47,7 +47,7 @@ main{
 /*--- fixed height will get rid of the flickering but requires specification in all media queries---*/
 .carousel-inner img {
     width: 100%;
-    max-height: 90%;
+    max-height: 100%;
 }
 
 
@@ -80,14 +80,14 @@ main{
     animation: changeFilter 6s infinite;
     background-image: url('/images/background_1.png');
     width: 100%;
-    max-height: 90%;
+    max-height: 100%;
 }
 
 .darkened-image-2 {
     animation: changeFilter 6s infinite;
     background-image: url('/images/background_2.png');
     width: 100%;
-    max-height: 90%;
+    max-height: 100%;
 }
 
 /*--- footer customization ---*/
