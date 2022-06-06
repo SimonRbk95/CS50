@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
             });
         }
     let badge = document.querySelectorALL(".profile-badge");
+    badge.
     });
 
 
