@@ -38,7 +38,7 @@ body {
     color: white;
 }
 
-.scrollspy-example {
+/*.scrollspy-example {
     position: relative;
     height: 200px;
     overflow: auto;
