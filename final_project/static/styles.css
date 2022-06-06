@@ -38,11 +38,7 @@ body {
     color: white;
 }
 
-/*.scrollspy-example {
-    position: relative;
-    height: 200px;
-    overflow: auto;
-}
+
 
 /*--- fixed height will get rid of the flickering but requires specification in all media queries---*/
 .carousel-inner img {
