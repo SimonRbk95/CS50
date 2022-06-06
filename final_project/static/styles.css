@@ -7,7 +7,7 @@ body {
     font-family: "Arial", sans-serif;
 }
 
-html{
+html {
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow: -moz-scrollbars-none;
@@ -16,9 +16,7 @@ html{
 
   html::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
-  }
-
-
+}
 
 /*--- carousel customization ---*/
 .sizingText-div-1 {
