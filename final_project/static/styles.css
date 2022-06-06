@@ -5,12 +5,10 @@ body {
     font-weight: 400;;
     margin: 0;
     font-family: "Arial", sans-serif;
-    width: 100%;
+
 }
 
-main{
-    width: 100%;
-}
+
 
 /*--- carousel customization ---*/
 .sizingText-div-1 {
@@ -48,7 +46,7 @@ main{
 /*--- fixed height will get rid of the flickering but requires specification in all media queries---*/
 .carousel-inner img {
     width: 100%;
-    max-height: 100%;
+    max-height: 100vh;
 }
 
 
