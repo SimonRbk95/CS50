@@ -7,6 +7,10 @@ body {
     font-family: "Arial", sans-serif;
 }
 
+main{
+    width: 100%;
+}
+
 /*--- carousel customization ---*/
 .sizingText-div-1 {
     position: absolute;
