@@ -6,11 +6,9 @@ document.addEventListener("DOMContentLoaded", function(){
             window.location.href = '/q1';
             });
         }
-    function setMargin() {
-        elem = document.querySelector('.profile-badge');
-        elem.style.marginRight = 'auto';
-        elem.style.marginLeft = 'auto';
-    }
+    elem = document.querySelector('.profile-badge');
+    elem.style.marginRight = 'auto';
+    elem.style.marginLeft = 'auto';
     });
 
 
