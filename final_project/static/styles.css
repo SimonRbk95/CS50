@@ -5,18 +5,10 @@ body {
     font-weight: 400;;
     margin: 0;
     font-family: "Arial", sans-serif;
-
+    overflow: hidden; /* Hide scrollbars */
+    
 }
 
-.non {
-    overflow-y: scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-}
-.container::-webkit-scrollbar { /* WebKit */
-    width: 0;
-    height: 0;
-}
 
 
 
