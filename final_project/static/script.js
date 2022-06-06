@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", function(){
             window.location.href = '/q1';
             });
         }
-    document.querySelectorAll(".profile-badge").badge.style.marginLeft = "auto";
-    badge.style.marginRight = "auto";
+    let style = document.createElement('style');
+    document.head.appendChild(style);
+    style.sheet.insertRule('.profile-badge {margin-left: auto; margin-right: auto}');
     });
 
 
