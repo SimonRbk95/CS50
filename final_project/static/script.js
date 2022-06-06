@@ -8,3 +8,6 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
+let scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#scrollSpyList'
+})
