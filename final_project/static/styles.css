@@ -65,7 +65,7 @@ html::-webkit-scrollbar {
     max-height: 100vh;
 }
 
-li{
+ul{
     style: none;
 }
 /*--- glow effect ---*/
