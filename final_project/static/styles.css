@@ -65,6 +65,15 @@ html::-webkit-scrollbar {
     max-height: 100vh;
 }
 
+#container-select {
+    margin-top: 10%;
+}
+
+#container-submit {
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
 table {
     border-collapse: collapse;
 }
