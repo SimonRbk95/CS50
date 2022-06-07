@@ -65,7 +65,9 @@ html::-webkit-scrollbar {
     max-height: 100vh;
 }
 
-
+li{
+    style: none;
+}
 /*--- glow effect ---*/
 @keyframes changeFilter {
 0% {
