@@ -34,5 +34,10 @@ suggest blog articles
 other project ideas:
 upload image, product info keywords, state & get ebay average price prediction
 
+Interests
+ML
+...
+
+Goals
 
 
