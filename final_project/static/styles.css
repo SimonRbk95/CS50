@@ -65,9 +65,9 @@ html::-webkit-scrollbar {
     max-height: 100vh;
 }
 
-ul{
-    list-style: none;
-}
+table {
+    border-spacing: 10px;
+  }
 /*--- glow effect ---*/
 @keyframes changeFilter {
 0% {
