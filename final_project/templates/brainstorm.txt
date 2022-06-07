@@ -41,7 +41,7 @@ less
 more
 very
 
-How comfortable are with understanding basic technologies, such as cloud or IoT?
+How comfortable are you with understanding basic technologies, such as cloud or IoT?
 less
 more
 very
