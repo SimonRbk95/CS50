@@ -66,8 +66,10 @@ html::-webkit-scrollbar {
 }
 
 table {
-    border-spacing: 10px;
+    border-spacing: 20px;
+    border-collapse: separate;
   }
+
 /*--- glow effect ---*/
 @keyframes changeFilter {
 0% {
