@@ -332,6 +332,12 @@ footer {
     background-color: black;
 }
 
+@keyframes col {
+     0% {background-color:red}
+    50% {background-color:green}
+    100% {background-color:blue}
+}
+
 div.test:hover {
     background-color: #4b4848;
     -webkit-transition: background-color 1000ms linear;
