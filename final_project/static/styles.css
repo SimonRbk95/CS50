@@ -71,7 +71,7 @@ table {
 
 td{
     padding-right: 10px;
-    max
+    max-width: 150px;
 }
 
 /*--- glow effect ---*/
