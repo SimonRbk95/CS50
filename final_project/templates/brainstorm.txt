@@ -36,12 +36,12 @@ upload image, product info keywords, state & get ebay average price prediction
 
 
 
-How comfortable are you with computer science & programming?
+How comfortable are you with programming?
 less
 more
 very
 
-How comfortable are you with understanding basic technologies, such as cloud or IoT?
+How comfortable are you with basic technologies, such as the internet, cloud, or IoT?
 less
 more
 very
