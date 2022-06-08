@@ -10,9 +10,12 @@ document.addEventListener("DOMContentLoaded", function(){
     elem.style.marginRight = 'auto';
     elem.style.marginLeft = 'auto';
 
-    $('.ui.dropdown')
-        .dropdown()
-;
+    document.querySelector('.select-field').addEventListener('click',()=>{
+        document.querySelector('.list').classList.toggle('show');
+        document.querySelector('.down-arrow').classList.toggle('rotate180');
+
+    });
+
 });
 
 
