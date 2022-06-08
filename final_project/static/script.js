@@ -18,7 +18,7 @@ $('.selectpicker').selectpicker({
 
 document.getElementById('select_1').addEventListener('change', function() {
 
-    if ($("#select_1 :selected").length > 2){
+    if ($("#select_1 :selected").length > 3){
       $('#select_1').selectpicker('deselectAll');
     }
   });
