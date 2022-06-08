@@ -16,6 +16,8 @@ $('.selectpicker').selectpicker({
     size: 6
 });
 
+
+
 $('#btnDeselect').on('click',function(){
   $('#select_1').selectpicker('deselectAll');
 });
