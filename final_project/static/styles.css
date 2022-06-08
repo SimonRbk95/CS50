@@ -345,34 +345,46 @@ div.test:hover {
     transition: background-color 1000ms linear;
 }
 
-.checkbox-menu li label {
+input{
+    outline: none;
+    border: none;
+}
+.multi-selector{
+    width: max-content;
+}
+.select-field{
+    border: 1px solid rgb(187, 187, 187);
+}
+.select-field,.task,.list{
+    width: 100%;
+    background-color: white;
+    padding: 0.3rem;
+}
+.list{
+    box-shadow: 0 30px 60px rgb(0,0,0,0.2);
+    display: none;
+}
+.down-arrow{
+    font-size: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.task{
     display: block;
-    padding: 3px 10px;
-    clear: both;
-    font-weight: normal;
-    line-height: 1.42857143;
-    color: #333;
-    white-space: nowrap;
-    margin:0;
-    transition: background-color .4s ease;
+    padding-left: 0;
 }
-.checkbox-menu li input {
-    margin: 0px 5px;
-    top: 2px;
-    position: relative;
+.task span{
+    float: right;
+    font-size: 0.6rem;
+    padding-top: 6px;
 }
-
-.checkbox-menu li.active label {
-    background-color: #cbcbff;
-    font-weight:bold;
+.task:hover{
+    background-color: aliceblue;
 }
-
-.checkbox-menu li label:hover,
-.checkbox-menu li label:focus {
-    background-color: #f5f5f5;
+.show{
+    display: block;
 }
-
-.checkbox-menu li.active label:hover,
-.checkbox-menu li.active label:focus {
-    background-color: #b8b8ff;
+.rotate180{
+    transform: rotate(-60deg);
 }
