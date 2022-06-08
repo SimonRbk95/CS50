@@ -10,12 +10,9 @@ document.addEventListener("DOMContentLoaded", function(){
     elem.style.marginRight = 'auto';
     elem.style.marginLeft = 'auto';
 
-    $('#langOpt').multiselect({
-        columns: 1,
-        placeholder: 'Select Languages',
-        search: true,
-        selectAll: true
-    });
+    $('.ui.dropdown')
+        .dropdown()
+;
 });
 
 
