@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function(){
         $(this).closest("li").toggleClass("active", this.checked);
      });
 
-    $(document).on('click', '.dropdown-menu', function (e) {
+     $(document).on('click', '.allow-focus', function (e) {
         e.stopPropagation();
-    });
+      });
 
 
 
