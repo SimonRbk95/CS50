@@ -23,6 +23,12 @@ if ($('#select_1 option:selected'.length) > 3){
 };
 
 
+let activities = document.getElementById("select_1");
+
+activities.addEventListener("click", function() {
+    let options = activities.querySelectorAll("option");
+    let count = options.length;
+
 $('#btnDeselect').on('click',function(){
   $('#select_1').selectpicker('deselectAll');
 });
