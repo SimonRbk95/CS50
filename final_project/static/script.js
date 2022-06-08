@@ -28,6 +28,10 @@ let activities = document.getElementById("select_1");
 activities.addEventListener("click", function() {
     let options = activities.querySelectorAll("option");
     let count = options.length;
+    if (options > 3){
+        $('.selectpicker option:selected').remove();
+        $('.selectpicker').selectpicker('refresh');
+    };
 
 $('#btnDeselect').on('click',function(){
   $('#select_1').selectpicker('deselectAll');
