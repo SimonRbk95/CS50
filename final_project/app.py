@@ -32,6 +32,7 @@ def about():
 
 @app.route("/q1", methods=["GET", "POST"])
 def q1():
+    request.args.
     return render_template("q1.html")
 
 @app.route("/result")
