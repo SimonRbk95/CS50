@@ -16,11 +16,6 @@ $('.selectpicker').selectpicker({
     size: 6
 });
 
-document.addEventListener()
-if ($('#select_1 option:selected'.length) > 3){
-    $('.selectpicker option:selected').remove();
-    $('.selectpicker').selectpicker('refresh');
-};
 
 
 let activities = document.getElementById("select_1");
@@ -32,6 +27,7 @@ activities.addEventListener("click", function() {
         $('.selectpicker option:selected').remove();
         $('.selectpicker').selectpicker('refresh');
     };
+});
 
 $('#btnDeselect').on('click',function(){
   $('#select_1').selectpicker('deselectAll');
