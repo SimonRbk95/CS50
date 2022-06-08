@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function(){
     elem.style.marginRight = 'auto';
     elem.style.marginLeft = 'auto';
 
-
+    $(document).on('click', '.dropdown-menu', function (e) {
+        e.stopPropagation();
+    });
 
 
 });
