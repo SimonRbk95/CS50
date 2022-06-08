@@ -16,8 +16,13 @@ $('.selectpicker').selectpicker({
 });
 
 $('#btnDeselect').on('click',function(){
-  $('.selectpicker').selectpicker('deselectAll');
+  $('.select_1').selectpicker('deselectAll');
 });
+
+$('#btnDeselect_2').on('click',function(){
+    $('#select_2').selectpicker('deselectAll');
+});
+
 
 
 
