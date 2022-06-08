@@ -30,7 +30,7 @@ def about():
 
 @app.route("/q1", methods=["GET", "POST"])
 def q1():
-    answers = request.args.get("level")
+    answers = request.args.getlist("level")
     print(answers)
     return render_template("q1.html")
 
