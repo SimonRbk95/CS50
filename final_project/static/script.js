@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", function(){
     elem.style.marginRight = 'auto';
     elem.style.marginLeft = 'auto';
 
-    $('.selectpicker').selectpicker({
-        maxOptions:3;
+
 });
 
-
+$('.selectpicker').selectpicker({
+    maxOptions: 3
+});
