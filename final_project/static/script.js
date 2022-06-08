@@ -16,7 +16,7 @@ $('.selectpicker').selectpicker({
     size: 6
 });
 
-
+document.addEventListener()
 if ($('#select_1 option:selected'.length) > 3){
     $('.selectpicker option:selected').remove();
     $('.selectpicker').selectpicker('refresh');
