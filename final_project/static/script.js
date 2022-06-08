@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function(){
     elem = document.querySelector('div.profile-badge');
     elem.style.marginRight = 'auto';
     elem.style.marginLeft = 'auto';
+
+    $(document).ready(function() {
+        $('#example-getting-started').multiselect();
     });
+});
 
 
