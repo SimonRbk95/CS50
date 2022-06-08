@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
     elem.style.marginRight = 'auto';
     elem.style.marginLeft = 'auto';
 
-
+    $('select').selectpicker();
 
 });
 
