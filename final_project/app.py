@@ -16,9 +16,7 @@ Session(app)
 app.static_folder = 'static'
 
 contents = read_csv("static/coursera_db")
-for type in contents:
-    print(type["Image URL"])
-print("done")
+# for type in contents: print(type["Image URL"]) print("done")
 
 @app.route("/")
 def index():
@@ -32,7 +30,8 @@ def about():
 
 @app.route("/q1", methods=["GET", "POST"])
 def q1():
-    request.args.
+    answers = request.args.get("level")
+    print(answers)
     return render_template("q1.html")
 
 @app.route("/result")
