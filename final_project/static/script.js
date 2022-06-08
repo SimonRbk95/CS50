@@ -10,9 +10,14 @@ document.addEventListener("DOMContentLoaded", function(){
     elem.style.marginRight = 'auto';
     elem.style.marginLeft = 'auto';
 
+    $(".checkbox-menu").on("change", "input[type='checkbox']", function() {
+        $(this).closest("li").toggleClass("active", this.checked);
+     });
+
     $(document).on('click', '.dropdown-menu', function (e) {
         e.stopPropagation();
     });
+
 
 
 });
