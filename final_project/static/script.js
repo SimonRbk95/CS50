@@ -10,14 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
     elem.style.marginRight = 'auto';
     elem.style.marginLeft = 'auto';
 });
-
-$('.selectpicker').selectpicker({
-    maxOptions: 3
-});
-
-$('#btnDeselect').on('click',function(){
-  $('.selectpicker').selectpicker('deselectAll');
-});
+;
 
 
 
