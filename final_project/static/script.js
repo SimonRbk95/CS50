@@ -9,8 +9,12 @@ document.addEventListener("DOMContentLoaded", function(){
     elem = document.querySelector('div.profile-badge');
     elem.style.marginRight = 'auto';
     elem.style.marginLeft = 'auto';
+});
 
-
+$('.selectpicker').selectpicker({
+    style: 'btn-info',
+    size: 4,
+    maxOptions: 2
 });
 
 
