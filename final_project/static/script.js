@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 $('.selectpicker').selectpicker({
-    maxOptions: 2,
+    
     size: 6
 });
 
