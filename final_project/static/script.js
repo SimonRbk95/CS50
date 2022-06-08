@@ -18,7 +18,7 @@ $('.selectpicker').selectpicker({
 
 
 
-let activities = document.getElementById("select_1");
+let activities = document.("select_1");
 
 activities.addEventListener("click", function() {
     let options = activities.querySelectorAll("option");
