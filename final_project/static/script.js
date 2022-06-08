@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
     elem.style.marginLeft = 'auto';
 
     $('.selectpicker').selectpicker({
-        maxOptions:3
+        maxOptions:3;
 });
 
 
