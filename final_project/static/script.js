@@ -16,10 +16,9 @@ $('.selectpicker').selectpicker({
     size: 6
 });
 
-document.getElementById('select_1').addEventListener('change', (e) => {
+document.getElementById('select_1').addEventListener('change', function() {
 
     if ($("#select_1 :selected").length > 2){
-      $('#select_1').selectpicker('deselectAll');
       $('#select_1').selectpicker('deselectAll');
     }
   });
