@@ -17,6 +17,11 @@ $('.selectpicker').selectpicker({
 });
 
 
+if ($('#select_1 option:selected').length; > 3){
+    $('.selectpicker option:selected').remove();
+    $('.selectpicker').selectpicker('refresh');
+}
+
 
 $('#btnDeselect').on('click',function(){
   $('#select_1').selectpicker('deselectAll');
