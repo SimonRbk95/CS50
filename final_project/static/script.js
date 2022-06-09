@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 $('.selectpicker').selectpicker({
-   maxOptions: 3,
+   // maxOptions: 3,
    size: 6
 });
 
