@@ -22,6 +22,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
   $('.selectpicker').selectpicker('mobile');
 }
 
+$("select option:selected").css('backgroundColor', '#FFFFFF');
 
 
 $('#btnDeselect').on('click',function(){
