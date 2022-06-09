@@ -14,18 +14,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 $('.selectpicker').selectpicker({
-    size: 6
+   maxOptions: 3,
+   size: 6
 });
 
-document.getElementById('select_1').addEventListener('change', function() {
-
-    if ($("#select_1 :selected").length > 3){
-      $('.selectpicker').selectpicker({
-        maxOptions: 3,
-        });
-      $('#select_1').selectpicker('deselectAll');
-    }
-  });
+//document.getElementById('select_1').addEventListener('change', function() {
+//    if ($("#select_1 :selected").length > 3){
+//      $('#select_1').selectpicker('deselectAll');
+//    }
+//  });
 
 
 
