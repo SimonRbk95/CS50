@@ -13,33 +13,34 @@
       <div class="col-12 text-center menu-margins">
         <h5>How comfortable are you with basic technologies (Cloud, Internet, Computer Science basics)?</h5>
         <select required class="selectpicker show-tick" name="q1">
-          <option value="1">less</option>
-          <option value="2">more</option>
-          <option value="3">very</option>
+          {% for option in options_q %}
+            <option value="{{ loop.index }}">{{ option }}</option>
+          {% endfor %}
         </select>
       </div>
       <div class="col-12 text-center menu-margins">
         <h5>How comfortable are you with programming?</h5>
           <select required class="selectpicker show-tick" name="q2">
-            <option value="1">less</option>
-            <option value="2">more</option>
-            <option value="3">very</option>
+            {% for option in options_q %}
+              <option value="{{ loop.index }}">{{ option }}</option>
+            {% endfor %}
           </select>
       </div>
       <div class="col-12 text-center menu-margins">
         <h5>Please select up to three areas of your interest:</h5>
           <select required class="selectpicker" id="select_1" name="q3" data-selected-text-format="count" multiple data-live-search="true" title='Choose three from...'>
-            {% for option in options_q3%}
+            {% for option in options_q3 %}
               <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
           </select>
           <button class="btn btn-light" id="btnDeselect">Deselect</button>
       </div>
       <div class="col-12 text-center menu-margins">
         <h5>Please select your goals:</h5>
           <select required class="selectpicker show-tick" id="select_2" multiple name="q4">
-            <option value="1">Get a new job in tech</option>
-            <option value="2">Boost my CV</option>
-            <option value="3">Learn about new technologies</option>
+            {% for option in options_q4 %}
+              <option value="{{ loop.index }}">{{ option }}</option>
+            {% endfor %}
           </select>
           <button class="btn btn-light" id="btnDeselect_2">Deselect</button>
       </div>

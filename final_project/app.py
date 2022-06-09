@@ -18,8 +18,6 @@ app.static_folder = 'static'
 contents = read_csv("static/coursera_db")
 # for type in contents: print(type["Image URL"]) print("done")
 
-options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things"]
-options_q4 = ["Get a new Job", "Boost my CV", "Learn about new technologies"]
 
 @app.route("/")
 def index():
@@ -41,7 +39,10 @@ def qs():
         # additional server-side input validation
         return render_template("results.html")
     else:
-        return render_template("questionnaire.html", options_q4=options_q4, options_q3=options_q3)
+        options_q = ["less", "more", "very"]
+        options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things"]
+        options_q4 = ["Get a new Job", "Boost my CV", "Learn about new technologies"]
+        return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 
 @app.route("/results")
 def results():
