@@ -14,8 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 $('.selectpicker').selectpicker({
-   // maxOptions: 3,
-   size: 6
+   maxOptions: 3,
 });
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
