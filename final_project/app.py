@@ -34,7 +34,7 @@ def q1():
     print(answers)
     return render_template("q1.html")
 
-@app.route("/results")
+@app.route("/results", methods=["GET", "POST"])
 def results():
     # based on input display Top 5 coursera courses
     # differentiate between professional certificate, specialization, standalone
