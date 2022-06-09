@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function(){
     elem.style.marginLeft = 'auto';
 });
 
+
+
 $('.selectpicker').selectpicker({
     size: 6
 });
