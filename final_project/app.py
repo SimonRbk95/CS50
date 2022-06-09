@@ -30,12 +30,15 @@ def about():
 
 @app.route("/qs", methods=["GET", "POST"])
 def qs():
-    return render_template("questionnaire.html")
-    q1 = request.args.get("q1")
-    q2 = request.args.get("q2")
-    List_q3 = request.args.getList("q3")
-    List_q4 = request.args.getList("q4")
-    print(q1, q2, List_q3, List_q4)
+    if request.method == "POST":
+        q1 = request.args.get("q1")
+        q2 = request.args.get("q2")
+        List_q3 = request.args.getList("q3")
+        List_q4 = request.args.getList("q4")
+        print(q1, q2, List_q3, List_q4)
+        return render_template("results.html")
+    else:
+        return render_template("questionnaire.html")
 
 @app.route("/results")
 def results():
