@@ -170,7 +170,7 @@ footer {
 }
 
 .dropdown-item.active {
-    background-color: red;
+    background-color: #464646;
 }
 
 /*--- media queries ---*/
