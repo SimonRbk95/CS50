@@ -18,6 +18,7 @@ app.static_folder = 'static'
 contents = read_csv("static/coursera_db")
 # for type in contents: print(type["Image URL"]) print("done")
 
+options_q4 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", ""]
 
 
 @app.route("/")
