@@ -165,6 +165,10 @@ footer {
     margin-top: 5%;
 }
 
+.show-tick{
+    width: 50%;
+}
+
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
     .sizingText-div-1{
