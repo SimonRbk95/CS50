@@ -170,9 +170,12 @@ footer {
 }
 
 .dropdown-item.active {
-    background-color: ;
+    background-color: white;
 }
 
+.bootstrap-select .bs-ok-default::after{
+    color: black;
+}
 
 
 /*--- media queries ---*/
