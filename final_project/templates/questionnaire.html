@@ -30,7 +30,7 @@
         <h5>Please select up to three areas of your interest:</h5>
           <select required class="selectpicker" id="select_1" name="q3" data-selected-text-format="count" multiple data-live-search="true" title='Choose three from...'>
             {% for option in options_q3%}
-              <option value="1">{{option}}</option>
+              <option value="{{ option }}">{{ option }}</option>
           </select>
           <button class="btn btn-light" id="btnDeselect">Deselect</button>
       </div>
