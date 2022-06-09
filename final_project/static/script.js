@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let buttons = document.querySelectorAll(".btn-outline-light");
     for (let i = 0; i < buttons.length; i++){
         buttons[i].addEventListener("click", function(){
-            window.location.href = '/q1';
+            window.location.href = '/qs';
             });
         }
     elem = document.querySelector('div.profile-badge');
