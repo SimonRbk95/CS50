@@ -93,7 +93,7 @@ td{
 }
 
 div.result-background:hover {
-    background-color: #737373;
+    background-image: linear-gradient(to right top, #282829, #2e2e2f, #333335, #39393b, #3f3f41, #454547, #4a4a4d, #505053, #57575a, #5e5e61, #656568, #6c6c6f);
     -webkit-transition: background-color 1000ms linear;
     -ms-transition: background-color 1000ms linear;
     transition: background-color 1000ms linear;
