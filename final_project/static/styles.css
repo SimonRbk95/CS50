@@ -181,14 +181,16 @@ span.text{
     color: black;
 }
 
-div.active a {
-    color: black !important; background-color: white;
-}
-
 .heading{
     padding-left: 0;
     margin-bottom: 1%;
     margin-top: 5%;
+}
+
+.scrollspy-example{
+    position: relative;
+    overflow-y: scroll;
+    height: 300px;
 }
 
 
