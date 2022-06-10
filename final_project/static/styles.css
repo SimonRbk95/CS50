@@ -49,15 +49,6 @@ html::-webkit-scrollbar {
     color: white;
 }
 
-.img-thumbnail{
-    margin-right: 2%;
-    margin-bottom: 25%;
-}
-
-.boxlayout {
-    display: inline-block;
-    vertical-align: top;
-}
 
 /*--- fixed height will get rid of the flickering but requires specification in all media queries---*/
 .carousel-inner img {
@@ -74,6 +65,17 @@ html::-webkit-scrollbar {
     margin-bottom: 10%;
 }
 
+.img-thumbnail{
+    margin-right: 2%;
+    margin-bottom: 25%;
+}
+
+.boxlayout {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
 table {
     border-collapse: collapse;
     margin-bottom: 2%;
@@ -82,6 +84,13 @@ table {
 td{
     padding-right: 20px;
     max-width: 150px;
+}
+
+.result-background{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: grey;
+
 }
 
 /*--- glow effect ---*/
