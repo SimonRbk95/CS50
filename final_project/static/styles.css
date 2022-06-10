@@ -89,14 +89,14 @@ td{
 .result-background{
     padding-top: 2%;
     padding-bottom: 2%;
-    background-image: linear-gradient(to bottom, #000000, #131313, #1f1f1f, #2b2b2b, #373737, #373737, #373737, #373737, #2b2b2b, #1f1f1f, #131313, #000000);
+    background-image: linear-gradient(to bottom, #000000, #121212, #1e1e1e, #292929, #353535, #353535, #353535, #353535, #292929, #1e1e1e, #121212, #000000);
 }
 
 div.result-background:hover {
-    background-image: linear-gradient(to bottom, #161616, #212121, #2d2d2d, #393939, #464545, #464545, #464545, #464545, #393939, #2d2d2d, #212121, #161616);
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
+    background-image: linear-gradient(to bottom, #121212, #1d1d1d, #282828, #343434, #404040, #404040, #404040, #404040, #343434, #282828, #1d1d1d, #121212);
+    -webkit-transition: background-image 1000ms linear;
+    -ms-transition: background-image 1000ms linear;
+    transition: background-image 1000ms linear;
 }
 
 
