@@ -381,10 +381,4 @@ span.text{
     100% {background-color:blue}
 }
 
-div.test:hover {
-    background-color: #4b4848;
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
-}
 
