@@ -39,7 +39,7 @@ def qs():
         # returns string
         List_q3 = request.form.getlist("q3")
 
-        # returns 
+        # returns the answers as an index number of list options_q
         List_q4 = request.form.getlist("q4")
         print(q1, q2, List_q3, List_q4)
 
