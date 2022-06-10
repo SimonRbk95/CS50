@@ -181,7 +181,7 @@ span.text{
     color: black;
 }
 
-li.active a {
+div.active a {
     color: black !important; background-color: white;
 }
 
