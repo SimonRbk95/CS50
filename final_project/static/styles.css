@@ -89,7 +89,7 @@ td{
 .result-background{
     padding-top: 2%;
     padding-bottom: 2%;
-    background-image: linear-gradient(to bottom, #000000, #101010, #1b1b1b, #252525, #2f2f2f, #2f2f2f, #2f2f2f, #2f2f2f, #252525, #1b1b1b, #101010, #000000);
+    background-image: linear-gradient(to bottom, #000000, #131313, #1f1f1f, #2b2b2b, #373737, #373737, #373737, #373737, #2b2b2b, #1f1f1f, #131313, #000000);
 }
 
 div.result-background:hover {
