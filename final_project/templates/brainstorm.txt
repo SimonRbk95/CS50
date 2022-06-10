@@ -63,10 +63,10 @@ options_q = ["less", "more", "very"]
 options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things"]
 options_q4 = ["Get a new Job", "Boost my CV", "Learn about new technologies"]
 
-if programming skills = less
+if programming skills == less
     Intro courses
 
-if comfortability with basic technologies = less
+if comfortability with basic technologies == less
     basic videos on youtube
     computer science for business professionals
 
@@ -74,10 +74,11 @@ if programming skills == more and options_q3 == programming..
     advanced programming courses
 
 if goals == new job
-    professional certificate courses
+    first professional certificate courses
+    second specialization courses
 
 if goals == boost CV
-    specialization courses
+    professional course & specialization courses
 
 if goals == understand new technology
     any courses, including YT videos
