@@ -76,6 +76,7 @@ html::-webkit-scrollbar {
 
 table {
     border-collapse: collapse;
+    margin-bottom: 2%;
 }
 
 td{
