@@ -64,7 +64,7 @@ options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Comp
 options_q4 = ["Get a new Job", "Boost my CV", "Learn about new technologies"]
 
 if programming skills == less
-    Intro courses
+    Intro courses for all but IoT
 
 if comfortability with basic technologies == less
     basic videos on youtube
