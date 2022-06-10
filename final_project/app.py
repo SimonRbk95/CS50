@@ -46,7 +46,6 @@ def qs():
 
 @app.route("/results")
 def results():
-    if 
     # based on input display Top 5 coursera courses
     # differentiate between professional certificate, specialization, standalone
     return render_template("results.html")
