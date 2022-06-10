@@ -44,7 +44,10 @@ def qs():
         print(q1, q2, List_q3, List_q4)
 
         # additional server-side input validation?
-
+        for choice in List_q4:
+            if choice not in options_q4:
+                return redirect("/qs")
+        
         # suggestions
 
 
