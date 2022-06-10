@@ -47,8 +47,9 @@ def qs():
         for choice in List_q4:
             if choice not in options_q4:
                 return redirect("/qs")
-        
+
         # suggestions
+        
 
 
 
