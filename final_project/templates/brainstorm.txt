@@ -70,4 +70,14 @@ if comfortability with basic technologies = less
     basic videos on youtube
     computer science for business professionals
 
-if 
+if programming skills == more and options_q3 == programming..
+    advanced programming courses
+
+if goals == new job
+    professional certificate courses
+
+if goals == boost CV
+    specialization courses
+
+if goals == understand new technology
+    any courses, including YT videos
