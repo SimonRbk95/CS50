@@ -181,6 +181,12 @@ span.text{
     color: black;
 }
 
+li.active a {
+    color: black !important; background-color: white;
+}
+
+
+
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
     .sizingText-div-1{
