@@ -30,8 +30,8 @@ def about():
 
 @app.route("/qs", methods=["GET", "POST"])
 def qs():
+    # get user input
     if request.method == "POST":
-        # get user input
         # returns the answers as an index number of list options_q
         q1 = request.form.get("q1")
         q2 = request.form.get("q2")
@@ -43,10 +43,12 @@ def qs():
         List_q4 = request.form.getlist("q4")
         print(q1, q2, List_q3, List_q4)
 
+        # additional server-side input validation?
+
         # suggestions
 
 
-        # additional server-side input validation
+
         return render_template("results.html")
     else:
         options_q = ["less", "more", "very"]
