@@ -31,11 +31,21 @@ def about():
 @app.route("/qs", methods=["GET", "POST"])
 def qs():
     if request.method == "POST":
+        # get user input
+        # returns the answers as an index number of list options_q
         q1 = request.form.get("q1")
         q2 = request.form.get("q2")
+
+        # returns string
         List_q3 = request.form.getlist("q3")
+
+        # returns 
         List_q4 = request.form.getlist("q4")
         print(q1, q2, List_q3, List_q4)
+
+        # suggestions
+
+
         # additional server-side input validation
         return render_template("results.html")
     else:
