@@ -94,7 +94,7 @@ td{
 }
 
 div.result-background:hover {
-    background-color: #4b4848;
+    background-color: #737373;
     -webkit-transition: background-color 1000ms linear;
     -ms-transition: background-color 1000ms linear;
     transition: background-color 1000ms linear;
