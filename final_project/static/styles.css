@@ -185,6 +185,11 @@ li.active a {
     color: black !important; background-color: white;
 }
 
+.heading{
+    padding-left: 0;
+    margin-bottom: 3%;
+    margin-top: 5%;
+}
 
 
 /*--- media queries ---*/
