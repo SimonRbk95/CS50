@@ -7,8 +7,8 @@ import shutil
 from flask import redirect, render_template, request, session
 
 def read_gz():
-    with gzip.open('/static/cdb.txt.gz', 'rb') as f_in:
-        with open('/static/cdb.txt', 'wb') as f_out:
+    with gzip.open('static/cdb.txt.gz', 'rb') as f_in:
+        with open('static/cdb.txt', 'wb') as f_out:
             shutil.copyfileobj(f_in, f_out)
         contents = []
         with open('/static/cdb.text', newline= "") as file:
