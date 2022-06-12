@@ -109,6 +109,9 @@ def qs():
             if courses.length() < 5:
                 # check for alternatives in cdb
                 pass
+            # get further data for chosen courses from cdb
+            
+
             choices.append(courses)
 
 
