@@ -15,8 +15,9 @@ Session(app)
 
 app.static_folder = 'static'
 
+# load up dictionaries
 cdb = read_txt("cdb")
-# for type in contents: print(type["Image URL"]) print("done")
+cdb100 = read_csv("cdb100")
 
 
 @app.route("/")
@@ -49,6 +50,7 @@ def qs():
                 return redirect("/qs")
 
         # suggestions
+        
 
 
 

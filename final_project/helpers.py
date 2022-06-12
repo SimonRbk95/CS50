@@ -22,9 +22,10 @@ def read_txt(file):
             contents.append(dict(row))
         return contents
 
-def read_csv(csv_file):
+# input csv file name without extension
+def read_csv(file):
     contents = []
-    with open(f"static/{csv_file}") as file:
+    with open(f"static/{file}.csv") as f_out:
         reader = csv.DictReader(file)
         for row in reader:
             contents.append(row)
