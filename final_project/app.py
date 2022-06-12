@@ -50,21 +50,11 @@ def qs():
             if choice not in options_q4:
                 return redirect("/qs")
 
+
+        # for each choice there will be a list of dictionaries with relevant courses
         choices = []
-        courses = [
-            [{
 
-            },
-            {
-
-            },],
-            [{
-
-            },
-            {
-
-            }],
-        ]
+        courses = []
 
 
         # filled if the user wants to "get a new job"
@@ -93,7 +83,7 @@ def qs():
                     for i in ["Data Analytics", "Data Science"]:
                         if i in dict["Product Name"] or i in dict["Primary Domain"] or i in dict["Primary Subdomain"]:
                             if "Get a new job" in List_q4:
-                                prof_cert_courses.append({
+                                courses.append({
                                     "Course Name": dict["Product Name"],
                                     "URL": dict["URL"],
                                     "Partner": dict["Partner"]})
