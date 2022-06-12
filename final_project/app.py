@@ -107,7 +107,7 @@ def qs():
                         "Partner": dict["Partner"]})
 
             if courses.length() < 5:
-                # check for alternative 
+                # check for alternatives in cdb
                 pass
             choices.append(courses)
 
