@@ -53,17 +53,8 @@ def qs():
 
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []
-
+        # list of dictionaries with relevant course data
         courses = []
-
-
-        # filled if the user wants to "get a new job"
-        prof_cert_courses = []
-        #
-        special_courses = []
-        other_courses = []
-        any_courses = []
-        p_intro_courses = []
 
         if q1 == "less":
             # suggest basic tech videos on Youtube
@@ -110,7 +101,7 @@ def qs():
                 # check for alternatives in cdb
                 pass
             # get further data for chosen courses from cdb
-            
+
 
             choices.append(courses)
 
