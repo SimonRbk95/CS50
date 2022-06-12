@@ -7,7 +7,7 @@ import shutil
 from flask import redirect, render_template, request, session
 
 def read_gz():
-    if not 
+    if not exists()
     with gzip.open('static/cdb.txt.gz', 'rb') as f_in:
         with open('static/cdb.txt', 'wb') as f_out:
             shutil.copyfileobj(f_in, f_out)
