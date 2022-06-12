@@ -49,7 +49,7 @@ def qs():
 
         for choice in List_q3:
             # additional server-side input validation?
-            if choice not in options_q4:
+            if choice not in options_q3:
                 return redirect("/qs")
 
         # for each choice there will be a list of dictionaries with relevant courses
