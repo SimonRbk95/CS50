@@ -100,7 +100,7 @@ def qs():
                         "Partner": dict["Partner"]})
 
             # get further data for chosen courses from cdb
-            for dict in cdb100:
+            for dict in cdb:
                 # keep track of at which index the list item, dictionary called 'course', is
                 i = 0
                 for course in courses:
