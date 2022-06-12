@@ -101,6 +101,7 @@ def qs():
                 # check for alternatives in cdb
                 pass
             # get further data for chosen courses from cdb
+            for dict in cdb
 
 
             choices.append(courses)
