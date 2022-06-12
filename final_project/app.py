@@ -51,7 +51,11 @@ def qs():
                 return redirect("/qs")
 
         choices = []
+
+
+        # filled if the user wants to "get a new job"
         prof_cert_courses = []
+        #
         special_courses = []
         other_courses = []
         any_courses = []
@@ -65,6 +69,8 @@ def qs():
             pass
 
         for choice in List_q4:
+
+            # coursera
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cbd100:
                 # special answer that considers two keywords
