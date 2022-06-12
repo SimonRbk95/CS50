@@ -68,7 +68,7 @@ def qs():
         for choice in List_q4:
             # coursera
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
-            for dict in cbd100:
+            for dict in cdb100:
                 # special answer that considers two keywords
                 if choice == "Data Analytics/ Science":
                     for i in ["Data Analytics", "Data Science"]:
@@ -110,7 +110,7 @@ def qs():
                         courses[i]["Current Price"] = dict["Current Price"]
                         courses[i]["Product Description"] = dict["Product Description"]
 
-            if courses.length() < 5:
+            if len(courses) < 5:
                 # check for alternatives in cdb
                 pass
 
