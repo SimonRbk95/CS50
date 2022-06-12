@@ -56,6 +56,12 @@ boost cv
 learn new technologies
 understand technology
 
+To benefits cobots
+implementation efficient
+comes with challenges
+because bla bla
+
+Successful usage of cobots depends almost entirely on an efficient implementation, considering high costs of deployment and bla.
 
 
 
