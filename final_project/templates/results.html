@@ -7,12 +7,12 @@
 {% block main %}
 <!--course display-->
 
-{{% for i in range(choices|length) %}}
+{{% for i in choices %}}
 <div class= "container-fluid">
     <div class="row justify-content-center">
       <div class="col-9 heading">
           <div>
-            <h1>Coursera Courses xyz</h1>
+            <h1>Coursera Courses for {{ i }}</h1>
           </div>
       </div>
     </div>
