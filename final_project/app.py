@@ -109,11 +109,12 @@ def qs():
                         courses[i]["Image URL"] = dict["Image URL"]
                         courses[i]["Current Price"] = dict["Current Price"]
                         courses[i]["Product Description"] = dict["Product Description"]
+                i+=1
 
             if len(courses) < 5:
                 # check for alternatives in cdb
                 pass
-            print(cdb)
+            
             print(courses)
             choices.append(courses)
             print(choices)
