@@ -101,7 +101,16 @@ def qs():
                 # check for alternatives in cdb
                 pass
             # get further data for chosen courses from cdb
-            for dict in cdb
+            for dict in cdb100:
+                # keep track of at which index the list item, dictionary called 'course', is
+                index = 0
+                for course in courses:
+                    if dict["Product Name"] == course["Course Name"]:
+                        courses[index]["URL"]: dict["Short Link"]
+                        courses[index]["Image URL"]: dict["Image URL"]
+                        courses[index][""]
+
+
 
 
             choices.append(courses)
