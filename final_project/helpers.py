@@ -30,5 +30,5 @@ def lookup(course):
         return None
 
 
-if __name__=="__main_":
-    read_gz()
+
+read_gz()
