@@ -104,10 +104,10 @@ def qs():
                 i = 0
                 for course in courses:
                     if dict["Product Name"] == course["Course Name"]:
-                        courses[i]["URL"]: dict["Short Link"]
-                        courses[i]["Image URL"]: dict["Image URL"]
-                        courses[i]["Current Price"]: dict["Current Price"]
-                        courses[i]["Product Description"]: dict["Product Description"]
+                        courses[i]["URL"] = dict["Short Link"]
+                        courses[i]["Image URL"] = dict["Image URL"]
+                        courses[i]["Current Price"] = dict["Current Price"]
+                        courses[i]["Product Description"] = dict["Product Description"]
             choices.append(courses)
         return render_template("results.html", choices=choices)
     else:
