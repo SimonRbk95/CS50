@@ -29,6 +29,7 @@ def read_csv(file):
         reader = csv.DictReader(file)
         for row in reader:
             contents.append(row)
+        print(contents[0])
         return contents
 
 
@@ -46,4 +47,4 @@ def lookup(course):
 
 
 
-read_gz()
+read_csv("cdb100")
