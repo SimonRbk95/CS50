@@ -67,10 +67,16 @@ def qs():
         for choice in List_q4:
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cbd100:
+                # special answer that considers two keywords
                 if choice == "Data Analytics/ Science":
-                    for s in ["Data Analytics", "Data Science"]:
-                        
-                if choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] :
+                    for i in ["Data Analytics", "Data Science"]:
+                        if i in dict["Product Name"] or i in dict["Primary Domain"] or i in dict["Primary Subdomain"]:
+                            if "Get a new job" in List_q4:
+                                prof_cert_courses.append({
+                                    "Course Name": dict["Product Name"],
+                                    "URL": dict["URL"],
+                                    "Partner": dict["Partner"]})
+                elif choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"]:
                     if 0 in List_q4:
                         prof_cert_courses.append({
                             "Course Name": dict["Product Name"],
