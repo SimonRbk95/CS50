@@ -10,8 +10,8 @@ from os.path import exists
 
 
 def read_gz(gz_file):
-    if not exists("static/cdb.txt"):
-        with gzip.open('static/cdb.txt.gz', 'rb') as f_in:
+    if not exists('static/cdb.txt'):
+        with gzip.open(f'static/{gz_file}', 'rb') as f_in:
             with open('static/cdb.txt', 'wb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
             f_out.close()
