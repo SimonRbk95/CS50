@@ -18,10 +18,10 @@
     </div>
     <div class="row justify-content-center result-background">
       <div id="list-example" class="col-2 list-group">
-        {{% for j in i %}}
+        {{% for j in range(i) %}}
         <a class="list-group-item list-group-item-dark list-group-item-action" href="#list-item-{{ j }}">Item 1</a>
-        {{% endfor %}}
       </div>
+      {{% for dict in i %}}
       <div class="col-7">
       <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="70" tabindex="0">
         <div class="boxlayout">
@@ -50,6 +50,16 @@
             </tr>
           </table>
         </div>
+        {{% endfor %}}
+        {{% endfor %}}
+
+
+
+
+
+
+
+
         <div class="boxlayout">
           <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/30/db08f0422e11e89c78d77b0b063ff0/img_archcont.png?auto=format%2Ccompress&dpr=1&w=300&h=300&fit=crop" alt="responsive webite" class="img-thumbnail" align="left" width="15%" height="15%">
           <h2 id="list-item-2">Course Title</h2>
