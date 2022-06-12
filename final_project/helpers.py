@@ -22,8 +22,11 @@ def read_gz(gz_file):
             contents.append(dict(row))
         return(contents)
 
-def read_csv():
-    
+def read_csv(csv_file):
+    with open(f"static/{csv_file}") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+
 
 def lookup(course):
     """Look up quote for symbol."""
