@@ -6,6 +6,8 @@
 
 {% block main %}
 <!--course display-->
+
+{{% for i in range(choices|length) %}}
 <div class= "container-fluid">
     <div class="row justify-content-center">
       <div class="col-9 heading">
@@ -16,8 +18,8 @@
     </div>
     <div class="row justify-content-center result-background">
       <div id="list-example" class="col-2 list-group">
-        {{% for i in range(choices[0]|length) %}}
-        <a class="list-group-item list-group-item-dark list-group-item-action" href="#list-item-{{ i }}">Item 1</a>
+        {{% for j in i %}}
+        <a class="list-group-item list-group-item-dark list-group-item-action" href="#list-item-{{ j }}">Item 1</a>
         {{% endfor %}}
       </div>
       <div class="col-7">
