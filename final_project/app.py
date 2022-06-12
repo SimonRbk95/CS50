@@ -105,6 +105,7 @@ def qs():
                         "Course Name": dict["Product Name"],
                         "URL": dict["URL"],
                         "Partner": dict["Partner"]})
+            choices.append(courses)
 
 
 
