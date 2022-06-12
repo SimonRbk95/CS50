@@ -11,7 +11,7 @@ def read_gz():
         with gzip.open('static/cdb.txt.gz', 'rb') as f_in:
             with open('static/cdb.txt', 'wb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
-            
+            f_out.close()
     contents = []
     with open('static/cdb.txt', newline= "") as file:
         reader = csv.DictReader(file, delimiter="\t")
