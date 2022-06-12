@@ -74,7 +74,6 @@ def qs():
             pass
 
         for choice in List_q4:
-
             # coursera
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cbd100:
@@ -88,16 +87,25 @@ def qs():
                                             "Course Name": dict["Product Name"],
                                             "URL": dict["URL"],
                                             "Partner": dict["Partner"]})
-                                    
+                                else:
+                                    courses.append({
+                                    "Course Name": dict["Product Name"],
+                                    "URL": dict["URL"],
+                                    "Partner": dict["Partner"]})
 
                 elif choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"]:
-                    if 0 in List_q4:
-                        prof_cert_courses.append({
-                            "Course Name": dict["Product Name"],
-                            "URL": dict["URL"],
-                            "Partner": dict["Partner"]})
+                    if "Get a new job" in List_q4:
+                        if dict["Product Type"] == "Professional Certificate":
+                            courses.append({
+                                "Course Name": dict["Product Name"],
+                                "URL": dict["URL"],
+                                "Partner": dict["Partner"]})
                     else:
-                        pass
+                        courses.append({
+                        "Course Name": dict["Product Name"],
+                        "URL": dict["URL"],
+                        "Partner": dict["Partner"]})
+
 
 
 
