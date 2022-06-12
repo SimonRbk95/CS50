@@ -45,4 +45,4 @@ def lookup(course):
     except requests.RequestException:
         return None
 
-read_txt(cdb)
+read_txt("cdb")
