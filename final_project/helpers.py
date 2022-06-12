@@ -16,8 +16,8 @@ def read_txt(file):
                 shutil.copyfileobj(f_in, f_out)
             f_out.close()
     contents = []
-    with open(f'static/{}cdb.txt', newline= "") as file:
-        reader = csv.DictReader(file, delimiter="\t")
+    with open(f'static/{file}.txt', newline= "") as f_out:
+        reader = csv.DictReader(f_out, delimiter="\t")
         for row in reader:
             contents.append(dict(row))
         return contents
