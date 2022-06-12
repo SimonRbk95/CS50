@@ -18,7 +18,7 @@
     </div>
     <div class="row justify-content-center result-background">
       <div id="list-example" class="col-2 list-group">
-        {{% for dict in i %}}
+        {% for dict in i %}
         <a class="list-group-item list-group-item-dark list-group-item-action" href="#list-item-{{ loop.index }}">Item 1</a>
       </div>
 
@@ -46,10 +46,10 @@
               <td>Costs</td><td>{{ dict["Current Price"] }}</td>
             </tr>
             <tr>
-              <td><a href="{{ Product URL }}"></a>Landing Page</td>
+              <td><a href="{{ dict["Product URL"] }}"></a>Landing Page</td>
             </tr>
           </table>
         </div>
-        {{% endfor %}}
+        {% endfor %}
 
 {% endblock %}
