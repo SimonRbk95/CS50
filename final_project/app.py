@@ -31,6 +31,9 @@ def about():
 
 @app.route("/qs", methods=["GET", "POST"])
 def qs():
+    options_q = ["less", "more", "very"]
+    options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things"]
+    options_q4 = ["Get a new Job", "Boost my CV", "Learn about new technologies"]
     # get user input
     if request.method == "POST":
         # returns the answers as an index number of list options_q
@@ -115,9 +118,6 @@ def qs():
 
         return render_template("results.html", choices=choices)
     else:
-        options_q = ["less", "more", "very"]
-        options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things"]
-        options_q4 = ["Get a new Job", "Boost my CV", "Learn about new technologies"]
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 
 @app.route("/results")

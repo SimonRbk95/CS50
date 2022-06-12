@@ -20,7 +20,6 @@ def read_txt(file):
         reader = csv.DictReader(f_out, delimiter="\t")
         for row in reader:
             contents.append(dict(row))
-        print(contents[0])
         return contents
 
 # input csv file name without extension
@@ -45,4 +44,3 @@ def lookup(course):
     except requests.RequestException:
         return None
 
-read_txt("cdb")
