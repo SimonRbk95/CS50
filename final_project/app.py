@@ -71,7 +71,7 @@ def qs():
                         prof_cert_course.append({
                             "Course Name": dict["Product Name"]
                             "URL": dict["URL"]
-                            "Partner": 
+                            "Partner": dict["Partner"]
                         })
                     else:
 
