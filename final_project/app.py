@@ -70,9 +70,9 @@ def qs():
                     if 0 in List_q4:
                         prof_cert_course.append({
                             "Course Name": dict["Product Name"]
-                            
-
                         })
+                    else:
+                        
 
                     prof_cert_courses["Course Name"]
 
