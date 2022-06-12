@@ -50,10 +50,10 @@ def qs():
             if choice not in options_q4:
                 return redirect("/qs")
 
-        prof_cert_courses = {}
-        special_courses = {}
-        other_courses = {}
-        any_courses = {}
+        prof_cert_courses = []
+        special_courses = []
+        other_courses = []
+        any_courses = []
 
         if q1 == "less":
             # suggest basic tech videos on Youtube
@@ -68,7 +68,7 @@ def qs():
             for dict in cbd100:
                 if choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] :
                     if 0 in List_q4:
-                        prof_cert_courses["Course Name"] = dict["Product Name"]
+                        prof_ce = dict["Product Name"]
 
                     prof_cert_courses["Course Name"]
 
