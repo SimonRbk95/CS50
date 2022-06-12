@@ -66,7 +66,7 @@ def qs():
         for choice in List_q4:
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cbd100:
-                if choice in dict["Product Name"]:
+                if choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] :
                     if 0 in List_q4:
                         prof_cert_courses["Course Name"] = dict["Product Name"]
 
