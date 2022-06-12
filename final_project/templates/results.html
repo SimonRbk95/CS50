@@ -19,7 +19,7 @@
     <div class="row justify-content-center result-background">
       <div id="list-example" class="col-2 list-group">
         {% for dict in i %}
-        <a class="list-group-item list-group-item-dark list-group-item-action" href="#list-item-{{ loop.index }}">Item 1</a>
+        <a class="list-group-item list-group-item-dark list-group-item-action" href="#list-item-{{ loop.index }}">Item {{ loop.index }}</a>
       </div>
 
       <div class="col-7">
