@@ -47,7 +47,7 @@ def qs():
         List_q4 = request.form.getlist("q4")
         print(q1, q2, List_q3, List_q4)
 
-        for choice in List_q4:
+        for choice in List_q3:
             # additional server-side input validation?
             if choice not in options_q4:
                 return redirect("/qs")
