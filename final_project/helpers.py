@@ -29,7 +29,6 @@ def read_csv(file):
         reader = csv.DictReader(f_out)
         for row in reader:
             contents.append(row)
-        print(contents[0])
         return contents
 
 
@@ -45,6 +44,3 @@ def lookup(course):
     except requests.RequestException:
         return None
 
-
-
-read_csv("cdb100")
