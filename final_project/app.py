@@ -65,7 +65,7 @@ def qs():
             # suggest intro programming courses
             pass
 
-        for choice in List_q4:
+        for choice in List_q3:
             # coursera
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cdb100:
@@ -114,7 +114,7 @@ def qs():
             if len(courses) < 5:
                 # check for alternatives in cdb
                 pass
-            
+
             print(courses)
             choices.append(courses)
             print(choices)
