@@ -3,10 +3,13 @@ import urllib.parse
 import csv
 import gzip
 import shutil
+import os
 
 from flask import redirect, render_template, request, session
+from os.path import exists
 
-def read_gz():
+
+def read_gz(gz_file):
     if not exists("static/cdb.txt"):
         with gzip.open('static/cdb.txt.gz', 'rb') as f_in:
             with open('static/cdb.txt', 'wb') as f_out:
@@ -17,7 +20,7 @@ def read_gz():
         reader = csv.DictReader(file, delimiter="\t")
         for row in reader:
             contents.append(dict(row))
-        print(contents[0])
+        return(contents)
 
 def lookup(course):
     """Look up quote for symbol."""
