@@ -105,7 +105,12 @@ def qs():
                         "Course Name": dict["Product Name"],
                         "URL": dict["URL"],
                         "Partner": dict["Partner"]})
+
+            if courses.length() < 5:
+                # check for alternative 
+                pass
             choices.append(courses)
+
 
 
 
