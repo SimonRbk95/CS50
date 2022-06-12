@@ -110,10 +110,6 @@ def qs():
                         courses[i]["Image URL"]: dict["Image URL"]
                         courses[i]["Current Price"]: dict["Current Price"]
                         courses[i]["Product Description"]: dict["Product Description"]
-
-
-
-
             choices.append(courses)
 
 
