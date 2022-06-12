@@ -44,12 +44,10 @@ def qs():
         List_q4 = request.form.getlist("q4")
         print(q1, q2, List_q3, List_q4)
 
-
         for choice in List_q4:
             # additional server-side input validation?
             if choice not in options_q4:
                 return redirect("/qs")
-
 
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []
@@ -111,27 +109,7 @@ def qs():
                         courses[i]["Current Price"]: dict["Current Price"]
                         courses[i]["Product Description"]: dict["Product Description"]
             choices.append(courses)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # suggestions
-
-
-
-
-
-        return render_template("results.html")
+        return render_template("results.html", choices=choices)
     else:
         options_q = ["less", "more", "very"]
         options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things"]
