@@ -49,10 +49,25 @@ def qs():
             # additional server-side input validation?
             if choice not in options_q4:
                 return redirect("/qs")
+
+        prof_cert_courses = {}
+        special_courses = {}
+        other_courses = {}
+        any_courses = {}
+
+        if q1 == "less":
+            # suggest basic tech videos on Youtube
+            pass
+
+        if q2 == "less":
+            # suggest intro programming courses
+            pass
+
+        for choice in List_q4:
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cbd100:
                 if choice in dict["Product Name"]:
-                    
+
 
 
 
