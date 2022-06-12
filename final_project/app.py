@@ -96,9 +96,6 @@ def qs():
                         "URL": dict["URL"],
                         "Partner": dict["Partner"]})
 
-            if courses.length() < 5:
-                # check for alternatives in cdb
-                pass
             # get further data for chosen courses from cdb
             for dict in cdb100:
                 # keep track of at which index the list item, dictionary called 'course', is
@@ -109,7 +106,13 @@ def qs():
                         courses[i]["Image URL"] = dict["Image URL"]
                         courses[i]["Current Price"] = dict["Current Price"]
                         courses[i]["Product Description"] = dict["Product Description"]
+
+            if courses.length() < 5:
+                # check for alternatives in cdb
+                pass
+
             choices.append(courses)
+
         return render_template("results.html", choices=choices)
     else:
         options_q = ["less", "more", "very"]
