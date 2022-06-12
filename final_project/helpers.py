@@ -6,17 +6,16 @@ import shutil
 
 from flask import redirect, render_template, request, session
 
-def read_csv(csv_file):
-
-with gzip.open('cdb.txt.gz', 'rb') as f_in:
-    with open('cdb.txt', 'wb') as f_out:
-        shutil.copyfileobj(f_in, f_out)
-    contents = []
-    with open(csv_file, newline= "") as file:
-        reader = csv.DictReader(file, delimiter="\t")
-        for row in reader:
-            contents.append(dict(row))
-        return contents
+def read_gz():
+    with gzip.open('/static/cdb.txt.gz', 'rb') as f_in:
+        with open('/static/cdb.txt', 'wb') as f_out:
+            shutil.copyfileobj(f_in, f_out)
+        contents = []
+        with open('/static/cdb.text', newline= "") as file:
+            reader = csv.DictReader(file, delimiter="\t")
+            for row in reader:
+                contents.append(dict(row))
+            print(contents[0])
 
 def lookup(course):
     """Look up quote for symbol."""
@@ -29,3 +28,7 @@ def lookup(course):
         response.raise_for_status()
     except requests.RequestException:
         return None
+
+
+if __name__=="__main_":
+    read_gz()
