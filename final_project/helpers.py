@@ -26,7 +26,7 @@ def read_txt(file):
 def read_csv(file):
     contents = []
     with open(f"static/{file}.csv") as f_out:
-        reader = csv.DictReader(file)
+        reader = csv.DictReader(f_out)
         for row in reader:
             contents.append(row)
         print(contents[0])
