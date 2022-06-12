@@ -8,15 +8,15 @@ import os
 from flask import redirect, render_template, request, session
 from os.path import exists
 
-
-def read_gz(gz_file):
-    if not exists('static/cdb.txt'):
-        with gzip.open(f'static/{gz_file}', 'rb') as f_in:
-            with open('static/cdb.txt', 'wb') as f_out:
+# input txt file name without extension
+def read_txt(file):
+    if not exists(f'static/{file}.txt'):
+        with gzip.open(f'static/{file}.txt.gz', 'rb') as f_in:
+            with open(f'static/{file}.txt', 'wb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
             f_out.close()
     contents = []
-    with open('static/cdb.txt', newline= "") as file:
+    with open(f'static/{}cdb.txt', newline= "") as file:
         reader = csv.DictReader(file, delimiter="\t")
         for row in reader:
             contents.append(dict(row))

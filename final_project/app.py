@@ -5,7 +5,7 @@ from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session
 from cs50 import SQL
 
-from helpers import read_csv, read_gz
+from helpers import read_csv, read_txt
 
 app = Flask(__name__)
 
@@ -15,7 +15,7 @@ Session(app)
 
 app.static_folder = 'static'
 
-cdb = read_csv("cdb")
+cdb = read_txt("cdb")
 # for type in contents: print(type["Image URL"]) print("done")
 
 
