@@ -113,8 +113,9 @@ def qs():
             if len(courses) < 5:
                 # check for alternatives in cdb
                 pass
-
+            
             choices.append(courses)
+            print(choices)
 
         return render_template("results.html", choices=choices)
     else:
