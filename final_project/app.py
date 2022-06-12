@@ -59,6 +59,7 @@ def qs():
         special_courses = []
         other_courses = []
         any_courses = []
+        p_intro_courses = []
 
         if q1 == "less":
             # suggest basic tech videos on Youtube
