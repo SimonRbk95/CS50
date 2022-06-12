@@ -20,12 +20,15 @@ def read_gz(gz_file):
         reader = csv.DictReader(file, delimiter="\t")
         for row in reader:
             contents.append(dict(row))
-        return(contents)
+        return contents
 
 def read_csv(csv_file):
+    contents = []
     with open(f"static/{csv_file}") as file:
         reader = csv.DictReader(file)
         for row in reader:
+            contents.append(row)
+        return contents
 
 
 def lookup(course):
