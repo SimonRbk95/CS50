@@ -8,8 +8,8 @@ from flask import redirect, render_template, request, session
 
 def read_csv(csv_file):
 
-with gzip.open('file.txt.gz', 'rb') as f_in:
-    with open('file.txt', 'wb') as f_out:
+with gzip.open('cdb.txt.gz', 'rb') as f_in:
+    with open('cdb.txt', 'wb') as f_out:
         shutil.copyfileobj(f_in, f_out)
     contents = []
     with open(csv_file, newline= "") as file:
