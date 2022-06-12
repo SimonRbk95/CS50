@@ -22,6 +22,9 @@ def read_gz(gz_file):
             contents.append(dict(row))
         return(contents)
 
+def read_csv():
+    
+
 def lookup(course):
     """Look up quote for symbol."""
 
