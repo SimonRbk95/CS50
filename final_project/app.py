@@ -51,6 +51,9 @@ def qs():
                 return redirect("/qs")
 
         choices = []
+        courses = [
+            
+        ]
 
 
         # filled if the user wants to "get a new job"
