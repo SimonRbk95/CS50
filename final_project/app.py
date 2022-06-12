@@ -50,6 +50,7 @@ def qs():
             if choice not in options_q4:
                 return redirect("/qs")
 
+        choices = []
         prof_cert_courses = []
         special_courses = []
         other_courses = []
