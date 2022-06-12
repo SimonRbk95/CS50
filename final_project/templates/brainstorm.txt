@@ -61,7 +61,7 @@ implementation efficient
 comes with challenges
 because bla bla
 
-Successful usage of cobots depends almost entirely on an efficient implementation, considering high costs of deployment and bla.
+Successful usage of cobots depends almost entirely on implementing the technology efficiently since its deployment is bla bla.
 
 
 
