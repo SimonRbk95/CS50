@@ -68,7 +68,11 @@ def qs():
             for dict in cbd100:
                 if choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] :
                     if 0 in List_q4:
-                        prof_ce = dict["Product Name"]
+                        prof_cert_course.append({
+                            "Course Name": dict["Product Name"]
+                            
+
+                        })
 
                     prof_cert_courses["Course Name"]
 
