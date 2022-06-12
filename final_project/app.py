@@ -44,13 +44,20 @@ def qs():
         List_q4 = request.form.getlist("q4")
         print(q1, q2, List_q3, List_q4)
 
-        # additional server-side input validation?
+
         for choice in List_q4:
+            # additional server-side input validation?
             if choice not in options_q4:
                 return redirect("/qs")
+            # check if there is a course in coursera's top 100 with a name smilair to the user's choice
+            for dict in cbd100:
+                if choice in dict["Product Name"]:
+                    
+
+
 
         # suggestions
-        
+
 
 
 
