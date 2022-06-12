@@ -113,6 +113,7 @@ def qs():
             if len(courses) < 5:
                 # check for alternatives in cdb
                 pass
+            print(cdb)
             print(courses)
             choices.append(courses)
             print(choices)
