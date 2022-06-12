@@ -74,10 +74,11 @@ def qs():
                             "Partner": dict["Partner"]
                         })
                     else:
-                        
+                        pass
 
 
-                    prof_cert_courses["Course Name"]
+
+
 
 
 
