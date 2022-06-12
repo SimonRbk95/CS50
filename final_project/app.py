@@ -108,8 +108,8 @@ def qs():
                     if dict["Product Name"] == course["Course Name"]:
                         courses[i]["URL"]: dict["Short Link"]
                         courses[i]["Image URL"]: dict["Image URL"]
-                        courses[i]["Current Price"]:
-                        courses[i]["Product Description"]:
+                        courses[i]["Current Price"]: dict["Current Price"]
+                        courses[i]["Product Description"]: dict["Product Description"]
 
 
 
