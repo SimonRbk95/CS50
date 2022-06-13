@@ -22,36 +22,39 @@
         {% endfor %}
       </div>
       <div class="col-7">
-      <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="70" tabindex="0">
-        {% for dict in i %}
-        <div class="boxlayout">
-        <img src="{{ dict["Image URL"] }}" alt="responsive webite" class="img-thumbnail" align="left" width="15%" height="15%">
-          <h2 id="list-item-{{ loop.index }}">{{ dict["Course Name"] }} </h2>
-          <details open>
-          <summary>Bootstrap is a famous front-end framework used to create mobile-first responsive websites. The latest release
-            version of bootstrap has removed JQuery dependency not fully work on vanilla javascript.</summary>
-            Bootstrap is a famous front-end framework used to create mobile-first responsive websites. The latest release
-            version of bootstrap has removed JQuery dependency not fully work on vanilla javascript.
-            Bootstrap is a famous front-end framework used to create mobile-first responsive websites. The latest release
-            version of bootstrap has removed JQuery dependency not fully work on vanilla javascript.
-          </details>
-          </br>
-          <table>
-            <tr>
-              <td>Manufacturer</td><td> </td>
-            <tr>
-              <td>Certificate</td><td> xyz</td>
-            </tr>
-            <tr>
-              <td>Costs</td><td>{{ dict["Current Price"] }}</td>
-            </tr>
-            <tr>
-              <td><a href="{{ dict["Product URL"] }}"></a>Landing Page</td>
-            </tr>
-          </table>
+        <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="70" tabindex="0">
+          {% for dict in i %}
+          <div class="boxlayout">
+            <img src="{{ dict["Image URL"] }}" alt="responsive webite" class="img-thumbnail" align="left" width="15%" height="15%">
+              <h2 id="list-item-{{ loop.index }}">{{ dict["Course Name"] }} </h2>
+              <details open>
+              <summary>Bootstrap is a famous front-end framework used to create mobile-first responsive websites. The latest release
+                version of bootstrap has removed JQuery dependency not fully work on vanilla javascript.</summary>
+                Bootstrap is a famous front-end framework used to create mobile-first responsive websites. The latest release
+                version of bootstrap has removed JQuery dependency not fully work on vanilla javascript.
+                Bootstrap is a famous front-end framework used to create mobile-first responsive websites. The latest release
+                version of bootstrap has removed JQuery dependency not fully work on vanilla javascript.
+              </details>
+              </br>
+              <table>
+                <tr>
+                  <td>Manufacturer</td><td> </td>
+                <tr>
+                  <td>Certificate</td><td> xyz</td>
+                </tr>
+                <tr>
+                  <td>Costs</td><td>{{ dict["Current Price"] }}</td>
+                </tr>
+                <tr>
+                  <td><a href="{{ dict["Product URL"] }}"></a>Landing Page</td>
+                </tr>
+              </table>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
+  </div>
+</div>
 {% endfor %}
 
 {% endblock %}
