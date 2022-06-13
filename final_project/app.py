@@ -78,14 +78,14 @@ def qs():
                                             "Course Name": dict["Product Name"],
                                             "URL": dict["URL"],
                                             "Partner": dict["Partner"],
-                                            "Certificate: dict["Product Type"],
+                                            "Certificate" : dict["Product Type"],
                                             })
                                 else:
                                     courses.append({
                                     "Course Name": dict["Product Name"],
                                     "URL": dict["URL"],
                                     "Partner": dict["Partner"],
-                                    "Certificate: dict["Product Type"],
+                                    "Certificate": dict["Product Type"],
                                     })
 
                 elif choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"]:
@@ -96,14 +96,14 @@ def qs():
                                 "Course Name": dict["Product Name"],
                                 "URL": dict["URL"],
                                 "Partner": dict["Partner"],
-                                "Certificate: dict["Product Type"],
+                                "Certificate": dict["Product Type"],
                                 })
                     else:
                         courses.append({
                         "Course Name": dict["Product Name"],
                         "URL": dict["URL"],
                         "Partner": dict["Partner"],
-                        "Certificate: dict["Product Type"],
+                        "Certificate": dict["Product Type"],
                         })
 
             # get further data for chosen courses from cdb
@@ -125,8 +125,6 @@ def qs():
 
 
             choices.append(courses)
-            print(len(choices))
-        print("choices[1]:", choices[1])
 
         return render_template("results.html", choices=choices)
     else:
