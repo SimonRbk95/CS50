@@ -138,10 +138,10 @@ def qs():
                 rnd_Ids.append(Ids)
         print(rnd_Ids)
     n = 0
-    m = 
+    m = 10
     for i in range(len(choices)):
             for j in range(len(choices[i])):
-                Ids = random.sample(range(1, 100),j)
+                Ids = random.sample(range(n, m),j)
 
 
 
