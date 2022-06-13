@@ -103,8 +103,8 @@ def qs():
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
                 i = 0
-                print(dict["Product Name"])
                 for course in courses:
+                    print(course["Course Name"])
                     if dict["Product Name"] == course["Course Name"]:
                         print(course)
                         print(dict["Product Name"])
