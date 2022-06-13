@@ -140,9 +140,14 @@ def qs():
     n = 0
     m = 10
     for i in range(len(choices)):
-            for j in range(len(choices[i])):
-                Ids = random.sample(range(n, m),j)
+        Ids = random.sample(range(n, m),len(choices[i]))
+        n +=11
+        m +=10
 
+        0, 10
+        11, 20
+        22, 30
+        33, 40
 
 
 
