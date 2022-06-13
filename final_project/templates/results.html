@@ -18,14 +18,14 @@
     <div class="row justify-content-center result-background">
       <div id="list-example" class="col-2 list-group">
         {% for dict in i%}
-        <a class="list-group-item list-group-item-dark list-group-item-action" href="#{{ loop.index }}">{{ dict["Course Name"] }}</a>
+        <a class="list-group-item list-group-item-dark list-group-item-action" href="#list-item-{{ dict["SKU"] }}">{{ dict["Course Name"] }}</a>
         {% endfor %}
       </div>
       <div class="col-7">
         <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="70" tabindex="0">
           {% for dict in i %}
           <div class="boxlayout">
-            <img src="{{ dict["Image URL"] }}" alt="responsive webite" class="img-thumbnail" align="left" width="15%" height="15%">
+            <img src="#list-item-{{ dict["SKU"] }}" alt="responsive webite" class="img-thumbnail" align="left" width="15%" height="15%">
               <h2 id="#{{ loop.index }}">{{ dict["Course Name"] }}</h2>
               <details open>
               <summary>Bootstrap is a famous front-end framework used to create mobile-first responsive websites. The latest release
