@@ -80,6 +80,7 @@ def qs():
                                             "URL": dict["URL"],
                                             "Partner": dict["Partner"],
                                             "Certificate" : dict["Product Type"],
+                                            "SKU": dict["Unique Merchant SKU"],
                                             })
                                 else:
                                     courses.append({
@@ -87,6 +88,7 @@ def qs():
                                     "URL": dict["URL"],
                                     "Partner": dict["Partner"],
                                     "Certificate": dict["Product Type"],
+                                    "SKU": dict["Unique Merchant SKU"],
                                     })
 
                 elif choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"]:
@@ -97,7 +99,8 @@ def qs():
                                 "Course Name": dict["Product Name"],
                                 "URL": dict["URL"],
                                 "Partner": dict["Partner"],
-                                "Certificate": dict["Product Type"],
+                                "Certificate": dict["Product Type"]
+                                "SKU": dict["Unique Merchant SKU"],
                                 })
                     else:
                         courses.append({
@@ -105,6 +108,7 @@ def qs():
                         "URL": dict["URL"],
                         "Partner": dict["Partner"],
                         "Certificate": dict["Product Type"],
+                        "SKU": dict["Unique Merchant SKU"],
                         })
 
             # get further data for chosen courses from cdb
