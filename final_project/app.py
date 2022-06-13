@@ -129,10 +129,10 @@ def qs():
 
         # list of three lists containing unique ids for each course
         rnd_Ids = []
-        for i in range(choices.length):
-            for j in range(choices[i].length):
+        for i in range(len(choices)):
+            for j in range(len(choices[i])):
                 rnd_Ids.append(random.sample(range(1, 100),j))
-                
+
 
 
 
