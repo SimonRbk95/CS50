@@ -126,6 +126,11 @@ def qs():
 
             choices.append(courses)
 
+            # unique id for each course
+            
+            for id in range(courses.length)
+
+
         return render_template("results.html", choices=choices)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
