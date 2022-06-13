@@ -1,5 +1,6 @@
 import os
 import string
+import random
 
 from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session
@@ -131,6 +132,7 @@ def qs():
         for i in range(choices.length):
             for j in range(choices[i].length):
                 
+
 
 
 
