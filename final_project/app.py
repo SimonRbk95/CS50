@@ -104,7 +104,6 @@ def qs():
                 # keep track of at which index the list item, the dictionary called 'course', is
                 i = 0
                 for course in courses:
-                    print(course["Course Name"])
                     if dict["Product Name"] == course["Course Name"]:
                         courses[i]["URL"] = dict["Short Link"]
                         courses[i]["Image URL"] = dict["Image URL"]
@@ -117,7 +116,9 @@ def qs():
                 pass
 
 
+
             choices.append(courses)
+            print(len(choices))
             # print(choices)
 
         return render_template("results.html", choices=choices)
