@@ -1,3 +1,19 @@
+<!-- macro generator, credits: https://gist.github.com/hijonathan/5db3d8ec64e267d06c32-->
+{% macro random_int(len) -%}
+  {% for n in range(len) %}
+    {{ [0,1,2,3,4,5,6,7,8,9]|random }}
+  {% endfor %}
+{%- endmacro %}
+
+{% macro unique_id(count_groups=5, group_len=6, separator='-') -%}
+  {% set parts %}
+    {% for n in range(count_groups) -%}
+      {{ random_int(group_len) }}
+    {% endfor %}
+  {% endset %}
+  {{ parts|join(separator) }}
+{%- endmacro %}
+
 {% extends "layout.html" %}
 
 {% block title %}
