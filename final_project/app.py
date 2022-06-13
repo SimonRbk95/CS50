@@ -137,7 +137,7 @@ def qs():
             n +=20
             m +=20
         print(rnd_Ids)
-        return render_template("results.html", choices=choices)
+        return render_template("results.html", choices=choices, rnd_Ids=rnd_Ids)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 
