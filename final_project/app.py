@@ -85,7 +85,8 @@ def qs():
                                     "Course Name": dict["Product Name"],
                                     "URL": dict["URL"],
                                     "Partner": dict["Partner"],
-                                    "Certificate: dict["Product Type"],})
+                                    "Certificate: dict["Product Type"],
+                                    })
 
                 elif choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"]:
                     # only append courses with professional certificates if "get a new job" is the goal
@@ -94,12 +95,16 @@ def qs():
                             courses.append({
                                 "Course Name": dict["Product Name"],
                                 "URL": dict["URL"],
-                                "Partner": dict["Partner"]})
+                                "Partner": dict["Partner"],
+                                "Certificate: dict["Product Type"],
+                                })
                     else:
                         courses.append({
                         "Course Name": dict["Product Name"],
                         "URL": dict["URL"],
-                        "Partner": dict["Partner"]})
+                        "Partner": dict["Partner"],
+                        "Certificate: dict["Product Type"],
+                        })
 
             # get further data for chosen courses from cdb
             for dict in cdb:
