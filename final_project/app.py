@@ -105,10 +105,13 @@ def qs():
                 i = 0
                 for course in courses:
                     if dict["Product Name"] == course["Course Name"]:
+                        print(course)
+                        print(dict["Product Name"])
                         courses[i]["URL"] = dict["Short Link"]
                         courses[i]["Image URL"] = dict["Image URL"]
                         courses[i]["Current Price"] = dict["Current Price"]
                         courses[i]["Product Description"] = dict["Product Description"]
+                        print(course)
                     i+=1
 
             if len(courses) < 5:
