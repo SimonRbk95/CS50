@@ -52,11 +52,6 @@ def qs():
             if choice not in options_q3:
                 return redirect("/qs")
 
-        # for each choice there will be a list of dictionaries with relevant courses
-        choices = []
-        # list of dictionaries with relevant course data
-        courses = []
-
         if q1 == "less":
             # suggest basic tech videos on Youtube
             pass
@@ -65,7 +60,11 @@ def qs():
             # suggest intro programming courses
             pass
 
+        # for each choice there will be a list of dictionaries with relevant courses
+        choices = []
         for choice in List_q3:
+            # list of dictionaries with relevant course data
+            courses = []
             # coursera
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cdb100:
