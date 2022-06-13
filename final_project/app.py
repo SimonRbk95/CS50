@@ -126,9 +126,12 @@ def qs():
 
             choices.append(courses)
 
-            # unique id for each course
-            
-            for id in range(courses.length)
+        # list of three lists containing unique ids for each course
+        
+        for i in range(choices.length):
+            for j in range(choices[i].length):
+
+
 
 
         return render_template("results.html", choices=choices)
