@@ -136,10 +136,7 @@ def qs():
             rnd_Ids.append(Ids)
             n +=20
             m +=20
-
-
-
-
+        print(rnd_Ids)
         return render_template("results.html", choices=choices)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
