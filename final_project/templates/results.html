@@ -23,8 +23,9 @@
       </div>
       <div class="col-7">
         <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="70" tabindex="0">
-          {% for dict in i %}
+
           <div class="boxlayout">
+            {% for dict in i %}
             <img src="{{ dict["Image URL"] }}" alt="responsive webite" class="img-thumbnail" align="left" width="15%" height="15%">
               <h2 id="#{{ dict["SKU"] }}">{{ dict["Course Name"] }} </h2>
               <details open>
