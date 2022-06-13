@@ -20,8 +20,9 @@
       <div id="list-example" class="col-2 list-group">
         {% for dict in i %}
         <a class="list-group-item list-group-item-dark list-group-item-action" href="#list-item-{{ loop.index }}">Item {{ loop.index }}</a>
+        {% endfor %}
       </div>
-
+      {% for dict in i %}
       <div class="col-7">
       <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="70" tabindex="0">
         <div class="boxlayout">
