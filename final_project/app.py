@@ -111,7 +111,7 @@ def qs():
                         courses[i]["Image URL"] = dict["Image URL"]
                         courses[i]["Current Price"] = dict["Current Price"]
                         courses[i]["Product Description"] = dict["Product Description"]
-                        print(course)
+                        print(courses[i]["Image URL"])
                     i+=1
 
             if len(courses) < 5:
@@ -120,7 +120,7 @@ def qs():
 
 
             choices.append(courses)
-            print(choices)
+            # print(choices)
 
         return render_template("results.html", choices=choices)
     else:
