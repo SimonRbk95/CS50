@@ -101,7 +101,7 @@ def qs():
 
             # get further data for chosen courses from cdb
             for dict in cdb:
-                # keep track of at which index the list item, dictionary called 'course', is
+                # keep track of at which index the list item, the dictionary called 'course', is
                 i = 0
                 for course in courses:
                     if dict["Product Name"] == course["Course Name"]:
@@ -115,7 +115,7 @@ def qs():
                 # check for alternatives in cdb
                 pass
 
-            print(courses)
+            
             choices.append(courses)
             print(choices)
 
