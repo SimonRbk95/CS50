@@ -131,7 +131,7 @@ def qs():
         rnd_Ids = []
         for i in range(choices.length):
             for j in range(choices[i].length):
-                while
+                
                 rnd_Ids[i].append(random.sample(range(1, 100)))
 
 
