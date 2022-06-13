@@ -131,7 +131,10 @@ def qs():
         rnd_Ids = []
         for i in range(len(choices)):
             for j in range(len(choices[i])):
-                rnd_Ids.append(random.sample(range(1, 100),j))
+                Ids = random.sample(range(1, 100),j)
+                    for i in range(len(choices)):
+                        if Ids in rnd_Ids[i]:
+                            Ids = random.sample(range(1, 100),j)
 
 
 
