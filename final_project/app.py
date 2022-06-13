@@ -119,7 +119,7 @@ def qs():
 
             choices.append(courses)
             print(len(choices))
-        print("choices:", choices[1])
+        print("choices[1]:", choices[1])
 
         return render_template("results.html", choices=choices)
     else:
