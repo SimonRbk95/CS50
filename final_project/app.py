@@ -80,7 +80,6 @@ def qs():
                                             "URL": dict["URL"],
                                             "Partner": dict["Partner"],
                                             "Certificate" : dict["Product Type"],
-                                            "SKU": dict["Unique Merchant SKU"],
                                             })
                                 else:
                                     courses.append({
@@ -88,7 +87,6 @@ def qs():
                                     "URL": dict["URL"],
                                     "Partner": dict["Partner"],
                                     "Certificate": dict["Product Type"],
-                                    "SKU": dict["Unique Merchant SKU"],
                                     })
 
                 elif choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"]:
@@ -100,7 +98,6 @@ def qs():
                                 "URL": dict["URL"],
                                 "Partner": dict["Partner"],
                                 "Certificate": dict["Product Type"],
-                                "SKU": dict["Unique Merchant SKU"],
                                 })
                     else:
                         courses.append({
@@ -108,7 +105,6 @@ def qs():
                         "URL": dict["URL"],
                         "Partner": dict["Partner"],
                         "Certificate": dict["Product Type"],
-                        "SKU": dict["Unique Merchant SKU"],
                         })
 
             # get further data for chosen courses from cdb
@@ -121,6 +117,7 @@ def qs():
                         courses[i]["Image URL"] = dict["Image URL"]
                         courses[i]["Current Price"] = dict["Current Price"]
                         courses[i]["Product Description"] = dict["Product Description"]
+                        courses[i]["SKU"] = dict["Unique Merchant SKU"]
                     i+=1
 
             if len(courses) < 5:
