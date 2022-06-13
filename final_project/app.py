@@ -99,7 +99,7 @@ def qs():
                                 "Course Name": dict["Product Name"],
                                 "URL": dict["URL"],
                                 "Partner": dict["Partner"],
-                                "Certificate": dict["Product Type"]
+                                "Certificate": dict["Product Type"],
                                 "SKU": dict["Unique Merchant SKU"],
                                 })
                     else:
