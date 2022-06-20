@@ -206,7 +206,7 @@ span.text{
 
 .scrollspy-example{
     position: relative;
-    overflow-y: scroll;
+    overflow: auto;
     height: 300px;
 }
 
