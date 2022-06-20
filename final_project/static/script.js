@@ -33,7 +33,7 @@ $('#btnDeselect_2').on('click',function(){
 });
 
 var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-  target: '#navbar-example'
+  target: '#list-example'
 })
 
 
