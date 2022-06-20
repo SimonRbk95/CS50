@@ -32,6 +32,10 @@ $('#btnDeselect_2').on('click',function(){
     $('#select_2').selectpicker('deselectAll');
 });
 
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+  target: '#navbar-example'
+})
+
 
 
 
