@@ -215,8 +215,15 @@ span.text{
 }
 
 td{
-    color: #F5F5F5;
+    color: #DDDDDD;
 }
+
+table:hover {
+    td{
+    color: #DDDDDD;
+}
+    }
+
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
     .sizingText-div-1{
