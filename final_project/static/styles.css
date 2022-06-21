@@ -98,6 +98,10 @@ tr:hover{
     background-image: linear-gradient(to bottom, #000000, #121212, #1e1e1e, #292929, #353535, #353535, #353535, #353535, #292929, #1e1e1e, #121212, #000000);
 }
 
+.card{
+    background-color: #34343;
+}
+
 div.result-background:hover {
     background-image: linear-gradient(to bottom, #121212, #1d1d1d, #282828, #343434, #404040, #404040, #404040, #404040, #343434, #282828, #1d1d1d, #121212);
     -webkit-transition: background-image 1000ms linear;
