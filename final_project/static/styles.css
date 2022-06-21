@@ -219,10 +219,8 @@ td{
 }
 
 table:hover {
-    td{
-    color: #DDDDDD;
+    color: white;
 }
-    }
 
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
