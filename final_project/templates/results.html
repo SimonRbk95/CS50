@@ -16,8 +16,12 @@
       </div>
     </div>
     <div class="row justify-content-center result-background">
-
-      <div class="col-9">
+      <div id="list-example" class="col-2 list-group">
+        {% for dict in i%}
+        <a class="list-group-item list-group-item-action" href="#list-item-{{ loop.index }}">{{ dict["Course Name"] }}</a>
+        {% endfor %}
+      </div>
+      <div class="col-7">
         <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="40" tabindex="0">
           {% for dict in i %}
           <div class="boxlayout" id="#list-item-{{ loop.index }}">
