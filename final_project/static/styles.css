@@ -84,6 +84,11 @@ table {
 td{
     padding-right: 20px;
     max-width: 150px;
+    color: #DDDDDD;
+}
+
+tr:hover{
+    background-color: ;
 }
 
 .result-background{
@@ -212,14 +217,6 @@ span.text{
 
 .card{
     max-width: 85%;
-}
-
-td{
-    color: #DDDDDD;
-}
-
-table:hover {
-    color: white;
 }
 
 /*--- media queries ---*/
