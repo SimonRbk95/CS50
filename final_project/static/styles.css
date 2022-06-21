@@ -103,6 +103,10 @@ tr:hover{
     border: 1px solid rgba(206, 195, 195, 0.13);
 }
 
+.card-body{
+    margin-bottom: 2%;
+}
+
 div.result-background:hover {
     background-image: linear-gradient(to bottom, #121212, #1d1d1d, #282828, #343434, #404040, #404040, #404040, #404040, #343434, #282828, #1d1d1d, #121212);
     -webkit-transition: background-image 1000ms linear;
