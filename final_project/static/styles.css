@@ -88,7 +88,8 @@ td{
 }
 
 tr:hover{
-    background-color: ;
+    background-color: #444444;
+    opacity: 0.5;
 }
 
 .result-background{
