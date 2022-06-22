@@ -44,7 +44,7 @@ def lookup(course):
     except requests.RequestException:
         return None
 
-def append_dict(dict, courses):
+def append_dict_c(dict, courses):
     courses.append({
     "Course Name": dict["Product Name"],
     "URL": dict["URL"],
