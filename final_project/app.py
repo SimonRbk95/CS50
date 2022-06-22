@@ -142,16 +142,4 @@ def qs():
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 
-@app.route("/results")
-def results():
-    # based on input display Top 5 coursera courses
-    # differentiate between professional certificate, specialization, standalone
-    return render_template("results.html")
 
-        # based on input display Top 5 edx courses
-
-        # based on input display Top5 udacity courses
-        # based on input display Top 5 coursera courses
-        # differentiate between professional certificate, specialization, standalone
-
-        # based on input display Top 5 youtube Videos
