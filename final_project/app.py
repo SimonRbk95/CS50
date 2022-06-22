@@ -67,8 +67,9 @@ def qs():
             # list of dictionaries with relevant course data
             # coursera
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
+            courses=[]
             for dict in cdb100:
-                courses = check_dict(choice, dict, List_q4)
+                courses = check_dict(courses, choice, dict, List_q4)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
@@ -96,7 +97,6 @@ def qs():
             rnd_Ids.append(Ids)
             n +=20
             m +=20
-        print(rnd_Ids)
         return render_template("results.html", choices=choices, rnd_Ids=rnd_Ids)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)

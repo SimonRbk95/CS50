@@ -53,8 +53,7 @@ def append_dict(dict, courses):
     })
     return courses
 
-def check_dict(choice, dict, List_q4):
-    courses = []
+def check_dict(courses, choice, dict, List_q4):
     if choice == "Data Analytics/ Science":
         for i in ["Data Analytics", "Data Science"]:
             if i in dict["Product Name"] or i in dict["Primary Domain"] or i in dict["Primary Subdomain"] and len(courses) < 5:
