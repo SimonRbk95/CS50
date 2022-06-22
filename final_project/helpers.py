@@ -53,7 +53,7 @@ def append_dict(dict, courses):
     })
     return courses
 
-def check_dict(choice, dict):
+def check_dict(choice, dict, List_q4):
     courses = []
     if choice == "Data Analytics/ Science":
         for i in ["Data Analytics", "Data Science"]:

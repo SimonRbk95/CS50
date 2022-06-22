@@ -6,7 +6,7 @@ from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session
 from cs50 import SQL
 
-from helpers import read_csv, read_txt
+from helpers import read_csv, read_txt, append_dict, check_dict
 
 app = Flask(__name__)
 
@@ -65,49 +65,10 @@ def qs():
         choices = []
         for choice in List_q3:
             # list of dictionaries with relevant course data
-            courses = []
             # coursera
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cdb100:
-
-                # special answer that considers two keywords
-                if choice == "Data Analytics/ Science":
-                    for i in ["Data Analytics", "Data Science"]:
-                        if i in dict["Product Name"] or i in dict["Primary Domain"] or i in dict["Primary Subdomain"]:
-                                if "Get a new job" in List_q4:
-                                    if dict["Product Type"] == "Professional Certificate" and len(courses) < 5:
-                                        courses.append({
-                                            "Course Name": dict["Product Name"],
-                                            "URL": dict["URL"],
-                                            "Partner": dict["Partner"],
-                                            "Certificate" : dict["Product Type"],
-                                            })
-                                elif len(courses) < 5:
-                                    courses.append({
-                                    "Course Name": dict["Product Name"],
-                                    "URL": dict["URL"],
-                                    "Partner": dict["Partner"],
-                                    "Certificate": dict["Product Type"],
-                                    })
-
-                elif choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] and len(courses) < 5:
-                    # only append courses with professional certificates if "get a new job" is the goal
-                    if "Get a new job" in List_q4:
-                        if dict["Product Type"] == "Professional Certificate" and len(courses) < 5:
-                            courses.append({
-                                "Course Name": dict["Product Name"],
-                                "URL": dict["URL"],
-                                "Partner": dict["Partner"],
-                                "Certificate": dict["Product Type"],
-                                })
-                    elif len(courses) < 5:
-                        courses.append({
-                        "Course Name": dict["Product Name"],
-                        "URL": dict["URL"],
-                        "Partner": dict["Partner"],
-                        "Certificate": dict["Product Type"],
-                        })
-
+                courses = check_dict(choice, dict, List_q4)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
@@ -120,12 +81,9 @@ def qs():
                         courses[i]["Product Description"] = dict["Product Description"]
                         courses[i]["SKU"] = dict["Unique Merchant SKU"]
                     i+=1
-
             if len(courses) < 5:
                 # check for alternatives in cdb
                 pass
-
-
 
             choices.append(courses)
 
