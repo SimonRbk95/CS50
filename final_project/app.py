@@ -69,7 +69,7 @@ def qs():
             # coursera
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cdb100:
-                
+
                 # special answer that considers two keywords
                 if choice == "Data Analytics/ Science":
                     for i in ["Data Analytics", "Data Science"]:
