@@ -54,4 +54,6 @@ def check_dict(choice, dict):
             if i in dict["Product Name"] or i in dict["Primary Domain"] or i in dict["Primary Subdomain"]:
                     if "Get a new job" in List_q4:
                         append_dict(dict, courses)
+                    elif len(courses) < 5:
+                        
     pass
