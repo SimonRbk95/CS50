@@ -44,13 +44,14 @@ def lookup(course):
     except requests.RequestException:
         return None
 
+def append_dict(dict, courses):
+    pass
+
 def check_dict(choice, dict):
+    courses = []
     if choice == "Data Analytics/ Science":
         for i in ["Data Analytics", "Data Science"]:
             if i in dict["Product Name"] or i in dict["Primary Domain"] or i in dict["Primary Subdomain"]:
                     if "Get a new job" in List_q4:
-                        append_dict()
-    pass
-
-def append_dict(dict):
+                        append_dict(dict, courses)
     pass
