@@ -53,23 +53,23 @@ def append_dict(dict, courses):
     })
     return courses
 
-def check_dict(courses, choice, dict, List_q4):
+def check_dict(courses, choice, dict, List_q4, max_courses):
     if choice == "Data Analytics/ Science":
         for i in ["Data Analytics", "Data Science"]:
-            if i in dict["Product Name"] or i in dict["Primary Domain"] or i in dict["Primary Subdomain"] and len(courses) < 5:
+            if i in dict["Product Name"] or i in dict["Primary Domain"] or i in dict["Primary Subdomain"] and len(courses) < max_courses:
                     # only append courses with professional certificates if "get a new job" is the goal
                     if "Get a new job" in List_q4:
-                        if dict["Product Type"] == "Professional Certificate" and len(courses) < 5:
+                        if dict["Product Type"] == "Professional Certificate" and len(courses) < max_courses:
                             courses = append_dict(dict, courses)
                             print(courses)
-                    elif len(courses) < 5:
+                    elif len(courses) < max_courses:
                         courses = append_dict(dict, courses)
                         print(courses)
-    elif choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] and len(courses) < 5:
+    elif choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] and len(courses) < max_courses:
         if "Get a new job" in List_q4:
-            if dict["Product Type"] == "Professional Certificate" and len(courses) < 5:
+            if dict["Product Type"] == "Professional Certificate" and len(courses) < max_courses:
                 courses = append_dict(dict, courses)
-        elif len(courses) < 5:
+        elif len(courses) < max_courses:
             courses = append_dict(dict, courses)
             print(courses)
     return courses

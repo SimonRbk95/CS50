@@ -69,7 +69,7 @@ def qs():
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             courses=[]
             for dict in cdb100:
-                courses = check_dict(courses, choice, dict, List_q4)
+                courses = check_dict(courses, choice, dict, List_q4, 5)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
@@ -85,7 +85,6 @@ def qs():
             if len(courses) < 5:
                 # check for alternatives in cdb
                 pass
-
             choices.append(courses)
 
         # list of three lists containing unique ids for each course
