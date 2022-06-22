@@ -45,7 +45,13 @@ def lookup(course):
         return None
 
 def append_dict(dict, courses):
-    pass
+    courses.append({
+    "Course Name": dict["Product Name"],
+    "URL": dict["URL"],
+    "Partner": dict["Partner"],
+    "Certificate": dict["Product Type"],
+    })
+    return courses
 
 def check_dict(choice, dict):
     courses = []
