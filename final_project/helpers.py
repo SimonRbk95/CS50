@@ -65,4 +65,3 @@ def check_dict(choice, dict):
         elif len(courses) < 5:
             courses = append_dict(dict, courses)
     return courses
-
