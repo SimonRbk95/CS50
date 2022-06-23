@@ -301,7 +301,7 @@ span.text{
 
     td{
         font-size: 10px;
-        width: auto;
+        min-width: 200px;
     }
 
     #course-button{
@@ -341,6 +341,7 @@ span.text{
 
     table{
         margin-left: 12%;
+        table-layout: fixed;
     }
 
     #certificate{
