@@ -293,6 +293,7 @@ span.text{
     img.img{
         width: 30px;
         height: 30px;
+        margin-bottom: 0;
     }
 
     td{
@@ -300,8 +301,9 @@ span.text{
         width: auto;
     }
 
-    #c-description{
+    #course-button{
         width: auto;
+        margin-left: 12%;
     }
 
     .product-description{
@@ -323,6 +325,7 @@ span.text{
 
     .card-body{
         width: auto;
+        margin-left: 12%;
     }
 
     .scrollspy-example{
@@ -331,6 +334,10 @@ span.text{
 
     .button-wrap{
         min-width: 100px;
+    }
+
+    table{
+        margin-left: 12%;
     }
 
 }
