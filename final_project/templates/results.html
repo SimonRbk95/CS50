@@ -40,11 +40,11 @@
                   <td><a href="{{ dict["URL"] }}" target="_blank" rel="noopener noreferrer">Landing Page</a></td><td></td>
                 </tr>
               </table>
-              <p style="min-width: 700px;">
+              <div>
                 <button class="btn-sm btn-light" id="c-description" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample-{{ loop.index }}" aria-expanded="false" aria-controls="collapseExample">
                   Course Description
                 </button>
-              </p>
+              </div>
               <div class="collapse" id="collapseExample-{{ loop.index }}">
                 <div class="card card-body">
                   <p class="product-description">{{ dict["Product Description"] }}</p>
