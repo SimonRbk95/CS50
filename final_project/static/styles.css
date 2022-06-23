@@ -292,7 +292,10 @@ span.text{
 
     td{
         font-size: 10px;
+        width: auto;
     }
+
+    
 
     #c-description{
         width: 50%;
