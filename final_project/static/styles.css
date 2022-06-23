@@ -304,7 +304,8 @@ span.text{
     }
 
     .course-vendor{
-        font-size: 15px;
+        font-size: 20px;
+        margin-left: -7%;
     }
 
     .course-title{
@@ -319,7 +320,11 @@ span.text{
         width: 35%;
     }
 
-    
+    .scrollspy-example{
+        height: 200px;
+    }
+
+
 }
 
 
