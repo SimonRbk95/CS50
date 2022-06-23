@@ -306,6 +306,9 @@ span.text{
         font-size: 15px;
     }
 
+    div.col-7{
+        width: 100%;
+    }
 }
 
 
