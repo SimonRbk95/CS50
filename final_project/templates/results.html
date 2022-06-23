@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
       <div class="col-9 heading">
           <div>
-            <h1 class="course-title">Coursera Courses</h1>
+            <h1 class="course-vendor">Coursera Courses</h1>
           </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
           {% for dict in i %}
           <div class="boxlayout" id="#list-item-{{ loop.index }}">
             <img src="{{ dict["Image URL"] }}" alt="responsive webite" class="img" align="left" width="100px" height="100px">
-              <h2>{{ dict["Course Name"] }}</h2>
+              <h2 class="course-title">{{ dict["Course Name"] }}</h2>
               <table>
                 <tr>
                   <td>Manufacturer/ Partner</td><td class="c-white">{{ dict["Partner"] }}</td>

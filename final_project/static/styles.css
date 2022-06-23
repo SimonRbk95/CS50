@@ -295,7 +295,7 @@ span.text{
         width: auto;
     }
 
-    
+
 
     #c-description{
         width: 50%;
@@ -305,9 +305,14 @@ span.text{
         font-size: 10px;
     }
 
+    .course-vendor{
+        font-size: 15px;
+    }
+
     .course-title{
         font-size: 15px;
     }
+
 
     div.col-7{
         width: 90%;
