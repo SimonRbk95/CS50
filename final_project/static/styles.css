@@ -239,7 +239,7 @@ span.text{
         position: absolute;
         top: 40%;
         transform: translateY(-60%);
-}
+    }
 
     .sizingText-div-2 {
         position: absolute;
@@ -271,9 +271,14 @@ span.text{
         height: 30px;
         padding: 0;
         font-size: 14px;
-}
+    }
+
     .carousel-indicators{
         bottom: -18px;
+    }
+
+    #list-example{
+        display: none;
     }
 }
 
@@ -313,9 +318,7 @@ span.text{
         width: 100%;
     }
 
-    #list-example{
-        display: none;
-    }
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
