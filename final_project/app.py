@@ -65,9 +65,8 @@ def qs():
         choices = []
         for choice in List_q3:
             # list of dictionaries with relevant course data
-            # coursera
-            # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             courses=[]
+            # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cdb100:
                 courses = check_dict(courses, choice, dict, List_q4, 5)
             # get further data for chosen courses from cdb
