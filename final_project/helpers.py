@@ -47,7 +47,7 @@ def lookup(course):
 def append_dict(dict, courses):
     courses.append({
     "Course Name": dict["Product Name"],
-    "URL": dict["Product URL"],
+    "URL": dict["URL"],
     "Partner": dict["Partner"],
     "Certificate": dict["Product Type"],
     })
