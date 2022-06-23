@@ -313,7 +313,7 @@ span.text{
         width: 100%;
     }
 
-    #list-example{
+    .list-group{
         display: none;
     }
 }
