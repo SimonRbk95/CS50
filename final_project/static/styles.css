@@ -233,6 +233,10 @@ span.text{
     max-width: 85%;
 }
 
+.product-description{
+    color: white;
+}
+
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
     .sizingText-div-1{
@@ -285,7 +289,23 @@ span.text{
         width: 30px;
         height: 30px;
     }
-    td
+
+    td{
+        font-size: 10px;
+    }
+
+    #c-description{
+        width: 50%;
+    }
+
+    .product-description{
+        font-size: 10px;
+    }
+
+    .course-title{
+        font-size: 15px;
+    }
+
 }
 
 

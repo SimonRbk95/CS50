@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
       <div class="col-9 heading">
           <div>
-            <h1>Coursera Courses</h1>
+            <h1 class="course-title">Coursera Courses</h1>
           </div>
       </div>
     </div>
@@ -41,13 +41,13 @@
                 </tr>
               </table>
               <p style="min-width: 700px;">
-                <button class="btn-sm btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample-{{ loop.index }}" aria-expanded="false" aria-controls="collapseExample">
+                <button class="btn-sm btn-light" id="c-description" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample-{{ loop.index }}" aria-expanded="false" aria-controls="collapseExample">
                   Course Description
                 </button>
               </p>
               <div class="collapse" id="collapseExample-{{ loop.index }}">
                 <div class="card card-body">
-                  <p style="color: white;">{{ dict["Product Description"] }}</p>
+                  <p class="product-description">{{ dict["Product Description"] }}</p>
                 </div>
               </div>
           </div>
