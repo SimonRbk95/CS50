@@ -311,12 +311,11 @@ span.text{
 
     .carousel-inner img {
         width: 100%;
-
     }
 
-#list-example{
-    display: none;
-}
+    #list-example{
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
