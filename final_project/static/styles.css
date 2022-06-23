@@ -311,9 +311,12 @@ span.text{
         font-size: 15px;
     }
 
-
     div.col-7{
         width: 90%;
+    }
+
+    .card-body{
+        width: 35%;
     }
 }
 
