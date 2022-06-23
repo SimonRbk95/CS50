@@ -237,6 +237,11 @@ span.text{
     color: white;
 }
 
+.button-wrap{
+    min-width: 700px;
+}
+
+
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
     .sizingText-div-1{
@@ -324,6 +329,9 @@ span.text{
         height: 200px;
     }
 
+    .button-wrap{
+        min-width: 100px;
+    }
 
 }
 
