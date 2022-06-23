@@ -88,6 +88,10 @@ td{
     width: 50%;
 }
 
+.c-white{
+    color: white;
+}
+
 tr:hover{
     background-color: #444444;
 }
