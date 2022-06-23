@@ -280,6 +280,12 @@ span.text{
     #list-example{
         display: none;
     }
+
+    img.img{
+        width: 30px;
+        height: 30px;
+    }
+    td
 }
 
 
