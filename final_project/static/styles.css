@@ -296,7 +296,7 @@ span.text{
     }
 
     #c-description{
-        width: 50%;
+        width: auto;
     }
 
     .product-description{
