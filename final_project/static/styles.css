@@ -83,9 +83,8 @@ table {
 
 td{
     padding-right: 20px;
-    max-width: 150px;
     color: #DDDDDD;
-    width: 50%;
+
 }
 
 .c-white{
@@ -301,7 +300,7 @@ span.text{
 
     td{
         font-size: 10px;
-        min-width: 200px;
+        width: 200px;
     }
 
     #course-button{
