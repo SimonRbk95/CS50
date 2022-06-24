@@ -83,6 +83,9 @@ def qs():
                     i+=1
             if len(courses) < 5:
                 # check for alternatives in cdb
+                for dict in cdb:
+                    
+                    pass
                 pass
             choices.append(courses)
 
