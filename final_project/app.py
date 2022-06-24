@@ -91,6 +91,8 @@ def qs():
             for dict in courses:
                 new_id = uuid.uuid1()
                 dict["ID"] == new_id.int
+
+            # append 
             choices.append(courses)
         return render_template("results.html", choices=choices, List_q3=List_q3)
     else:
