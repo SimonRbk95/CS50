@@ -68,7 +68,7 @@ def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
                 elif len(courses) < max_courses:
                     courses = append_dict(dict, courses)
         elif not cdb100:
-            elif choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] and len(courses) < max_courses:
+            if choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] and len(courses) < max_courses:
                 if "Get a new job" in List_q4:
                     if dict["Product Type"] == "Professional Certificate" and len(courses) < max_courses:
                         courses = append_dict(dict, courses)
