@@ -1,6 +1,7 @@
 import os
 import string
 import random
+import uuid
 
 from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session
@@ -87,7 +88,9 @@ def qs():
                     courses = check_dict(courses, choice, dict, List_q4, 5, False)
 
             # assign every dict a unique identifier
-            
+            for dict in courses:
+                new_ID =
+                dict["ID"] == 
             choices.append(courses)
         return render_template("results.html", choices=choices, List_q3=List_q3)
     else:
