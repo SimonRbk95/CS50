@@ -74,8 +74,8 @@ def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
                         courses = append_dict(dict, courses)
                 elif len(courses) < max_courses:
                     courses = append_dict(dict, courses)
-        elif choice in dict["Product Name"]
+        elif choice in dict["Product Name"]:
 
 
-        pass
+            pass
     return courses
