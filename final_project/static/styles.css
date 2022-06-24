@@ -300,7 +300,6 @@ span.text{
     }
 
     td{
-        font-size: 10px;
         width: 200px;
     }
 
@@ -340,7 +339,8 @@ span.text{
     }
 
     table{
-        margin-left: 12%;
+        font-size: 11px;
+        margin-left: 10%;
         table-layout: fixed;
     }
 
