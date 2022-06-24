@@ -88,7 +88,4 @@ def check_dict_cdb100(courses, choice, dict, List_q4, max_courses, cdb100=None):
                     courses = append_dict_cdb100(dict, courses)
         elif choice in dict["Product Name"] and len(courses) < max_courses:
             courses = append_dict_cdb(dict, courses)
-
-
-            pass
-    return courses
+        return courses
