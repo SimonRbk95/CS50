@@ -90,7 +90,7 @@ def qs():
             # assign every dict a unique identifier
             for dict in courses:
                 new_id = uuid.uuid1()
-                dict["ID"] == new_id.int
+                dict["ID"] = new_id.int
 
             # append the list of dictionaries to the outter list
             print(courses)
