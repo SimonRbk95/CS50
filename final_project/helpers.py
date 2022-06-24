@@ -44,12 +44,15 @@ def lookup(course):
     except requests.RequestException:
         return None
 
-def append_dict_cdb100(dict, courses):
+def append_dict_cdb(dict, courses):
     courses.append({
     "Course Name": dict["Product Name"],
     "URL": dict["Product URL"],
     "Partner": dict["Manufacturer"],
     "Certificate": dict["Product Type"],
+    "Image URL" : dict["Image URL"],
+    "Current Price" : dict["Current Price"],
+    "Product Description" : dict["Product Description"],
     })
     return courses
 
