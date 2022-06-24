@@ -67,7 +67,7 @@ html::-webkit-scrollbar {
 
 .img{
     margin-right: 2%;
-    margin-bottom: 25%;
+    margin-bottom: 15%;
 }
 
 .boxlayout {
@@ -88,10 +88,6 @@ td{
     color: #DDDDDD;
     width: 400px;
 
-}
-
-.c-white{
-    color: white;
 }
 
 tr:hover{
