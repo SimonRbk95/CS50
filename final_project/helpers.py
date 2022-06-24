@@ -48,13 +48,14 @@ def append_dict(dict, courses, cdb100=None):
     courses.append({
     "Course Name": dict["Product Name"],
     # different key for the cdb100 data base
-    if cdb100:
-        "URL": dict["URL"]
-    else:
-         "URL": dict["Product URL"]
     "Partner": dict["Partner"],
     "Certificate": dict["Product Type"],
     })
+
+    if cdb100:
+        courses.append("URL": dict["URL"])
+    else:
+         "URL": dict["Product URL"]
     return courses
 
 def check_dict(courses, choice, dict, List_q4, max_courses):
