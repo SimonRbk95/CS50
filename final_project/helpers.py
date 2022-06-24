@@ -47,8 +47,8 @@ def lookup(course):
 def append_dict_cdb100(dict, courses):
     courses.append({
     "Course Name": dict["Product Name"],
-    "URL": dict["URL"],
-    "Partner": dict["Partner"],
+    "URL": dict["Product URL"],
+    "Partner": dict["Manufacturer"],
     "Certificate": dict["Product Type"],
     })
     return courses
