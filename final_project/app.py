@@ -84,7 +84,7 @@ def qs():
             if len(courses) < 5:
                 # check for alternatives in cdb
                 for dict in cdb:
-                    courses = check_dict(courses, choice, List_q4, 5, False)
+                    courses = check_dict(courses, choice, dict, List_q4, 5, False)
             choices.append(courses)
         return render_template("results.html", choices=choices)
     else:
