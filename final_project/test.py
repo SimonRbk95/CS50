@@ -35,3 +35,12 @@
                         "Partner": dict["Partner"],
                         "Certificate": dict["Product Type"],
                         })
+        # list of three lists containing unique ids for each course
+        rnd_Ids = []
+        n = 0
+        m = 20
+        for i in range(len(choices)):
+            Ids = random.sample(range(n, m),len(choices[i]))
+            rnd_Ids.append(Ids)
+            n +=20
+            m +=20

@@ -86,17 +86,7 @@ def qs():
                 for dict in cdb:
                     courses = check_dict(courses, choice, List_q4, 5, False)
             choices.append(courses)
-
-        # list of three lists containing unique ids for each course
-        rnd_Ids = []
-        n = 0
-        m = 20
-        for i in range(len(choices)):
-            Ids = random.sample(range(n, m),len(choices[i]))
-            rnd_Ids.append(Ids)
-            n +=20
-            m +=20
-        return render_template("results.html", choices=choices, rnd_Ids=rnd_Ids)
+        return render_template("results.html", choices=choices)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 
