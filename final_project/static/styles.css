@@ -82,7 +82,8 @@ table {
 }
 
 td{
-    padding-right: 20px;
+    padding-right: 0;
+    paddin-left: 0;
     color: #DDDDDD;
     width: 300px;
 
@@ -241,9 +242,7 @@ span.text{
     min-width: 700px;
 }
 
-#certificate{
-    min-width: 220px;
-}
+
 
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
