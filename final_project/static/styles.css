@@ -325,6 +325,7 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
 
     div.col-7{
         width: 90%;
+        padding-left: 12px;
     }
 
     .card-body{
