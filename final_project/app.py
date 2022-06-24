@@ -68,7 +68,7 @@ def qs():
             courses=[]
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cdb100:
-                courses = check_dict(courses, choice, dict, List_q4, 5)
+                courses = check_dict(courses, choice, dict, List_q4, 5, False)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
@@ -84,7 +84,7 @@ def qs():
             if len(courses) < 5:
                 # check for alternatives in cdb
                 for dict in cdb:
-                    
+                    courses = check_dict(courses, choice, List_q4, 5, True)
                     pass
                 pass
             choices.append(courses)
