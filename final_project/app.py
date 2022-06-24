@@ -79,12 +79,15 @@ def qs():
                         courses[i]["Image URL"] = dict["Image URL"]
                         courses[i]["Current Price"] = dict["Current Price"]
                         courses[i]["Product Description"] = dict["Product Description"]
-                        courses[i]["SKU"] = dict["Unique Merchant SKU"]
+                        # courses[i]["SKU"] = dict["Unique Merchant SKU"]
                     i+=1
             if len(courses) < 5:
                 # check for alternatives in cdb
                 for dict in cdb:
                     courses = check_dict(courses, choice, dict, List_q4, 5, False)
+
+            # assign every dict a unique identifier
+            
             choices.append(courses)
         return render_template("results.html", choices=choices, List_q3=List_q3)
     else:
