@@ -42,11 +42,11 @@
                 </tr>
               </table>
               <p class="button-wrap">
-                <button class="btn-sm btn-light" id="course-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample-{{}}" aria-expanded="false" aria-controls="collapseExample">
+                <button class="btn-sm btn-light" id="course-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample-{{ dict["ID"]}}" aria-expanded="false" aria-controls="collapseExample">
                   Course Description
                 </button>
               </p>
-              <div class="collapse" id="collapseExample-{{}}">
+              <div class="collapse" id="collapseExample-{{ dict["ID"]}}">
                 <div class="card card-body">
                   <p class="product-description">{{ dict["Product Description"] }}</p>
                 </div>
