@@ -44,10 +44,13 @@ def lookup(course):
     except requests.RequestException:
         return None
 
-def append_dict(dict, courses):
+def append_dict(dict, courses, c=None):
     courses.append({
     "Course Name": dict["Product Name"],
-    "URL": dict["URL"],
+    if c:
+        "URL": dict["Product URL"]
+    else:
+         "URL": dict["URL"]
     "Partner": dict["Partner"],
     "Certificate": dict["Product Type"],
     })
