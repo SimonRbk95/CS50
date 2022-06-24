@@ -86,7 +86,7 @@ def qs():
                 for dict in cdb:
                     courses = check_dict(courses, choice, dict, List_q4, 5, False)
             choices.append(courses)
-        return render_template("results.html", choices=choices)
+        return render_template("results.html", choices=choices, List_q3=List_q3)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 
