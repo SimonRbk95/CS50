@@ -92,7 +92,7 @@ def qs():
                 new_id = uuid.uuid1()
                 dict["ID"] == new_id.int
 
-            # append 
+            # append the list of dictionaries to the outter list 
             choices.append(courses)
         return render_template("results.html", choices=choices, List_q3=List_q3)
     else:
