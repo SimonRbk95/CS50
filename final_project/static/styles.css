@@ -243,7 +243,9 @@ span.text{
     min-width: 700px;
 }
 
-
+#list-example{
+    display: none;
+}
 
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
