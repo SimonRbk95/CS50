@@ -6,7 +6,7 @@ from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session
 from cs50 import SQL
 
-from helpers import read_csv, read_txt, append_dict, check_dict
+from helpers import read_csv, read_txt, append_dict_cdb, append_dict_cdb100, check_dict
 
 app = Flask(__name__)
 

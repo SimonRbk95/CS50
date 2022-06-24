@@ -65,8 +65,7 @@ def append_dict_cdb100(dict, courses):
     })
     return courses
 
-def check_dict_cdb100(courses, choice, dict, List_q4, max_courses, cdb100=None):
-
+def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
         if choice == "Data Analytics/ Science":
             for i in ["Data Analytics", "Data Science"]:
                 if cdb100:
