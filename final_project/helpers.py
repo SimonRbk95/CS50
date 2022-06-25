@@ -86,11 +86,9 @@ def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
                 elif len(courses) < max_courses:
                     courses = append_dict_cdb100(dict, courses)
         elif choice in dict["Product Name"] and len(courses) < max_courses:
-            i = 0
+            # avoid duplicates
             for course in courses:
-                if course[i]["Product Name"] == dict["Product Name"]:
+                if course["Course Name"] == dict["Product Name"]:
                     return courses
-                else:
-                    i +=1
             courses = append_dict_cdb(dict, courses)
         return courses
