@@ -63,13 +63,13 @@ def qs():
 
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []
-        for choice in List_q3:
+        for i in List_q3:
             # list of dictionaries with relevant course data
             courses=[]
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cdb100:
                 if check_duplicates(courses, dict) == False:
-                    courses = check_dict(courses, choice, dict, List_q4, 5, True)
+                    courses = check_dict(courses, i, dict, List_q4, keywords_ 5, True)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
