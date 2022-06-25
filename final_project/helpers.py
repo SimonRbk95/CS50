@@ -74,6 +74,7 @@ def check_duplicates(courses, dict):
 
 
 def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
+        if check_duplicates(courses, dict) == False:
         if choice == "Data Analytics/ Science":
             for i in ["Data Analytics", "Data Science"]:
                 if cdb100:
@@ -91,8 +92,8 @@ def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
                 if "Get a new job" in List_q4:
                     if dict["Product Type"] == "Professional Certificate" and len(courses) < max_courses:
                         courses = append_dict_cdb100(dict, courses)
-                elif len(courses) < max_courses and check_duplicates(courses, dict) == False:
+                elif len(courses) < max_courses:
                     courses = append_dict_cdb100(dict, courses)
-        elif choice in dict["Product Name"] and len(courses) < max_courses and check_duplicates(courses, dict) == False:
+        elif choice in dict["Product Name"] and len(courses) < max_courses:
                 courses = append_dict_cdb(dict, courses)
         return courses
