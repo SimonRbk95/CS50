@@ -69,7 +69,7 @@ def qs():
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cdb100:
                 if check_duplicates(courses, dict) == False:
-                    courses = check_dict(courses, i, dict, List_q4, keywords_q3, 5, True)
+                    courses = check_dict(courses, index, dict, List_q4, keywords_q3, 5, True)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
