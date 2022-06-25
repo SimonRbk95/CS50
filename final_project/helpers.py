@@ -65,13 +65,11 @@ def append_dict_cdb100(dict, courses):
     })
     return courses
 
-def check_duplicates(courses, dict, cdb):
+def check_duplicates(courses, dict):
     for course in courses:
         if course["Course Name"] == dict["Product Name"]:
             return True
     return False
-
-
 
 def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
         if choice == "Data Analytics/ Science":

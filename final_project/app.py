@@ -1,13 +1,13 @@
 import os
 import string
-import random
 import uuid
+import helpers
 
 from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session
 from cs50 import SQL
 
-from helpers import read_csv, read_txt, append_dict_cdb, append_dict_cdb100, check_dict
+from helpers import read_csv, read_txt, append_dict_cdb, append_dict_cdb100, check_dict, check_duplicates
 
 app = Flask(__name__)
 
@@ -85,9 +85,8 @@ def qs():
             if len(courses) < 5:
                 # check for alternatives in cdb
                 for dict in cdb:
-                    for course in courses:
-                        if course["Course Name"] == dict["Product Name"]:
-                    courses = check_dict(courses, choice, dict, List_q4, 5, False)
+                    if check_duplicates(courses, dict) == False:
+                        courses = check_dict(courses, choice, dict, List_q4, 5, False)
 
             # assign every dict a 'unique' identifier
             # not worth it to check for duplicates - possibility extremely low
