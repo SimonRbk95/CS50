@@ -119,4 +119,5 @@ def check_dict(courses, index, dict, List_q4, keywords_q3, max_courses, cdb100=N
                 courses = append_dict_cdb(dict, courses)
         return courses
 
-def check_dict_
+def check_cdb100(courses, index, dict, List_q4, keywords_q3, max_courses):
+    
