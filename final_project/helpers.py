@@ -105,25 +105,8 @@ def check_dict(courses, index, dict, List_q4, keywords_q3, max_courses, cdb100=N
                             courses = append_dict_cdb100(dict, courses)
                     elif len(courses) < max_courses:
                         courses = append_dict_cdb100(dict, courses)
-
-
-        else:
-            if "Get a new job" in List_q4:
-                if dict["Product Type"] == "Professional Certificate" and len(courses) < max_courses:
-                    courses = append_dict_cdb100(dict, courses)
-            elif len(courses) < max_courses:
-                courses = append_dict_cdb100(dict, courses)
-        elif choice in dict["Product Name"] and len(courses) < max_courses:
+        elif any(n in dict["Product Name"] for n in keywords_q3[index]):
                 courses = append_dict_cdb(dict, courses)
         return courses
 
-def check_cdb100(courses, index, dict, List_q4, keywords_q3, max_courses):
-    if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[index]):
-        if len(courses) < max_courses:
-            # only append courses with professional certificates if "get a new job" is the goal
-            if "Get a new job" in List_q4:
-                if dict["Product Type"] == "Professional Certificate" and len(courses) < max_courses:
-                    courses = append_dict_cdb100(dict, courses)
-            elif len(courses) < max_courses:
-                courses = append_dict_cdb100(dict, courses)
 
