@@ -43,12 +43,10 @@ def qs():
         q1 = request.form.get("q1")
         q2 = request.form.get("q2")
 
-        # returns string
+        # returns indeces of select elements in options_q3
         List_q3 = request.form.getlist("q3")
 
-        # returns the answers as an index number of list options_q
         List_q4 = request.form.getlist("q4")
-        print(q1, q2, List_q3, List_q4)
 
         for choice in List_q3:
             # additional server-side input validation?

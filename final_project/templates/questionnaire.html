@@ -14,7 +14,7 @@
         <h5>How comfortable are you with basic technologies (Cloud, Internet, Computer Science basics)?</h5>
         <select required class="selectpicker show-tick" name="q1">
           {% for option in options_q %}
-            <option value="{{ loop.index }}">{{ option }}</option>
+            <option value="{{ option }}">{{ option }}</option>
           {% endfor %}
         </select>
       </div>
@@ -22,7 +22,7 @@
         <h5>How comfortable are you with programming?</h5>
           <select required class="selectpicker show-tick" name="q2">
             {% for option in options_q %}
-              <option value="{{ loop.index0 }}">{{ option }}</option>
+              <option value="{{ option }}">{{ option }}</option>
             {% endfor %}
           </select>
       </div>
