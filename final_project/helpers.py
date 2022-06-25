@@ -90,5 +90,7 @@ def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
             for course in courses:
                 if course[i]["Product Name"] == dict["Product Name"]:
                     return courses
+                else:
+                    i +=1
             courses = append_dict_cdb(dict, courses)
         return courses
