@@ -92,6 +92,9 @@ def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
                     if dict["Product Type"] == "Professional Certificate" and len(courses) < max_courses:
                         courses = append_dict_cdb100(dict, courses)
                 elif len(courses) < max_courses:
+                    if check_duplicates(courses, dict):
+                    return courses
+                else:
                     courses = append_dict_cdb100(dict, courses)
         elif choice in dict["Product Name"] and len(courses) < max_courses:
             # avoid duplicates
