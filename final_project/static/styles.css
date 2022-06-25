@@ -190,7 +190,7 @@ div.result-background:hover {
 }
 
 footer {
-    margin-top: 5%;
+    margin-top: 10%;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -247,6 +247,11 @@ span.text{
 div.profile-badge.profile-badge--width-280.profile-badge--dark{
     margin-right: auto;
     margin-left: auto;
+}
+
+
+#my-badge{
+    margin-top: 5%;
 }
 
 /*--- media queries ---*/
