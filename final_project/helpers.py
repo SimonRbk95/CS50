@@ -96,6 +96,7 @@ def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
         return courses
 
 def check_dict(courses, index, dict, List_q4, keywords_q3, max_courses, cdb100=None):
+        
         if cdb100:
             # only append courses with professional certificates if "get a new job" is the goal
             if "Get a new job" in List_q4:
