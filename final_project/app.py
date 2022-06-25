@@ -48,10 +48,10 @@ def qs():
 
         List_q4 = request.form.getlist("q4")
 
-        for choice in List_q3:
+        # for choice in List_q3:
             # additional server-side input validation?
-            if choice not in options_q3:
-                return redirect("/qs")
+            # if choice not in options_q3:
+                # return redirect("/qs")
 
         if q1 == "less":
             # suggest basic tech videos on Youtube
