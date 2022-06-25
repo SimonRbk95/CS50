@@ -107,7 +107,6 @@ def check_dict(courses, index, dict, List_q4, keywords_q3, max_courses, cdb100=N
                         courses = append_dict_cdb100(dict, courses)
 
 
-
         else:
             if choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] and len(courses) < max_courses:
                 if "Get a new job" in List_q4:
