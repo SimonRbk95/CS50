@@ -68,6 +68,8 @@ def append_dict_cdb100(dict, courses):
 def check_duplicates(courses, dict):
     for course in courses:
         if course["Course Name"] == dict["Product Name"]:
+            print(course)
+            print(dict["Product Name"])
             return True
     return False
 
