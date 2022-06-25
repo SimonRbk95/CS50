@@ -87,7 +87,8 @@ def qs():
                 for dict in cdb:
                     courses = check_dict(courses, choice, dict, List_q4, 5, False)
 
-            # assign every dict a unique identifier
+            # assign every dict a 'unique' identifier
+            # not worth it to check for duplicates - possibility extremely low
             for dict in courses:
                 new_id = uuid.uuid1()
                 dict["ID"] = new_id.int
