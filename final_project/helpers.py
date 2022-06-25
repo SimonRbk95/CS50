@@ -91,15 +91,8 @@ def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
                 if "Get a new job" in List_q4:
                     if dict["Product Type"] == "Professional Certificate" and len(courses) < max_courses:
                         courses = append_dict_cdb100(dict, courses)
-                elif len(courses) < max_courses:
-                    if check_duplicates(courses, dict):
-                    return courses
-                else:
+                elif len(courses) < max_courses and check_duplicates(courses, dict) == False:
                     courses = append_dict_cdb100(dict, courses)
-        elif choice in dict["Product Name"] and len(courses) < max_courses:
-            # avoid duplicates
-            if check_duplicates(courses, dict):
-                return courses
-            else:
+        elif choice in dict["Product Name"] and len(courses) < max_courses and check_duplicates(courses, dict) == False:
                 courses = append_dict_cdb(dict, courses)
         return courses
