@@ -46,6 +46,11 @@ def qs():
         # returns indeces of select elements in options_q3
         List_q3 = request.form.getlist("q3")
 
+        # get actual options chosen based on returned indeces
+        List_q3_options = []
+        for i in List_q3:
+            List_q3_options.append(options_q3[int(i)])
+
         List_q4 = request.form.getlist("q4")
 
         # for choice in List_q3:
@@ -96,7 +101,7 @@ def qs():
 
             # append the list of dictionaries to the outter list
             choices.append(courses)
-        return render_template("results.html", choices=choices, List_q3=List_q3)
+        return render_template("results.html", choices=choices, List_q3_options=List_q3_options)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 
