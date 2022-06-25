@@ -108,14 +108,13 @@ def check_dict(courses, index, dict, List_q4, keywords_q3, max_courses, cdb100=N
 
 
         else:
-            if choice in dict["Product Name"] or choice in dict["Primary Domain"] or choice in dict["Primary Subdomain"] and len(courses) < max_courses:
-                if "Get a new job" in List_q4:
-                    if dict["Product Type"] == "Professional Certificate" and len(courses) < max_courses:
-                        courses = append_dict_cdb100(dict, courses)
-                elif len(courses) < max_courses:
+            if "Get a new job" in List_q4:
+                if dict["Product Type"] == "Professional Certificate" and len(courses) < max_courses:
                     courses = append_dict_cdb100(dict, courses)
-            elif choice in dict["Product Name"] and len(courses) < max_courses:
-                    courses = append_dict_cdb(dict, courses)
+            elif len(courses) < max_courses:
+                courses = append_dict_cdb100(dict, courses)
+        elif choice in dict["Product Name"] and len(courses) < max_courses:
+                courses = append_dict_cdb(dict, courses)
         return courses
 
 def check_cdb100(courses, index, dict, List_q4, keywords_q3, max_courses):
