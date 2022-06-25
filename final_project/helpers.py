@@ -65,6 +65,14 @@ def append_dict_cdb100(dict, courses):
     })
     return courses
 
+def check_duplicates(courses, dict):
+    for course in courses:
+        if course["Course Name"] == dict["Product Name"]:
+            return True
+    return False
+
+
+
 def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
         if choice == "Data Analytics/ Science":
             for i in ["Data Analytics", "Data Science"]:
@@ -87,8 +95,8 @@ def check_dict(courses, choice, dict, List_q4, max_courses, cdb100=None):
                     courses = append_dict_cdb100(dict, courses)
         elif choice in dict["Product Name"] and len(courses) < max_courses:
             # avoid duplicates
-            for course in courses:
-                if course["Course Name"] == dict["Product Name"]:
-                    return courses
-            courses = append_dict_cdb(dict, courses)
+            if check_duplicates(courses, dict):
+                return courses
+            else:
+                courses = append_dict_cdb(dict, courses)
         return courses
