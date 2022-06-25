@@ -85,6 +85,8 @@ def qs():
             if len(courses) < 5:
                 # check for alternatives in cdb
                 for dict in cdb:
+                    for course in courses:
+                        if course["Course Name"] == dict["Product Name"]:
                     courses = check_dict(courses, choice, dict, List_q4, 5, False)
 
             # assign every dict a 'unique' identifier
