@@ -225,7 +225,7 @@ span.text{
 .scrollspy-example{
     position: relative;
     overflow-y: scroll;
-    height: 250px;
+    height: 300px;
 }
 
 .card{
@@ -253,6 +253,11 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
 #my-badge{
     margin-top: 2%;
     margin-left: 1%;
+}
+
+.listgroup{
+    font-size: 17px;
+    background-color: ;
 }
 
 /*--- media queries ---*/
