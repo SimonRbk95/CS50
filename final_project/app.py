@@ -77,7 +77,7 @@ def qs():
                 if check_duplicates(courses, dict) == False:
                     if "Get a new Job" in List_q4:
                         courses = prof_cert_courses(courses, index, dict, keywords_q3, max_courses)
-                    courses = check_all_courses(courses, index, dict, List_q4, keywords_q3, max_courses, True)
+                    courses = check_all_courses(courses, index, dict, keywords_q3, max_courses, True)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
