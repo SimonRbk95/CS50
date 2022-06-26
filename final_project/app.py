@@ -94,7 +94,7 @@ def qs():
                 # check for alternatives in cdb
                 for dict in cdb:
                     if check_duplicates(courses, dict) == False:
-                        courses = check_all_courses(courses, index, dict, List_q4, keywords_q3, max_courses, False)
+                        courses = check_all_courses(courses, index, dict, keywords_q3, max_courses, False)
 
             # assign every dict a 'unique' identifier
             # not worth it to check for duplicates - possibility extremely low
