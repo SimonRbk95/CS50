@@ -1,11 +1,10 @@
 import os
 import string
 import uuid
-import helpers
 
 from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session
-from csmax_courses0 import SQL
+from cs50 import SQL
 
 from helpers import read_csv, read_txt, append_dict_cdb, append_dict_cdb100, check_duplicates, prof_cert_courses, check_all_courses
 
@@ -77,7 +76,7 @@ def qs():
             for dict in cdb100:
                 if check_duplicates(courses, dict) == False:
                     if "Get a new Job" in List_q4:
-                        courses = prof_cert_courses(courses, index, dict, keywords_q3_ max_courses)
+                        courses = prof_cert_courses(courses, index, dict, keywords_q3, max_courses)
                     courses = check_all_courses(courses, index, dict, List_q4, keywords_q3, max_courses, True)
             # get further data for chosen courses from cdb
             for dict in cdb:
