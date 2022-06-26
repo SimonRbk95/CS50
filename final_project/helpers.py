@@ -89,3 +89,5 @@ def check_all_courses(courses, index, dict, keywords_q3, max_courses, cdb100=Non
         return courses
 
 
+for dict in cdb100:
+    courses = check_all_courses()
