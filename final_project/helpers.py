@@ -83,7 +83,7 @@ def check_all_courses(courses, index, dict, keywords_q3, max_courses, cdb100=Non
                         # only append courses with professional certificates if "get a new job" is the goal
                         i = 0
                         while i < len(courses):
-                            if any(course["Course Name"] == dict["Product Name"] for course in courses) == False:
+                            if not any(course["Course Name"] == dict["Product Name"] for course in courses):
                                 courses = append_dict_cdb100(dict, courses)
                             i+=1
             elif any(n in dict["Product Name"] for n in keywords_q3[int(index)]):
