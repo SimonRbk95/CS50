@@ -5,7 +5,7 @@ import helpers
 
 from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session
-from cs50 import SQL
+from csmax_courses0 import SQL
 
 from helpers import read_csv, read_txt, append_dict_cdb, append_dict_cdb100, check_duplicates, prof_cert_courses, check_all_courses
 
@@ -37,6 +37,7 @@ def qs():
     options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things"]
     options_q4 = ["Get a new Job", "Boost my CV", "Learn about new technologies"]
     keywords_q3 = [["Machine Learning"],["Data Analytics", "Data Science"],["Blockchain"],["Computer Science"],["Python", "Programming with Python"],["Internet of Things"]]
+    max_courses = 5
     # get user input
     if request.method == "POST":
         # returns the answers as an index number of list options_q
@@ -76,8 +77,8 @@ def qs():
             for dict in cdb100:
                 if check_duplicates(courses, dict) == False:
                     if "Get a new Job" in List_q4:
-                        courses = prof_cert_courses(courses, index, dict, keywords_q3_ 5)
-                    courses = check_all_courses(courses, index, dict, List_q4, keywords_q3, 5, True)
+                        courses = prof_cert_courses(courses, index, dict, keywords_q3_ max_courses)
+                    courses = check_all_courses(courses, index, dict, List_q4, keywords_q3, max_courses, True)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
@@ -90,11 +91,11 @@ def qs():
                         courses[i]["Product Description"] = dict["Product Description"]
                         # courses[i]["SKU"] = dict["Unique Merchant SKU"]
                     i+=1
-            if len(courses) < 5:
+            if len(courses) < max_courses:
                 # check for alternatives in cdb
                 for dict in cdb:
                     if check_duplicates(courses, dict) == False:
-                        courses = check_all_courses(courses, index, dict, List_q4, keywords_q3, 5, False)
+                        courses = check_all_courses(courses, index, dict, List_q4, keywords_q3, max_courses, False)
 
             # assign every dict a 'unique' identifier
             # not worth it to check for duplicates - possibility extremely low
