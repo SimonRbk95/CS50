@@ -52,6 +52,7 @@ def qs():
             List_q3_options.append(options_q3[int(i)])
 
         List_q4 = request.form.getlist("q4")
+        print(List_q4)
 
         # for choice in List_q3:
             # additional server-side input validation?
