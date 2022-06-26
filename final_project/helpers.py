@@ -79,9 +79,7 @@ def check_dict(courses, index, dict, List_q4, keywords_q3, max_courses, cdb100=N
         if len(courses) < max_courses:
             if cdb100 and any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) :
                         # only append courses with professional certificates if "get a new job" is the goal
-                        if "Get a new job" in List_q4:
-                            if dict["Product Type"] == "Professional Certificate":
-                                courses = append_dict_cdb100(dict, courses)
+                        if any(course[""] == dict["Product Name"] for course in )
                         else:
                             courses = append_dict_cdb100(dict, courses)
             elif any(n in dict["Product Name"] for n in keywords_q3[int(index)]):
