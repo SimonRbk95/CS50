@@ -49,7 +49,6 @@ def append_dict_cdb(dict, courses):
     "Course Name": dict["Product Name"],
     "URL": dict["Product URL"],
     "Partner": dict["Manufacturer"],
-    "Certificate": dict["Product Type"],
     "Image URL" : dict["Image URL"],
     "Current Price" : dict["Current Price"],
     "Product Description" : dict["Product Description"],
