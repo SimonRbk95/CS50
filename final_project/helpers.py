@@ -79,7 +79,9 @@ def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cd
             if cdb100:
                 if "Get a new Job" in List_q4:
                     for dict in cdb100:
-                        courses = prof_cert_courses(courses, index, dict, keywords_q3, max_courses)
+                        if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and len(courses) < max_courses:
+                            if dict["Product Type"] == "Professional Certificate":
+                                courses = append_dict_cdb100(dict, courses)
                 for dict in cdb100:
                     if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict):
                         courses = append_dict_cdb100(dict, courses)
