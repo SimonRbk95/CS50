@@ -77,12 +77,11 @@ def condition(dict, courses, keywords_q3, index, max_courses, cdb100=None):
         if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict) and len(courses) < max_courses:
             return True
     else:
-        if any(n in dict["Product Name"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict):
+        if any(n in dict["Product Name"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict) and len(courses) < max_courses:
             return True
 
 # requires cdb100 or cdb database as a list of dictionaries
 def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cdb100=None, cdb=None):
-        if len(courses) < max_courses:
             # append professional certificates first if get a new job is the goal
             # check if we are searching the cdb100 to use appropriate searches
             if cdb100:
@@ -99,7 +98,7 @@ def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cd
                 for dict in cdb:
                     if condition(dict, courses, keywords_q3, index, max_courses):
                         courses = append_dict_cdb(dict, courses)
-        return courses
+            return courses
 
 
 
