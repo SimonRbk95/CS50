@@ -31,7 +31,6 @@ def read_csv(file):
             contents.append(row)
         return contents
 
-
 def lookup(course):
     """Look up quote for symbol."""
 
@@ -71,11 +70,10 @@ def check_duplicates(courses, dict):
     return False
 
 def prof_cert_courses(courses, index, dict, keywords_q3, max_courses):
-    if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and len(courses) < max_courses:
-        print(dict["Product Type"])
-        if dict["Product Type"] == "Professional Certificate":
-            courses = append_dict_cdb100(dict, courses)
-            print(courses)
+    for dict in cdb100:
+        if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and len(courses) < max_courses:
+            if dict["Product Type"] == "Professional Certificate":
+                courses = append_dict_cdb100(dict, courses)
     return courses
 
 def check_all_courses(courses, index, dict, keywords_q3, max_courses, cdb100=None):
