@@ -81,7 +81,7 @@ def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cd
             # check if we are searching the cdb100 to use appropriate searches
             if cdb100:
                 for dict in cdb100:
-                    if not check_duplicates(courses, dict):
+                    if not check_duplicates(courses, dict) and any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)])
                         courses = append_dict_cdb100(dict, courses)
             # in big data base search only for matches in product name
             else:
