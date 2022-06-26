@@ -66,11 +66,11 @@ def append_dict_cdb100(dict, courses):
 def check_duplicates(courses, dict):
     return any(course["Course Name"] == dict["Product Name"] for course in courses)
 
-def prof_cert_courses(courses, index, dict, keywords_q3, max_courses):
-    if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and len(courses) < max_courses:
-        if dict["Product Type"] == "Professional Certificate":
-            courses = append_dict_cdb100(dict, courses)
-    return courses
+# def prof_cert_courses(courses, index, dict, keywords_q3, max_courses):
+    # if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and len(courses) < max_courses:
+        #if dict["Product Type"] == "Professional Certificate":
+            # courses = append_dict_cdb100(dict, courses)
+    # return courses
 
 def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cdb100=None, cdb=None):
         if len(courses) < max_courses:
