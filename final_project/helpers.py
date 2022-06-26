@@ -73,6 +73,7 @@ def check_duplicates(courses, dict):
 
 def prof_cert_courses(courses, index, dict, keywords_q3, max_courses):
     if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and len(courses) < max_courses:
+        print(dict["Product Type"])
         if dict["Product Type"] == "Professional Certificate":
             courses = append_dict_cdb100(dict, courses)
             print(courses)
