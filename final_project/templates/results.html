@@ -29,8 +29,8 @@
           {% endfor %}
         </ul>
       </div>
-      <div class="col-6" id="rightdiv">
-        <div class="scrollspy-example" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="40" tabindex="0">
+      <div class="col-6">
+        <div class="scrollspy-example" id="rightdiv" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="40" tabindex="0">
           {% for dict in i %}
           <div class="boxlayout" id="#list-item-{{ dict["ID"] }}">
             <img src="{{ dict["Image URL"] }}" alt="" class="img" align="left" width="100px" height="100px">
