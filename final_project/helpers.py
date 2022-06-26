@@ -86,7 +86,7 @@ def check_all_courses(courses, index, dict, keywords_q3, max_courses, cdb, cdb10
             # in big data base search only for matches in product name
             else:
                 for dict in cdb:
-                    if any(n in dict["Product Name"] for n in keywords_q3[int(index)]):
+                    if any(n in dict["Product Name"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict):
                         courses = append_dict_cdb(dict, courses)
         return courses
 
