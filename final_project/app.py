@@ -43,7 +43,7 @@ def qs():
         q1 = request.form.get("q1")
         q2 = request.form.get("q2")
 
-        # returns indeces of select elements in options_q3
+        # returns indeces of select elements in options_q3 that will be used as correspondants to the list of keywords
         List_q3 = request.form.getlist("q3")
 
         # get actual options chosen based on returned indeces
