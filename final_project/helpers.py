@@ -75,11 +75,11 @@ def prof_cert_courses(courses, index, dict, keywords_q3, max_courses):
 def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cdb100=None, cdb=None):
         if len(courses) < max_courses:
             # append professional certificates first if get a new job is the goal
-            if "Get a new Job" in List_q4:
-                for dict in cdb100:
-                    courses = prof_cert_courses(courses, index, dict, keywords_q3, max_courses)
             # check if we are searching the cdb100 to use appropriate searches
             if cdb100:
+                if "Get a new Job" in List_q4:
+                    for dict in cdb100:
+                        courses = prof_cert_courses(courses, index, dict, keywords_q3, max_courses)
                 for dict in cdb100:
                     if not check_duplicates(courses, dict) and any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)])
                         courses = append_dict_cdb100(dict, courses)
