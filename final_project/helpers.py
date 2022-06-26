@@ -67,24 +67,27 @@ def check_duplicates(courses, dict):
     return any(course["Course Name"] == dict["Product Name"] for course in courses)
 
 def prof_cert_courses(courses, index, dict, keywords_q3, max_courses):
-    for dict in cdb100:
-        if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and len(courses) < max_courses:
-            if dict["Product Type"] == "Professional Certificate":
-                courses = append_dict_cdb100(dict, courses)
+    if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and len(courses) < max_courses:
+        if dict["Product Type"] == "Professional Certificate":
+            courses = append_dict_cdb100(dict, courses)
     return courses
 
-def check_all_courses(courses, index, dict, keywords_q3, max_courses, cdb100, cdb100=None):
+def check_all_courses(courses, index, dict, keywords_q3, max_courses, cdb, cdb100, cdb100=None):
         if len(courses) < max_courses:
             # append professional certificates first if get a new job is the goal
             if "Get a new Job" in List_q4:
-                courses = prof_cert_courses(courses, index, dict, keywords_q3, max_courses)
+                for dict in cdb100:
+                    courses = prof_cert_courses(courses, index, dict, keywords_q3, max_courses)
             # check if we are searching the cdb100 to use appropriate searches
             if cdb100 and any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]):
-                if not check_duplicates(courses, dict):
-                    courses = append_dict_cdb100(dict, courses)
+                for dict in cdb100:
+                    if not check_duplicates(courses, dict):
+                        courses = append_dict_cdb100(dict, courses)
             # in big data base search only for matches in product name
-            elif any(n in dict["Product Name"] for n in keywords_q3[int(index)]):
-                    courses = append_dict_cdb(dict, courses)
+            else:
+                for dict in cdb:
+                    if any(n in dict["Product Name"] for n in keywords_q3[int(index)]):
+                        courses = append_dict_cdb(dict, courses)
         return courses
 
 
