@@ -72,7 +72,7 @@ def qs():
             # list of dictionaries with relevant course data
             courses=[]
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
-            check_all_courses(courses, index, dict, keywords_q3, max_courses, cdb100)
+            check_all_courses(courses, index, dict, keywords_q3, max_courses, cdb100=cdb100)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
@@ -86,13 +86,10 @@ def qs():
                         # courses[i]["SKU"] = dict["Unique Merchant SKU"]
                     i+=1
             if len(courses) < max_courses:
-                # check for alternatives in cdb
-                for dict in cdb:
-                    if check_duplicates(courses, dict) == False:
-                        courses = check_all_courses(courses, index, dict, keywords_q3, max_courses, False)
+                courses = check_all_courses(courses, index, dict, keywords_q3, max_courses, cdb=cdb)
 
             # assign every dict a 'unique' identifier
-            # not worth it to check for duplicates - possibility extremely low
+            # (not worth it to check for duplicates - possibility of a match is extremely low)
             for dict in courses:
                 new_id = uuid.uuid1()
                 dict["ID"] = new_id.int
