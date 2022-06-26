@@ -72,7 +72,7 @@ def qs():
             # list of dictionaries with relevant course data
             courses=[]
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
-            check_all_courses(courses, index, keywords_q3, max_courses, cdb100=cdb100)
+            check_all_courses(List_q4, courses, index, keywords_q3, max_courses, cdb100=cdb100)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is

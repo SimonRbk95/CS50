@@ -72,7 +72,7 @@ def prof_cert_courses(courses, index, dict, keywords_q3, max_courses):
             courses = append_dict_cdb100(dict, courses)
     return courses
 
-def check_all_courses(courses, index, keywords_q3, max_courses, cdb100=None, cdb=None):
+def check_all_courses(List_q4, courses, index, keywords_q3, max_courses, cdb100=None, cdb=None):
         if len(courses) < max_courses:
             # append professional certificates first if get a new job is the goal
             if "Get a new Job" in List_q4:
