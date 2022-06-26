@@ -6,9 +6,16 @@ document.addEventListener("DOMContentLoaded", function(){
             window.location.href = '/qs';
             });
         }
-    elem = document.querySelector('div.profile-badge');
-    elem.style.marginRight = 'auto';
-    elem.style.marginLeft = 'auto';
+    let right=document.getElementById('rightdiv').style.height;
+    let left=document.getElementById('leftdiv').style.height;
+    if(left>right)
+    {
+        document.getElementById('rightdiv').style.height=left;
+    }
+    else
+    {
+        document.getElementById('leftdiv').style.height=right;
+    }
 });
 
 
