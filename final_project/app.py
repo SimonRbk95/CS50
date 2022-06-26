@@ -52,7 +52,6 @@ def qs():
             List_q3_options.append(options_q3[int(i)])
 
         List_q4 = request.form.getlist("q4")
-        
 
         # for choice in List_q3:
             # additional server-side input validation?
@@ -73,9 +72,10 @@ def qs():
             # list of dictionaries with relevant course data
             courses=[]
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
-            for dict in cdb100:
-                if "Get a new Job" in List_q4:
+            if "Get a new Job" in List_q4:
+                for dict in cdb100:
                     courses = prof_cert_courses(courses, index, dict, keywords_q3, max_courses)
+            for dict in cdb100:
                 courses = check_all_courses(courses, index, dict, keywords_q3, max_courses, True)
             # get further data for chosen courses from cdb
             for dict in cdb:
