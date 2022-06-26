@@ -73,8 +73,12 @@ def check_duplicates(courses, dict):
     # return courses
 
 def condition(dict, courses, keywords_q3, index, max_courses, cdb100=None):
-    if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict) and len(courses) < max_courses:
-    pass
+    if cdb100:
+        if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict) and len(courses) < max_courses:
+            return True
+    else:
+        if any(n in dict["Product Name"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict):
+            return True
 
 # requires cdb100 or cdb database as a list of dictionaries
 def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cdb100=None, cdb=None):
@@ -84,16 +88,16 @@ def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cd
             if cdb100:
                 if "Get a new Job" in List_q4:
                     for dict in cdb100:
-                        if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and len(courses) < max_courses:
+                        if condition(dict, courses, keywords_q3, index, max_courses, True):
                             if dict["Product Type"] == "Professional Certificate":
                                 courses = append_dict_cdb100(dict, courses)
                 for dict in cdb100:
-                    if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict) and len(courses) < max_courses:
+                    if condition(dict, courses, keywords_q3, index, max_courses, True):
                         courses = append_dict_cdb100(dict, courses)
             # in big data base search only for matches in product name
             else:
                 for dict in cdb:
-                    if any(n in dict["Product Name"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict):
+                    if condition(dict, courses, keywords_q3, index, max_courses):
                         courses = append_dict_cdb(dict, courses)
         return courses
 
