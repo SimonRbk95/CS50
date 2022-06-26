@@ -7,7 +7,7 @@ from flask_session import Session
 from flask import Flask, flash, redirect, render_template, request, session
 from cs50 import SQL
 
-from helpers import read_csv, read_txt, append_dict_cdb, append_dict_cdb100, check_dict, check_duplicates
+from helpers import read_csv, read_txt, append_dict_cdb, append_dict_cdb100, check_duplicates, prof_cert_courses, check_all_courses
 
 app = Flask(__name__)
 
@@ -75,7 +75,9 @@ def qs():
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             for dict in cdb100:
                 if check_duplicates(courses, dict) == False:
-                    courses = check_dict(courses, index, dict, List_q4, keywords_q3, 5, True)
+                    if "Get a new Job" in List_q4:
+                        courses = prof_cert_courses(courses, index, dict, keywords_q3_ 5)
+                    courses = check_all_courses(courses, index, dict, List_q4, keywords_q3, 5, True)
             # get further data for chosen courses from cdb
             for dict in cdb:
                 # keep track of at which index the list item, the dictionary called 'course', is
@@ -92,7 +94,7 @@ def qs():
                 # check for alternatives in cdb
                 for dict in cdb:
                     if check_duplicates(courses, dict) == False:
-                        courses = check_dict(courses, index, dict, List_q4, keywords_q3, 5, False)
+                        courses = check_all_courses(courses, index, dict, List_q4, keywords_q3, 5, False)
 
             # assign every dict a 'unique' identifier
             # not worth it to check for duplicates - possibility extremely low
