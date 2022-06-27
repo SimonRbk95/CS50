@@ -114,7 +114,6 @@ def YT_lookup(course):
         videoEmbeddable="true",
         fields="items(id(videoId),snippet(title,description))")
         response = request.execute()
-        response.raise_for_status()
         print(response)
     except requests.RequestException:
         return None
