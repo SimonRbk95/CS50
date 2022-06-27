@@ -97,26 +97,25 @@ def YT_lookup(course):
     """Look up quote for symbol."""
     api_service_name = "youtube"
     api_version = "v3"
+    api_key = os.environ.get("API_KEY")
+    youtube = googleapiclient.discovery.build(
+    api_service_name, api_version, developerKey = api_key)
+    request = youtube.search().list(
+    part="id,snippet",
+    type='video',
+    q=course,
+    videoDuration='short',
+    videoDefinition='high',
+    maxResults=3,
+    relevanceLanguage="en",
+    videoEmbeddable="true",
+    order="viewCount",
+    fields="items(id(videoId),snippet(title,description))")
 
-    # Contact API
     try:
-        api_key = os.environ.get("API_KEY")
-        youtube = googleapiclient.discovery.build(
-        api_service_name, api_version, developerKey = api_key)
-        request = youtube.search().list(
-        part="id,snippet",
-        type='video',
-        q=course,
-        videoDuration='short',
-        videoDefinition='high',
-        maxResults=3,
-        relevanceLanguage="en",
-        videoEmbeddable="true",
-        order="viewCount",
-        fields="items(id(videoId),snippet(title,description))")
         response = request.execute()
         print(response)
-    except requests.RequestException:
+    except (KeyError, TypeError, ValueError):
         return None
 
 YT_lookup("Data Science")
