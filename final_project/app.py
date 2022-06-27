@@ -20,6 +20,12 @@ app.static_folder = 'static'
 cdb = read_txt("cdb")
 cdb100 = read_csv("cdb100")
 
+# variables needed for web-application
+options_q = ["less", "more", "very"]
+options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things"]
+options_q4 = ["Get a new Job", "Boost my CV", "Learn about new technologies"]
+keywords_q3 = [["Machine Learning"],["Data Analytics", "Data Science"],["Blockchain"],["Computer Science"],["Python", "Programming with Python"],["Internet of Things"]]
+max_courses = 5
 
 @app.route("/")
 def index():
@@ -32,11 +38,6 @@ def about():
 
 @app.route("/qs", methods=["GET", "POST"])
 def qs():
-    options_q = ["less", "more", "very"]
-    options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things"]
-    options_q4 = ["Get a new Job", "Boost my CV", "Learn about new technologies"]
-    keywords_q3 = [["Machine Learning"],["Data Analytics", "Data Science"],["Blockchain"],["Computer Science"],["Python", "Programming with Python"],["Internet of Things"]]
-    max_courses = 5
     # get user input
     if request.method == "POST":
         # returns the answers as an index number of list options_q
