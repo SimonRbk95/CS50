@@ -110,7 +110,7 @@ def YT_lookup(course):
     relevanceLanguage="en",
     # videoEmbeddable="true",
     order="viewCount",
-    fields="items(id(videoId),snippet(title,description,thumbnails)"
+    fields="items(id(videoId),snippet(title,description,thumbnails))"
     )
 
     #contact api
@@ -118,6 +118,14 @@ def YT_lookup(course):
         response = request.execute()
         print(response)
     except requests.RequestException:
+        return None
+
+    try:
+        quote = response.json()
+        return { "title": quote[""]
+
+        }
+    except (KeyError, TypeError, ValueError):
         return None
 
 
