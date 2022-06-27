@@ -110,8 +110,7 @@ def YT_lookup(course):
     relevanceLanguage="en",
     # videoEmbeddable="true",
     order="viewCount",
-    fields="items(id(videoId),snippet(title,description))")
-
+    fields="items(id(videoId),snippet(title,description,thumbnails)")
     try:
         response = request.execute()
         print(response)
