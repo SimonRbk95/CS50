@@ -113,7 +113,7 @@ def YT_lookup(course):
     fields="items(id(videoId),snippet(title,description,thumbnails)")
     try:
         response = request.execute()
-        print(response)
+        ret
     except (KeyError, TypeError, ValueError):
         return None
 
