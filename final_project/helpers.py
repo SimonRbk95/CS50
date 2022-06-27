@@ -122,9 +122,9 @@ def YT_lookup(course, maxResults):
     for i in range(maxResults):
         YT_data.append({
                 "videoId": response["items"][i]["id"]["videoId"],
-                "title": response["items"][i]["snippet"]["title"],
-                "thumbnail": response["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
-                "description": response["items"][i]["snippet"]["description"],
+                # "title": response["items"][i]["snippet"]["title"],
+                # "thumbnail": response["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
+                # "description": response["items"][i]["snippet"]["description"],
             })
     return YT_data
 
