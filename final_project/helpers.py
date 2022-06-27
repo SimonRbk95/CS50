@@ -104,11 +104,12 @@ def YT_lookup(course):
     part="id,snippet",
     type='video',
     q=course,
-    videoDuration='short',
+    videoDuration='medium',
     videoDefinition='high',
     maxResults=3,
     relevanceLanguage="en",
-    videoEmbeddable="true",
+    # videoEmbeddable="true",
+    order="viewCount",
     fields="items(id(videoId),snippet(title,description))")
 
     try:
@@ -117,4 +118,4 @@ def YT_lookup(course):
     except (KeyError, TypeError, ValueError):
         return None
 
-YT_lookup("Data Science Intro")
+YT_lookup("Data Science")
