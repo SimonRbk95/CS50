@@ -34,18 +34,6 @@ def read_csv(file):
             contents.append(row)
         return contents
 
-def lookup(course):
-    """Look up quote for symbol."""
-
-    # Contact API
-    try:
-        api_key = os.environ.get("API_KEY")
-        url = f"https://cloud.iexapis.com/stable/stock/{urllib.parse.quote_plus(course)}/quote?token={api_key}"
-        response = requests.get(url)
-        response.raise_for_status()
-    except requests.RequestException:
-        return None
-
 def append_dict_cdb(dict, courses):
     courses.append({
     "Course Name": dict["Product Name"],
@@ -103,5 +91,15 @@ def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cd
                         courses = append_dict_cdb(dict, courses)
             return courses
 
+def lookup(course):
+    """Look up quote for symbol."""
 
+    # Contact API
+    try:
+        api_key = os.environ.get("API_KEY")
+        url = f"https://cloud.iexapis.com/stable/stock/{urllib.parse.quote_plus(course)}/quote?token={api_key}"
+        response = requests.get(url)
+        response.raise_for_status()
+    except requests.RequestException:
+        return None
 
