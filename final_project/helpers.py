@@ -115,7 +115,7 @@ def YT_lookup(course):
     try:
         response = request.execute()
         print(response)
-    except exceptions.DefaultCredentialsError:
+    except (KeyError, TypeError, ValueError, GoogleAuthError):
         return None
 
 YT_lookup("Data Science")
