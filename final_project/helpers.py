@@ -115,12 +115,17 @@ def YT_lookup(course):
     #contact api
     try:
         response = request.execute()
+        print(response)
     except requests.RequestException:
         return None
 
     try:
         qoute = response.json()
+        return {
+
+        }
     except (KeyError, TypeError, ValueError):
-        
+        return None
+
 
 YT_lookup("Data Science")
