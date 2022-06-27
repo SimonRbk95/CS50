@@ -108,6 +108,7 @@ def YT_lookup(course):
         type='video',
         q=course,
         videoDuration='short',
+        videoDefinition='high',
         maxResults=3,
         fields="items(id(videoId),snippet(title,description))")
         response = requests.get(url)
