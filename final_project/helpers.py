@@ -111,10 +111,14 @@ def YT_lookup(course):
     # videoEmbeddable="true",
     order="viewCount",
     fields="items(id(videoId),snippet(title,description,thumbnails)")
+
+    #contact api
     try:
         response = request.execute()
-        ret
     except (KeyError, TypeError, ValueError):
         return None
+
+    try:
+        qoute = response.json()
 
 YT_lookup("Data Science")
