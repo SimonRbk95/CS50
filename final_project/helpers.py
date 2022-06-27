@@ -122,9 +122,12 @@ def YT_lookup(course):
 
     try:
         quote = response.json()
-        return { "title": quote[""]
+        return [{"videoId": quote["items"][0]
+
+
 
         }
+        ]
     except (KeyError, TypeError, ValueError):
         return None
 
