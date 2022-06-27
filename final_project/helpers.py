@@ -93,13 +93,23 @@ def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cd
                         courses = append_dict_cdb(dict, courses)
             return courses
 
-def lookup(course):
+def YT_lookup(course):
     """Look up quote for symbol."""
+    api_service_name = "youtube"
+    api_version = "v3"
 
     # Contact API
     try:
         api_key = os.environ.get("API_KEY")
-        url = f"https://cloud.iexapis.com/stable/stock/{urllib.parse.quote_plus(course)}/quote?token={api_key}"
+        youtube = googleapiclient.discovery.build(
+        api_service_name, api_version, developerKey = api_key)
+        request = youtube.search().list(
+        part="id,snippet",
+        type='video',
+        q=course,
+        videoDuration='short',
+        maxResults=3,
+        fields="items(id(videoId),snippet(title,description))")
         response = requests.get(url)
         response.raise_for_status()
     except requests.RequestException:
