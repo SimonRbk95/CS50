@@ -130,5 +130,6 @@ def YT_lookup(course, maxResults):
                  "description": response["items"][i]["snippet"]["description"],
                 })
         return YT_data
+        return ()
     except (KeyError, TypeError, ValueError):
         return None
