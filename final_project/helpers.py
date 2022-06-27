@@ -110,6 +110,8 @@ def YT_lookup(course):
         videoDuration='short',
         videoDefinition='high',
         maxResults=3,
+        relevanceLanguage="en"
+        
         fields="items(id(videoId),snippet(title,description))")
         response = requests.get(url)
         response.raise_for_status()
