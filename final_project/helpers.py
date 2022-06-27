@@ -121,18 +121,14 @@ def YT_lookup(course, maxResults):
 
     # parse response
     try:
-        quote = response.json()
         YT_data = []
         for i in range(maxResults):
             YT_data.append({
-                 "videoId": quote["items"][i]["id"]["videoId"],
-                 "title": quote["items"][i]["snippet"]["title"],
-                 "thumbnail": quote["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
-                 "description": quote["items"][i]["snippet"]["description"],
+                 "videoId": response["items"][i]["id"]["videoId"],
+                 "title": response["items"][i]["snippet"]["title"],
+                 "thumbnail": response["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
+                 "description": response["items"][i]["snippet"]["description"],
                 })
+        return YT_data
     except (KeyError, TypeError, ValueError):
         return None
-
-
-
-print(YT_lookup("Data Science", 3))
