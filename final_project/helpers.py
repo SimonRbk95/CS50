@@ -112,7 +112,7 @@ def YT_lookup(course):
         maxResults=3,
         relevanceLanguage="en",
         videoEmbeddable="true",
-        fields="items(id(videoId),snippet(title,description,))")
+        fields="items(id(videoId),snippet(title,description))")
         response = request.execute()
         response.raise_for_status()
     except requests.RequestException:
