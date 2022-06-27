@@ -120,16 +120,13 @@ def YT_lookup(course, maxResults):
         return None
 
     # parse response
-    try:
-        YT_data = []
-        for i in range(maxResults):
-            YT_data.append({
-                 "videoId": response["items"][i]["id"]["videoId"],
-                 "title": response["items"][i]["snippet"]["title"],
-                 "thumbnail": response["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
-                 "description": response["items"][i]["snippet"]["description"],
-                })
-        return YT_data
-        return ()
-    except (KeyError, TypeError, ValueError):
-        return None
+    YT_data = []
+    for i in range(maxResults):
+        YT_data.append({
+                "videoId": response["items"][i]["id"]["videoId"],
+                "title": response["items"][i]["snippet"]["title"],
+                "thumbnail": response["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
+                "description": response["items"][i]["snippet"]["description"],
+            })
+    return YT_data
+
