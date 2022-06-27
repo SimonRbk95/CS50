@@ -62,7 +62,7 @@ def qs():
         if q1 == "less":
             # suggest basic tech videos on Youtube
             quote = YT_lookup("Technology Basics", 3)
-            pass
+            render_template("YT_template1", quote=quote)
 
         if q2 == "less":
             # suggest intro programming courses
