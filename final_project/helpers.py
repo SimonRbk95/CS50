@@ -93,7 +93,7 @@ def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cd
                         courses = append_dict_cdb(dict, courses)
             return courses
 
-def YT_lookup(course):
+def YT_lookup(course, maxResults):
     """Look up quote for symbol."""
     api_service_name = "youtube"
     api_version = "v3"
@@ -106,35 +106,33 @@ def YT_lookup(course):
     q=course,
     videoDuration='medium',
     videoDefinition='high',
-    maxResults=3,
+    maxResults=maxResults,
     relevanceLanguage="en",
     # videoEmbeddable="true",
     order="viewCount",
     fields="items(id(videoId),snippet(title,description,thumbnails))"
     )
 
-    #contact api
+    # contact api
     try:
         response = request.execute()
-        print(response)
     except requests.RequestException:
         return None
 
+    # parse response
     try:
         quote = response.json()
-        return [
-            {"videoId": quote["items"][0]["id"]["videoId"],
-             "title": quote["items"][0]["snippet"]["title"],
-             "thumbnail": quote["items"][0]["snippet"]["thumbnails"]["medium"]["url"],
-             ""
-
-
-
-        }
-        ]
+        YT_data = []
+        for i in range(maxResults):
+            YT_data.append({
+                 "videoId": quote["items"][i]["id"]["videoId"],
+                 "title": quote["items"][i]["snippet"]["title"],
+                 "thumbnail": quote["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
+                 "description": quote["items"][i]["snippet"]["description"],
+                })
     except (KeyError, TypeError, ValueError):
         return None
 
 
 
-YT_lookup("Data Science")
+print(YT_lookup("Data Science", 3))
