@@ -60,10 +60,12 @@ def qs():
 
         if q1 == "less":
             # suggest basic tech videos on Youtube
+            quote = YT_lookup("Technology Basics", 3)
             pass
 
         if q2 == "less":
             # suggest intro programming courses
+            quote = YT_lookup("Programming Intro", 3)
             pass
 
         # for each choice there will be a list of dictionaries with relevant courses
