@@ -122,7 +122,11 @@ def YT_lookup(course):
 
     try:
         quote = response.json()
-        return [{"videoId": quote["items"][0]
+        return [
+            {"videoId": quote["items"][0]["id"]["videoId"],
+             "title": quote["items"][0]["snippet"]["title"],
+             "thumbnail": quote["items"][0]["snippet"]["thumbnails"]["medium"]["url"],
+             ""
 
 
 
