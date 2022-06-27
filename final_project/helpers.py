@@ -7,8 +7,6 @@ import os
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
-import pandas as pd
-import seaborn as sns
 
 from flask import redirect, render_template, request, session
 from os.path import exists
