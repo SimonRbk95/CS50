@@ -66,7 +66,7 @@ def qs():
 
         if q2 == "less":
             # suggest intro programming courses
-            quote = YT_lookup("Programming Intro", 3)
+            quote = YT_lookup("Programming Basics", 3)
             pass
 
         # for each choice there will be a list of dictionaries with relevant courses
