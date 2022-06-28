@@ -99,7 +99,7 @@ def qs():
 
             # append the list of dictionaries to the outter list
             choices.append(courses)
-        return render_template("results.html", choices=choices, List_q3_options=List_q3_options)
+        return render_template("results.html", choices=choices, List_q3_options=List_q3_options, quote=quote)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 
