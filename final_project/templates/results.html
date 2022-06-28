@@ -7,15 +7,14 @@
 {% block main %}
 
 <!--YT Programming Intro Videos-->
-<div class="container">
-{% include 'YT_template1.html' %}
-</div>
+
 
 <!--YT Basic Tech Videos-->
 
 <!--course displays-->
-{% for i in choices %}
 <div class= "container-fluid">
+  {% include 'YT_template1.html' %}
+  {% for i in choices %}
     <div class="row justify-content-center">
       <div class="col-8 heading">
           <div>
