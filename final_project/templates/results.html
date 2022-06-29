@@ -17,64 +17,6 @@
 <!--Edx-->
 <!--Udacity-->
 
-
-  {% for i in choices %}
-    <div class="row justify-content-center">
-      <div class="col-8 heading">
-          <div>
-            <small class="text-muted">{{ List_q3_options[loop.index0] }}</small>
-            </h1>
-          </div>
-      </div>
-    </div>
-    <div class="row justify-content-center result-background">
-      <div id="list-example" class="col-2 list-group">
-        {% for dict in i%}
-        <a class="list-group-item list-group-item-action" href="#list-item-{{ dict["ID"] }}">{{ dict["Course Name"] }}</a>
-        {% endfor %}
-      </div>
-      <div class="col-2" id="leftdiv">
-        <ul class="list-group">
-          {% for dict in i%}
-          <li class="list-group-item">{{ dict["Course Name"] }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="col-6">
-        <div class="scrollspy-example" id="rightdiv" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="40" tabindex="0">
-          {% for dict in i %}
-          <div class="boxlayout" id="#list-item-{{ dict["ID"] }}">
-            <img src="{{ dict["Image URL"] }}" alt="" class="img" align="left" width="100px" height="100px">
-              <h2 class="course-title">{{ dict["Course Name"] }}</h2>
-              <table>
-                <tr>
-                  <td>Manufacturer/ Partner</td><td>{{ dict["Partner"] }}</td>
-                <tr>
-                  <td>Product Type</td><td>{{ dict["Certificate"] }}</td>
-                </tr>
-                <tr>
-                  <td>Costs</td><td>${{ dict["Current Price"] }}</td>
-                </tr>
-                <tr>
-                  <td><a href="{{ dict["URL"] }}" target="_blank" rel="noopener noreferrer">Landing Page</a></td><td></td>
-                </tr>
-              </table>
-              <p class="button-wrap">
-                <button class="btn-sm btn-light" id="course-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample-{{ dict["ID"]}}" aria-expanded="false" aria-controls="collapseExample">
-                  Course Description
-                </button>
-              </p>
-              <div class="collapse" id="collapseExample-{{ dict["ID"]}}">
-                <div class="card card-body">
-                  <p class="product-description">{{ dict["Product Description"] }}</p>
-                </div>
-              </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  {% endfor %}
 </div>
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
