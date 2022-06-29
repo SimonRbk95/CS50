@@ -10,20 +10,19 @@
 <!--YT Intro Videos-->
 {% include "YT_template1.html" %}
 
-
 <!--course displays-->
 {% for i in List_q3_options %}
-<div class="row justify-content-center">
-  <div class="col-8 heading">
-      <div>
-      <small class="text-muted">{{ List_q3_options[loop.index0] }}</small>
-      </h1>
-      </div>
+  <div class="row justify-content-center">
+    <div class="col-8 heading">
+        <div>
+        <small class="text-muted">{{ List_q3_options[loop.index0] }}</small>
+        </h1>
+        </div>
+    </div>
   </div>
-</div>
 
+  <h2>Coursera Courses</h2>
   {% include "coursera_courses.html" %}
-  {% endfor %}
 
   <!--
   {% for dict in course_vendor["edx"][loop.index0 %}
@@ -33,16 +32,6 @@
   -->
 
 {% endfor %}
-
-
-<!--
-i
-Course Vendor
-courses for i
-
--->
-<h2>Coursera Courses</h2>
-{% include "Coursera_courses.html" %}
 
 <!--Edx-->
 <!--Udacity-->
