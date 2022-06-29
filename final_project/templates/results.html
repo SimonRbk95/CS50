@@ -7,16 +7,17 @@
 {% block main %}
 
 <div class= "container-fluid">
-<!--YT Programming Intro Videos-->
+<!--YT Intro Videos-->
 {% include "YT_template1.html" %}
-<!--YT Basic Tech Videos-->
 
-<!--Coursera course displays-->
-{% for i in choices %}
-
-
-
+<!--course displays-->
 <h2>Coursera Courses</h2>
+{% include "Coursera_courses.html" %}
+
+<!--Edx-->
+<!--Udacity-->
+
+
   {% for i in choices %}
     <div class="row justify-content-center">
       <div class="col-8 heading">
