@@ -12,7 +12,7 @@
 
 
 <!--course displays-->
-
+{% for i in List_q3_options %}
 <div class="row justify-content-center">
   <div class="col-8 heading">
       <div>
@@ -21,8 +21,7 @@
       </div>
   </div>
 </div>
-{% for choice in course_vendors["coursera"] %}
-  {% for dict in course_vendor["coursera"][loop.index0] %}
+{% for dict in course_vendor["coursera"][loop.index0] %}
 
 
 <!--
