@@ -16,7 +16,7 @@
     <div class="row justify-content-center">
       <div class="col-8 heading">
           <div>
-            <h1 class="course-vendor">Coursera Courses <small class="text-muted">{{ List_q3_options[loop.index0] }}</small>
+            <small class="text-muted">{{ List_q3_options[loop.index0] }}</small>
             </h1>
           </div>
       </div>
@@ -67,9 +67,8 @@
           {% endfor %}
         </div>
       </div>
-  </div>
-{% endfor %}
-
+    </div>
+  {% endfor %}
 </div>
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
