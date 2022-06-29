@@ -69,6 +69,7 @@ def qs():
             quote = YT_lookup("Programming Basics", 3)
             pass
 
+        # ! COURSERA !
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []
         for index in List_q3:
@@ -96,9 +97,13 @@ def qs():
             for dict in courses:
                 new_id = uuid.uuid1()
                 dict["ID"] = new_id.int
-
             # append the list of dictionaries to the outter list
             choices.append(courses)
+
+
+        course_vendors=[]
+        course_vendors.append(choices)
+
         return render_template("results.html", choices=choices, List_q3_options=List_q3_options, quote=quote)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
