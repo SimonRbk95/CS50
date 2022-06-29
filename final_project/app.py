@@ -100,11 +100,11 @@ def qs():
             # append the list of dictionaries to the outter list
             choices.append(courses)
 
-
+        # choices specific to the course vendor (currently coursera only)
         course_vendors=[]
         course_vendors.append(choices)
 
-        return render_template("results.html", choices=choices, List_q3_options=List_q3_options, quote=quote)
+        return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, quote=quote)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 
