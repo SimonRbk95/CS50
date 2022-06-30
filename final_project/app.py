@@ -110,6 +110,7 @@ def qs():
             choices.append(courses)
 
         course_vendors["coursera"] = choices
+        print(ids)
 
         return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, intro_videos=intro_videos, ids=ids)
     else:
