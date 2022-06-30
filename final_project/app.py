@@ -61,18 +61,22 @@ def qs():
 
         intro_videos=[]
         if q1 == "less":
-            # suggest basic tech videos on Youtube
-            intro_videos.append(YT_lookup("Technology Basics", 3))
-            # render_template("YT_template1.html", quote=quote)
+            # suggest free YT videos
+            intro_videos.append(YT_lookup("Technology basics", 3))
 
         if q2 == "less":
-            # suggest intro programming courses
-            intro_videos.append(YT_lookup("Programming Basics", 3))
-            pass
+            # suggest programming basics courses
+            intro_videos.append(YT_lookup("Programming basics", 3))
+        else:
+            intro_videos.append(YT_lookup("Programming advanced", 3))
 
-        # ! COURSERA !
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []
+
+        # choices will be assigned keys to the specific course vendor (currently coursera only)
+        course_vendors={}
+
+        # ! COURSERA !
         for index in List_q3:
             # list of dictionaries with relevant course data
             courses=[]
@@ -101,8 +105,6 @@ def qs():
             # append the list of dictionaries to the outter list
             choices.append(courses)
 
-        # choices specific to the course vendor (currently coursera only)
-        course_vendors={}
         course_vendors["coursera"] = choices
 
         return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, intro_videos=intro_videos)
