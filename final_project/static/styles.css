@@ -380,8 +380,17 @@ h3{
     }
 
     .YT-carousel-indicators{
-        transform: translateY(20px)
+        transform: translateY(20px);
     }
+
+    .YT-prev{
+        transform: translateX(-30px);
+    }
+
+    .YT-next{
+        transform: translateX(30px);
+    }
+
 }
 
 
