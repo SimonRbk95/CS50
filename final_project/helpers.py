@@ -128,7 +128,6 @@ def YT_lookup(course, maxResults):
                 # "thumbnail": response["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
                 # "description": response["items"][i]["snippet"]["description"],
             })
-    print(YT_data)
     return YT_data
 
 
