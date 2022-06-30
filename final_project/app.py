@@ -60,14 +60,11 @@ def qs():
                 # return redirect("/qs")
 
         intro_videos={
-            "basics": {
-                "Technology": [],
-                "Programming": [],
-            },
-            "advanced":{
-                "Technology": [],
-                "Programming": [],
-            }
+                {"Technology basics": [],
+                "Programming basics": [],
+                "Technology advanced": [],
+                "Programming advanced": [],
+                }
         }
 
         if q1 == "less":
