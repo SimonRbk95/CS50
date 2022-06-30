@@ -435,6 +435,13 @@ h2{
         width: 100%;
     }
 
+    #list-example{
+        display: none;
+    }
+
+    .list-group{
+        display: none;
+    }
 
 }
 
@@ -467,6 +474,14 @@ h2{
     .footerText{
         font-size: 16px;
         margin-bottom: 5%;
+    }
+
+    #list-example{
+        display: none;
+    }
+
+    .list-group{
+        display: none;
     }
 }
 
