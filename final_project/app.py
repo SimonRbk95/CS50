@@ -60,7 +60,7 @@ def qs():
                 # return redirect("/qs")
 
         intro_videos={}
-
+        
         if q1 == "less":
             # suggest free YT videos
             intro_videos["Technology basics"] = (YT_lookup("Understanding Technology", 3))

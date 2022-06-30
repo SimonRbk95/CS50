@@ -116,7 +116,7 @@ def YT_lookup(course, maxResults):
     # contact api
     try:
         response = request.execute()
-    except requests.RequestException:
+    except googleapiclient.errors.HttpError:
         return None
 
     # parse response
@@ -128,10 +128,9 @@ def YT_lookup(course, maxResults):
                 # "thumbnail": response["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
                 # "description": response["items"][i]["snippet"]["description"],
             })
-    print(YT_data)
     return YT_data
 
-YT_lookup("Data", 3)
+
 
 
 
