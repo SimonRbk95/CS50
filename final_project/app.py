@@ -100,17 +100,17 @@ def qs():
 
             # assign every dict a 'unique' identifier
             # (not worth it to check for duplicates - possibility of a match is extremely low)
-            ids = []
+            
             for dict in courses:
                 new_id = uuid.uuid1().int
                 dict["ID"] = new_id
-                ids.append(new_id)
+
 
             # append the list of dictionaries to the outter list
             choices.append(courses)
 
         course_vendors["coursera"] = choices
-        print(ids)
+
 
         return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, intro_videos=intro_videos, ids=ids)
     else:
