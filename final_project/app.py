@@ -69,7 +69,7 @@ def qs():
             # suggest programming basics courses
             intro_videos["Programming basics"] = (YT_lookup("Programming basics", 3))
         else:
-            intro_videos["Programming advanced"] = (YT_lookup("Programming advanced", 3))
+            intro_videos["Programming advanced"] = (YT_lookup("Programming advanced concepts", 3))
 
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []
