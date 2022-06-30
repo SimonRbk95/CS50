@@ -63,7 +63,7 @@ def qs():
             "basics": {
                 "Technology": [],
                 "Programming": [],
-            }
+            },
             "advanced":{
                 "Technology": [],
                 "Programming": [],
