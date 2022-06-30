@@ -483,6 +483,10 @@ h2{
     .list-group{
         display: none;
     }
+
+    .col-6{
+        width: 90%;
+    }
 }
 
 
