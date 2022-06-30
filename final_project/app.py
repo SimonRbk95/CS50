@@ -59,12 +59,16 @@ def qs():
             # if choice not in options_q3:
                 # return redirect("/qs")
 
-        intro_videos=[
+        intro_videos={
+            "basics": {
                 "Technology basics": [],
-                "Programming basics": [],
+                "Programming aasics": [],
+            },
+            "advanced":{
                 "Technology advanced": [],
                 "Programming advanced": [],
-        ]
+            }
+        }
 
         if q1 == "less":
             # suggest free YT videos
