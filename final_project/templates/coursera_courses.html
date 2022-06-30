@@ -1,4 +1,6 @@
-<div class="row justify-content-center result-background">
+<!-- extra spacing for course block-->
+{% if loop.index0 == 0 %}
+<div class="row justify-content-center result-background" style="margin.top">
     <div id="list-example" class="col-2 list-group">
     {% for dict in course_vendors["coursera"][loop.index0] %}
     <a class="list-group-item list-group-item-action" href="#list-item-{{ dict["ID"] }}">{{ dict["Course Name"] }}</a>
