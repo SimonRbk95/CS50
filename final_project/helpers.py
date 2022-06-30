@@ -107,7 +107,7 @@ def YT_lookup(course, maxResults):
     maxResults=maxResults,
     relevanceLanguage="en",
     # videoEmbeddable="true",
-    # order="viewCount",
+    # ~order="viewCount",
     fields="items(id(videoId),snippet(title,description,thumbnails))"
     )
 
