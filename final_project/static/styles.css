@@ -116,7 +116,9 @@ div.result-background:hover {
     transition: background-image 1000ms linear;
 }
 
-
+.course-vendor-title{
+    margin-top: 5%;
+}
 
 
 /*--- glow effect ---*/
