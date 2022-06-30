@@ -63,8 +63,7 @@ def qs():
         if q1 == "less":
             # suggest free YT videos
             intro_videos.append(YT_lookup("Technology basics", 3))
-        else:
-            intro_videos.append(YT_lookup("Technology advanced", 3))
+
 
         if q2 == "less":
             # suggest programming basics courses
