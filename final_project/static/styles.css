@@ -272,7 +272,10 @@ h3{
     color: gray;
 }
 
-.YT-carousel-indicators{transform: translateY(60px)}
+.YT-carousel-indicators{
+    transform: translateY(60px)
+}
+
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
     .sizingText-div-1{
@@ -374,6 +377,10 @@ h3{
 
     #certificate{
         min-width: 100px;
+    }
+
+    .YT-carousel-indicators{
+        transform: translateY(20px)
     }
 }
 
