@@ -59,14 +59,15 @@ def qs():
             # if choice not in options_q3:
                 # return redirect("/qs")
 
+        intro_videos=[]
         if q1 == "less":
             # suggest basic tech videos on Youtube
-            quote = YT_lookup("Technology Basics", 3)
+            intro_videos.append(YT_lookup("Technology Basics", 3))
             # render_template("YT_template1.html", quote=quote)
 
         if q2 == "less":
             # suggest intro programming courses
-            quote = YT_lookup("Programming Basics", 3)
+            intro_videos.append(YT_lookup("Programming Basics", 3))
             pass
 
         # ! COURSERA !
@@ -104,7 +105,7 @@ def qs():
         course_vendors={}
         course_vendors["coursera"] = choices
 
-        return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, quote=quote)
+        return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, intro_videos=intro_videos)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 

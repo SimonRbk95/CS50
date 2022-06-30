@@ -1,5 +1,5 @@
 <!-- set data-bs-intertval to false to stop automatic transitioning and delete data-bs-ride-->
-
+{% for intro in intro_videos %}
   <div class="row justify-content-center">
     <div class="col-8 heading">
         <div>
@@ -22,7 +22,7 @@
         <div class="carousel-item">
         {% endif %}
           <div class="row d-flex justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-5">
               <div class="ratio ratio-16x9" id="bottom-section">
                 <iframe
                 style="border: 0px;"
@@ -49,3 +49,4 @@
       </button>
     </div>
   </div>
+{% enfor %}
