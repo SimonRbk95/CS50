@@ -62,7 +62,7 @@ def qs():
         intro_videos={
             "basics": {
                 "Technology basics": [],
-                "Programming aasics": [],
+                "Programming basics": [],
             },
             "advanced":{
                 "Technology advanced": [],
