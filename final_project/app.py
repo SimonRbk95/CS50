@@ -59,20 +59,17 @@ def qs():
             # if choice not in options_q3:
                 # return redirect("/qs")
 
-        intro_videos={
-            "basics": {},
-            "advanced":{}
-        }
+        intro_videos={}
 
         if q1 == "less":
             # suggest free YT videos
-            intro_videos["basics"]["Technology advanced"] = (YT_lookup("Understanding Technology", 3))
+            intro_videos["Technology basics"] = (YT_lookup("Understanding Technology", 3))
 
         if q2 == "less":
             # suggest programming basics courses
-            intro_videos["basics"]["Programming advanced"] = (YT_lookup("Programming basics", 3))
+            intro_videos["Programming basics"] = (YT_lookup("Programming basics", 3))
         else:
-            intro_videos.append["advanced"]["Programming advanced"] = (YT_lookup("Programming advanced", 3))
+            intro_videos["Programming advanced"] = (YT_lookup("Programming advanced", 3))
 
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []

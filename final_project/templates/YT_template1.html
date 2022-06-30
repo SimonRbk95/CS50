@@ -5,12 +5,7 @@
         <div>
           <h1 class="course-vendor">
             <!--hard coded first index corresponding to basic tech videos and second to programming ones-->
-            {% if "basics" in intro %}
-              {{ intro["basics"] }}
-
-            {% if "Programming basics" in intro %}
-              Programming Basics
-            {% endif %}
+            {{ intro }}
             <small class="text-muted">free on Youtube</small></h1>
         </div>
     </div>
