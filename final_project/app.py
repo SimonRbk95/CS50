@@ -66,13 +66,13 @@ def qs():
 
         if q1 == "less":
             # suggest free YT videos
-            intro_videos["basics"]["Programming"] = [].append(YT_lookup("Understanding Technology", 3))
+            intro_videos["basics"]["Technology"] = (YT_lookup("Understanding Technology", 3))
 
         if q2 == "less":
             # suggest programming basics courses
-            intro_videos["basics"].append(YT_lookup("Programming basics", 3))
+            intro_videos["basics"]["Programming"] = (YT_lookup("Programming basics", 3))
         else:
-            intro_videos.append(YT_lookup("Programming advanced", 3))
+            intro_videos.append["advanced"]["Programming"] = (YT_lookup("Programming advanced", 3))
 
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []
