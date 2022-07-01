@@ -111,7 +111,8 @@ def qs():
         course_vendors["coursera"] = choices
 
         # youtube videos choice specific
-        for index in
+        for index in List_q3:
+            
 
         return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, intro_videos=intro_videos)
     else:
