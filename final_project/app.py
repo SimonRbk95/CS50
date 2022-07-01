@@ -47,7 +47,7 @@ def qs():
         # returns indeces of select elements in options_q3 that will be used as correspondants to the list of keywords
         List_q3 = request.form.getlist("q3")
 
-        # get actual options chosen based on returned indeces
+        # get actual options chosen based on returned indeces, needed for titles in results.html
         List_q3_options = []
         for i in List_q3:
             List_q3_options.append(options_q3[int(i)])
@@ -101,11 +101,9 @@ def qs():
 
             # assign every dict a 'unique' identifier
             # (not worth it to check for duplicates - possibility of a match is extremely low)
-
             for dict in courses:
                 new_id = uuid.uuid1().int
                 dict["ID"] = new_id
-
 
             # append the list of dictionaries to the outter list
             choices.append(courses)
@@ -113,7 +111,7 @@ def qs():
         course_vendors["coursera"] = choices
 
         # youtube videos choice specific
-        for index in 
+        for index in
 
         return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, intro_videos=intro_videos)
     else:
