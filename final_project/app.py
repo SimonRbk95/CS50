@@ -116,7 +116,7 @@ def qs():
             # look for videos using the keywords that correspond the input to q3
             course_videos.append(YT_lookup(" ".join(keywords_q3(index))))
 
-        return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, intro_videos=intro_videos, course_videos)
+        return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, intro_videos=intro_videos, course_videos=course_videos)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
 
