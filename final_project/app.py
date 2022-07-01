@@ -72,7 +72,7 @@ def qs():
             intro_videos["Programming advanced"] = (YT_lookup("Programming advanced concepts", 3))
 
 
-        
+
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []
         # choices will be assigned keys to the specific course vendor (currently coursera only)
@@ -112,6 +112,8 @@ def qs():
 
         course_vendors["coursera"] = choices
 
+        # youtube videos choice specific
+        for index in 
 
         return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, intro_videos=intro_videos)
     else:
