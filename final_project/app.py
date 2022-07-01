@@ -60,7 +60,7 @@ def qs():
                 # return redirect("/qs")
 
         intro_videos={}
-        
+
         if q1 == "less":
             # suggest free YT videos
             intro_videos["Technology basics"] = (YT_lookup("Understanding Technology", 3))
@@ -71,9 +71,10 @@ def qs():
         else:
             intro_videos["Programming advanced"] = (YT_lookup("Programming advanced concepts", 3))
 
+
+        
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []
-
         # choices will be assigned keys to the specific course vendor (currently coursera only)
         course_vendors={}
 
