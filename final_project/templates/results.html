@@ -12,76 +12,72 @@
 
 <!--course displays-->
 {% for option in List_q3_options %}
-<div class="container-lg result-background">
-  <div class="row justify-content-center">
-    <div class="col-8 heading">
-      <h1>{{ List_q3_options[loop.index0] }} Courses</h1>
+  <div class="container-lg result-background">
+    <div class="row justify-content-center">
+      <div class="col-8 heading">
+        <h1>{{ List_q3_options[loop.index0] }} Courses</h1>
 
-      <!-- Coursera -->
-      <h2 class="course-vendor-title">Coursera</h2>
+        <!-- Coursera -->
+        <h2 class="course-vendor-title">Coursera</h2>
 
-      <!-- Button trigger modal -->
-      <button type="button" class="btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Certificates Overview
-      </button>
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <h5>Coursera courses come with different certificates:</h5>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Certificate</th>
-                    <th scope="col">Goal</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Certificates Overview
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h5>Coursera courses come with different certificates:</h5>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Certificate</th>
+                      <th scope="col">Goal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-  </div>
+    </div>
 
-</div>
+    {% include "coursera_courses.html" %}
 
-  {% include "coursera_courses.html" %}
+    <!--
+    edx
+    {# for dict in course_vendors["edx"][loop.index0] #}
+    {# endfor #}
+    udacity
+    {# for dict in course_vendors["udacity"][loop.index0] #}
+    {# endfor #}
+    -->
 
-  <!--
-  edx
-  {# for dict in course_vendors["edx"][loop.index0] #}
-  {# endfor #}
-  udacity
-  {# for dict in course_vendors["udacity"][loop.index0] #}
-  {# endfor #}
-  -->
-
-  <!--YT videos choice specific-->
-  {% include "YT_template2.html" %}
+    <!--YT videos choice specific-->
+    {% include "YT_template2.html" %}
   </div>
 {% endfor %}
-
-
 
 </div>
 
