@@ -277,6 +277,14 @@ h2{
     transform: translateY(60px)
 }
 
+.blockquote-footer{
+    font-size: 1em;
+}
+
+.blockquote-footer::before {
+    content: none;
+    }
+
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
     .sizingText-div-1{
