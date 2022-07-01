@@ -4,14 +4,14 @@
     <a class="list-group-item list-group-item-action" href="#list-item-{{ dict["ID"] }}">{{ dict["Course Name"] }}</a>
     {% endfor %}
     </div>
-    <div class="col-2" id="leftdiv">
+    <div class="col-3" id="leftdiv">
     <ul class="list-group">
         {% for dict in course_vendors["coursera"][loop.index0] %}
         <li class="list-group-item">{{ dict["Course Name"] }}</li>
         {% endfor %}
     </ul>
     </div>
-    <div class="col-6">
+    <div class="col-8">
     <div class="scrollspy-example" id="rightdiv" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="40" tabindex="0">
         {% for dict in course_vendors["coursera"][loop.index0] %}
         <div class="boxlayout" id="#list-item-{{ dict["ID"] }}">

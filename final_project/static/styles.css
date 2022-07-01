@@ -97,7 +97,7 @@ tr:hover{
 .result-background{
     padding-top: 2%;
     padding-bottom: 2%;
-    background-image: linear-gradient(to bottom, #000000, #121212, #1e1e1e, #292929, #353535, #353535, #353535, #353535, #292929, #1e1e1e, #121212, #000000);
+    background-image: linear-gradient(to bottom, #000, #040404, #070707, #0b0b0b, #0e0e0e, #0e0e0e, #0e0e0e, #0e0e0e, #0b0b0b, #070707, #040404, #000);
 }
 
 .card{
@@ -110,7 +110,7 @@ tr:hover{
 }
 
 div.result-background:hover {
-    background-image: linear-gradient(to bottom, #121212, #1d1d1d, #282828, #343434, #404040, #404040, #404040, #404040, #343434, #282828, #1d1d1d, #121212);
+    background-image: linear-gradient(to bottom, #000000, #070707, #0e0e0e, #131313, #171717, #171717, #171717, #171717, #131313, #0e0e0e, #070707, #000000);
     -webkit-transition: background-image 1000ms linear;
     -ms-transition: background-image 1000ms linear;
     transition: background-image 1000ms linear;
