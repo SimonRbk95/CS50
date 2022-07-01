@@ -2,10 +2,10 @@
   <div class="row justify-content-center">
     <div class="col-8 heading">
         <div>
-          <h1 class="course-vendor">
+          <h2 class="course-vendor">
             <!--hard coded first index corresponding to basic tech videos and second to programming ones-->
-            {{ key }} videos
-            <small class="text-muted">free on Youtube</small></h1>
+            Relevant {{ key }} videos
+            <small class="text-muted">free on Youtube</small></h2>
         </div>
     </div>
   </div>
@@ -17,7 +17,8 @@
         <button type="button" data-bs-target="#carouselExampleCaptions-{{ loop.index0 }}" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        {% for list in intro_videos[key] %}
+        <!--course_videos index based on List_q3-->
+        {% for list in course_videos[loop.index0] %}
         {% if loop.index0 == 0 %}
         <div class="carousel-item active">
         {% else %}
@@ -51,4 +52,3 @@
       </button>
     </div>
   </div>
-{% endfor %}
