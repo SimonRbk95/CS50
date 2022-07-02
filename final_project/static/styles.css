@@ -120,6 +120,16 @@ tr:hover{
     margin-top: 2%;
 }
 
+.border-bottom{
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
 div.result-background:hover {
     background-image: linear-gradient(to bottom, #000000, #070707, #0e0e0e, #131313, #171717, #171717, #171717, #171717, #131313, #0e0e0e, #070707, #000000);
     -webkit-transition: background-image 1000ms linear;
@@ -128,7 +138,7 @@ div.result-background:hover {
 }
 
 .title{
-    margin-top: 35px;
+    margin-top: 50px;
 }
 
 /*--- glow effect ---*/
@@ -299,6 +309,7 @@ h2{
 .course-title{
     margin-top: 10%;
 }
+
 
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
