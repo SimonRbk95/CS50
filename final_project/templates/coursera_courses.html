@@ -14,7 +14,7 @@
         </ul>
     </div>
     <div class="col">
-        <div class="scrollspy-example" id="rightdiv" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="40" tabindex="0">
+        <div class="scrollspy-example" id="rightdiv" data-bs-spy="scroll" data-bs-target="#list-example-{{ dict["ID"] }}" data-bs-offset="40" tabindex="0">
             {% for dict in course_vendors["coursera"][loop.index0] %}
             <div class="boxlayout" id="#list-item-{{ dict["ID"] }}">
             <img src="{{ dict["Image URL"] }}" alt="" class="img" align="left" width="100px" height="100px">
@@ -32,15 +32,15 @@
                     <td>
 
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ dict["ID"] }}">
                             Course Description
                         </button>
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal-" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal-{{ dict["ID"] }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Course Description</h5>
+                                <h5 class="modal-title" id="exampleModalLabel-{{ dict["ID"] }}">Course Description</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
