@@ -271,7 +271,7 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
 }
 
 .list-group-item{
-    background-color: rgb(40, 40, 40, 40);
+    background-color: rgb(40, 40, 40, .25);
     border: 1px solid rgba(100,100,100,.5);
     color: rgb(225, 225, 225, 225);
 }
