@@ -285,6 +285,10 @@ h2{
     content: none;
     }
 
+.text-center{
+    text-align: center;
+}
+
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
     .sizingText-div-1{
