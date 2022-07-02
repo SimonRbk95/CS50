@@ -142,11 +142,11 @@ div.result-background:hover {
 }
 
 .modal-content{
-
+    background-color: rgb(35, 35, 35, 35);
 }
 
 .modal-footer{
-    border: 1px solid rgba(150, 150, 150, 0.5)
+    border: 1px solid rgba(150, 150, 150, 0.5);
 }
 
 /*--- glow effect ---*/
