@@ -296,6 +296,10 @@ h2{
     text-align: center;
 }
 
+.course-title{
+    margin-top: 10%;
+}
+
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
     .sizingText-div-1{
@@ -369,15 +373,6 @@ h2{
 
     .course-vendor{
         font-size: 16px;
-    }
-
-    .course-title{
-        margin-top: 10%;
-    }
-
-    div.col-7{
-        width: 90%;
-        padding-left: 12px;
     }
 
     .card-body{
