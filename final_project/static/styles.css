@@ -103,7 +103,7 @@ tr:hover{
 
 .card{
     background-color: transparent;
-    border: 1px solid rgba(206, 195, 195, 0.13);
+    border: 1px solid rgba(206, 195, 195, 0.13); max-width: 90%;
 }
 
 .card-body{
@@ -284,10 +284,6 @@ h2{
 
 .text-center{
     text-align: center;
-}
-
-.card{
-    max-width: 90%;
 }
 
 /*--- media queries ---*/
