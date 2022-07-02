@@ -110,6 +110,17 @@ tr:hover{
     margin-bottom: 2%;
 }
 
+.border{
+    background-color: transparent;
+    border: 1px solid rgba(206, 195, 195, 0.13);
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-bottom: 1em;
+    margin-right: 5%;
+    padding-top: 2em;
+    margin-left: 5%;
+    padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
 div.result-background:hover {
     background-image: linear-gradient(to bottom, #000000, #070707, #0e0e0e, #131313, #171717, #171717, #171717, #171717, #131313, #0e0e0e, #070707, #000000);
     -webkit-transition: background-image 1000ms linear;
