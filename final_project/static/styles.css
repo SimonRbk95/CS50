@@ -92,7 +92,7 @@ td{
 }
 
 tr:hover{
-    background-color: #444444;
+    background-color: rgba(40, 40, 40, 0.5);
 }
 
 .result-background{
