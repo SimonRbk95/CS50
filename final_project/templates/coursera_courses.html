@@ -18,7 +18,7 @@
             {% for dict in course_vendors["coursera"][loop.index0] %}
             <div class="boxlayout" id="#list-item-{{ dict["ID"] }}">
             <img src="{{ dict["Image URL"] }}" alt="" class="img" align="left" width="100px" height="100px">
-                <h2 class="course-title">{{ dict["Course Name"] }}</h2>
+                <h2>{{ dict["Course Name"] }}</h2>
                 <table>
                 <tr>
                     <td>Manufacturer/ Partner</td><td>{{ dict["Partner"] }}</td>
