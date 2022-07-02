@@ -113,6 +113,23 @@ tr:hover{
 .border{
     background-color: transparent;
     border: 1px solid rgba(206, 195, 195, 0.13);
+    border-top-color: rgba(206, 195, 195, 0.13);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgba(206, 195, 195, 0.13);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgba(206, 195, 195, 0.13);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgba(206, 195, 195, 0.13);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
     padding-bottom: 1em;
