@@ -1,15 +1,13 @@
 {% set id = loop.index0 + 3 %}
 
 <!--set data-bs-interval to false to stop automatic transitioning and delete data-bs-ride-->
-  <div class="row justify-content-center title">
-    <div class="col-8 text-center">
+    <div class="col text-center">
         <div class="course-vendor title">
             <!--hard coded first index corresponding to basic tech videos and second to programming ones-->
             <h2>Relevant {{ key }} videos
             <small class="text-muted">free on Youtube</small></h2>
         </div>
     </div>
-  </div>
   <div class="row justify-content-center border border-dark" style="padding-bottom: 3em;">
     <div id="carouselExampleCaptions-{{ id }}" class="col-8 carousel slide carousel-fade" data-bs-interval="false">
       <div class="carousel-indicators YT-carousel-indicators">
