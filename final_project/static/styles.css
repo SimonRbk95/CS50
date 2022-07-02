@@ -141,6 +141,10 @@ div.result-background:hover {
     margin-top: 50px;
 }
 
+.modal-content{
+    
+}
+
 /*--- glow effect ---*/
 @keyframes changeFilter {
 0% {
