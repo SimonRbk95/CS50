@@ -276,7 +276,9 @@ span.text{
     display: none;
 }
 
-
+.btn-light{
+    
+}
 div.profile-badge.profile-badge--width-280.profile-badge--dark{
     margin-right: auto;
     margin-left: auto;
