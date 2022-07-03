@@ -277,8 +277,15 @@ span.text{
 }
 
 .btn-new{
-    
+    background-color: black;
+    border-color: ;
 }
+
+.btn-new:hover{
+    border-color: #0b0b0b;
+    background-color: 
+}
+#0b0b0b
 div.profile-badge.profile-badge--width-280.profile-badge--dark{
     margin-right: auto;
     margin-left: auto;
