@@ -273,8 +273,10 @@ span.text{
 }
 
 #list-example{
-    display: none;
+    /*display: none;*/
 }
+
+#
 
 div.profile-badge.profile-badge--width-280.profile-badge--dark{
     margin-right: auto;
