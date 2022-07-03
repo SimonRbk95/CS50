@@ -279,6 +279,7 @@ span.text{
 .btn-new{
     background-color: black;
     border-color: #444446;
+    color: rgb(225, 225, 225, 225);
 }
 
 .btn-new:hover{
