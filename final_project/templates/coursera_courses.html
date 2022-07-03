@@ -1,6 +1,6 @@
 <div class="row justify-content-center border border-dark">
     <!-- scrollspy -->
-    <div id="list-example" class="col-2 list-group">
+    <div id="list-example" class="col-3 list-group">
         {% for dict in course_vendors["coursera"][loop.index0] %}
         <a class="list-group-item list-group-item-action" href="#list-item-{{ dict["ID"] }}">{{ dict["Course Name"] }}</a>
         {% endfor %}
