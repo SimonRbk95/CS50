@@ -454,7 +454,9 @@ h2{
         font-size 12px;
     }
 
-    .btn-course-description
+    .btn-course-description{
+        font-size 10px;
+    }
 }
 
 
