@@ -392,7 +392,7 @@ h2{
         font-size: 18px;
     }
 
-    h2{
+    h2.course-name{
         font-size: 14px;
         height: 36px;
         margin-bottom: 3px;
