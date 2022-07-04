@@ -100,10 +100,10 @@ def qs():
                 courses = check_all_courses(courses, index, keywords_q3, max_courses, cdb=cdb)
 
             # assign every dict a 'unique' identifier
-            # (not worth it to check for duplicates - possibility of a match is extremely low)
             ids=[]
             for dict in courses:
                 new_id = uuid.uuid1().int
+                # check if they are unique
                 if new_id not in ids:
                     ids.append(ids)
                     dict["ID"] = new_id
