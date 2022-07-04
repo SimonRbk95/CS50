@@ -455,6 +455,10 @@ h2{
         margin-bottom: 20px;
     }
 
+    .table.table-dark.table-striped{
+        font-size: 10px;
+    }
+
 
 /* -- YT-carousel*/
 
