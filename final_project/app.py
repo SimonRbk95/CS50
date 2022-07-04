@@ -101,9 +101,12 @@ def qs():
 
             # assign every dict a 'unique' identifier
             # (not worth it to check for duplicates - possibility of a match is extremely low)
+            ids=[]
             for dict in courses:
                 new_id = uuid.uuid1().int
-                dict["ID"] = new_id
+                if new_id not in ids:
+                    ids.append(ids)
+                    dict["ID"] = new_id
 
             # append the list of dictionaries to the outter list
             choices.append(courses)
