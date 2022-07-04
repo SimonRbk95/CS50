@@ -450,7 +450,12 @@ h2{
 
 /* -- YT-carousel*/
 
-    col-
+    col-md-6{
+        max-width: 95%;
+    }
+
+    
+
     .YT-carousel-indicators{
         transform: translateY(28px);
     }
