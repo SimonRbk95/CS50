@@ -592,6 +592,14 @@ h2{
     .col-3.leftdiv{
         display: none;
     }
+
+    .table.table-dark.table-striped{
+        font-size: 10px;
+    }
+
+    .modal-dialog-scrollable .modal-content{
+        font-size: 12px;
+    }
 }
 
 
