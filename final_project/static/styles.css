@@ -440,6 +440,11 @@ h2{
         height: 150px;
     }
 
+    .padding-mobile{
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
     .button-wrap{
         min-width: 100px;
     }
