@@ -393,7 +393,10 @@ h2{
     }
 
     h2{
-        font-size: 15px;
+        font-size: 14px;
+        height: 36px;
+        margin-bottom: 3px;
+
     }
 
     #list-example{
