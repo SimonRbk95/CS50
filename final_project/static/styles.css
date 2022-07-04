@@ -415,6 +415,7 @@ h2{
         width: 30px;
         height: 30px;
         margin-bottom: 5px;
+        margin-left: 0;
     }
 
     td{
@@ -451,7 +452,7 @@ h2{
         font-size: 10px;
         table-layout: fixed;
         margin-top: 5%;
-        margin-left: 2%;
+        margin-left: 0;
         margin-bottom: 20px;
     }
 
