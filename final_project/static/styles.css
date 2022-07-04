@@ -317,6 +317,10 @@ h2{
     transform: translateY(60px)
 }
 
+.YT-border-padding{
+    padding-bottom: 3em;
+}
+
 .blockquote-footer{
     font-size: 1em;
 }
@@ -454,7 +458,9 @@ h2{
         max-width: 95%;
     }
 
-    .border{}
+    .border{
+        padding-bottom: 2em;
+    }
 
 
     .YT-carousel-indicators{
