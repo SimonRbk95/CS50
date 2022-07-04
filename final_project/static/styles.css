@@ -578,13 +578,6 @@ h2{
         margin-bottom: 5%;
     }
 
-    #list-example{
-        display: none;
-    }
-
-    .list-group{
-        display: none;
-    }
 
     .col-6{
         width: 90%;
@@ -592,6 +585,12 @@ h2{
 
     .col-md-5{
         width: 60%;
+    }
+
+    /* coursera course display*/
+
+    .col-3.leftdiv{
+        display: none;
     }
 }
 
