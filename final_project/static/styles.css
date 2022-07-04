@@ -461,11 +461,11 @@ h2{
     }
 
     .btn-course-overview{
-        font-size 12px;
+        font-size: 12px;
     }
 
     .btn-course-description{
-        font-size 10px;
+        font-size: 10px;
         width: 90%;
     }
 }
