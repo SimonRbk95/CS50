@@ -454,14 +454,14 @@ h2{
         max-width: 95%;
     }
 
-    
+
 
     .YT-carousel-indicators{
         transform: translateY(28px);
     }
 
     .YT-prev{
-        transform: translateX(-18px);
+        transform: translateX(-20px);
     }
 
     .YT-next{
