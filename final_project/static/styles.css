@@ -490,7 +490,8 @@ h2{
     }
 
     .btn-course-description{
-        font-size: 10px;
+        font-size: 11px;
+        padding: 4px;
         width: 90%;
     }
 }
