@@ -439,15 +439,15 @@ h2{
 
 /* -- YT-carousel*/
     .YT-carousel-indicators{
-        transform: translateY(20px);
+        transform: translateY(28px);
     }
 
     .YT-prev{
-        transform: translateX(-30px);
+        transform: translateX(-18px);
     }
 
     .YT-next{
-        transform: translateX(30px);
+        transform: translateX(18px);
     }
 
 }
