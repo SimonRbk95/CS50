@@ -447,13 +447,14 @@ h2{
         min-width: 100px;
     }
 
-    table{
+    .course-table{
         font-size: 10px;
         table-layout: fixed;
         margin-top: 5%;
         margin-left: 2%;
         margin-bottom: 20px;
     }
+
 
 /* -- YT-carousel*/
 
