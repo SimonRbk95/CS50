@@ -378,6 +378,12 @@ h2{
         bottom: -18px;
     }
 
+    #certificate{
+        min-width: 100px;
+    }
+
+    /* results.html */
+
     #list-example{
         display: none;
     }
@@ -428,11 +434,7 @@ h2{
         table-layout: fixed;
     }
 
-    #certificate{
-        min-width: 100px;
-    }
-
-/* YT-carousel*/
+/* -- YT-carousel*/
     .YT-carousel-indicators{
         transform: translateY(20px);
     }
