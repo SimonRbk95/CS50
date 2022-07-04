@@ -432,6 +432,7 @@ h2{
         min-width: 100px;
     }
 
+/* YT-carousel*/
     .YT-carousel-indicators{
         transform: translateY(20px);
     }
