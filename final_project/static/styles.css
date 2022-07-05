@@ -452,7 +452,7 @@ h2{
     .course-table{
         font-size: 10px;
         table-layout: fixed;
-        margin-top: 5%;
+        margin-top: 0;
         margin-left: 0;
         margin-bottom: 20px;
     }
