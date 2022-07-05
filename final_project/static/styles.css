@@ -396,7 +396,7 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
         font-size: 18px;
     }
 
-    h2.course-name{
+    .course-name{
         font-size: 13px;
         min-height: 36px;
         margin-bottom: 3px;
