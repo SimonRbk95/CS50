@@ -352,6 +352,10 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
 /*--- media queries ---*/
 @media only screen and (max-width: 768px) {
 
+    .dark-video{
+        filter: brightness(50%);
+    }
+
     .darkened-image {
         background-image: url('/images/background_vertical.png');
         max-height: 90vh;
