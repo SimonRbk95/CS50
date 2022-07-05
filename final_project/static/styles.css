@@ -360,11 +360,11 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
     }
 
     .desktop-hidden{
-        display: none !important;
+        display: inline !important;
     }
 
     .mobile-hidden{
-        display: inline !important;
+        display: none !important;
     }
 
 
