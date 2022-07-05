@@ -433,6 +433,29 @@ h2{
         width: 200px;
     }
 
+    .td-adjusted{
+        width: 280px;
+    }
+
+    .btn-course-overview{
+        font-size: 12px;
+        margin-bottom: 5%;
+    }
+
+    .btn-course-description{
+        font-size: 10px;
+        padding: 3px;
+        width: 90%;
+    }
+
+    .course-table{
+        font-size: 10px;
+        table-layout: fixed;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
     #course-button{
         width: auto;
         margin-left: 12%;
@@ -458,29 +481,6 @@ h2{
 
     .button-wrap{
         min-width: 100px;
-    }
-
-    .btn-course-overview{
-        font-size: 12px;
-        margin-bottom: 5%;
-    }
-
-    .btn-course-description{
-        font-size: 10px;
-        padding: 3px;
-        width: 90%;
-    }
-
-    .course-table{
-        font-size: 10px;
-        table-layout: fixed;
-        margin-top: 0;
-        margin-left: 0;
-        margin-bottom: 20px;
-    }
-
-    .td-adjusted{
-        width: 280px;
     }
 
     .table.table-dark.table-striped{
