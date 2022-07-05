@@ -52,7 +52,7 @@ def append_dict_cdb100(dict, courses):
     "Course Name": dict["Product Name"],
     "URL": dict["URL"],
     "Partner": dict["Partner"],
-    "Certificate": dict["Product Type"],
+    "Product Type": dict["Product Type"],
     })
     return courses
 
