@@ -355,9 +355,11 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
         max-height: 90vh;
     }
 
-    .mobile-hidden{
-        display: 
+    .desktop-hidden{
+        display: none !important;
     }
+
+    
 
     .sizingText-div-1{
         position: absolute;
