@@ -399,7 +399,8 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
     }
 
     #btn-submit-questionnaire{
-        min-width: 300px;
+        min-width: 150px;
+        min-height: 40px;
     }
 
     /* results */
