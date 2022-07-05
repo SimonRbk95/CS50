@@ -354,7 +354,7 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
 
     .darkened-image {
         animation: changeFilter 6s infinite;
-        background-image: url('/images/background_horizontal.png');
+        background-image: url('/images/background_vertical.png');
         width: 100%;
         max-height: 90vh;
     }
