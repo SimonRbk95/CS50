@@ -479,6 +479,10 @@ h2{
         margin-bottom: 20px;
     }
 
+    .td-adjusted{
+        width: 280px;
+    }
+
     .table.table-dark.table-striped{
         font-size: 10px;
     }
