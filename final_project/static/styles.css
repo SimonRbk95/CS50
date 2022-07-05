@@ -337,6 +337,10 @@ h2{
     margin-top: 10%;
 }
 
+.quote{
+    color: gray;
+}
+
 
 /*--- media queries ---*/
 @media only screen and (max-width: 575px) {
@@ -396,7 +400,10 @@ h2{
         font-size: 13px;
         min-height: 36px;
         margin-bottom: 3px;
+    }
 
+    .quote{
+        font-size: 14px;"
     }
 
     #list-example{
@@ -535,6 +542,10 @@ h2{
 
     .carousel-inner img {
         width: 100%;
+    }
+
+    .quote{
+        font-size: 16px;
     }
 
     /* course display */
