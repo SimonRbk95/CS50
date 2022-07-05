@@ -42,6 +42,8 @@ def append_dict_cdb(dict, courses):
     "Image URL" : dict["Image URL"],
     "Current Price" : dict["Current Price"],
     "Product Description" : dict["Product Description"],
+    # hard code the product type for courses that are not in cdb100 as they are most likely of type "course"
+    "Product Type": "Course",
     })
     return courses
 

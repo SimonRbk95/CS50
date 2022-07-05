@@ -98,10 +98,6 @@ def qs():
                     i+=1
             if len(courses) < max_courses:
                 courses = check_all_courses(courses, index, keywords_q3, max_courses, cdb=cdb)
-                # any course that has not been run through cdb100 is likely of Product Type "Course"
-                i = 0
-                for course in courses:
-                    dict[""]
 
             # assign every dict a 'unique' identifier
             ids=[]
