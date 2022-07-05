@@ -65,6 +65,7 @@ html::-webkit-scrollbar {
     margin-bottom: 10%;
 }
 
+/* course display */
 .img{
     margin-right: 2%;
     margin-left: 2%;
@@ -76,6 +77,9 @@ html::-webkit-scrollbar {
     width: 100%;
 }
 
+.course-table{
+    margin-bottom: 35px;
+}
 
 table {
     border-collapse: collapse;
