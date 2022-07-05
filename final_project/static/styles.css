@@ -344,6 +344,10 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
     min-width: 300px;
 }
 
+.mobile-hidden{
+    display: none !important;
+}
+
 
 /*--- media queries ---*/
 @media only screen and (max-width: 768px) {
@@ -359,7 +363,10 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
         display: none !important;
     }
 
-    
+    .mobile-hidden{
+        display: inline !important;
+    }
+
 
     .sizingText-div-1{
         position: absolute;
