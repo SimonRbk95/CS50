@@ -238,6 +238,7 @@ footer {
 
 .menu-margins {
     margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 .show-tick{
@@ -392,10 +393,6 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
     /* questionnaire */
     h5{
         font-size: 16px;
-    }
-
-    .menu-margins{
-        margin-bottom: 10%;
     }
 
     /* results */
