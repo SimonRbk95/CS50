@@ -394,7 +394,9 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
         font-size: 16px;
     }
 
-    
+    .menu-margins{
+        margin-bottom: 10%;
+    }
 
     /* results */
 
