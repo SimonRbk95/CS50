@@ -537,6 +537,7 @@ h2{
         width: 100%;
     }
 
+    /* course display */
     #list-example{
         display: none;
     }
@@ -545,6 +546,13 @@ h2{
         display: none;
     }
 
+    .course-table{
+        font-size: 10px;
+        table-layout: fixed;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
