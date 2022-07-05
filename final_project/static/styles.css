@@ -79,6 +79,7 @@ html::-webkit-scrollbar {
 
 .course-table{
     margin-bottom: 35px;
+    font-size: 18px;
 }
 
 table {
