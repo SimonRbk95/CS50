@@ -42,15 +42,20 @@
             </select>
             <button class="btn btn-light" id="btnDeselect">Deselect</button>
         </div>
-        <div class="col-12 text-center menu-margins">
+          <div>
           <h5>Please select your goals:</h5>
+          </div>
+            <div class="col-10">
             <select required class="selectpicker show-tick" id="select_2" multiple name="q4" title="Choose any from...">
               {% for option in options_q4 %}
                 <option value="{{ option }}">{{ option }}</option>
               {% endfor %}
             </select>
+            </div>
+            <div class="col-2">
             <button class="btn btn-light" id="btnDeselect_2">Deselect</button>
-        </div>
+            </div>
+
         <div class="col-3 text-center">
               <button type="submit" class="btn btn-outline-light btn-lg" id="btn-submit-questionnaire">Submit</button>
         </div>
