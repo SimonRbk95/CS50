@@ -340,6 +340,10 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
     color: gray;
 }
 
+#btn-submit-questionnaire{
+    min-width: 300px;
+}
+
 
 /*--- media queries ---*/
 @media only screen and (max-width: 768px) {
@@ -392,6 +396,10 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
     /* questionnaire */
     h5{
         font-size: 16px;
+    }
+
+    #btn-submit-questionnaire{
+        min-width: 300px;
     }
 
     /* results */
