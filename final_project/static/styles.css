@@ -343,7 +343,7 @@ h2{
 
 
 /*--- media queries ---*/
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 768px) {
     .sizingText-div-1{
         position: absolute;
         top: 40%;
@@ -509,7 +509,7 @@ h2{
 }
 
 
-@media only screen and (min-width: 576px) and (max-width: 768px) {
+/* @media only screen and (min-width: 576px) and (max-width: 768px) {
     .footerText{
         font-size: 14px;
         margin-bottom: 5%;
@@ -545,10 +545,10 @@ h2{
     }
 
     .quote{
-        font-size: 16px;
+        font-size: 14px;
     }
 
-    /* course display */
+    ---course display
     #list-example{
         display: none;
     }
@@ -564,7 +564,7 @@ h2{
         margin-left: 0;
         margin-bottom: 20px;
     }
-}
+*/
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .sizingText-div-1 {
@@ -618,6 +618,18 @@ h2{
 
     .modal-dialog-scrollable .modal-content{
         font-size: 12px;
+    }
+
+    .course-table{
+        font-size: 16px;
+        table-layout: fixed;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .quote{
+        font-size: 16px;
     }
 }
 
