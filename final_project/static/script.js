@@ -18,8 +18,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 });
 
-
-
 $('.selectpicker').selectpicker({
    maxOptions: 3,
 });
@@ -27,9 +25,6 @@ $('.selectpicker').selectpicker({
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
   $('.selectpicker').selectpicker('mobile');
 }
-
-
-
 
 $('#btnDeselect').on('click',function(){
   $('#select_1').selectpicker('deselectAll');
