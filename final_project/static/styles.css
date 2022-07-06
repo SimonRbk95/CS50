@@ -344,6 +344,10 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
     min-width: 300px;
 }
 
+video{
+    width: 100%;
+}
+
 .mobile{
     display: none !important;
 }
