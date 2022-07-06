@@ -360,6 +360,10 @@ video{
 /*--- media queries ---*/
 @media only screen and (max-width: 768px) {
 
+    p.landing-page{
+        font-size: 
+    }
+
     .dark-video{
         filter: brightness(50%);
     }
