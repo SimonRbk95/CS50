@@ -100,8 +100,8 @@ tr:hover{
 }
 
 .result-background{
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-image: linear-gradient(to bottom, #000, #040404, #070707, #0b0b0b, #0e0e0e, #0e0e0e, #0e0e0e, #0e0e0e, #0b0b0b, #070707, #040404, #000);
 }
 
