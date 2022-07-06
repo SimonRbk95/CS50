@@ -684,8 +684,6 @@ video{
     .mobile-select{
         display: inline !important;
         width: 30%;
-        margin-right: auto;
-        margin-left: auto;
     }
 
     .desktop-select{
