@@ -55,17 +55,12 @@
         <!--select menu q3 all devices-->
         <div class="col-12 text-center menu-margins">
           <h5>Please select up to three areas of your interest:</h5>
-            <select required class="selectpicker desktop-select" id="select_1" name="q3" data-selected-text-format="count" multiple data-live-search="true" title='Choose three from...'>
+            <select required class="selectpicker" id="select_1" name="q3" data-selected-text-format="count" multiple data-live-search="true" title='Choose three from...'>
               {% for option in options_q3 %}
                 <option value="{{ loop.index0 }}">{{ option }}</option>
               {% endfor %}
             </select>
             <button class="btn btn-light desktop-select" id="btnDeselect">Deselect</button>
-            <select required multiple class="form-select mobile-select" aria-label="Default select example" size="3" title="Choose three from.." name="q3">
-              {% for option in options_q3 %}
-                <option value="{{ loop.index0 }}">{{ option }}</option>
-              {% endfor %}
-            </select>
           </div>
         </div>
 
