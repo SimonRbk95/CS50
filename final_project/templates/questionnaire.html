@@ -19,7 +19,7 @@
       <div class="row justify-content-center title">
 
         <!--select menu q1-->
-        <div class="col-12 text-center menu-margins">
+        <div class="col-10 text-center menu-margins" style="margin-top: 65px;">
           <h5>How comfortable are you with basic technologies (Cloud, Internet, Computer Science basics)?</h5>
           <!--select menu desktop-->
           <select required class="selectpicker show-tick desktop-select" name="q1">
@@ -36,7 +36,7 @@
         </div>
 
         <!--select menu q2-->
-        <div class="col-12 text-center menu-margins">
+        <div class="col-10 text-center menu-margins">
           <h5>How comfortable are you with programming?</h5>
           <!--select menu desktop-->
           <select required class="selectpicker show-tick desktop-select" name="q2">
@@ -53,7 +53,7 @@
         </div>
 
         <!--select menu q3 all devices-->
-        <div class="col-12 text-center menu-margins">
+        <div class="col-10 text-center menu-margins">
           <h5>Please select up to three areas of your interest:</h5>
             <select required class="selectpicker" id="select_1" name="q3" data-selected-text-format="count" multiple data-live-search="true" title='Choose three from...'>
               {% for option in options_q3 %}
@@ -64,7 +64,7 @@
         </div>
 
         <!-- select menu q4 all devices-->
-        <div class="col-12 text-center menu-margins">
+        <div class="col-10 text-center menu-margins">
           <h5>Please select your goals:</h5>
             <select required class="selectpicker show-tick" id="select_2" multiple name="q4" title="Choose any from...">
               {% for option in options_q4 %}
