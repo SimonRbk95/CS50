@@ -17,7 +17,7 @@
     </div>
     <form action="/qs" method="post">
       <div class="row justify-content-center title">
-        <div class="col-12 text-center menu-margins">
+        <div class="col-12 text-center menu-margins desktop-select">
           <h5>How comfortable are you with basic technologies (Cloud, Internet, Computer Science basics)?</h5>
           <select required class="selectpicker show-tick" name="q1">
             {% for option in options_q %}
@@ -26,7 +26,7 @@
           </select>
         </div>
         <div class="col-12 text-center menu-margins mobile-select">
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" aria-label="Default select example" name="q1">
             {% for option in options_q %}
               <option value="{{ option }}">{{ option }}</option>
             {% endfor %}
