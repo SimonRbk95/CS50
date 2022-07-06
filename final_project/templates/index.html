@@ -7,9 +7,12 @@
 {% block main %}
 
 <div class="container-fluid">
-  <video playsinline autoplay muted loop>
-    <source class="desktop" src="static/images/background_horizontal.mov" type="video/quicktime">
-    <source class="mobile" src="static/images/background_vertical.mov" type="video/quicktime">
+  <video class="desktop" playsinline autoplay muted loop>
+    <source src="static/images/background_horizontal.mov" type="video/quicktime">
+    Your browser does not support the video tag.
+  </video>
+  <video class="mobile"playsinline autoplay muted loop>
+    <source src="static/images/background_vertical.mov" type="video/quicktime">
     Your browser does not support the video tag.
   </video>
   <div class="row justify-content-center">
