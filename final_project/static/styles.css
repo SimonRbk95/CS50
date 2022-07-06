@@ -344,7 +344,7 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
     min-width: 300px;
 }
 
-.mobile-hidden{
+.mobile{
     display: none !important;
 }
 
@@ -366,11 +366,11 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
         max-height: 90vh;
     }
 
-    .desktop-hidden{
+    .desktop{
         display: none !important;
     }
 
-    .mobile-hidden{
+    .mobile{
         display: inline !important;
     }
 
