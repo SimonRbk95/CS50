@@ -9,7 +9,6 @@
     <!--Select Menu-->
 <div class="container-fluid">
   <div class="container-lg result-background">
-
     <div class="row justify-content-center title border border-dark">
       <div class="col-12 text-center">
         <h1>Personalized Suggestions</h1><br>
@@ -17,12 +16,12 @@
       </div>
     </div>
     <form action="/qs" method="post">
-
-      <!--select menu desktop-->
       <div class="row justify-content-center title">
-        <div class="col-12 text-center menu-margins desktop-select">
+
+        <!--select menu desktop-->
+        <div class="col-12 text-center menu-margins">
           <h5>How comfortable are you with basic technologies (Cloud, Internet, Computer Science basics)?</h5>
-          <select required class="selectpicker show-tick" name="q1">
+          <select required class="selectpicker show-tick desktop-select" name="q1">
             {% for option in options_q %}
               <option value="{{ option }}">{{ option }}</option>
             {% endfor %}
@@ -30,16 +29,14 @@
         </div>
 
         <!--select menu mobile-->
-        <div class="col-12 text-center menu-margins mobile-select">
-          <h5>How comfortable are you with basic technologies (Cloud, Internet, Computer Science basics)?</h5>
-          <div class="col-6 text-center">
+          <div class="col-6 text-center mobile-select-">
             <select class="form-select" aria-label="Default select example" name="q1">
               {% for option in options_q %}
                 <option value="{{ option }}">{{ option }}</option>
               {% endfor %}
             </select>
           </div>
-        </div>
+
 
         <!--select menu desktop-->
         <div class="col-12 text-center menu-margins desktop-select">
