@@ -357,6 +357,9 @@ video{
     display: none !important;
 }
 
+.mobile-select{
+    display: none !important;
+}
 
 /*--- media queries ---*/
 @media only screen and (max-width: 768px) {
@@ -445,6 +448,15 @@ video{
         min-width: 150px;
         min-height: 40px;
     }
+
+    .mobile-select{
+        display: inline !important;
+    }
+
+    .mobile-desktop{
+        display: none !important;
+    }
+
 
     /* results */
 
