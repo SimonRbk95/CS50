@@ -679,6 +679,16 @@ video{
         width: 60%;
     }
 
+    /*questionnaire*/
+
+    .mobile-select{
+        display: inline !important;
+    }
+
+    .desktop-select{
+        display: none !important;
+    }
+
     /* coursera course display*/
 
     .course-name{
