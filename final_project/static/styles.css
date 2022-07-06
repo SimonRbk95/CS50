@@ -361,7 +361,9 @@ video{
 @media only screen and (max-width: 768px) {
 
     p.landing-page{
-        font-size: 
+        font-size: 16px;
+        margin-right: 20px;
+        margin-left: 20px;
     }
 
     .dark-video{
