@@ -95,6 +95,8 @@ def qs():
                         courses[i]["Current Price"] = dict["Current Price"]
                         courses[i]["Product Description"] = dict["Product Description"]
                         # courses[i]["SKU"] = dict["Unique Merchant SKU"]
+                    else:
+                        dict["Current Price"]= "-"
                     i+=1
             if len(courses) < max_courses:
                 courses = check_all_courses(courses, index, keywords_q3, max_courses, cdb=cdb)
