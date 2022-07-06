@@ -353,7 +353,7 @@ video{
     padding: 0;
 }
 
-.mobile{
+.mobile-video{
     display: none !important;
 }
 
@@ -381,11 +381,11 @@ video{
         max-height: 90vh;
     }
 
-    .desktop{
+    .desktop-video{
         display: none !important;
     }
 
-    .mobile{
+    .mobile-video{
         display: inline !important;
     }
 
