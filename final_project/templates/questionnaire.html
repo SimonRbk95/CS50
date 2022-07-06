@@ -9,6 +9,7 @@
     <!--Select Menu-->
 <div class="container-fluid">
   <div class="container-lg result-background">
+
     <div class="row justify-content-center title border border-dark">
       <div class="col-12 text-center">
         <h1>Personalized Suggestions</h1><br>
@@ -38,9 +39,8 @@
           </select>
         </div>
 
-
-
-        <div class="col-12 text-center menu-margins">
+        <!--select menu desktop-->
+        <div class="col-12 text-center menu-margins desktop-select">
           <h5>How comfortable are you with programming?</h5>
             <select required class="selectpicker show-tick" name="q2">
               {% for option in options_q %}
@@ -48,6 +48,18 @@
               {% endfor %}
             </select>
         </div>
+
+        <!--select menu mobile-->
+        <div class="col-12 text-center menu-margins mobile-select">
+          <h5>How comfortable are you with programming?</h5>
+          <select class="form-select" aria-label="Default select example" name="q2">
+            {% for option in options_q %}
+              <option value="{{ option }}">{{ option }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <!--select menu all devices-->
         <div class="col-12 text-center menu-margins">
           <h5>Please select up to three areas of your interest:</h5>
             <select required class="selectpicker" id="select_1" name="q3" data-selected-text-format="count" multiple data-live-search="true" title='Choose three from...'>
@@ -57,6 +69,8 @@
             </select>
             <button class="btn btn-light" id="btnDeselect">Deselect</button>
         </div>
+
+        <!-- select menu all devices-->
         <div class="col-12 text-center menu-margins">
           <h5>Please select your goals:</h5>
             <select required class="selectpicker show-tick" id="select_2" multiple name="q4" title="Choose any from...">
@@ -69,6 +83,7 @@
         <div class="col-12 text-center">
               <button type="submit" class="btn btn-outline-light btn-lg" id="btn-submit-questionnaire">Submit</button>
         </div>
+
       </div>
     </form>
   </div>
