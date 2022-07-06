@@ -346,6 +346,7 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
 
 video{
     width: 100%;
+    filter: brightness(80%);
 }
 
 .no-padding{
