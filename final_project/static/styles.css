@@ -643,6 +643,7 @@ video{
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .sizingText-div-1 {
+        max-width: 65%;
         top: 50%;
         transform: translateY(-40%);
     }
