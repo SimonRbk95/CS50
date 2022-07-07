@@ -398,6 +398,7 @@ video{
 
     .sizingText-div-1{
         top: 40%;
+        max-width: 90%;
     }
 
     .sizingText-div-2 {
