@@ -54,24 +54,14 @@ def qs():
 
         List_q4 = request.form.getlist("q4")
 
-        # for choice in List_q3:
-            # additional server-side input validation?
-            # if choice not in options_q3:
-                # return redirect("/qs")
-
+        # get introductory videos based on first two questions
         intro_videos={}
-
         if q1 == "less":
-            # suggest free YT videos
             intro_videos["Technology basics"] = (YT_lookup("Understanding Technology", 3))
-
         if q2 == "less":
-            # suggest programming basics courses
             intro_videos["Programming basics"] = (YT_lookup("Programming basics", 3))
         else:
             intro_videos["Programming advanced"] = (YT_lookup("Programming advanced concepts", 3))
-
-
 
         # for each choice there will be a list of dictionaries with relevant courses
         choices = []
