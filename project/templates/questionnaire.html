@@ -69,7 +69,7 @@
           <h5>Please select your goals:</h5>
             <select required class="selectpicker show-tick" id="select_2" multiple name="q4" title="Choose any from...">
               {% for option in options_q4 %}
-                <option value="{{ option }}">{{ option }}</option>
+                <option value="{{ loop.index0 }}">{{ option }}</option>
               {% endfor %}
             </select>
             <button class="btn btn-light desktop-select" id="btnDeselect_2">Deselect</button>

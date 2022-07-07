@@ -78,7 +78,7 @@ def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cd
             # append professional certificates first if get a new job is the goal
             # check if we are searching the cdb100 to use appropriate searches
             if cdb100:
-                if "Start a career in tech" in List_q4:
+                if "0" in List_q4:
                     for dict in cdb100:
                         if condition_coursera(dict, courses, keywords_q3, index, max_courses, True):
                             if dict["Product Type"] == "Professional Certificate":
