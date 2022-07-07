@@ -6,16 +6,6 @@ document.addEventListener("DOMContentLoaded", function(){
             window.location.href = '/qs';
             });
         }
-    let right=document.getElementById('rightdiv').style.height;
-    let left=document.getElementById('leftdiv').style.height;
-    if(left>right)
-    {
-        document.getElementById('rightdiv').style.height=left;
-    }
-    else
-    {
-        document.getElementById('leftdiv').style.height=right;
-    }
 });
 
 $('.selectpicker').selectpicker({
