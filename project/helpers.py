@@ -54,6 +54,18 @@ def append_dict_cdb100(dict, courses):
     "Partner": dict["Partner"],
     "Product Type": dict["Product Type"],
     })
+    # get further data for chosen courses from cdb
+    for dict in cdb:
+        # keep track of at which index the list element, the dictionary called 'course', is
+        i = 0
+        for course in courses:
+            if dict["Product Name"] == course["Course Name"]:
+                # courses[i]["URL"] = dict["Short Link"]
+                courses[i]["Image URL"] = dict["Image URL"]
+                courses[i]["Current Price"] = dict["Current Price"]
+                courses[i]["Product Description"] = dict["Product Description"]
+                # courses[i]["SKU"] = dict["Unique Merchant SKU"]
+            i+=1
     return courses
 
 def check_duplicates(courses, dict):

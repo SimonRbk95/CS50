@@ -75,18 +75,7 @@ def qs():
             courses=[]
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             check_all_courses(courses, index, keywords_q3, max_courses, List_q4=List_q4, cdb100=cdb100)
-            # get further data for chosen courses from cdb
-            for dict in cdb:
-                # keep track of at which index the list element, the dictionary called 'course', is
-                i = 0
-                for course in courses:
-                    if dict["Product Name"] == course["Course Name"]:
-                        # courses[i]["URL"] = dict["Short Link"]
-                        courses[i]["Image URL"] = dict["Image URL"]
-                        courses[i]["Current Price"] = dict["Current Price"]
-                        courses[i]["Product Description"] = dict["Product Description"]
-                        # courses[i]["SKU"] = dict["Unique Merchant SKU"]
-                    i+=1
+            # look for more courses until the desired number is reached
             if len(courses) < max_courses:
                 courses = check_all_courses(courses, index, keywords_q3, max_courses, cdb=cdb)
             # assign every dict a 'unique' identifier later used for html ids
