@@ -345,8 +345,11 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
 }
 
 video{
-    width: 100%;
+    width: 100vw;
     filter: brightness(80%);
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
 }
 
 .no-padding{
