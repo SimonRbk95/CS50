@@ -63,9 +63,9 @@ def qs():
         else:
             intro_videos["Programming advanced"] = (YT_lookup("Programming advanced concepts", 3))
 
-        # for each choice there will be a list of dictionaries with relevant courses
+        # the list will contain for each choice(answer to questions three) a list of dictionaries with relevant courses
         choices = []
-        # choices will be assigned keys to the specific course vendor (currently coursera only)
+        # this list will be assigned a keys to the course vendor (currently coursera only)
         course_vendors={}
 
         # ! COURSERA !
