@@ -397,9 +397,7 @@ video{
 
 
     .sizingText-div-1{
-        position: absolute;
         top: 40%;
-        transform: translateY(-60%);
     }
 
     .sizingText-div-2 {
