@@ -76,7 +76,7 @@ def qs():
             check_all_courses(courses, index, keywords_q3, max_courses, List_q4=List_q4, cdb100=cdb100)
             # get further data for chosen courses from cdb
             for dict in cdb:
-                # keep track of at which index the list item, the dictionary called 'course', is
+                # keep track of at which index the list element, the dictionary called 'course', is
                 i = 0
                 for course in courses:
                     if dict["Product Name"] == course["Course Name"]:
@@ -85,11 +85,9 @@ def qs():
                         courses[i]["Current Price"] = dict["Current Price"]
                         courses[i]["Product Description"] = dict["Product Description"]
                         # courses[i]["SKU"] = dict["Unique Merchant SKU"]
-
                     i+=1
             if len(courses) < max_courses:
                 courses = check_all_courses(courses, index, keywords_q3, max_courses, cdb=cdb)
-
             # assign every dict a 'unique' identifier
             ids=[]
             for dict in courses:
@@ -98,7 +96,6 @@ def qs():
                 if new_id not in ids:
                     ids.append(ids)
                     dict["ID"] = new_id
-
             # append the list of dictionaries to the outter list
             choices.append(courses)
 
