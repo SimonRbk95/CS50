@@ -88,7 +88,7 @@ def qs():
                     i+=1
             if len(courses) < max_courses:
                 courses = check_all_courses(courses, index, keywords_q3, max_courses, cdb=cdb)
-            # assign every dict a 'unique' identifier
+            # assign every dict a 'unique' identifier later used for html ids
             ids=[]
             for dict in courses:
                 new_id = uuid.uuid1().int
