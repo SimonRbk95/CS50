@@ -66,9 +66,11 @@ def check_duplicates(courses, dict):
     # return courses
 
 def condition_coursera(dict, courses, keywords_q3, index, max_courses, cdb100=None):
+    # look for a match in cdb100
     if cdb100:
         if any(n in dict["Product Name"] or n in dict["Primary Domain"] or n in dict["Primary Subdomain"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict) and len(courses) < max_courses:
             return True
+    # look for a match in cdb
     else:
         if any(n in dict["Product Name"] for n in keywords_q3[int(index)]) and not check_duplicates(courses, dict) and len(courses) < max_courses:
             return True

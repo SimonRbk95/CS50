@@ -52,7 +52,7 @@ def qs():
         for i in List_q3:
             List_q3_options.append(options_q3[int(i)])
 
-        # returns strings of options chosen in question 4
+        # returns list of indeces of options chosen in question 4 as strings
         List_q4 = request.form.getlist("q4")
 
         # get introductory videos based on first two questions
