@@ -47,7 +47,7 @@ def append_dict_cdb(dict, courses):
     })
     return courses
 
-def append_dict_cdb100(dict, courses):
+def append_dict_cdb100(dict, courses, cdb):
     courses.append({
     "Course Name": dict["Product Name"],
     "URL": dict["URL"],
@@ -89,10 +89,10 @@ def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cd
                 if "0" in List_q4:
                     for dict in cdb100:
                         if condition_coursera(dict, courses, keywords_q3, index, max_courses, True) and dict["Product Type"] == "Professional Certificate":
-                                courses = append_dict_cdb100(dict, courses)
+                                courses = append_dict_cdb100(dict, courses, cdb)
                 for dict in cdb100:
                     if condition_coursera(dict, courses, keywords_q3, index, max_courses, True):
-                        courses = append_dict_cdb100(dict, courses)
+                        courses = append_dict_cdb100(dict, courses, cdb)
             # in big data base search only for matches in product name
             # match is checked in app.py
             else:

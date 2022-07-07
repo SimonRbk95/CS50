@@ -74,7 +74,7 @@ def qs():
             # list of dictionaries with relevant course data
             courses=[]
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
-            check_all_courses(courses, index, keywords_q3, max_courses, List_q4=List_q4, cdb100=cdb100)
+            check_all_courses(courses, index, keywords_q3, max_courses, List_q4=List_q4, cdb100=cdb100, cdb=cdb)
             # look for more courses until the desired number is reached
             if len(courses) < max_courses:
                 courses = check_all_courses(courses, index, keywords_q3, max_courses, cdb=cdb)
