@@ -364,6 +364,10 @@ video{
     display: none !important;
 }
 
+video::-webkit-media-controls{
+    display: none !important;
+}
+
 /*--- media queries ---*/
 @media only screen and (max-width: 768px) {
 
