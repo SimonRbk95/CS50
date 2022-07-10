@@ -8,7 +8,6 @@ import googleapiclient.errors
 from os.path import exists
 
 
-
 # input txt file name without extension
 def read_txt(file):
     if not exists(f'static/{file}.txt'):
