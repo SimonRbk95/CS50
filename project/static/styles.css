@@ -1,4 +1,4 @@
-html {
+body {
     background-color: black !important;
     color: white !important;
     font-size: 1.2rem !important;
@@ -12,6 +12,12 @@ html {
     scrollbar-width: none; /* for Firefox */
     overflow: -moz-scrollbars-none;
     overflow-y: scroll;
+    color: white !important;
+    font-size: 1.2rem !important;
+    font-weight: 400 !important;
+    margin: 0;
+    font-family: "Arial", sans-serif !important;
+
 }
 
 html::-webkit-scrollbar {
