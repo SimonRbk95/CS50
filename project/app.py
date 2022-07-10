@@ -1,7 +1,7 @@
 import uuid
 
 from flask_session import Session
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request
 
 
 from helpers import read_csv, read_txt, check_all_courses, YT_lookup
