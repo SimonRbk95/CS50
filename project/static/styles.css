@@ -152,7 +152,7 @@ div.result-background:hover {
 }
 
 .modal-content{
-    background-color: rgb(35, 35, 35, 35);
+    background-color: rgb(35, 35, 35);
 }
 
 .modal-footer{
@@ -280,7 +280,7 @@ span.text{
 .btn-new{
     background-color: black;
     border-color: #444446;
-    color: rgb(225, 225, 225, 225);
+    color: rgb(225, 225, 225);
 }
 
 .btn-new:hover{
@@ -304,9 +304,9 @@ div.profile-badge.profile-badge--width-280.profile-badge--dark{
 }
 
 .list-group-item{
-    background-color: rgb(40, 40, 40, .25);
+    background-color: rgba(40, 40, 40, .25);
     border: 1px solid rgba(100,100,100,.5);
-    color: rgb(225, 225, 225, 225);
+    color: rgb(225, 225, 225);
 }
 
 .YT-carousel-indicators{
