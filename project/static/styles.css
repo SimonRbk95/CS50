@@ -4,7 +4,7 @@ body {
     font-size: 1.2rem;
     font-weight: 400;
     margin: 0;
-    font-family: "Arial", sans-serif !important;
+    font-family: "Arial", sans-serif;
 }
 
 html {
@@ -12,12 +12,6 @@ html {
     scrollbar-width: none; /* for Firefox */
     overflow: -moz-scrollbars-none;
     overflow-y: scroll;
-    color: white !important;
-    font-size: 1.2rem !important;
-    font-weight: 400 !important;
-    margin: 0;
-    font-family: "Arial", sans-serif !important;
-
 }
 
 html::-webkit-scrollbar {
