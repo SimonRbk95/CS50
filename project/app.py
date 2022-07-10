@@ -18,7 +18,7 @@ app.static_folder = 'static'
 cdb = read_txt("cdb")
 cdb100 = read_csv("cdb100")
 
-# variables needed for web-application
+# variables containing the options for the questionnaire
 options_q = ["less", "more", "very"]
 
 options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things", "Web Development"]
@@ -58,7 +58,7 @@ def qs():
         List_q4 = request.form.getlist("q4")
 
         # get introductory videos based on first two questions
-        intro_videos={}
+        intro_videos = {}
         if q1 == "less":
             intro_videos["Technology basics"] = (YT_lookup("Understanding Technology", 3))
         if q2 == "less":
@@ -69,19 +69,19 @@ def qs():
         # the list will contain for each choice(answer to questions three) a list of dictionaries with relevant courses
         choices = []
         # this list will be assigned a keys to the course vendor (currently coursera only)
-        course_vendors={}
+        course_vendors = {}
 
         # ! COURSERA !
         for index in List_q3:
             # list of dictionaries with relevant course data
-            courses=[]
+            courses = []
             # check if there is a course in coursera's top 100 with a name smilair to the user's choice
             check_all_courses(courses, index, keywords_q3, max_courses, List_q4=List_q4, cdb100=cdb100, cdb=cdb)
             # look for more courses until the desired number is reached
             if len(courses) < max_courses:
                 courses = check_all_courses(courses, index, keywords_q3, max_courses, cdb=cdb)
             # assign every dict a 'unique' identifier later used for html ids
-            ids=[]
+            ids = []
             for dict in courses:
                 new_id = uuid.uuid1().int
                 # check if they are unique
@@ -102,5 +102,4 @@ def qs():
         return render_template("results.html", course_vendors=course_vendors, List_q3_options=List_q3_options, intro_videos=intro_videos, course_videos=course_videos)
     else:
         return render_template("questionnaire.html", options_q=options_q, options_q3=options_q3, options_q4=options_q4)
-
 
