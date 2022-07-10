@@ -1,10 +1,7 @@
-import requests
-import urllib.parse
 import csv
 import gzip
 import shutil
 import os
-import google_auth_oauthlib.flow
 import googleapiclient.discovery
 import googleapiclient.errors
 
