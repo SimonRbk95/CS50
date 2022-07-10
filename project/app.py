@@ -20,9 +20,13 @@ cdb100 = read_csv("cdb100")
 
 # variables needed for web-application
 options_q = ["less", "more", "very"]
+
 options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Computer Science", "Programming with Python", "Internet of Things", "Web Development"]
+
 options_q4 = ["Start a career in tech", "Boost my CV", "Learn about new technologies"]
-keywords_q3 = [["Machine Learning"],["Data Analytics", "Data Science"],["Blockchain"],["Computer Science"],["Python", "Programming with Python"],["Internet of Things"], ["Web Development", "Front-end development", "Fullstack Developer"]]
+
+keywords_q3 = [["Machine Learning"], ["Data Analytics", "Data Science"], ["Blockchain"],["Computer Science"],["Python", "Programming with Python"],["Internet of Things"], ["Web Development", "Front-end development", "Fullstack Developer"]]
+
 max_courses = 5
 
 @app.route("/")
