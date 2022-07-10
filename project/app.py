@@ -25,7 +25,7 @@ options_q3 = ["Machine Learning", "Data Analytics/ Science", "Blockchain", "Comp
 
 options_q4 = ["Start a career in tech", "Boost my CV", "Learn about new technologies"]
 
-keywords_q3 = [["Machine Learning"], ["Data Analytics", "Data Science"], ["Blockchain"],["Computer Science"],["Python", "Programming with Python"],["Internet of Things"], ["Web Development", "Front-end development", "Fullstack Developer"]]
+keywords_q3 = [["Machine Learning"], ["Data Analytics", "Data Science"], ["Blockchain"],["Computer Science"], ["Python", "Programming with Python"], ["Internet of Things"], ["Web Development", "Front-end development", "Fullstack Developer"]]
 
 max_courses = 5
 
