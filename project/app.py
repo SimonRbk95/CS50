@@ -1,5 +1,3 @@
-import os
-import string
 import uuid
 
 from flask_session import Session
