@@ -61,7 +61,7 @@ def append_dict_cdb100(dict, courses, cdb):
                 courses[i]["Current Price"] = dict["Current Price"]
                 courses[i]["Product Description"] = dict["Product Description"]
                 # courses[i]["SKU"] = dict["Unique Merchant SKU"]
-            i+=1
+            i += 1
     return courses
 
 def check_duplicates(courses, dict):
@@ -85,7 +85,7 @@ def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cd
         if "0" in List_q4:
             for dict in cdb100:
                 if condition_coursera(dict, courses, keywords_q3, index, max_courses, True) and dict["Product Type"] == "Professional Certificate":
-                        courses = append_dict_cdb100(dict, courses, cdb)
+                    courses = append_dict_cdb100(dict, courses, cdb)
         for dict in cdb100:
             if condition_coursera(dict, courses, keywords_q3, index, max_courses, True):
                 courses = append_dict_cdb100(dict, courses, cdb)
@@ -104,19 +104,19 @@ def YT_lookup(course, maxResults):
     api_version = "v3"
     api_key = os.environ.get("API_KEY")
     youtube = googleapiclient.discovery.build(
-    api_service_name, api_version, developerKey=api_key)
+        api_service_name, api_version, developerKey=api_key)
     request = youtube.search().list(
-    part="id,snippet",
-    type='video',
-    q=course,
-    videoDuration='medium',
-    videoDefinition='high',
-    maxResults=maxResults,
-    relevanceLanguage="en",
-    # videoEmbeddable="true",
-    # ~order="viewCount",
-    # fields="items(id(videoId),snippet(title,description,thumbnails))"
-    fields="items(id(videoId))"
+        part="id,snippet",
+        type='video',
+        q=course,
+        videoDuration='medium',
+        videoDefinition='high',
+        maxResults=maxResults,
+        relevanceLanguage="en",
+        # videoEmbeddable="true",
+        # ~order="viewCount",
+        # fields="items(id(videoId),snippet(title,description,thumbnails))"
+        fields="items(id(videoId))"
     )
 
     # contact api
@@ -129,15 +129,10 @@ def YT_lookup(course, maxResults):
     YT_data = []
     for i in range(maxResults):
         YT_data.append({
-                "videoId": response["items"][i]["id"]["videoId"],
-                # "title": response["items"][i]["snippet"]["title"],
-                # "thumbnail": response["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
-                # "description": response["items"][i]["snippet"]["description"],
-            })
+            "videoId": response["items"][i]["id"]["videoId"],
+            # "title": response["items"][i]["snippet"]["title"],
+            # "thumbnail": response["items"][i]["snippet"]["thumbnails"]["medium"]["url"],
+            # "description": response["items"][i]["snippet"]["description"],
+        })
     return YT_data
-
-# print(YT_lookup("Data Science", 2))
-
-
-
 
