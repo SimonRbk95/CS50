@@ -79,23 +79,24 @@ def condition_coursera(dict, courses, keywords_q3, index, max_courses, cdb100=No
 
 # requires cdb100 or cdb database as a list of dictionaries
 def check_all_courses(courses, index, keywords_q3, max_courses, List_q4=None, cdb100=None, cdb=None):
-            # append professional certificates first if get a new job is the goal
-            # check if we are searching the cdb100 to use appropriate searches
-            if cdb100:
-                if "0" in List_q4:
-                    for dict in cdb100:
-                        if condition_coursera(dict, courses, keywords_q3, index, max_courses, True) and dict["Product Type"] == "Professional Certificate":
-                                courses = append_dict_cdb100(dict, courses, cdb)
-                for dict in cdb100:
-                    if condition_coursera(dict, courses, keywords_q3, index, max_courses, True):
+    # append professional certificates first if get a new job is the goal
+    # check if we are searching the cdb100 to use appropriate searches
+    if cdb100:
+        if "0" in List_q4:
+            for dict in cdb100:
+                if condition_coursera(dict, courses, keywords_q3, index, max_courses, True) and dict["Product Type"] == "Professional Certificate":
                         courses = append_dict_cdb100(dict, courses, cdb)
-            # in big data base search only for matches in product name
-            # match is checked in app.py
-            else:
-                for dict in cdb:
-                    if condition_coursera(dict, courses, keywords_q3, index, max_courses):
-                        courses = append_dict_cdb(dict, courses)
-            return courses
+        for dict in cdb100:
+            if condition_coursera(dict, courses, keywords_q3, index, max_courses, True):
+                courses = append_dict_cdb100(dict, courses, cdb)
+    # in big data base search only for matches in product name
+    # match is checked in app.py
+    else:
+        for dict in cdb:
+            if condition_coursera(dict, courses, keywords_q3, index, max_courses):
+                courses = append_dict_cdb(dict, courses)
+    return courses
+
 
 def YT_lookup(course, maxResults):
     """Look up quote for symbol."""
@@ -103,7 +104,7 @@ def YT_lookup(course, maxResults):
     api_version = "v3"
     api_key = os.environ.get("API_KEY")
     youtube = googleapiclient.discovery.build(
-    api_service_name, api_version, developerKey = api_key)
+    api_service_name, api_version, developerKey=api_key)
     request = youtube.search().list(
     part="id,snippet",
     type='video',
