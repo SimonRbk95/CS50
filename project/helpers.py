@@ -5,7 +5,6 @@ import os
 import googleapiclient.discovery
 import googleapiclient.errors
 
-from flask import redirect, render_template, request, session
 from os.path import exists
 
 # input txt file name without extension
