@@ -18,9 +18,11 @@ User input:
 The users gets prompted by a Get Started button that takes them to a questionnaire. All these mandatory questions serve to determine which courses and videos to suggest.
 
 1. How comfortable are you with basic technologies?
-2. How comfortable are you with programming?
+2. How comfortable are you with programming?</br>
     The first two questions can be answered with less, more, and very. Each answer triggers different keywords used to fetch video IDs via Youtube's data search API.
-3. What are your areas of interest?
+3. What are your areas of interest?</br>
+    The third question is a multiple-choice one, currently restricted to a maximum choice of three areas of interest. This arbitrary restriction serves only to avoid having a results page so long as to be offputting for the user.
+
 4. What are your goals?
 
 The first two questions can be answered with less, more, and very. Each answer triggers different keywords used to fetch video IDs via Youtube's data search API.
