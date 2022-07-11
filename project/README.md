@@ -48,7 +48,7 @@ Jinja2 uses the python variables to dynamically create the html files displaying
 ## Further improvements:
 - Access to other course vendors' databases, such as via edX's API or Udacity's affiliated program, would bring more variety to the selection. The code is already adjusted to add other courses. The only thing that likely needs adjustment is the search algorithm, as different vendors will have different keys and may provide dissimilar information on their courses. Access to their databases requires an application on their websites.
 - Youtube has a daily quota on data API requests. Therefore, extensive usage of this web application might need a fallback to a pre-stored set of video ids.
-- Although any malicious change of client-side JS or HTML cannot cause any harm to application as no SQL database is in use, someone could 
+- Although any malicious change of client-side JS or HTML cannot cause any harm to the application as no SQL database is in use, someone could
 
 # Further improvements
 
