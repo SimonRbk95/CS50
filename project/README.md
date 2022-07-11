@@ -4,16 +4,32 @@ Information technologies are still very foreign for many people working in vario
 The Flask web application is mainly based on Python routing and creating the logic behind suggesting courses, Javascript for interactive buttons and forms, HTML, CSS, and Jinja 2 working with Python variables to create HTML dynamically.
 
 Technologies used:
-Flask (as a framework)
-Python
-Javascript
-Jinja2
-HTML
-CSS
-other small libraries or packages
+- Flask (as a framework)
+- Python
+- Javascript
+- Jinja2
+- HTML
+- CSS
+- other small libraries or packages
 
 ## How does it work:
-The idea is simple. The
+User input:
+
+The users gets prompted by a Get Started button that takes them to a questionnaire. All these mandatory questions serve to determine which courses and videos to suggest.
+
+1. How comfortable are you with basic technologies?
+2. How comfortable are you with programming?
+    The first two questions can be answered with less, more, and very. Each answer triggers different keywords used to fetch video IDs via Youtube's data search API.
+3. What are your areas of interest?
+4. What are your goals?
+
+The first two questions can be answered with less, more, and very. Each answer triggers different keywords used to fetch video IDs via Youtube's data search API.
+
+The third question is a multiple-choice one, currently restricted to a maximum choice of three areas of interest. This arbitrary restriction serves only to avoid having a results page so long as to be offputting for the user.
+
+The fourth question determines the user's goals, influencing the type of suggested courses.
+
+All the answers are stored in Python Lists and dynamically allocated via Jinja2, ensuring easy maintenance and enabling course suggestions.
 
 ### Video Demo:
 
