@@ -13,25 +13,29 @@ Technologies used:
 - other small libraries or packages
 
 ## How does it work:
-User input:
+### User input:
 
 The users gets prompted by a Get Started button that takes them to a questionnaire. All these mandatory questions serve to determine which courses and videos to suggest.
 
 1. How comfortable are you with basic technologies?
 2. How comfortable are you with programming?</br>
-    The first two questions can be answered with less, more, and very. Each answer triggers different keywords used to fetch video IDs via Youtube's data search API.
+    <sub>The first two questions can be answered with less, more, and very. Each answer triggers different keywords used to fetch video IDs via Youtube's data search API.
 3. What are your areas of interest?</br>
-    The third question is a multiple-choice one, currently restricted to a maximum choice of three areas of interest. This arbitrary restriction serves only to avoid having a results page so long as to be offputting for the user.
+    <sub>The third question is a multiple-choice one, currently restricted to a maximum choice of three areas of interest. This arbitrary restriction serves only to avoid having a results page so long as to be offputting for the user.
 
-4. What are your goals?
-
-The first two questions can be answered with less, more, and very. Each answer triggers different keywords used to fetch video IDs via Youtube's data search API.
-
-The third question is a multiple-choice one, currently restricted to a maximum choice of three areas of interest. This arbitrary restriction serves only to avoid having a results page so long as to be offputting for the user.
-
-The fourth question determines the user's goals, influencing the type of suggested courses.
+4. What are your goals?</br>
+    <sub>The fourth question determines the user's goals, influencing the type of suggested courses.
 
 All the answers are stored in Python Lists and dynamically allocated via Jinja2, ensuring easy maintenance and enabling course suggestions.
+
+### Coursera Database:
+Access to Coursera courses is granted by getting access to their affiliated program. Then you can browse their courses and download their course catalogues. For the application, I use their Top 100-course catalogue and a file comprising 5000 tech courses pre-sorted by relevance. Both course catalogues come in different file formats and comprise slightly different information, which has to be accounted for in working with them. Also, Coursera does not provide a simple API; the course databases may be updated manually by downloading their catalogue once in a while. For these reasons, in helpers.py, I have adjusted the functions "read_txt" and "read_csv". This way, the course files only need to be downloaded, named cdb and cdb_100, and placed in the project folder for it to work. These functions load up the course databases into dictionaries that are needed to suggest the courses.
+
+### Parameters used to look for courses:
+To look for courses, questions 3 and 4 are critical. Question 3 returns the choices' indices. These indices correspond to a list containing keywords. These keywords will be used to search for matches. Currently, only the first answer to question 4 impacts the course suggestion, signalling to consider only a particular Coursera product type that aligns with the user's goal.
+
+
+
 
 ### Video Demo:
 
