@@ -38,7 +38,7 @@ To look for courses, questions 3 and 4 are critical. Question 3 returns the choi
 The Top 100 database is searched first, storing information about the course in a dictionary. For these matches, the more extensive database can provide further information, such as thumbnails and a course description. If the top 100 database does not satisfy the maximum number of suggested courses, the algorithm will query the larger Coursera database for more options. Eventually, the algorithm creates a list that, for each answer to question 3, contains a list of dictionaries with relevant courses.
 
 ## Youtube Videos via its API:
-Very straightforward, based on a list of keywords for every possible area of interest, one function fetches the video IDs from Youtube's API to suggest relevant courses in English at medium length.
+Very straightforward, based on a list of keywords for every possible area of interest, one function fetches the video IDs from Youtube's API to suggest relevant courses in English at medium length. The API Key is 
 
 ## Final display of course suggestions:
 Jinja2 uses the python variables to dynamically create the html files displaying all the course and video suggestions, avoiding as much hard-coded HTML as possible.
