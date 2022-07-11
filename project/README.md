@@ -1,4 +1,6 @@
 # CS50 Final Project -- Online Digital Skills Consultant
-#### Video URL:
-#### Description:
+The Online Digital Skills Consultant serves to 
+## Description:
+
+## Video Demo:
 
