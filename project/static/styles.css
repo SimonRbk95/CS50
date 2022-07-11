@@ -579,64 +579,6 @@ video::-webkit-media-controls{
 
 }
 
-
-/* @media only screen and (min-width: 576px) and (max-width: 768px) {
-    .footerText{
-        font-size: 14px;
-        margin-bottom: 5%;
-    }
-
-    #my-badge{
-        display: none;
-    }
-
-    .sizingText-div-1 {
-        top: 50%;
-        transform: translateY(-40%);
-    }
-
-    .sizingText-div-2 {
-        top: 40%;
-        transform: translateY(-40%);
-        margin-right:40%;
-    }
-
-    .carousel-caption h1 {
-        font-family: 'Quicksand', sans-serif;
-        font-size: 100%;
-    }
-
-    .carousel-caption p {
-        font-family: 'Quicksand', sans-serif;
-        font-size: 60%;
-    }
-
-    .carousel-inner img {
-        width: 100%;
-    }
-
-    .quote{
-        font-size: 14px;
-    }
-
-    ---course display
-    #list-example{
-        display: none;
-    }
-
-    .list-group{
-        display: none;
-    }
-
-    .course-table{
-        font-size: 16px;
-        table-layout: fixed;
-        margin-top: 0;
-        margin-left: 0;
-        margin-bottom: 20px;
-    }
-*/
-
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .sizingText-div-1 {
         max-width: 65%;
@@ -768,9 +710,6 @@ video::-webkit-media-controls{
     }
 }
 
-
-
-/* */
 
 .test {
     background-color: black;
