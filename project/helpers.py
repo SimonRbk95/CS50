@@ -2,8 +2,8 @@ import csv
 import gzip
 import shutil
 import os
-import googleapiclient.discovery
-import googleapiclient.errors
+# import googleapiclient.discovery
+# import googleapiclient.errors
 
 from os.path import exists
 

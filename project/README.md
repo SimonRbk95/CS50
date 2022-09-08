@@ -3,7 +3,8 @@ Information technologies are still very foreign for many people working in vario
 
 The Flask web application uses Python for routing and creating the logic behind suggesting courses, Javascript for interactive buttons and forms, HTML, CSS, and Jinja 2 to create HTML dynamically.
 
-### Technologies used:
+###
+Technologies used:
 - Flask (as a framework)
 - Python
 - Javascript
